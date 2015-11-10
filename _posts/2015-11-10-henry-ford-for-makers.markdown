@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Heny Ford for Makers: Quotes on Design"
+title: "Henry Ford for Makers: Quotes on Design"
 date: 2015-11-10
 categories: inspiration
 ---
