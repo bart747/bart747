@@ -3,7 +3,7 @@ html {
   font-size: 16px; }
   @media screen and (min-width: 500px) {
     html {
-      font-size: 19px; } }
+      font-size: 18px; } }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -13,8 +13,8 @@ body {
   border-top: 3px solid #222;
   color: #404040;
   font-family: "Ubuntu", sans-serif;
-  line-height: 1.55;
-  padding: 1rem 0.775rem 3rem; }
+  line-height: 27.9px;
+  padding: 1rem 13.95px 3rem; }
 
 .wrapper {
   margin: 0 auto;
@@ -31,12 +31,15 @@ a {
     color: #ff4136;
     transition: color 0.25s; }
 
+.page {
+  margin-bottom: 3rem; }
+
 .patterns-lib > h2 {
   background-color: #e8e8e8;
   color: #828282;
   font-family: "Ubuntu Mono", monospace;
   font-size: 1rem;
-  line-height: 1.55rem;
+  line-height: 27.9px;
   padding: 0 0.5em;
   text-transform: uppercase;
   letter-spacing: 0.25em; }
@@ -53,7 +56,7 @@ button,
   border-radius: 3px;
   text-align: center;
   margin: 0.5rem;
-  max-width: 15.5rem;
+  max-width: 279px;
   cursor: pointer; }
   button:hover,
   .btn:hover {
@@ -102,7 +105,7 @@ button,
   color: #ffd600; }
 
 p {
-  margin: 1.55rem 0; }
+  margin: 27.9px 0; }
 
 h1,
 h2,
@@ -110,21 +113,30 @@ h3 {
   color: #222; }
 
 h1, .h1-like {
-  font-size: 2.325rem;
+  font-size: 41.85px;
   font-weight: bold;
   line-height: 1;
-  margin: 3.1rem 0 1.55rem; }
+  margin: 55.8px 0 27.9px; }
 
 h2, .h2-like {
-  font-size: 22px;
+  font-size: 1.25rem;
   font-weight: 600;
-  line-height: 1.55rem;
-  margin: 3.1rem 0 1.55rem 0; }
+  line-height: 27.9px;
+  margin: 55.8px 0 27.9px 0; }
 
 h3, .h3-like {
-  font-size: 19px;
+  font-size: 18px;
   text-transform: uppercase;
-  margin: 3.1rem 0 1.55rem; }
+  margin: 55.8px 0 27.9px; }
+
+blockquote {
+  border-left: 1px dotted #828282;
+  margin: 0;
+  padding-left: 1rem; }
+
+ul {
+  margin: 27.9px 0;
+  padding-left: 1rem; }
 
 /**
  * Site header
@@ -139,7 +151,7 @@ code {
 @media screen and (min-width: 760px) {
   .col {
     float: left;
-    padding-right: 1.55rem; }
+    padding-right: 27.9px; }
     .col:last-of-type {
       padding-right: 0; }
 
@@ -159,7 +171,7 @@ img {
 
 .header {
   text-align: center;
-  margin-bottom: 1.55rem; }
+  margin-bottom: 27.9px; }
 
 .logo a {
   border-bottom: none;
@@ -176,11 +188,11 @@ img {
   max-height: 45px; }
 
 .masthead {
-  font-size: 19px;
+  font-size: 18px;
   padding: 1rem 0 0; }
 
 .masthead-h1 {
-  font-size: 3.1rem;
+  font-size: 55.8px;
   font-weight: bold;
   line-height: 0.85;
   margin: 0 0 0 -0.05em;
@@ -189,11 +201,11 @@ img {
   word-spacing: 0.125em; }
 
 .masthead-h2 {
-  margin: 1.55rem 0 3.1rem; }
+  margin: 27.9px 0 55.8px; }
 
 @media screen and (min-width: 800px) {
   .masthead-h1 {
-    font-size: 3.875rem;
+    font-size: 69.75px;
     font-weight: bold;
     line-height: 0.85;
     margin: 0 0 0 -0.05em;
@@ -202,22 +214,23 @@ img {
     word-spacing: 0.33em; }
 
   .masthead-h2 {
-    margin: 1.55rem 0; } }
+    margin: 27.9px 0; } }
 .menu-list ul {
   list-style: none;
   padding: 0; }
 .menu-list li {
-  margin-bottom: 0.5em; }
+  margin-bottom: 6.975px; }
 
 .menu-list a {
   border-bottom: none; }
 
 .menu-list-title {
-  margin: 1.55rem 0 0.775rem; }
+  margin: 27.9px 0 13.95px; }
 
 .post {
   max-width: 34rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-bottom: 3rem; }
 
 .post-meta {
   color: #828282; }
@@ -228,7 +241,8 @@ img {
 .highlight {
   border-left: 1px dotted #828282;
   font-size: 18px;
-  padding: 1em 0.5em; }
+  margin: 27.9px 0;
+  padding-left: 0.5em; }
   .highlight .c {
     color: #998;
     font-style: italic; }

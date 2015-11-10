@@ -4,7 +4,8 @@
 .highlight {
     border-left: 1px dotted $grey;
     font-size: 18px;
-    padding: 1em 0.5em;
+    margin: $u 0;
+    padding-left: 0.5em;
 
     .c     { color: #998; font-style: italic } // Comment
     .err   { color: #a61717; background-color: #e3d2d2 } // Error

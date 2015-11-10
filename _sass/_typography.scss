@@ -32,3 +32,16 @@ h3, .h3-like {
   text-transform: uppercase;
   margin: ($u * 2) 0 $u;
 }
+
+
+blockquote {
+  border-left: 1px dotted $grey;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+ul {
+  margin: $u 0;
+  padding-left: 1rem;
+}
+

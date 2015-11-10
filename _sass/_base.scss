@@ -18,7 +18,7 @@ body {
   border-top: 3px solid $black;
   color: $text-color;
   font-family: $base-font-family;
-  line-height: $base-line-height;
+  line-height: $u;
   padding: 1rem ( 0.5 * $u ) 3rem;
 }
 
@@ -40,6 +40,10 @@ a {
     color: $red;
     transition: color 0.25s;
   }
+}
+
+.page {
+  margin-bottom: 3rem;
 }
 
 .patterns-lib>h2 {

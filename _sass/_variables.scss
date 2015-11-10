@@ -5,14 +5,13 @@
 
 $base-font-family: "Ubuntu", sans-serif;
 $monospace:        "Ubuntu Mono", monospace;
-$base-font-size:   19px;
-$large-font-size:  22px;
+$base-font-size:   18px;
+$large-font-size:  1rem + 0.25;
 $small-font-size:  16px;
 $base-line-height: 1.55;
 
 // base rhythm unit
-$u:                1rem * $base-line-height;
-
+$u:                $base-font-size * $base-line-height;
 // colors
 
 //brand
