@@ -1,0 +1,21 @@
+//
+// menu list
+//
+
+.menu-list {
+  ul {
+  list-style: none;
+  padding: 0;
+  }
+  li {
+    margin-bottom: 0.5em;
+  }
+}
+
+.menu-list a {
+  border-bottom: none;
+}
+
+.menu-list-title {
+  margin: $u 0 ( 0.5 * $u );
+}

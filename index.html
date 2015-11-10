@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <div class="masthead">
+    <h1 class="masthead-h1">
+      Essentials<br>
+      No Fluff
+    </h1>
+    <h2 class="masthead-h2">Designing fast web interfaces that help you stay agile</h2>
+  </div>
+
+
+
+  <div class="menu-list-group grid">
+
+    <div class="menu-list col half">
+    <ul class="">
+      <h3 class="menu-list-title">Projects</h3>
+
+        <li>
+        <a href="/patterns.html">Design Patterns Library of This Site</a>
+        </li>
+
+    </ul>
+    </div>
+
+    <div class="menu-list col half">
+    <ul class="">
+      <h3 class="menu-list-title">Posts</h3>
+      {% for post in site.posts %}
+        <li>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    </div>
+
+  </div>
+
+</div>

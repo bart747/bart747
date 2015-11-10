@@ -1,0 +1,129 @@
+
+
+html {
+  box-sizing: border-box;
+  font-size: $small-font-size;
+
+  @media screen and (min-width: 500px) {
+    font-size: $base-font-size;
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $background-color;
+  border-top: 3px solid $black;
+  color: $text-color;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+  padding: 1rem ( 0.5 * $u ) 3rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 64rem;
+ }
+
+.center {
+  text-align: center;
+ }
+
+a {
+  border-bottom: 1px dotted ;
+  color: $blue-dark;
+  text-decoration: none;
+
+  &:active, &:hover {
+    color: $red;
+    transition: color 0.25s;
+  }
+}
+
+.patterns-lib>h2 {
+  background-color: $grey-light;
+  color: $grey;
+  font-family: $monospace;
+  font-size: 1rem;
+  line-height: $u;
+  padding: 0 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+
+.patterns-lib.logo-svg img {
+  max-width: 150px;
+}
+
+button,
+.btn {
+  color: white;
+  background-color: $blue;
+  box-shadow: 0 1px 2px $grey;
+  padding: 0.5rem;
+  border-radius: 3px;
+  text-align: center;
+  margin: 0.5rem;
+  max-width: 10 * $u;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $blue-dark;
+    box-shadow: none;
+  }
+
+  &:active {
+  font-weight: bold;
+  }
+}
+
+.btn-round {
+  border-radius: 50%;
+  height: 2.5em;
+  width: 2.5em;
+}
+
+.blue {
+  color: $blue;
+}
+
+.blue-dark {
+  color: $blue-dark;
+}
+
+.blue-code {
+  color: $blue-code;
+}
+.red {
+  color: $red;
+}
+
+.red-dark {
+  color: $red-dark;
+}
+
+.grey {
+  color: $grey;
+}
+
+.black {
+  color: $black;
+}
+
+.brown {
+  color: $brown;
+}
+
+.grey {
+  color: $grey;
+}
+
+.grey-light {
+  color: $grey-light;
+}
+
+.yellow {
+  color: $yellow;
+}

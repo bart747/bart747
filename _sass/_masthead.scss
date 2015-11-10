@@ -1,0 +1,38 @@
+.masthead {
+  font-size: $base-font-size;
+  padding: 1rem 0 0;
+}
+
+.masthead-h1 {
+  font-size: 2 * $u;
+  font-weight: bold;
+  line-height: 0.85;
+  margin: 0 0 0 -0.05em;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  word-spacing: 0.125em;
+}
+
+.masthead-h2 {
+  margin: $u 0 ( 2 * $u );
+}
+
+
+@media screen and (min-width: 800px) {
+
+  .masthead-h1 {
+    font-size: 2.5 * $u;
+    font-weight: bold;
+    line-height: 0.85;
+    margin: 0 0 0 -0.05em;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    word-spacing: 0.33em;
+  }
+
+  .masthead-h2 {
+    margin: $u 0;
+  }
+}
+
+

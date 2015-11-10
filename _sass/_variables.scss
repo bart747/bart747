@@ -1,0 +1,49 @@
+//
+// variables
+//
+
+
+$base-font-family: "Ubuntu", sans-serif;
+$monospace:        "Ubuntu Mono", monospace;
+$base-font-size:   19px;
+$large-font-size:  22px;
+$small-font-size:  16px;
+$base-line-height: 1.55;
+
+// base rhythm unit
+$u:                1rem * $base-line-height;
+
+// colors
+
+//brand
+$black:            #222;
+$brown:            #a9903c;
+$blue-code:        #303871;
+$text-color:       #404040;
+$background-color: #fff;
+$blue:             #3050f0;
+$blue-light:       #00d1ed;
+$blue-dark:        #1919a9;
+$green:            #189560;
+$green-light:      #4ef400;
+$green-dark:       #1b3e2e;
+$orange-deep:      #ec3311;
+$orange:           #e46609;
+$purple:           #533a70;
+$red:              #ff4136;
+$red-dark:         #a12424;
+$yellow:           #ffd600;
+
+$grey:             #828282;
+$grey-light:       lighten($grey, 40%);
+$grey-dark:        darken($grey, 20%);
+
+$graphite:         #2c2c36;
+
+// width of the content area
+$content-width:    800px;
+
+// screens
+$on-palm:          600px;
+$on-laptop:        800px;
+

@@ -1,0 +1,34 @@
+//
+// typography
+//
+
+
+p {
+  margin: $u 0;
+}
+
+h1,
+h2,
+h3 {
+  color: $black;
+}
+
+h1, .h1-like {
+  font-size: $u * 1.5;
+  font-weight: bold;
+  line-height: 1;
+  margin: ($u * 2) 0 $u;
+}
+
+h2, .h2-like {
+  font-size: $large-font-size;
+  font-weight: 600;
+  line-height: $u;
+  margin: ($u * 2) 0 $u 0;
+}
+
+h3, .h3-like {
+  font-size: $base-font-size;
+  text-transform: uppercase;
+  margin: ($u * 2) 0 $u;
+}

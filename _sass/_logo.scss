@@ -1,0 +1,24 @@
+//
+// logo
+//
+
+.logo {
+}
+
+.logo a {
+  border-bottom: none;
+  color: $black;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+.logo-svg {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 50px;
+  max-height: 45px;
+}
