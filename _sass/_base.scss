@@ -31,6 +31,10 @@ body {
   text-align: center;
  }
 
+.bold {
+  font-weight: bold;
+}
+
 a {
   border-bottom: 1px dotted ;
   color: $blue-dark;
@@ -126,6 +130,10 @@ button,
 
 .grey-light {
   color: $grey-light;
+}
+
+.purple {
+  color: $purple;
 }
 
 .yellow {

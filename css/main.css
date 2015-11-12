@@ -23,6 +23,9 @@ body {
 .center {
   text-align: center; }
 
+.bold {
+  font-weight: bold; }
+
 a {
   border-bottom: 1px dotted;
   color: #1919a9;
@@ -101,6 +104,9 @@ button,
 .grey-light {
   color: #e8e8e8; }
 
+.purple {
+  color: #533a70; }
+
 .yellow {
   color: #ffd600; }
 
@@ -173,23 +179,39 @@ img {
   text-align: center;
   margin-bottom: 27.9px; }
 
-.logo a {
+.logo {
+  stroke: #222;
+  text-align: center;
+  margin: 0 auto;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-name: sharpen;
+  animation-name: sharpen; }
+
+.logo, .logo a {
   border-bottom: none;
   color: #222;
   font-weight: normal;
-  letter-spacing: 0.05em; }
-  .logo a:hover {
-    color: #3050f0; }
+  letter-spacing: 0.05em;
+  line-height: 1; }
+  .logo:hover, .logo a:hover {
+    color: #3050f0;
+    stroke: #3050f0; }
 
-.logo-svg {
-  text-align: center;
-  margin: 0 auto;
-  max-width: 50px;
-  max-height: 45px; }
+@-webkit-keyframes sharpen {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
+@keyframes sharpen {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .masthead {
   font-size: 18px;
-  padding: 1rem 0 0; }
+  padding: 27.9px 0; }
 
 .masthead-h1 {
   font-size: 55.8px;
