@@ -2,16 +2,6 @@
  * Site header
  */
 
-
-code {
-  color: $blue-code;
-  font-family: $monospace;
-}
-
-.secondary {
-  color: $grey-dark;
-}
-
 //grid
 @media screen and (min-width: 760px) {
   .col {
@@ -40,5 +30,20 @@ code {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.patterns-lib>h2 {
+  background-color: $grey-light;
+  color: $grey;
+  font-family: $monospace;
+  font-size: 1rem;
+  line-height: $u;
+  padding: 0 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+
+.patterns-lib.logo-svg img {
+  max-width: 150px;
 }
 
