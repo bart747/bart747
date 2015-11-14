@@ -3,12 +3,12 @@
 //
 
 
-$base-font-family: "Ubuntu", sans-serif;
+$base-font-family: Source Sans Pro, "Ubuntu", sans-serif;
 $monospace:        "Ubuntu Mono", monospace;
-$base-font-size:   18px;
+$base-font-size:   19px;
 $large-font-size:  1rem + 0.25;
 $small-font-size:  16px;
-$base-line-height: 1.55;
+$base-line-height: 1.50;
 
 // base rhythm unit
 $u:                $base-font-size * $base-line-height;
@@ -19,7 +19,7 @@ $black:            #222;
 $brown:            #a9903c;
 $blue-code:        #303871;
 $text-color:       #404040;
-$background-color: #fff;
+$background-color: #fffcf8;
 $blue:             #3050f0;
 $blue-light:       #00d1ed;
 $blue-dark:        #1919a9;

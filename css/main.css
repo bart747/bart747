@@ -3,18 +3,18 @@ html {
   font-size: 16px; }
   @media screen and (min-width: 500px) {
     html {
-      font-size: 18px; } }
+      font-size: 19px; } }
 
 *, *:before, *:after {
   box-sizing: inherit; }
 
 body {
-  background-color: #fff;
+  background-color: #fffcf8;
   border-top: 3px solid #222;
   color: #404040;
-  font-family: "Ubuntu", sans-serif;
-  line-height: 27.9px;
-  padding: 1rem 13.95px 3rem; }
+  font-family: Source Sans Pro, "Ubuntu", sans-serif;
+  line-height: 28.5px;
+  padding: 1rem 14.25px 3rem; }
 
 .wrapper {
   margin: 0 auto;
@@ -42,7 +42,7 @@ a {
   color: #828282;
   font-family: "Ubuntu Mono", monospace;
   font-size: 1rem;
-  line-height: 27.9px;
+  line-height: 28.5px;
   padding: 0 0.5em;
   text-transform: uppercase;
   letter-spacing: 0.25em; }
@@ -59,7 +59,7 @@ button,
   border-radius: 3px;
   text-align: center;
   margin: 0.5rem;
-  max-width: 279px;
+  max-width: 285px;
   cursor: pointer; }
   button:hover,
   .btn:hover {
@@ -111,7 +111,7 @@ button,
   color: #ffd600; }
 
 p {
-  margin: 27.9px 0; }
+  margin: 28.5px 0; }
 
 h1,
 h2,
@@ -119,21 +119,21 @@ h3 {
   color: #222; }
 
 h1, .h1-like {
-  font-size: 41.85px;
+  font-size: 42.75px;
   font-weight: bold;
   line-height: 1;
-  margin: 55.8px 0 27.9px; }
+  margin: 57px 0 28.5px; }
 
 h2, .h2-like {
   font-size: 1.25rem;
   font-weight: 600;
-  line-height: 27.9px;
-  margin: 55.8px 0 27.9px 0; }
+  line-height: 28.5px;
+  margin: 57px 0 28.5px 0; }
 
 h3, .h3-like {
-  font-size: 18px;
+  font-size: 19px;
   text-transform: uppercase;
-  margin: 55.8px 0 27.9px; }
+  margin: 57px 0 28.5px; }
 
 blockquote {
   border-left: 1px dotted #828282;
@@ -141,7 +141,7 @@ blockquote {
   padding-left: 1rem; }
 
 ul {
-  margin: 27.9px 0;
+  margin: 28.5px 0;
   padding-left: 1rem; }
 
 /**
@@ -157,7 +157,7 @@ code {
 @media screen and (min-width: 760px) {
   .col {
     float: left;
-    padding-right: 27.9px; }
+    padding-right: 28.5px; }
     .col:last-of-type {
       padding-right: 0; }
 
@@ -177,7 +177,7 @@ img {
 
 .header {
   text-align: center;
-  margin-bottom: 27.9px; }
+  margin-bottom: 28.5px; }
 
 .logo {
   stroke: #222;
@@ -210,11 +210,12 @@ img {
   to {
     opacity: 1; } }
 .masthead {
-  font-size: 18px;
-  padding: 27.9px 0; }
+  font-size: 19px;
+  padding: 28.5px 0; }
 
 .masthead-h1 {
-  font-size: 55.8px;
+  color: #a9903c;
+  font-size: 57px;
   font-weight: bold;
   line-height: 0.85;
   margin: 0 0 0 -0.05em;
@@ -223,11 +224,11 @@ img {
   word-spacing: 0.125em; }
 
 .masthead-h2 {
-  margin: 27.9px 0 55.8px; }
+  margin: 28.5px 0 57px; }
 
 @media screen and (min-width: 800px) {
   .masthead-h1 {
-    font-size: 69.75px;
+    font-size: 71.25px;
     font-weight: bold;
     line-height: 0.85;
     margin: 0 0 0 -0.05em;
@@ -236,18 +237,18 @@ img {
     word-spacing: 0.33em; }
 
   .masthead-h2 {
-    margin: 27.9px 0; } }
+    margin: 28.5px 0; } }
 .menu-list ul {
   list-style: none;
   padding: 0; }
 .menu-list li {
-  margin-bottom: 6.975px; }
+  margin-bottom: 7.125px; }
 
 .menu-list a {
   border-bottom: none; }
 
 .menu-list-title {
-  margin: 27.9px 0 13.95px; }
+  margin: 28.5px 0 14.25px; }
 
 .post {
   max-width: 34rem;
@@ -263,7 +264,7 @@ img {
 .highlight {
   border-left: 1px dotted #828282;
   font-size: 18px;
-  margin: 27.9px 0;
+  margin: 28.5px 0;
   padding-left: 0.5em; }
   .highlight .c {
     color: #998;
