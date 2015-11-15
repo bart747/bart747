@@ -1,5 +1,8 @@
-@charset "utf-8";
+//
+// main
+//
 
+@charset "utf-8";
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
@@ -11,7 +14,9 @@
         "logo",
         "masthead",
         "menu-list",
+        "buttons",
         "post",
         "footer",
+        "helpers",
         "syntax-highlighting"
 ;

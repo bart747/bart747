@@ -1,4 +1,6 @@
-
+//
+//  base
+//
 
 html {
   box-sizing: border-box;
@@ -27,14 +29,6 @@ body {
   max-width: 64rem;
  }
 
-.center {
-  text-align: center;
- }
-
-.bold {
-  font-weight: bold;
-}
-
 a {
   border-bottom: 1px dotted ;
   color: $blue-dark;
@@ -50,92 +44,4 @@ a {
   margin-bottom: 3rem;
 }
 
-.patterns-lib>h2 {
-  background-color: $grey-light;
-  color: $grey;
-  font-family: $monospace;
-  font-size: 1rem;
-  line-height: $u;
-  padding: 0 0.5em;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-}
 
-.patterns-lib.logo-svg img {
-  max-width: 150px;
-}
-
-button,
-.btn {
-  color: white;
-  background-color: $blue;
-  box-shadow: 0 1px 2px $grey;
-  padding: 0.5rem;
-  border-radius: 3px;
-  text-align: center;
-  margin: 0.5rem;
-  max-width: 10 * $u;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $blue-dark;
-    box-shadow: none;
-  }
-
-  &:active {
-  font-weight: bold;
-  }
-}
-
-.btn-round {
-  border-radius: 50%;
-  height: 2.5em;
-  width: 2.5em;
-}
-
-.blue {
-  color: $blue;
-}
-
-.blue-dark {
-  color: $blue-dark;
-}
-
-.blue-code {
-  color: $blue-code;
-}
-.red {
-  color: $red;
-}
-
-.red-dark {
-  color: $red-dark;
-}
-
-.grey {
-  color: $grey;
-}
-
-.black {
-  color: $black;
-}
-
-.brown {
-  color: $brown;
-}
-
-.grey {
-  color: $grey;
-}
-
-.grey-light {
-  color: $grey-light;
-}
-
-.purple {
-  color: $purple;
-}
-
-.yellow {
-  color: $yellow;
-}

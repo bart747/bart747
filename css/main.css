@@ -20,12 +20,6 @@ body {
   margin: 0 auto;
   max-width: 64rem; }
 
-.center {
-  text-align: center; }
-
-.bold {
-  font-weight: bold; }
-
 a {
   border-bottom: 1px dotted;
   color: #1919a9;
@@ -36,79 +30,6 @@ a {
 
 .page {
   margin-bottom: 3rem; }
-
-.patterns-lib > h2 {
-  background-color: #e8e8e8;
-  color: #828282;
-  font-family: "Ubuntu Mono", monospace;
-  font-size: 1rem;
-  line-height: 28.5px;
-  padding: 0 0.5em;
-  text-transform: uppercase;
-  letter-spacing: 0.25em; }
-
-.patterns-lib.logo-svg img {
-  max-width: 150px; }
-
-button,
-.btn {
-  color: white;
-  background-color: #3050f0;
-  box-shadow: 0 1px 2px #828282;
-  padding: 0.5rem;
-  border-radius: 3px;
-  text-align: center;
-  margin: 0.5rem;
-  max-width: 285px;
-  cursor: pointer; }
-  button:hover,
-  .btn:hover {
-    background-color: #1919a9;
-    box-shadow: none; }
-  button:active,
-  .btn:active {
-    font-weight: bold; }
-
-.btn-round {
-  border-radius: 50%;
-  height: 2.5em;
-  width: 2.5em; }
-
-.blue {
-  color: #3050f0; }
-
-.blue-dark {
-  color: #1919a9; }
-
-.blue-code {
-  color: #303871; }
-
-.red {
-  color: #ff4136; }
-
-.red-dark {
-  color: #a12424; }
-
-.grey {
-  color: #828282; }
-
-.black {
-  color: #222; }
-
-.brown {
-  color: #a77040; }
-
-.grey {
-  color: #828282; }
-
-.grey-light {
-  color: #e8e8e8; }
-
-.purple {
-  color: #533a70; }
-
-.yellow {
-  color: #ffd600; }
 
 p {
   margin: 28.5px 0; }
@@ -151,9 +72,6 @@ code {
 .secondary {
   color: #4f4f4f; }
 
-/**
- * Site header
- */
 @media screen and (min-width: 760px) {
   .col {
     float: left;
@@ -263,6 +181,30 @@ img {
 .menu-list-title {
   margin: 28.5px 0 14.25px; }
 
+button,
+.btn {
+  color: white;
+  background-color: #3050f0;
+  box-shadow: 0 1px 2px #828282;
+  padding: 0.5rem;
+  border-radius: 3px;
+  text-align: center;
+  margin: 0.5rem;
+  max-width: 285px;
+  cursor: pointer; }
+  button:hover,
+  .btn:hover {
+    background-color: #1919a9;
+    box-shadow: none; }
+  button:active,
+  .btn:active {
+    font-weight: bold; }
+
+.btn-round {
+  border-radius: 50%;
+  height: 2.5em;
+  width: 2.5em; }
+
 .post {
   max-width: 34rem;
   margin: 0 auto;
@@ -271,9 +213,48 @@ img {
 .post-meta {
   color: #828282; }
 
-/**
- * Syntax highlighting styles
- */
+.center {
+  text-align: center; }
+
+.bold {
+  font-weight: bold; }
+
+.blue {
+  color: #3050f0; }
+
+.blue-dark {
+  color: #1919a9; }
+
+.blue-code {
+  color: #303871; }
+
+.red {
+  color: #ff4136; }
+
+.red-dark {
+  color: #a12424; }
+
+.grey {
+  color: #828282; }
+
+.black {
+  color: #222; }
+
+.brown {
+  color: #a77040; }
+
+.grey {
+  color: #828282; }
+
+.grey-light {
+  color: #e8e8e8; }
+
+.purple {
+  color: #533a70; }
+
+.yellow {
+  color: #ffd600; }
+
 .highlight {
   border-left: 1px dotted #828282;
   font-size: 18px;
