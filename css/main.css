@@ -67,7 +67,7 @@ ul {
 
 code {
   color: #303871;
-  font-family: "Ubuntu Mono", monospace; }
+  font-family: "Liberation Mono", Consolas, Menlo, Courier, monospace; }
 
 .secondary {
   color: #4f4f4f; }
@@ -96,7 +96,7 @@ img {
 .patterns-lib > h2 {
   background-color: #e8e8e8;
   color: #828282;
-  font-family: "Ubuntu Mono", monospace;
+  font-family: "Liberation Mono", Consolas, Menlo, Courier, monospace;
   font-size: 1rem;
   line-height: 28.5px;
   padding: 0 0.5em;
@@ -257,7 +257,7 @@ button,
 
 .highlight {
   border-left: 1px dotted #828282;
-  font-size: 18px;
+  font-size: 16px;
   margin: 28.5px 0;
   padding-left: 0.5em; }
   .highlight .c {

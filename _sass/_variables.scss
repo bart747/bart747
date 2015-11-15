@@ -4,7 +4,7 @@
 
 
 $base-font-family: Source Sans Pro, "Ubuntu", sans-serif;
-$monospace:        "Ubuntu Mono", monospace;
+$monospace:        'Liberation Mono',Consolas, Menlo, Courier, monospace;
 $base-font-size:   19px;
 $large-font-size:  1rem + 0.25;
 $small-font-size:  16px;
@@ -39,10 +39,4 @@ $grey-dark:        darken($grey, 20%);
 
 $graphite:         #2c2c36;
 
-// width of the content area
-$content-width:    800px;
-
-// screens
-$on-palm:          600px;
-$on-laptop:        800px;
 
