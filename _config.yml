@@ -1,9 +1,10 @@
 # Site settings
-title: UI design,  bart747, essentials - no fluff
-subtitle: fast 'n' simple
+title: UI Designer-Developer
+subtitle: Designing fast and clear web interfaces.
 email: hello.bartosz@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  UI designer, developer
+  Designing fast and clear web interfaces that help you stay agile.
+  CSS/SASS, HTML, JavaScript.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://bart747.github.io" # the base hostname & protocol for your site
 twitter_username: bwhimself
