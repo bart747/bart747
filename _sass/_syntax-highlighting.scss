@@ -4,12 +4,14 @@
 
 .highlight {
     border-left: 1px dotted $grey;
-    font-size: 16px;
+    font-size: $small-font-size;
+    line-height: 0.75 * $u;
     margin: $u 0;
     padding-left: 0.5em;
 
+
     .c     { color: #998; font-style: italic } // Comment
-    .err   { color: #a61717; background-color: #e3d2d2 } // Error
+    .err   { color: #a61717; } // Error
     .k     { color: $red-dark; } // Keyword
     .o     { color: $blue; } // Operator
     .p     { color: #536065 }
@@ -45,7 +47,7 @@
     .nf    { color: #757575; font-weight: bold } // Name.Function
     .nn    { color: #555 } // Name.Namespace
     .nt    { color: #000080 } // Name.Tag
-    .nv    { color: #008080 } // Name.Variable
+    .nv    { color: #555} // Name.Variable
     .ow    { font-weight: bold } // Operator.Word
     .w     { color: #bbb } // Text.Whitespace
     .mf    { color: $orange } // Literal.Number.Float

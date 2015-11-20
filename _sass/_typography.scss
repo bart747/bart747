@@ -45,9 +45,18 @@ ul {
   padding-left: 1rem;
 }
 
+ol {
+  margin: $u 0;
+  padding-left: 1.25rem;
+}
+
 code {
   color: $blue-code;
   font-family: $monospace;
+  font-size: $small-font-size;
+  @media screen and (max-width: 568px) {
+    font-size: $small-font-size - 2;
+  }
 }
 
 .secondary {

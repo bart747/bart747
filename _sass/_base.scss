@@ -4,10 +4,10 @@
 
 html {
   box-sizing: border-box;
-  font-size: $small-font-size;
-
-  @media screen and (min-width: 500px) {
-    font-size: $base-font-size;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  @media screen and (max-width: 568px) {
+    font-size: $small-font-size;
   }
 }
 
@@ -20,13 +20,13 @@ body {
   border-top: 3px solid $black;
   color: $text-color;
   font-family: $base-font-family;
-  line-height: $u;
   padding: 1rem ( 0.5 * $u ) 3rem;
 }
 
 .wrapper {
   margin: 0 auto;
   max-width: 64rem;
+
  }
 
 a {
@@ -43,5 +43,3 @@ a {
 .page {
   margin-bottom: 3rem;
 }
-
-

@@ -8,10 +8,11 @@ $monospace:        'Liberation Mono',Consolas, Menlo, Courier, monospace;
 $base-font-size:   19px;
 $large-font-size:  1rem + 0.25;
 $small-font-size:  16px;
-$base-line-height: 1.50;
+$base-line-height: 1.5;
 
 // base rhythm unit
-$u:                $base-font-size * $base-line-height;
+$u:                1.5rem;
+$us:               $small-font-size * $base-line-height;
 // colors
 
 //brand
