@@ -16,9 +16,9 @@ So make your life easier and build things that are easy to edit.
 Here are some examples of SASS based solutions that you can use to make UI more maintainable and themable.
 
 
-## Vriables
+## Variables
 
-With SASS variables you can control your baic UI properties from one, organised file.
+With SASS variables you can control your basic UI properties from one, organised file.
 The obvious ones are font families, media queries, colors and sizes.
 
 Here's quick example:
@@ -93,10 +93,13 @@ $lg:               1024px;
 
 ### What's rhythm unit ($u)?
 
-You can use $u for things like margins, padding, height and  line-height. It will keep everything well aligned. It equals your default leading size.
+You can use $u for things like margins, padding, height and  line-height.
+It will keep everything well aligned. It equals your default leading size.
 
-For instance, when you have two different UI blocks (like media object) in-line, it will prevent misalignment.
-Just use it to set up margins and paddings. If there's a headline that's bigger than basic font size,
+For instance, when you have two different UI blocks (like media object) in-line,
+it will prevent misalignment.
+Just use it to set up margins and paddings.
+If there's a headline that's bigger than basic font size,
 fit it into a line-hight that equals one $u.
 
 
@@ -196,7 +199,7 @@ Building a gallery based on halves and quarters, or rule of thirds gives enough 
 
 Your article page doesn't need a three column version.
 
-One media-obiect layout with extra modifier classes is better than a few completely different ones.
+One media-object layout with extra modifier classes is better than a few completely different ones.
 Mod classes are something like this: <code>.photo-big,
 .text-only, .secondary.</code>
 
