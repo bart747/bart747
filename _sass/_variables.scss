@@ -3,10 +3,10 @@
 //
 
 
-$base-font-family: Source Sans Pro, "Ubuntu", sans-serif;
-$monospace:        'Liberation Mono',Consolas, Menlo, Courier, monospace;
+$base-font-family: "Source Sans Pro", sans-serif;
+$monospace:        "Roboto Mono", monospace;
 $base-font-size:   19px;
-$large-font-size:  1rem + 0.25;
+$large-font-size:  26px;
 $small-font-size:  16px;
 $base-line-height: 1.5;
 
@@ -39,5 +39,3 @@ $grey-light:       lighten($grey, 40%);
 $grey-dark:        darken($grey, 20%);
 
 $graphite:         #2c2c36;
-
-

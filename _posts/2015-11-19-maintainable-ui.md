@@ -5,10 +5,6 @@ date: 2015-11-10
 categories: how-to
 ---
 
-Briefly:
-**Build with unavoidable change in mind.
-Organize components for your future self and others&mdash;assuming that you will need to redo some things.**
-
 I guarantee you that changes are unavoidable. And you can’t predict the future.
 You also can’t solve problems in theory only, without prototyping.
 So make your life easier and build things that are easy to edit.
@@ -189,6 +185,8 @@ Rules and conventions are better than total configurability.
 Set main building blocks of your future product and stick to them.
 It's better for your brain than playing with endless options.
 
+### You're Doing too Much Anyway
+
 Having max three extra colors beside your default text color is most of the time enough.
 
 A grid system with only 4 classes: <code>.row, .half, .third, .quarter</code>, is often enough.
@@ -232,4 +230,3 @@ Maybe your thing is not so great in some situations.
 Maybe you won't remember how you figured it out.
 
 **The whole point is to take advantage from uncertainty**.
-

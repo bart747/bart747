@@ -4,7 +4,6 @@ layout: default
 
 <div class="post">
 
-
   <h1 class="post-title">{{ page.title }}</h1>
   <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
 
@@ -15,7 +14,8 @@ layout: default
 
   <br>
   <div class="center">
-    <a href="{{ site.baseurl }}/">home</a>
+    <a href="{{ site.baseurl }}/">home</a><br>
+    <a href="{{ site.baseurl }}/blog.html">post list</a>
   </div>
 
 </div>

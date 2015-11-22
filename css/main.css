@@ -13,7 +13,7 @@ body {
   background-color: #fffcf8;
   border-top: 3px solid #222;
   color: #404040;
-  font-family: Source Sans Pro, "Ubuntu", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   padding: 1rem 0.75rem 3rem; }
 
 .wrapper {
@@ -46,7 +46,7 @@ h1, .h1-like {
   margin: 3rem 0 1.5rem; }
 
 h2, .h2-like {
-  font-size: 1.25rem;
+  font-size: 26px;
   font-weight: 600;
   line-height: 1.5rem;
   margin: 3rem 0 1.5rem 0; }
@@ -71,7 +71,7 @@ ol {
 
 code {
   color: #303871;
-  font-family: "Liberation Mono", Consolas, Menlo, Courier, monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 16px; }
   @media screen and (max-width: 568px) {
     code {
@@ -104,7 +104,7 @@ img {
 .patterns-lib > h2 {
   background-color: #e8e8e8;
   color: #828282;
-  font-family: "Liberation Mono", Consolas, Menlo, Courier, monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 1rem;
   line-height: 1.5rem;
   padding: 0 0.5em;
@@ -181,13 +181,31 @@ img {
   list-style: none;
   padding: 0; }
 .menu-list li {
-  margin-bottom: 0.375rem; }
+  margin-bottom: 0.495rem; }
 
 .menu-list a {
   border-bottom: none; }
 
 .menu-list-title {
   margin: 1.5rem 0 0.75rem; }
+
+.post-list ul {
+  list-style-type: none;
+  padding: 0; }
+
+.post-list-title,
+.post-list-title a {
+  border-bottom: none;
+  font-size: 19px;
+  text-transform: none;
+  margin: 2.25rem 0 0.75rem; }
+
+.post-list p {
+  color: #4f4f4f;
+  font-weight: normal;
+  margin-top: 0; }
+  .post-list p::after {
+    content: '..'; }
 
 button,
 .btn {
@@ -213,7 +231,8 @@ button,
   height: 2.5em;
   width: 2.5em; }
 
-.post {
+.post,
+.wrapper-post-like {
   max-width: 34rem;
   margin: 0 auto;
   margin-bottom: 3rem; }
@@ -223,6 +242,10 @@ button,
 
 .center {
   text-align: center; }
+
+.txt-secondary {
+  color: #828282;
+  font-size: 16px; }
 
 .bold {
   font-weight: bold; }
@@ -265,8 +288,7 @@ button,
 
 .highlight {
   border-left: 1px dotted #828282;
-  font-size: 16px;
-  line-height: 1.125rem;
+  line-height: 1.35rem;
   margin: 1.5rem 0;
   padding-left: 0.5em; }
   .highlight .c {

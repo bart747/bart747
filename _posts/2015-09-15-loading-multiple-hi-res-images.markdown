@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Dealing with multiple hi-res images and slow Internet connection"
+title:  "Dealing with Multiple Hi-Res Images and Slow Internet Connection"
 date:   2015-09-09
 categories: 'how-to'
 ---

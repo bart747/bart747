@@ -1,0 +1,22 @@
+.post-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post-list-title,
+.post-list-title a {
+  border-bottom: none;
+  font-size: $base-font-size;
+  text-transform: none;
+  margin: (1.5 * $u) 0 (0.5 * $u);
+}
+
+.post-list p {
+  color: $grey-dark;
+  font-weight: normal;
+  margin-top: 0;
+
+  &::after {
+    content: '..';
+  }
+}
