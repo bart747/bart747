@@ -137,6 +137,9 @@ img {
     color: #3050f0;
     stroke: #3050f0; }
 
+.logo svg {
+  margin: 0.5rem; }
+
 @-webkit-keyframes sharpen {
   from {
     opacity: 0; }

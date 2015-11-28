@@ -23,6 +23,10 @@
   }
 }
 
+.logo svg {
+  margin: 0.5rem;
+}
+
 @keyframes sharpen {
   from {
     opacity: 0;
@@ -31,4 +35,3 @@
     opacity: 1;
   }
 }
-
