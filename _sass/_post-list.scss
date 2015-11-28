@@ -3,20 +3,28 @@
   padding: 0;
 }
 
-.post-list-title,
-.post-list-title a {
-  border-bottom: none;
+.post-list li {
+  padding: 0.5em;
+  margin: 0 -0.5em;
+}
+
+.post-list-title {
   font-size: $base-font-size;
   text-transform: none;
-  margin: (1.5 * $u) 0 (0.5 * $u);
+  margin: (0.5 *$u) 0 (0.5 * $u);
 }
 
 .post-list p {
   color: $grey-dark;
   font-weight: normal;
-  margin-top: 0;
+  margin: 0 0 (0.5 * $u);
 
   &::after {
     content: '..';
   }
+}
+
+.post-list li:hover {
+  background: lighten($yellow, 40%);
+  transition: background 0.25s;
 }

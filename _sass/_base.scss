@@ -29,8 +29,8 @@ body {
 }
 
 a {
-  border-bottom: 1px dotted ;
-  color: $blue-dark;
+  border-bottom: 1px dotted $grey-dark;
+  color: $black;
   text-decoration: none;
 
   &:active, &:hover {
