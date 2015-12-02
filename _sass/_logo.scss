@@ -10,16 +10,19 @@
   animation-name: sharpen;
 }
 
-.logo, .logo a {
+.logo,
+.logo a {
   border-bottom: none;
   color: $black;
   font-weight: normal;
   letter-spacing: 0.05em;
   line-height: 1;
+  fill: $blue-dark;
 
   &:hover {
     color: $blue;
-    stroke: $blue;
+    fill: $blue;
+    transition: fill, 0.5s;
   }
 }
 

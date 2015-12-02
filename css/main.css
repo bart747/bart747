@@ -18,7 +18,7 @@ body {
 
 .wrapper {
   margin: 0 auto;
-  max-width: 64rem; }
+  max-width: 1000px; }
 
 a {
   border-bottom: 1px dotted #4f4f4f;
@@ -127,15 +127,19 @@ img {
   -webkit-animation-name: sharpen;
   animation-name: sharpen; }
 
-.logo, .logo a {
+.logo,
+.logo a {
   border-bottom: none;
   color: #222;
   font-weight: normal;
   letter-spacing: 0.05em;
-  line-height: 1; }
-  .logo:hover, .logo a:hover {
+  line-height: 1;
+  fill: #1919a9; }
+  .logo:hover,
+  .logo a:hover {
     color: #3050f0;
-    stroke: #3050f0; }
+    fill: #3050f0;
+    transition: fill, 0.5s; }
 
 .logo svg {
   margin: 0.5rem; }
@@ -153,7 +157,7 @@ img {
     opacity: 1; } }
 .masthead {
   font-size: 19px;
-  padding: 1.5rem 0; }
+  padding: 3rem 0; }
 
 .masthead-h1 {
   color: #222;
@@ -176,10 +180,7 @@ img {
     margin: 0 0 0 -0.05em;
     text-transform: uppercase;
     letter-spacing: -0.05em;
-    word-spacing: 0.05em; }
-
-  .masthead-h2 {
-    margin: 1.5rem 0; } }
+    word-spacing: 0.05em; } }
 .menu-list ul {
   list-style: none;
   padding: 0; }
@@ -193,25 +194,10 @@ img {
   list-style-type: none;
   padding: 0; }
 
-.post-list li {
-  padding: 0.5em;
-  margin: 0 -0.5em; }
-
 .post-list-title {
   font-size: 19px;
   text-transform: none;
-  margin: 0.75rem 0 0.75rem; }
-
-.post-list p {
-  color: #4f4f4f;
-  font-weight: normal;
   margin: 0 0 0.75rem; }
-  .post-list p::after {
-    content: '..'; }
-
-.post-list li:hover {
-  background: #fff7cc;
-  transition: background 0.25s; }
 
 button,
 .btn {

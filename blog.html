@@ -8,14 +8,14 @@ layout: default
 <div class="post-list">
 <ul>
   {% for post in site.posts %}
-  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
     <li>
       <h3 class="post-list-title">
-        {{ post.title}}
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+          {{ post.title}}
+        </a>
       </h3>
-        {{ post.excerpt }}
     </li>
-  </a>
+
   {% endfor %}
 </ul>
 </div>
