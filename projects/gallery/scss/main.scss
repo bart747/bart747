@@ -46,6 +46,7 @@ pre {
   overflow-x: auto;
   overflow-y: auto;
 }
+
 .hidden {
   display: none;
 }
@@ -69,8 +70,13 @@ pre {
 }
 
 .pic-placeholder {
-  filter: blur(8px)
+  filter: blur(8px);
 }
+
+.blur {
+  filter: blur(3px);
+}
+
 .pic-main img {
   width: 100%;
 }
@@ -81,7 +87,10 @@ pre {
 }
 
 .pic-mini {
+  background: $grey-light;
   display: inline-block;
+  height: 150px;
+  width: 200px;
 }
 
 .pic-mini img {

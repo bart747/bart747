@@ -59,6 +59,10 @@ pre {
   -webkit-filter: blur(8px);
   filter: blur(8px); }
 
+.blur {
+  -webkit-filter: blur(3px);
+  filter: blur(3px); }
+
 .pic-main img {
   width: 100%; }
 
@@ -67,7 +71,10 @@ pre {
   margin: 0 auto; }
 
 .pic-mini {
-  display: inline-block; }
+  background: #EEE;
+  display: inline-block;
+  height: 150px;
+  width: 200px; }
 
 .pic-mini img {
   height: auto;

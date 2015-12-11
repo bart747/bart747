@@ -21,49 +21,26 @@ function imgCreate(source, frame) {
     frame.append(img);
 }
 
-// create selected images at start
-(function imgLoadAtStart() {
 
-    // first miniature in full size frame
-    // (miniatures are smaller so will appear earlier)
-    imgCreate(picMiniSrc[0], placeholder);
+// create first miniature in full size frame
+// (miniatures are smaller so will appear earlier)
+imgCreate(picMiniSrc[0], placeholder);
 
-    // fist full size and hide it
-    imgCreate(picBigSrc[0], framesBig[0]);
-    framesBig[0].addClass("hidden");
+// create fist full size photo and hide it
+imgCreate(picBigSrc[0], framesBig[0]);
+framesBig[0].addClass("hidden");
 
-    // all miniatures in mini frames
-    for (var i = 0; i < picNr; i += 1) {
-        imgCreate(picMiniSrc[i], framesMini[i]);
-    }
-})();
-
-// create selected images when page is ready
-(function imgLoadAtPageReady() {
-    window.onload = function () {
-
-
-      // all full size except the first one (already created)
-      for (var i = 1; i < picNr; i += 1) {
-
-          // hide them upfront
-          framesBig[i].addClass("hidden");
-          imgCreate(picBigSrc[i], framesBig[i]);
-       }
-
-      // hide placeholder and show full size image
-      placeholder.addClass("hidden");
-      framesBig[0].removeClass("hidden");
-    };
-})();
+// create all miniatures in mini frames
+for (let i = 0; i < picNr; i += 1) {
+    imgCreate(picMiniSrc[i], framesMini[i]);
+    framesMini[i].addClass("blur");
+}
 
 // add 'active' css state class to first miniature
 framesMini[0].addClass("pic-active");
 
 
-//
 //  'ON CLICK' FUNCTIONALITY
-//
 // add/remove on click css state classes in selected div frames
 function cssToggle(framesNr) {
 
@@ -73,20 +50,44 @@ function cssToggle(framesNr) {
 
     mini.click(function() {
         // reset css state classes before adding changes
-        for (var i=0; i<picNr; i+=1) {
+        for (let i=0; i<picNr; i+=1) {
             framesBig[i].addClass("hidden");
             framesMini[i].removeClass("pic-active");
     }
 
-    // add/remove proper css state classes to selected image frames
-    mini.addClass("pic-active");
-    big.removeClass("hidden");
+        // add/remove proper css state classes to selected image frames
+        mini.addClass("pic-active");
+        big.removeClass("hidden");
     });
 }
 
 // apply cssToggle function to all image frames
-for (var i=0; i<picNr; i+=1) {
-    cssToggle(i);
-}
+window.onload = function () {
+};
+
+// when page is ready do...
+(function atPageReady() {
+    window.onload = function () {
+
+      // create all full size except the first one (already created)
+      for (let i = 1; i < picNr; i += 1) {
+
+          // hide them upfront
+          framesBig[i].addClass("hidden");
+          imgCreate(picBigSrc[i], framesBig[i]);
+       }
+
+      // hide placeholder and show full size image
+      placeholder.addClass("hidden");
+      framesBig[0].removeClass("hidden");
+
+      // remove blur effect and apply cssToggle function to all image frames
+      for (let i = 0; i < picNr; i+=1 ) {
+          framesMini[i].removeClass("blur");
+          cssToggle(i);
+      }
+    };
+})();
+
 
 })();
