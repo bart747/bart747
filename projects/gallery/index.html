@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatibile" content="IE=edge">
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="snappy product gallery UI">
+<meta name="keywords" content="gallery, ui, ux, preformance, front-end">
+<meta name="author" content="Bartosz Wieczorek">
+
+<title>  </title>
+
+<link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+<nav>
+<div class="">
+   <a href="../" class="">Home</a> 
+</div>
+</nav>
+
+
+<div class="wrapper-1024">
+
+<header>
+  <h1> Z 3000 Fast-Shooter </h1>
+  <p>
+      Full HD Movie mode |
+      High-speed continuous shooting |
+      Built-in Wi-Fi
+  </p>
+</header>
+
+<div class="gallery">
+
+  <div class="pic pic-main">
+
+    <div id="pic-1-placeholder" class="pic-placeholder"></div>
+    <div id="pic-1"></div>
+    <div id="pic-2"></div>
+    <div id="pic-3"></div>
+
+  </div>
+
+
+  <div class="pic-mini-group">
+
+    <div id="pic-mini-1" class="pic pic-mini"></div>
+    <div id="pic-mini-2" class="pic pic-mini"></div>
+    <div id="pic-mini-3" class="pic pic-mini"></div>
+
+  </div>
+
+  <div class="description">
+    <h3> Here's how the main functionality is done </h3>
+    <p>Not all images are uploaded in the same time.
+       Only miniatures and the first full size one are processed at start.</p>
+
+    <p>Others &mdash;
+       the ones that you can see only after clicking on a miniature &mdash; are uploaded later.
+       That way they don't "steal bandwith" and the gallery appears faster.</p>
+
+    <p>Before the first full size photo is uploaded, it's miniature version serves as placeholder.
+       That way you shorten blank space appearance.</p>
+
+    <p>If you're a developer, check out source code (it's un-minified).
+    With <strong>dev tools'</strong> network tab you can also see differences in image upload time.
+      It will be useful to use 2G simulation and disable cache.
+       Notice that images '2' and '3' are uploading after miniatures and '1' are done.
+      </p>
+       <p>For aesthetic reasons I used also CSS animations and filters (blur).
+
+    <br>
+    <p>Photos by <a href="https://pixabay.com/en/users/DariuszSankowski-1441456/">Dariusz Sankowski</a></p>
+  </div>
+
+</div>
+
+</div>
+
+
+<footer>
+   <a href="../" class="">Home</a> 
+</footer>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="js/babel/main.js"></script>
+
+</body>
+
+</html>
