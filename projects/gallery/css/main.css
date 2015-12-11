@@ -44,7 +44,6 @@ pre {
 
 .pic img {
   border: 2px solid white;
-  -webkit-animation: switch 0.25s cubic-bezier(0.4, 0.6, 1, 0.7);
   animation: switch 0.25s cubic-bezier(0.4, 0.6, 1, 0.7); }
 
 .pic-main {
@@ -56,7 +55,6 @@ pre {
   max-width: 960px; }
 
 .pic-placeholder {
-  -webkit-filter: blur(8px);
   filter: blur(8px); }
 
 .pic-main img {
@@ -79,24 +77,12 @@ pre {
 .pic-active img {
   border: 2px solid #777; }
 
-@-webkit-keyframes switch {
-  0% {
-    opacity: 0.5;
-    -webkit-filter: blur(2px);
-    filter: blur(2px); }
-  100% {
-    opacity: 1;
-    -webkit-filter: blur(0);
-    filter: blur(0); } }
-
 @keyframes switch {
   0% {
     opacity: 0.5;
-    -webkit-filter: blur(2px);
     filter: blur(2px); }
   100% {
     opacity: 1;
-    -webkit-filter: blur(0);
     filter: blur(0); } }
 .grid {
   text-align: center; }
