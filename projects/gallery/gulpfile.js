@@ -48,7 +48,7 @@ gulp.task('brow', function() {
 });
 
 // serve
-gulp.task('serve', ['sass', 'lint', 'babel'], function() {
+gulp.task('serve', ['sass', 'auto', 'lint', 'babel'], function() {
 
   browserSync.init({
     server: {

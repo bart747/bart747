@@ -81,7 +81,7 @@ function cssToggle(framesNr) {
     // add/remove proper css state classes to selected image frames
     mini.addClass("pic-active");
     big.removeClass("hidden");
-    })
+    });
 }
 
 // apply cssToggle function to all image frames
