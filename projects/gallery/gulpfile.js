@@ -58,7 +58,7 @@ gulp.task('serve', ['sass', 'auto', 'lint', 'babel'], function() {
 
   gulp.watch('./scss/*.scss', ['sass']).on('change', browserSync.reload);
   gulp.watch('./css/*.css', ['auto']).on('change', browserSync.reload);
-  gulp.watch('./js/*.js', ['lint', 'babel']).on('change', browserSync.reload);
+  gulp.watch('./js/*.js', ['lint', 'babel', 'sass']).on('change', browserSync.reload);
 });
 
 // watch

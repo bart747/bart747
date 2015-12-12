@@ -4,13 +4,16 @@
 
     var picNr = 3;
 
-    // pic sources - full size and miniatures
-    var picBigSrc = ["img/1.jpg", "img/2.jpg", "img/3.jpg"];
-    var picMiniSrc = ["img/1s.jpg", "img/2s.jpg", "img/3s.jpg"];
+    var sources = {
+        full: ["img/1.jpg", "img/2.jpg", "img/3.jpg"],
+        mini: ["img/1s.jpg", "img/2s.jpg", "img/3s.jpg"]
+    };
 
-    // div frames for images - should be already created in HTML file
-    var framesBig = [$("div#pic-1"), $("div#pic-2"), $("div#pic-3")];
-    var framesMini = [$("div#pic-mini-1"), $("div#pic-mini-2"), $("div#pic-mini-3")];
+    // div frames for images
+    var frames = {
+        full: [$("div#pic-1"), $("div#pic-2"), $("div#pic-3")],
+        mini: [$("div#pic-mini-1"), $("div#pic-mini-2"), $("div#pic-mini-3")]
+    };
 
     // frame for image that will serve as placeholder until
     // first full size photo will be uploaded
@@ -23,68 +26,67 @@
         frame.append(img);
     }
 
-    // create first miniature in full size frame
+    // create first miniature in placeholder frame
     // (miniatures are smaller so will appear earlier)
-    imgCreate(picMiniSrc[0], placeholder);
+    imgCreate(sources.mini[0], placeholder);
 
     // create fist full size photo and hide it
-    imgCreate(picBigSrc[0], framesBig[0]);
-    framesBig[0].addClass("hidden");
+    imgCreate(sources.full[0], frames.full[0]);
+    frames.full[0].addClass("hidden");
 
     // create all miniatures in mini frames
     for (var i = 0; i < picNr; i += 1) {
-        imgCreate(picMiniSrc[i], framesMini[i]);
-        framesMini[i].addClass("blur");
+        imgCreate(sources.mini[i], frames.mini[i]);
+        frames.mini[i].addClass("blur");
     }
 
     // add 'active' css state class to first miniature
-    framesMini[0].addClass("pic-active");
+    frames.mini[0].addClass("pic-active");
 
     //  'ON CLICK' FUNCTIONALITY
     // add/remove on click css state classes in selected div frames
     function cssToggle(framesNr) {
 
         // select right div frames
-        var big = framesBig[framesNr];
-        var mini = framesMini[framesNr];
+        var main = frames.full[framesNr];
+        var miniature = frames.mini[framesNr];
 
-        mini.click(function () {
+        miniature.click(function () {
             // reset css state classes before adding changes
             for (var i = 0; i < picNr; i += 1) {
-                framesBig[i].addClass("hidden");
-                framesMini[i].removeClass("pic-active");
+                frames.full[i].addClass("hidden");
+                frames.mini[i].removeClass("pic-active");
             }
 
             // add/remove proper css state classes to selected image frames
-            mini.addClass("pic-active");
-            big.removeClass("hidden");
+            miniature.addClass("pic-active");
+            main.removeClass("hidden");
         });
     }
 
-    // apply cssToggle function to all image frames
-    window.onload = function () {};
-
-    // when page is ready do...
-    (function atPageReady() {
+    // fire at the end of the document loading process
+    function atPageReady() {
         window.onload = function () {
 
             // create all full size except the first one (already created)
             for (var i = 1; i < picNr; i += 1) {
 
                 // hide them upfront
-                framesBig[i].addClass("hidden");
-                imgCreate(picBigSrc[i], framesBig[i]);
+                frames.full[i].addClass("hidden");
+                imgCreate(sources.full[i], frames.full[i]);
             }
 
             // hide placeholder and show full size image
             placeholder.addClass("hidden");
-            framesBig[0].removeClass("hidden");
+            frames.full[0].removeClass("hidden");
 
             // remove blur effect and apply cssToggle function to all image frames
             for (var i = 0; i < picNr; i += 1) {
-                framesMini[i].removeClass("blur");
+                frames.mini[i].removeClass("blur");
                 cssToggle(i);
             }
         };
-    })();
+    };
+
+    atPageReady();
 })();
