@@ -1,3 +1,4 @@
+
 (function() {
 
 const picNr = 3;
@@ -86,9 +87,8 @@ function atPageReady() {
           cssToggle(i);
       }
     };
-};
+}
 
 atPageReady();
-
 
 }());

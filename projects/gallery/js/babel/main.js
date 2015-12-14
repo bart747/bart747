@@ -86,7 +86,7 @@
                 cssToggle(i);
             }
         };
-    };
+    }
 
     atPageReady();
 })();
