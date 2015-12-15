@@ -8,7 +8,7 @@
   padding: 0;
   }
   li {
-    margin-bottom:( 0.33 * $u );
+    margin-bottom:( 0.5 * $u );
   }
 }
 
@@ -16,5 +16,9 @@
 }
 
 .menu-list-title {
-  margin: $u 0 ( 0.5 * $u );
+  margin: (2 * $u) 0 ( 0.5 * $u );
+}
+
+.menu-list-small li {
+  margin: 0;
 }

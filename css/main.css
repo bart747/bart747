@@ -134,7 +134,7 @@ img {
   font-weight: normal;
   letter-spacing: 0.05em;
   line-height: 1;
-  fill: #1919a9; }
+  fill: #222; }
   .logo:hover,
   .logo a:hover {
     color: #3050f0;
@@ -157,7 +157,7 @@ img {
     opacity: 1; } }
 .masthead {
   font-size: 19px;
-  padding: 3rem 0; }
+  padding: 3rem 0 1.5rem; }
 
 .masthead-h1 {
   color: #222;
@@ -185,14 +185,23 @@ img {
   list-style: none;
   padding: 0; }
 .menu-list li {
-  margin-bottom: 0.495rem; }
+  margin-bottom: 0.75rem; }
 
 .menu-list-title {
-  margin: 1.5rem 0 0.75rem; }
+  margin: 3rem 0 0.75rem; }
+
+.menu-list-small li {
+  margin: 0; }
 
 .post-list ul {
   list-style-type: none;
   padding: 0; }
+
+.post-list li {
+  margin-bottom: 3rem; }
+
+.post-list p::after {
+  content: '..'; }
 
 .post-list-title {
   font-size: 19px;
