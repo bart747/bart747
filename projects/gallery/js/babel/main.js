@@ -52,6 +52,7 @@
         var miniature = frames.mini[framesNr];
 
         miniature.click(function () {
+
             // reset css state classes before adding changes
             for (var i = 0; i < picNr; i += 1) {
                 frames.full[i].addClass("hidden");

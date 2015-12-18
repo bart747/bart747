@@ -27,7 +27,7 @@ p {
 
 .description {
   margin: 0 auto;
-  max-width: 32rem;
+  max-width: 35rem;
   text-align: left; }
 
 pre {
@@ -44,8 +44,8 @@ pre {
 
 .pic img {
   border: 2px solid white;
-  -webkit-animation: switch 0.25s cubic-bezier(0.4, 0.6, 1, 0.7);
-  animation: switch 0.25s cubic-bezier(0.4, 0.6, 1, 0.7); }
+  -webkit-animation: switch 0.25s cubic-bezier(0, 0, 0.5, 1);
+  animation: switch 0.25s cubic-bezier(0, 0, 0.5, 1); }
 
 .pic-main {
   background: #EEE;
