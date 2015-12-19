@@ -33,6 +33,9 @@ h3, .h3-like {
   margin: ($u * 2) 0 $u;
 }
 
+strong {
+  font-weight: bold;
+}
 
 blockquote {
   border-left: 1px dotted $grey;

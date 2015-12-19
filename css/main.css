@@ -56,6 +56,9 @@ h3, .h3-like {
   text-transform: uppercase;
   margin: 3rem 0 1.5rem; }
 
+strong {
+  font-weight: bold; }
+
 blockquote {
   border-left: 1px dotted #828282;
   margin: 0;
