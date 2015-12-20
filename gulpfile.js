@@ -39,7 +39,7 @@ gulp.task('comp', function() {
 });
 
 // minify css
-gulp.task('minify-css', function() {
+gulp.task('minify-css', ['auto'], function() {
   return gulp.src('./css/*.css')
     .pipe(minifyCss({compatibility: 'ie8'}))
     .pipe(gulp.dest('./css/mini'));
