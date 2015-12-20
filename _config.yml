@@ -10,5 +10,4 @@ url: "http://bart747.github.io" # the base hostname & protocol for your site
 twitter_username: bwhimself
 github_username: bart747
 
-# Build settings
-markdown: kramdown
+exclude: [node_modules]

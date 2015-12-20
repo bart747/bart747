@@ -3,4 +3,4 @@ source "https://rubygems.org"
 
 # gem "rails"
 gem "jekyll-assets"
-gem "autoprefixer-rails"
+#gem "autoprefixer-rails"

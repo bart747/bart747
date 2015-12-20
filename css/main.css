@@ -235,6 +235,9 @@ button,
   height: 2.5em;
   width: 2.5em; }
 
+.btn-social {
+  margin: 0.75rem 0 0.75rem 4px; }
+
 .post,
 .wrapper-post-like {
   max-width: 34rem;
