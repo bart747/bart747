@@ -82,8 +82,7 @@ gulp.task('serve', ['sass', 'auto'], function() {
 
 // watch
 gulp.task('watch', function() {
-  gulp.watch('./_sass/*.scss', ['sass']);
-  gulp.watch('./css/*.css', ['auto', 'minify-css']);
+  gulp.watch('./_sass/*.scss', ['sass', 'auto', 'minify-css']);
 });
 
 // default
