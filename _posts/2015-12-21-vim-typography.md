@@ -18,7 +18,7 @@ and can't or don't want to use when Vim is running via terminal.
 
 ### Theming (syntax highlighter) 
 
-{% highlight viml %}
+{% highlight vim %}
 syntax enable
 set background=dark
 colorscheme themeName 
@@ -29,11 +29,11 @@ Color schemes are stored in <code>.vim/colors</code> folder.
 
 ### Fonts
 
-{% highlight viml %}
+{% highlight vim %}
 set guifont=Droid\ Sans\ Mono\ 14
 {% endhighlight %}
 or
-{% highlight viml %}
+{% highlight vim %}
 set guifont=DejaVu\ Sans\ Mono:h13
 {% endhighlight %}
 
@@ -41,7 +41,7 @@ As you can see, when there are spaces in a font name, you have to use
 <code>\</code> before them. There are also system differences when it comes to picking size. 
 
 This is an example of setup for many operating systems:
-{% highlight viml %}
+{% highlight vim %}
 if has("gui_gtk2")
   set guifont=Droid\ Sans\ Mono\ 13
 elseif has("gui_macvim")
@@ -53,7 +53,7 @@ endif
 
 ### Linespace (almost like line-height in CSS)
 
-{% highlight viml %}
+{% highlight vim %}
 linespace=4
 {% endhighlight %}
 
@@ -83,7 +83,7 @@ Consider using some of them in <code>.gvimrc</code> instead of <code>.vimrc</cod
 
 Set and show 80 characters limit. 
 
-{% highlight viml %}
+{% highlight vim %}
 set textwidth=80
 set colorcolumn=+1  
 {% endhighlight %}
@@ -92,14 +92,14 @@ You'll see a line after 80th column.
 
 ### Line Numbers 
 
-{% highlight viml %}
+{% highlight vim %}
 set number          " show line numbers
 set numberwidth=4   " width of number bar
 {% endhighlight %}
 
 ### Text Highlighting
 
-{% highlight viml %}
+{% highlight vim %}
 set cursorline      " highlight current line
 set showmatch       " highlight matching <[{()}]>
 {% endhighlight %}
@@ -107,7 +107,7 @@ set showmatch       " highlight matching <[{()}]>
 
 ### Autoindenting 
 
-{% highlight viml %}
+{% highlight vim %}
 set autoindent      " set autoindenting on
 set copyindent      " copy the indentation from previous line
 {% endhighlight %}
@@ -115,7 +115,7 @@ set copyindent      " copy the indentation from previous line
 
 ### Spell Check + Word Completion
 
-{% highlight viml %}
+{% highlight vim %}
 set spell spelllang=en_us
 set complete+=kspell 
 {% endhighlight %}
