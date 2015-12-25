@@ -29,12 +29,8 @@
 <div class="wrapper-1024">
 
 <header>
-  <h1> Z 3000 Fast-Shooter </h1>
-  <p>
-      Full HD Movie mode |
-      High-speed continuous shooting |
-      Built-in Wi-Fi
-  </p>
+  <h1> Fast Two-Step Upload Gallery </h1>
+
 </header>
 
 <div class="gallery">
@@ -59,25 +55,47 @@
 
   <div class="description">
     <h2> Here's how the main functionality is done </h2>
+
+     
+    <h3>Gallery's JS file:</h3>
+      <script src="https://gist.github.com/bart747/d07b8b072f798b6f9185.js"></script>
+
+    <h3>Main Thing: Two Step Upload</h3>
+
     <p>Not all images are uploaded in the same time.
        Only miniatures and the first full size one are processed at start.</p>
 
-    <p>Others &mdash;
-       the ones that you can see only after clicking on a miniature &mdash; are uploaded later.
+    <p>Others&mdash;the ones that you can see only after clicking on
+       a miniature&mdash;are uploaded later.
        That way they don't "steal bandwith" and the gallery appears faster.</p>
 
-    <p>Before the first full size photo is uploaded, it's miniature version serves as placeholder.
+    <p>Before the first full size photo is uploaded, it's miniature version
+       serves as placeholder.
        That way you shorten blank space appearance.</p>
 
-    <p>If you're a developer, check out the source code (it's un-minified).
-       With the <strong>dev tools'</strong> network tab you can also see differences in image upload time.
+    <p>With the <strong>dev tools'</strong> network tab you can see
+       differences in image upload time.
        It will be useful to use 2G simulation and disable cache.
        Notice that images '2' and '3' are uploading after miniatures and '1' are done.
       </p>
-       <p>For aesthetic reasons I used also CSS animations and filters (blur).
-    
-    <h3>Gallery's JS file:</h3>
-      <script src="https://gist.github.com/bart747/d07b8b072f798b6f9185.js"></script>
+    <p>For aesthetic reasons I used also CSS animations and filters
+       (blur).</p>
+
+
+    <h3>RWD</h3>   
+    <p>When it comes to responsive images, it's usually a good idea to use
+       <code>srcset</code> and <code>size</code> attributes.
+       However, in this project,
+       I made the two step upload with <code>window.onload</code> a priority.
+       Now it's hard to use the <code>srcset</code>.</p>
+
+    <p>So how to make it more responsive if I want to keep that two step upload
+       structure?
+       I can use extra DIV frames and CSS media queries that will decide which
+       frame to show.
+       There will be a frame for each size of image.
+       Media queries will hide and show them accordingly to screen resolution.</p>
+
     <br>
     <p><small>Photos by <a href="https://pixabay.com/en/users/DariuszSankowski-1441456/">Dariusz Sankowski</a></small></p>
   </div>

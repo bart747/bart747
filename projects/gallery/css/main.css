@@ -13,6 +13,9 @@ header {
   text-align: center;
   margin: 1em; }
 
+h1, h2, h3, h4 {
+  margin: 2rem 0 1rem; }
+
 h1 {
   line-height: 1;
   margin: 0; }
@@ -45,7 +48,7 @@ pre {
 .pic img {
   border: 2px solid white;
   -webkit-animation: switch 0.25s cubic-bezier(0, 0, 0.5, 1);
-  animation: switch 0.25s cubic-bezier(0, 0, 0.5, 1); }
+          animation: switch 0.25s cubic-bezier(0, 0, 0.5, 1); }
 
 .pic-main {
   background: #EEE;
@@ -57,11 +60,11 @@ pre {
 
 .pic-placeholder {
   -webkit-filter: blur(8px);
-  filter: blur(8px); }
+          filter: blur(8px); }
 
 .blur {
   -webkit-filter: blur(3px);
-  filter: blur(3px); }
+          filter: blur(3px); }
 
 .pic-main img {
   width: 100%; }
@@ -90,21 +93,21 @@ pre {
   0% {
     opacity: 0.5;
     -webkit-filter: blur(2px);
-    filter: blur(2px); }
+            filter: blur(2px); }
   100% {
     opacity: 1;
     -webkit-filter: blur(0);
-    filter: blur(0); } }
+            filter: blur(0); } }
 
 @keyframes switch {
   0% {
     opacity: 0.5;
     -webkit-filter: blur(2px);
-    filter: blur(2px); }
+            filter: blur(2px); }
   100% {
     opacity: 1;
     -webkit-filter: blur(0);
-    filter: blur(0); } }
+            filter: blur(0); } }
 .grid {
   text-align: center; }
 
