@@ -6,8 +6,6 @@
   stroke: $black;
   text-align: center;
   margin: 0 auto;
-  animation-duration: 1s;
-  animation-name: sharpen;
 }
 
 .logo,
@@ -18,6 +16,8 @@
   letter-spacing: 0.05em;
   line-height: 1;
   fill: $black;
+  animation-name: logo;
+  animation-duration: 3s;
 
   &:hover {
     color: $blue;
@@ -30,11 +30,22 @@
   margin: 0.5rem;
 }
 
-@keyframes sharpen {
+@keyframes logo {
   from {
+    fill: $black;
     opacity: 0;
   }
-  to {
+
+  15% {
     opacity: 1;
+  }
+
+  50% {
+    fill: $red;
+  }
+
+
+  to {
+    fill: $black; 
   }
 }

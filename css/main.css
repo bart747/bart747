@@ -479,11 +479,7 @@ img {
 .logo {
   stroke: #222;
   text-align: center;
-  margin: 0 auto;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-name: sharpen;
-  animation-name: sharpen; }
+  margin: 0 auto; }
 
 .logo,
 .logo a {
@@ -492,7 +488,11 @@ img {
   font-weight: normal;
   letter-spacing: 0.05em;
   line-height: 1;
-  fill: #222; }
+  fill: #222;
+  -webkit-animation-name: logo;
+  animation-name: logo;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s; }
   .logo:hover,
   .logo a:hover {
     color: #3050f0;
@@ -502,17 +502,27 @@ img {
 .logo svg {
   margin: 0.5rem; }
 
-@-webkit-keyframes sharpen {
+@-webkit-keyframes logo {
   from {
+    fill: #222;
     opacity: 0; }
+  15% {
+    opacity: 1; }
+  50% {
+    fill: #ff4136; }
   to {
-    opacity: 1; } }
+    fill: #222; } }
 
-@keyframes sharpen {
+@keyframes logo {
   from {
+    fill: #222;
     opacity: 0; }
+  15% {
+    opacity: 1; }
+  50% {
+    fill: #ff4136; }
   to {
-    opacity: 1; } }
+    fill: #222; } }
 .masthead {
   font-size: 19px;
   padding: 3rem 0 1.5rem; }
