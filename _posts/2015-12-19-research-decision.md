@@ -15,7 +15,7 @@ If you're not, you're looking for information farther.
 All that pushes you away from reality.
 
 It's much better to prototype fast&mdash;do something that barely works.
-Than it's not just a picture in your head.
+Than it's no longer just a picture in your head.
 It's clickable.
 You can see actual performance.
 
