@@ -47,7 +47,8 @@ pre {
 
 .pic img {
   border: 2px solid white;
-  animation: switch 0.25s cubic-bezier(0, 0, 0.5, 1); }
+  -webkit-animation: switch 0.25s cubic-bezier(0, 0, 0.5, 1);
+          animation: switch 0.25s cubic-bezier(0, 0, 0.5, 1); }
 
 .pic-main {
   background: #EEE;
@@ -58,10 +59,12 @@ pre {
   max-width: 960px; }
 
 .pic-placeholder {
-  filter: blur(8px); }
+  -webkit-filter: blur(8px);
+          filter: blur(8px); }
 
 .blur {
-  filter: blur(3px); }
+  -webkit-filter: blur(3px);
+          filter: blur(3px); }
 
 .pic-main img {
   width: 100%; }
@@ -86,13 +89,25 @@ pre {
 .pic-active img {
   border: 2px solid #777; }
 
+@-webkit-keyframes switch {
+  0% {
+    opacity: 0.5;
+    -webkit-filter: blur(2px);
+            filter: blur(2px); }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0); } }
+
 @keyframes switch {
   0% {
     opacity: 0.5;
-    filter: blur(2px); }
+    -webkit-filter: blur(2px);
+            filter: blur(2px); }
   100% {
     opacity: 1;
-    filter: blur(0); } }
+    -webkit-filter: blur(0);
+            filter: blur(0); } }
 .grid {
   text-align: center; }
 
