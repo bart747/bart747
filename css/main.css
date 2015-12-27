@@ -577,7 +577,8 @@ img {
   margin: 0 0 0.75rem; }
 
 button,
-.btn {
+.btn,
+a.cc_btn {
   color: white;
   background-color: #3050f0;
   box-shadow: 0 1px 2px #828282;
@@ -588,11 +589,13 @@ button,
   max-width: 15rem;
   cursor: pointer; }
   button:hover,
-  .btn:hover {
+  .btn:hover,
+  a.cc_btn:hover {
     background-color: #1919a9;
     box-shadow: none; }
   button:active,
-  .btn:active {
+  .btn:active,
+  a.cc_btn:active {
     font-weight: bold; }
 
 .btn-round {
@@ -611,6 +614,36 @@ button,
 
 .post-meta {
   color: #828282; }
+
+.cc_banner {
+  background: #e8e8e8;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 15px;
+  min-width: 33%;
+  padding: 0 1em; }
+  .cc_banner::after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.cc-banner p {
+  margin: 0; }
+
+.cc_logo {
+  display: none; }
+
+.cc_message {
+  float: left;
+  margin: 1em;
+  max-width: 75%; }
+
+a.cc_btn {
+  color: white;
+  float: right;
+  padding: 0.25em 0.5em;
+  height: 70%; }
 
 .center {
   text-align: center; }

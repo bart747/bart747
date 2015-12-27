@@ -1,0 +1,35 @@
+.cc_banner {
+  background: $grey-light;
+  position: fixed;
+  bottom: 0;
+  left: 0; 
+  font-size: 15px;
+  min-width: 33%;
+  padding: 0 1em;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.cc-banner p {
+  margin: 0;
+}
+.cc_logo {
+  display: none;
+}
+.cc_message {
+  float: left;
+  margin: 1em;
+  max-width: 75%;
+}
+
+a.cc_btn {
+  @extend .btn;
+  color: white;
+  float: right;
+  padding: 0.25em 0.5em;
+  height: 70%;
+}
