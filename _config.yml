@@ -13,3 +13,5 @@ github_username: bart747
 # convert  also projects 
 exclude: [_sass, sass, gulpfile.js, node_modules, projects/*/node_modules]
 
+# links
+permalink: none
