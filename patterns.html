@@ -2,28 +2,43 @@
 layout: default
 ---
 
+<div class="wrapper">
+
 <h1 class="center">Design Patterns Library</h1>
 
 <div class="patterns-lib page">
 
 
-<h2>Logo</h2>
-<div class="logo logo-svg" style="max-width: 200px;">
+<h2>Header</h2>
+<header class="header">
+
+<div class="logo">
   <a href="{{ site.baseurl }}/">
-    <img src="/img/bone.svg">
+
+bart747.github.io
+
   </a>
 </div>
 
+</header>
 
 <h2>Masthead</h2>
   <div class="masthead">
+    <div class="wrapper">  
+
+    <h1 class="masthead-h1 masthead-h1-super">
+      snappy <span class="masthead-h1-extra">UI</span> 
+    </h1>
+
     <h1 class="masthead-h1">
       Essentials<br>
       No Fluff
     </h1>
+
     <h2 class="masthead-h2">Designing fast web interfaces that help you stay agile</h2>
       <p>Ground round pig spare ribs, pork chop tri-tip biltong ham picanha kevin tongue venison porchetta.
       </p>
+    </div>
 
   </div>
 
@@ -32,7 +47,7 @@ layout: default
   <div class="menu-list">
     <ul class="">
     <h3 class="menu-list-title">Posts</h3>
-    {% for post in site.posts %}
+    {% for post in site.posts limit:3 %}
       <li>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </li>
@@ -96,8 +111,8 @@ the ones that will be helpful especially to makers—designers, developers, etc.
 </div>
 
 <h2>Buttons</h2>
-  <div class="btn">click me</div>
-  <div class="btn btn-round">5</div>
+  <button class="btn">click me</button>
+  <button class="btn btn-round">5</button>
 
 
 <h2>Colors</h2>
@@ -112,6 +127,7 @@ the ones that will be helpful especially to makers—designers, developers, etc.
 
 
 <h2>Code</h2>
+With numbers:
 {% highlight js linenos %}
 gulp.task('auto', ['sass'], function() {
   return gulp.src('./css/main.css')
@@ -131,6 +147,30 @@ for (; i < 9; i++) {
 }
 {% endhighlight %}
 
+No numbers:
+{% highlight scss %}
+a {
+  color: $blue-dark;
+  text-decoration: none;
+
+  &:active, &:hover {
+    color: $red;
+    transition: color 0.25s;
+  }
+}
+{% endhighlight %}
 
 
+<h2>Icons</h2>
+  Octicons: &nbsp;
+  <span class="octicon octicon-zap"></span> &nbsp; 
+  <span class="octicon octicon-keyboard"></span> &nbsp;
+  <span class="octicon octicon-dashboard"></span>
+  <br>
+  Mega-octicons: &nbsp;
+  <span class="mega-octicon octicon-zap"></span> &nbsp;
+  <span class="mega-octicon octicon-keyboard"></span> &nbsp;
+  <span class="mega-octicon octicon-dashboard"></span>
+
+</div>
 </div>

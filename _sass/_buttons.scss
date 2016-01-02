@@ -7,7 +7,8 @@ button,
   color: white;
   background-color: $blue;
   box-shadow: 0 1px 2px $grey;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 0;
   border-radius: 3px;
   text-align: center;
   margin: 0.5rem;
@@ -16,11 +17,10 @@ button,
 
   &:hover {
     background-color: $blue-dark;
-    box-shadow: none;
   }
 
   &:active {
-  font-weight: bold;
+    box-shadow: none;
   }
 
 }
@@ -32,5 +32,5 @@ button,
 }
 
 .btn-social {
-    margin: ($u / 2) 0 ($u / 2) 2px;
+  margin: ($u / 2) 0 ($u / 2) 2px;
 }
