@@ -3,6 +3,8 @@
 //
 
 .logo {
+  font-family: $monospace;
+  font-size: 0.75rem;
   stroke: $black;
   text-align: center;
   margin: 0 auto;
@@ -11,7 +13,7 @@
 .logo,
 .logo a {
   border-bottom: none;
-  color: $black;
+  color: white;
   font-weight: normal;
   letter-spacing: 0.05em;
   line-height: 1;
@@ -20,8 +22,7 @@
   animation-duration: 3s;
 
   &:hover {
-    color: $blue;
-    fill: $blue;
+    color: $red;
     transition: fill, 0.5s;
   }
 }

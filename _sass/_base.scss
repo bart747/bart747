@@ -17,20 +17,18 @@ html {
 
 body {
   background-color: $background-color;
-  border-top: 3px solid $black;
   color: $text-color;
   font-family: $base-font-family;
-  padding: 1rem ( 0.5 * $u ) 3rem;
 }
 
 .wrapper {
   margin: 0 auto;
   max-width: 1000px;
+  padding: 0 ( 0.5 * $u ) 0;
 }
 
 a {
-  border-bottom: 1px dotted $grey-dark;
-  color: $black;
+  color: $blue-dark;
   text-decoration: none;
 
   &:active, &:hover {

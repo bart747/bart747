@@ -366,18 +366,16 @@ html {
 
 body {
   background-color: #fffcf8;
-  border-top: 3px solid #222;
   color: #404040;
-  font-family: "Source Sans Pro", sans-serif;
-  padding: 1rem 0.75rem 3rem; }
+  font-family: "Source Sans Pro", sans-serif; }
 
 .wrapper {
   margin: 0 auto;
-  max-width: 1000px; }
+  max-width: 1000px;
+  padding: 0 0.75rem 0; }
 
 a {
-  border-bottom: 1px dotted #4f4f4f;
-  color: #222;
+  color: #1919a9;
   text-decoration: none; }
   a:active, a:hover {
     color: #ff4136;
@@ -428,7 +426,7 @@ ol {
   padding-left: 1.25rem; }
 
 code {
-  color: #303871;
+  color: #1F2A40;
   font-family: "Roboto Mono", monospace;
   font-size: 16px; }
   @media screen and (max-width: 568px) {
@@ -436,7 +434,7 @@ code {
       font-size: 14px; } }
 
 .secondary {
-  color: #4f4f4f; }
+  color: #363636; }
 
 @media screen and (min-width: 760px) {
   .col {
@@ -473,10 +471,14 @@ img {
   max-width: 150px; }
 
 .header {
+  background: #1F2A40;
+  color: #fffcf8;
   text-align: center;
-  margin-bottom: 1.5rem; }
+  padding: 0.75rem; }
 
 .logo {
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.75rem;
   stroke: #222;
   text-align: center;
   margin: 0 auto; }
@@ -484,7 +486,7 @@ img {
 .logo,
 .logo a {
   border-bottom: none;
-  color: #222;
+  color: white;
   font-weight: normal;
   letter-spacing: 0.05em;
   line-height: 1;
@@ -495,8 +497,7 @@ img {
   animation-duration: 3s; }
   .logo:hover,
   .logo a:hover {
-    color: #3050f0;
-    fill: #3050f0;
+    color: #ff4136;
     transition: fill, 0.5s; }
 
 .logo svg {
@@ -524,31 +525,45 @@ img {
   to {
     fill: #222; } }
 .masthead {
+  background: #1F2A40;
   font-size: 19px;
-  padding: 3rem 0 1.5rem; }
+  padding: 1.5rem 0; }
 
 .masthead-h1 {
-  color: #222;
+  color: white;
   font-size: 3rem;
   font-weight: bold;
-  line-height: 0.85;
-  margin: 0 0 0 -0.05em;
+  line-height: 1;
+  margin: 0;
   text-transform: uppercase;
   letter-spacing: -0.05em;
   word-spacing: 0.05em; }
 
-.masthead-h2 {
-  margin: 1.5rem 0 3rem; }
+.masthead-h1-super {
+  font-size: 4.5rem;
+  letter-spacing: -0.075em;
+  margin: 0 0 1.5rem;
+  word-spacing: 0.05em;
+  text-transform: none; }
 
-@media screen and (min-width: 800px) {
+.masthead-h2 {
+  color: white;
+  margin: 1.5rem 0; }
+
+.masthead-h1-extra {
+  color: #ff4136;
+  font-size: 1.5em; }
+
+@media all and (min-width: 768px) {
   .masthead-h1 {
-    font-size: 3.75rem;
-    font-weight: bold;
-    line-height: 0.85;
-    margin: 0 0 0 -0.05em;
-    text-transform: uppercase;
-    letter-spacing: -0.05em;
-    word-spacing: 0.05em; } }
+    font-size: 3.75rem; }
+
+  .masthead-h1-super {
+    font-size: 7.5rem;
+    margin: 0 0 1.5rem; } }
+.octicon {
+  color: #404040; }
+
 .menu-list ul {
   list-style: none;
   padding: 0; }
@@ -615,6 +630,9 @@ a.cc_btn {
 .post-meta {
   color: #828282; }
 
+footer {
+  margin-bottom: 1.5rem; }
+
 .cc_banner {
   background: #e8e8e8;
   position: fixed;
@@ -662,7 +680,7 @@ a.cc_btn {
   color: #1919a9; }
 
 .blue-code {
-  color: #303871; }
+  color: #1F2A40; }
 
 .red {
   color: #ff4136; }
@@ -690,6 +708,10 @@ a.cc_btn {
 
 .yellow {
   color: #ffd600; }
+
+.white,
+.white .octicon {
+  color: #fff; }
 
 .highlight {
   border-left: 1px dotted #828282;

@@ -1,0 +1,6 @@
+{
+  "name": "jekyll site",
+  "dependencies": {
+    "octicons": "*"
+  }
+}

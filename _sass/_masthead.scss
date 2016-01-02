@@ -3,36 +3,49 @@
 //
 
 .masthead {
+  background: $blue-code;
   font-size: $base-font-size;
-  padding: ( 2 * $u ) 0 $u;
-}
+  padding: $u 0;
+ }
+
 
 .masthead-h1 {
-  color: $black;
+  color: white;
   font-size: 2 * $u;
   font-weight: bold;
-  line-height: 0.85;
-  margin: 0 0 0 -0.05em;
+  line-height: 1;
+  margin: 0;
   text-transform: uppercase;
   letter-spacing: -0.05em;
   word-spacing: 0.05em;
 }
 
-.masthead-h2 {
-  margin: $u 0 ( 2 * $u );
+.masthead-h1-super {
+  font-size: 3 * $u;
+  letter-spacing: -0.075em;
+  margin: 0 0 $u; 
+  word-spacing: 0.05em;
+  text-transform: none;
 }
 
+.masthead-h2 {
+  color: white;
+  margin: $u 0;
+}
 
-@media screen and (min-width: 800px) {
+.masthead-h1-extra {
+  color: $red;
+  font-size: 1.5em;
+}
+
+@media all and (min-width: $screen-mid) {
 
   .masthead-h1 {
     font-size: 2.5 * $u;
-    font-weight: bold;
-    line-height: 0.85;
-    margin: 0 0 0 -0.05em;
-    text-transform: uppercase;
-    letter-spacing: -0.05em;
-    word-spacing: 0.05em;
   }
 
+  .masthead-h1-super {
+    font-size: 5 * $u;
+    margin: 0 0 $u; 
+  }
 }
