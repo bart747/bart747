@@ -626,7 +626,8 @@ a.cc_btn {
 .wrapper-post-like {
   max-width: 34rem;
   margin: 0 auto;
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem;
+  padding: 0 0.75rem; }
 
 .post-meta {
   color: #828282; }
