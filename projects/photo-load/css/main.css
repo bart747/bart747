@@ -1,0 +1,133 @@
+html {
+  box-sizing: border-box;
+  font-size: 18px; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  font-family: sans-serif;
+  line-height: 1.7; }
+
+header {
+  text-align: center;
+  margin: 1em; }
+
+h1, h2, h3, h4 {
+  margin: 2rem 0 1rem; }
+
+h1 {
+  line-height: 1;
+  margin: 0; }
+
+p {
+  margin: 0 0 1rem; }
+
+.wrapper-1024 {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1024px; }
+
+.description {
+  margin: 0 auto;
+  max-width: 35rem;
+  text-align: left; }
+
+pre {
+  font-size: 13px;
+  line-height: 1.4;
+  overflow-x: auto;
+  overflow-y: auto; }
+
+.hidden {
+  display: none; }
+
+.gallery {
+  text-align: left; }
+
+.pic img {
+  border: 2px solid white;
+  -webkit-animation: switch 0.25s cubic-bezier(0, 0, 0.5, 1);
+          animation: switch 0.25s cubic-bezier(0, 0, 0.5, 1); }
+
+.pic-main {
+  background: #EEE;
+  text-align: center;
+  line-height: 0;
+  margin: 0 auto;
+  min-height: 200px;
+  max-width: 960px; }
+
+.pic-placeholder {
+  -webkit-filter: blur(8px);
+          filter: blur(8px); }
+
+.blur {
+  -webkit-filter: blur(3px);
+          filter: blur(3px); }
+
+.pic-main img {
+  width: 100%; }
+
+.pic-mini-group {
+  text-align: center;
+  margin: 0 auto; }
+
+.pic-mini {
+  background: #EEE;
+  display: inline-block;
+  height: 150px;
+  width: 200px; }
+
+.pic-mini img {
+  height: auto;
+  width: 200px; }
+  .pic-mini img:hover {
+    border: 2px solid #777;
+    cursor: pointer; }
+
+.pic-active img {
+  border: 2px solid #777; }
+
+@-webkit-keyframes switch {
+  0% {
+    opacity: 0.5;
+    -webkit-filter: blur(2px);
+            filter: blur(2px); }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0); } }
+
+@keyframes switch {
+  0% {
+    opacity: 0.5;
+    -webkit-filter: blur(2px);
+            filter: blur(2px); }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0); } }
+.grid {
+  text-align: center; }
+
+@media screen and (min-width: 450px) {
+  .col {
+    float: left;
+    padding-right: 1rem; }
+    .col:last-of-type {
+      padding-right: 0; }
+
+  .col.half {
+    width: 50%; }
+
+  .col.third {
+    width: 33.33%; }
+
+  .grid {
+    text-align: left; }
+
+  .grid:after {
+    content: "";
+    display: table;
+    clear: both; } }

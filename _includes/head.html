@@ -1,29 +1,38 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- favicons -->
-  <link rel="icon" type="image/png" href="{{ "/img/icon-32.png" | prepend: site.baseurl }}" sizes="32x32">
-  <link rel="icon" type="image/png" href="{{ "/img/icon-96.png" | prepend: site.baseurl }}" sizes="96x96">
-  <link rel="apple-touch-icon-precomposed" href="{{ "/img/icon-152.png" | prepend: site.baseurl }}" sizes="152x152">
-  <link rel="apple-touch-icon-precomposed" href="{{ "/img/icon-180.png" | prepend: site.baseurl }}" sizes="180x180">
-
-  <!-- fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,400italic,700|Source+Sans+Pro:400,400italic,700'
-    rel='stylesheet' type='text/css'>
-  
-  <link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css">
+<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
 
-  <!-- stylesheets -->
-  <link rel="stylesheet" href="{{ "/css/mini/main.css" | prepend: site.baseurl }}">
+<!-- DNS prefetching for external assets  -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="//platform.twitter.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
 
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+<!-- favicons -->
+<link rel="icon" type="image/png" href="{{ "/img/icon-32.png" | prepend: site.baseurl }}" sizes="32x32">
+<link rel="icon" type="image/png" href="{{ "/img/icon-96.png" | prepend: site.baseurl }}" sizes="96x96">
+<link rel="apple-touch-icon-precomposed" href="{{ "/img/icon-152.png" | prepend: site.baseurl }}" sizes="152x152">
+<link rel="apple-touch-icon-precomposed" href="{{ "/img/icon-180.png" | prepend: site.baseurl }}" sizes="180x180">
+
+<!-- fonts -->
+<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,400italic,700|Source+Sans+Pro:400,400italic,700'
+  rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css">
+
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="{{ "/css/mini/main.css" | prepend: site.baseurl }}">
+
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
 
 <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
