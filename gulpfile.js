@@ -1,12 +1,9 @@
 var gulp = require('gulp');
 var sass = require('gulp-ruby-sass');
-var compass = require('gulp-compass');
+var babel = require('gulp-babel');
 var autoprefixer = require('gulp-autoprefixer');
 var minifyCss = require('gulp-minify-css');
-var coffee = require('gulp-coffee');
-var coffeelint = require('gulp-coffeelint');
 var jshint = require('gulp-jshint');
-var browserify = require('browserify');
 var browserSync = require('browser-sync').create();
 var source = require('vinyl-source-stream');
 
@@ -27,17 +24,6 @@ gulp.task('auto', ['sass'], function() {
     .pipe(gulp.dest('./css'));
 });
 
-// compass
-gulp.task('comp', function() {
-  return gulp.src('./scss/*.scss')
-    .pipe(compass({
-      config_file: 'config.rb',
-      css: 'stylesheets',
-      sass: 'scss',
-    }))
-    .pipe(gulp.dest('./stylesheets'));
-});
-
 // minify css
 gulp.task('minify-css', ['auto'], function() {
   return gulp.src('./css/*.css')
@@ -45,28 +31,20 @@ gulp.task('minify-css', ['auto'], function() {
     .pipe(gulp.dest('./css/mini'));
 });
 
-// CoffeeScript
-gulp.task('coffee', function() {
-  return gulp.src('src/coffee/*.coffee')
-    .pipe(coffeelint())
-    .pipe(coffee({ bare:true }))
-    .pipe(gulp.dest('src/js'));
-});
-
 // lint
 gulp.task('lint', function() {
   return gulp.src('js/*.js')
-    .pipe(jshint())
+    .pipe(jshint({
+        esnext: true
+    }))
     .pipe(jshint.reporter('default'));
 });
 
-// browserify
-gulp.task('brow', function() {
-  return browserify('src/js/script.js')
-    .bundle()
-    // pass ot vinyl source stream
-    .pipe(source('bundle.js'))
-    .pipe(gulp.dest('src/js/build/'));
+// babel
+gulp.task('babel', ['lint'], function() {
+    return gulp.src('./js/*.js')
+        .pipe(babel())
+        .pipe(gulp.dest('./js/babel'));
 });
 
 // serve
@@ -78,11 +56,13 @@ gulp.task('serve', ['sass', 'auto'], function() {
 
   gulp.watch('./_scss/*.scss', ['sass']).on('change', browserSync.reload);
   gulp.watch('./css/*.css', ['auto', 'minify-css']).on('change', browserSync.reload);
+  gulp.watch('./js/*.js', ['lint', 'babel']).on('change', browserSync.reload);
 });
 
 // watch
 gulp.task('watch', function() {
   gulp.watch('./_sass/*.scss', ['sass', 'auto', 'minify-css']);
+  gulp.watch('./js/*.js', ['lint', 'babel']);
 });
 
 // default

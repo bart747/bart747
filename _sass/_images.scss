@@ -1,0 +1,19 @@
+//
+// images
+//
+img {
+  border-radius: 4px;
+  transition: all 1s ease; 
+}
+
+.post img {
+  background: $grey;
+  max-height: 600px;
+  max-width: 600px;
+}
+
+.img-blur {
+  filter: blur(6px);
+}
+
+

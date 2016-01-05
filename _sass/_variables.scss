@@ -4,11 +4,12 @@
 
 
 $base-font-family: "Source Sans Pro", sans-serif;
-$monospace:        "Roboto Mono", monospace;
+$monospace:        "DejaVu Sans Mono", monospace;
 $base-font-size:   19px;
 $large-font-size:  26px;
 $small-font-size:  16px;
 $base-line-height: 1.5;
+
 
 // base rhythm unit
 $u:                1.5rem;
@@ -21,7 +22,7 @@ $us:               $small-font-size * $base-line-height;
 $black:            #222;
 $brown:            #a77040;
 $blue-code:        #1F2A40;
-$text-color:       #404040;
+$text-color:       #363636;
 $background-color: #fffcf8;
 $blue:             #3050f0;
 $blue-light:       #00d1ed;

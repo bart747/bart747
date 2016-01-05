@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "A Hint on How to Speed Up Jekyll Regeneration"
-date: 2015-12-27
+title: "Progressive Image Load (With Blur and Transition)"  
+date: 2015-01-05
 ---
 
 My Jekyll site was way too slow recently.

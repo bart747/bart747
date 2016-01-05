@@ -53,10 +53,13 @@ ol {
   padding-left: 1.25rem;
 }
 
-code {
-  color: $blue-code;
-  font-family: $monospace;
+pre, code {
   font-size: $small-font-size;
+}
+
+p code {
+  color: $green;
+  font-family: $monospace;
   @media screen and (max-width: 568px) {
     font-size: $small-font-size - 2;
   }
