@@ -641,7 +641,9 @@ img {
 .post img {
   background: #828282;
   max-height: 600px;
-  max-width: 600px; }
+  max-width: 600px;
+  height: auto;
+  width: 100%; }
 
 .img-blur {
   -webkit-filter: blur(6px);

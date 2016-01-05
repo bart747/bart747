@@ -81,6 +81,8 @@ img {
   background: $grey;
   max-height: 600px;
   max-width: 600px;
+  height: auto;
+  width: 100%;
 }
 
 .img-blur {
