@@ -647,8 +647,8 @@ img {
   width: 100%; }
 
 .img-blur {
-  -webkit-filter: blur(10px);
-  filter: blur(10px); }
+  -webkit-filter: blur(7px);
+  filter: blur(7px); }
 
 .octicon {
   color: #363636; }

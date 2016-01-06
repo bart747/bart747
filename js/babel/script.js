@@ -32,8 +32,8 @@
     else {
         setTimeout(function () {
           imgAll[0].classList.remove('img-blur');
-          console.log('blur removed from img 0 (timeout: 800)');
-        }, 800);
+          console.log('blur removed from img 0 (timeout: 300)');
+        }, 300);
       }
   }
 
@@ -55,8 +55,8 @@
           [].forEach.call(imgAll, function (el) {
             el.classList.remove('img-blur');
           });
-          console.log('blur removed from all img (timeout: 1200)');
-        }, 1200);
+          console.log('blur removed from all img (timeout: 600)');
+        }, 600);
       }
   }
 })();

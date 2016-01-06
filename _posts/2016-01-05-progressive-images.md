@@ -5,15 +5,17 @@ Transition)"
 date: 2016-01-05
 ---
 
-Waiting for pictures to be fully uploaded is annoying. To make my site
+Seeing clunky, pixelated images at page start doesn't make good
+first impression.
+To make my site
 better, I figured out a trick that makes it a little bit better experience.
 
 ## Good Sides
 
 Looks cool.
 Will improve UX a little bit.
-It's small.
-Takes around 22 lines of code&mdash;JS and CSS together.
+It's relatively small.
+Takes around 50 lines of code, 1,7kb&mdash;JS and CSS together.
 You don't
 need to do anything with HTML, so it works nicely with Markdown posts.
 
@@ -75,8 +77,8 @@ if (imgAll[0] !== undefined) {
   else  {
     setTimeout(function() {
       imgAll[0].classList.remove('img-blur');   
-      console.log('blur removed from img 0 (timeout: 800)');
-    }, 800);
+      console.log('blur removed from img 0 (timeout: 300)');
+    }, 300);
   }
 
 }
@@ -99,8 +101,8 @@ if (imgAll[1] !== undefined) {
       [].forEach.call(imgAll, function(el) {
         el.classList.remove('img-blur');   
       });   
-      console.log('blur removed from all img (timeout: 1200)');
-    }, 1200);
+      console.log('blur removed from all img (timeout: 600)');
+    }, 600);
   }
 
 }
@@ -114,19 +116,21 @@ if (imgAll[1] !== undefined) {
 {% highlight scss %}
 
 img {
-  transition: all 1s ease; 
+  border-radius: 4px;
+  transition: all 0.5s ease; 
 }
 
 .post img {
   background: $grey;
-  max-height: 600px;
+  margin: 0 auto;
   max-width: 600px;
+  min-height: 250px;
   height: auto;
   width: 100%;
 }
 
 .img-blur {
-  filter: blur(6px);
+  filter: blur(7px);
 }
 
 {% endhighlight %}
@@ -160,8 +164,8 @@ make sure that the script will select only big images.
 else  {
   setTimeout(function() {
     imgAll[0].classList.remove('img-blur');   
-    console.log('blur removed from img 0 (timeout: 800)');
-  }, 800);
+    console.log('blur removed from img 0 (timeout: 300)');
+  }, 300);
 }
 
 
