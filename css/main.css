@@ -426,7 +426,7 @@ ol {
   padding-left: 1.25rem; }
 
 pre, code {
-  font-size: 16px; }
+  font-size: 15px; }
 
 p code {
   color: #189560;
@@ -636,18 +636,19 @@ footer {
 
 img {
   border-radius: 4px;
-  transition: all 1s ease; }
+  transition: all 0.5s ease; }
 
 .post img {
   background: #828282;
-  max-height: 600px;
+  margin: 0 auto;
   max-width: 600px;
+  min-height: 250px;
   height: auto;
   width: 100%; }
 
 .img-blur {
-  -webkit-filter: blur(6px);
-  filter: blur(6px); }
+  -webkit-filter: blur(10px);
+  filter: blur(10px); }
 
 .octicon {
   color: #363636; }

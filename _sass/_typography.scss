@@ -54,7 +54,7 @@ ol {
 }
 
 pre, code {
-  font-size: $small-font-size;
+  font-size: $small-font-size - 1;
 }
 
 p code {
