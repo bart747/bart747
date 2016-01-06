@@ -117,17 +117,17 @@ if (imgAll[1] !== undefined) {
 }
 
 .img-blur-1 {
-  animation-duration: 0.3s;
+  animation-duration: 0.5s;
   animation-name: img-blur; 
 }
 
 .img-blur-2 {
-  animation-duration: 0.75s;
+  animation-duration: 1s;
   animation-name: img-blur; 
 }
 
 .img-blur-3 {
-  animation-duration: 1.25s;
+  animation-duration: 1.5s;
   animation-name: img-blur; 
 }
 
@@ -155,7 +155,6 @@ if (imgAll[1] !== undefined) {
 
     imgAll[0].classList.add('img-blur-1');   
     console.log('img 0: blur 1');
-
   }
 
 {% endhighlight %}
@@ -187,14 +186,13 @@ As you can see, with this kind of solution you have to make assumptions.
 And CSS filter is unsupported by many browsers.  
 
 When the internet connection is slow (1-2 Mb/s),
-the script will add blur effect that lasts around 0.3-1.25 second.
+the script will add blur effect that lasts around 0.5-1.5 second.
 It looks nicer than clunky, pixelated images.
 On the other hand, if the connection is reaaaallly slow,
 longer animation might be better.
 But why to focus on such edge case?
 
-I decided to keep the presented here effect.
-In my experience it's pretty close to the sweet spot.
+In my experience 0.5-1.5s it's pretty close to the sweet spot.
 
 ### Why Not to Use Something Like Medium.com Thing 
 
