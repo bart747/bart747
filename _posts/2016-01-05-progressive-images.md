@@ -186,13 +186,13 @@ As you can see, with this kind of solution you have to make assumptions.
 And CSS filter is unsupported by many browsers.  
 
 When the internet connection is slow (1-2 Mb/s),
-the script will add blur effect that lasts around 0.5-1.5 second.
+the script will add blur effect that lasts around 0.5-1.75 second.
 It looks nicer than clunky, pixelated images.
 On the other hand, if the connection is reaaaallly slow,
 longer animation might be better.
 But why to focus on such edge case?
 
-In my experience 0.5-1.5s it's pretty close to the sweet spot.
+In my experience 0.5-1.75s it's pretty close to the sweet spot.
 
 ### Why Not to Use Something Like Medium.com Thing 
 

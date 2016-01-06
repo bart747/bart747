@@ -652,14 +652,14 @@ img {
   animation-name: img-blur; }
 
 .img-blur-2 {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
   -webkit-animation-name: img-blur;
   animation-name: img-blur; }
 
 .img-blur-3 {
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.75s;
+  animation-duration: 1.75s;
   -webkit-animation-name: img-blur;
   animation-name: img-blur; }
 

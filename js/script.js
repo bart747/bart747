@@ -21,7 +21,6 @@ if (imgAll[0] !== undefined &&
 
     imgAll[0].classList.add('img-blur-1');   
     console.log('img 0: blur 1');
-
   }
 }
 
@@ -51,7 +50,6 @@ if (imgAll[1] !== undefined) {
     }   
     console.log('img rest: blur 3');
   }
-
 }
 
 }());
