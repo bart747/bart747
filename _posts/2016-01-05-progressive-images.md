@@ -58,53 +58,45 @@ const imgAll = document.querySelectorAll('.page-content img');
 // so 260 threshold will fine 
 const imgThreshold = 260; 
 
-// add blur effect to all selected images
-[].forEach.call(imgAll, function(el) {
-  el.classList.add('img-blur');   
-});
-console.log("blur added");
+// if there's only one image
+if (imgAll[0] !== undefined &&
+  imgAll[1] === undefined) {
 
-if (imgAll[0] !== undefined) {
+  // if it's not loading fast enough, 
+  // add proper blur animation
+  if (imgAll[0].clientHeight < imgThreshold) {
 
-  // if first image is "uploaded enough" remove it's blur filter 
-  if (imgAll[0].clientHeight > imgThreshold) {
-    imgAll[0].classList.remove('img-blur');   
-    console.log('blur removed from img 0');
+    imgAll[0].classList.add('img-blur-1');   
+    console.log('img 0: blur 1');
   }
-
-  // if not, remove blur with delay
-  // ( += css transition time )
-  else  {
-    setTimeout(function() {
-      imgAll[0].classList.remove('img-blur');   
-      console.log('blur removed from img 0 (timeout: 300)');
-    }, 300);
-  }
-
 }
 
+// if there are two or more images, add proper blur animations 
 if (imgAll[1] !== undefined) {
 
-  // if second image is "uploaded enough" remove blur filter
-  // from all pics
-  if (imgAll[1].clientHeight > imgThreshold) {
-    [].forEach.call(imgAll, function(el) {
-      el.classList.remove('img-blur');   
-    });
-    console.log('blur removed from img 1');
+  // when only first image is loading fast enough
+  if (imgAll[0].clientHeight > imgThreshold &&
+    imgAll[1].clientHeight < imgThreshold) {
+
+    imgAll[0].classList.add('img-blur-1');   
+    console.log('img 0: blur 1');
+
+    for ( let i = 1; i < imgAll.length; i += 1 ) {
+      imgAll[i].classList.add('img-blur-2');   
+    }   
+    console.log('img rest: blur 2');
   }
 
-  // if not, remove blur with delay 
-  // ( += css transition time )
-  else  {
-    setTimeout(function() {
-      [].forEach.call(imgAll, function(el) {
-        el.classList.remove('img-blur');   
-      });   
-      console.log('blur removed from all img (timeout: 600)');
-    }, 600);
-  }
+  // when all images are not loading fast enough
+  else {
+    imgAll[0].classList.add('img-blur-2');   
+    console.log('img 0: blur 2');
 
+    for ( let i = 1; i < imgAll.length; i += 1 ) {
+      imgAll[i].classList.add('img-blur-3');   
+    }   
+    console.log('img rest: blur 3');
+  }
 }
 
 }());
@@ -115,11 +107,6 @@ if (imgAll[1] !== undefined) {
 
 {% highlight scss %}
 
-img {
-  border-radius: 4px;
-  transition: all 0.5s ease; 
-}
-
 .post img {
   background: $grey;
   margin: 0 auto;
@@ -129,8 +116,31 @@ img {
   width: 100%;
 }
 
-.img-blur {
-  filter: blur(7px);
+.img-blur-1 {
+  animation-duration: 0.3s;
+  animation-name: img-blur; 
+}
+
+.img-blur-2 {
+  animation-duration: 0.75s;
+  animation-name: img-blur; 
+}
+
+.img-blur-3 {
+  animation-duration: 1.25s;
+  animation-name: img-blur; 
+}
+
+@keyframes img-blur { 
+
+  from {
+    filter: blur(7px);
+  }
+
+  to {
+    filter: blur(0);
+  }
+
 }
 
 {% endhighlight %}
@@ -141,48 +151,24 @@ img {
 
 {% highlight js %}
 
-if (imgAll[0].clientHeight > imgThreshold) {
-  imgAll[0].classList.remove('img-blur');   
-  console.log('blur removed from img 0');
-}
+  if (imgAll[0].clientHeight < imgThreshold) {
+
+    imgAll[0].classList.add('img-blur-1');   
+    console.log('img 0: blur 1');
+
+  }
 
 {% endhighlight %}
 
 The <code>'clientHeght > imgThreshold'</code> comparison checks if
-the first image is "uploaded enough" at the time.
+the first image is "downloaded enough" at the time.
 In other words,
 I assume that if the picture is not bigger than 220px (height)
-when the script is in execution, it's upload process is slow.
+when the script is in execution, it's load process is slow.
 
 If you use small pictures, like avatars,
 make sure that the script will select only big images.
 
-### setTimeout
-
-{% highlight js %}
-
-else  {
-  setTimeout(function() {
-    imgAll[0].classList.remove('img-blur');   
-    console.log('blur removed from img 0 (timeout: 300)');
-  }, 300);
-}
-
-
-{% endhighlight %}
-
-When the upload process is interpreted as slow, the blur effect will stay on
-images longer. Then it will be taken off with a nice transition
-effect. That animation takes around 0.5 second.
-
-{% highlight scss %}
-
-img {
-  transition: all 0.5s ease; 
-}
-
-
-{% endhighlight %}
 
 ### Why Not Use 'window.onload' Instead of 'clientHeight'?
 
@@ -201,12 +187,13 @@ As you can see, with this kind of solution you have to make assumptions.
 And CSS filter is unsupported by many browsers.  
 
 When the internet connection is slow (1-2 Mb/s),
-the script will extend blur effect to ca 1.5 second&mdash;including transitions.
+the script will add blur effect that lasts around 0.3-1.25 second.
 It looks nicer than clunky, pixelated images.
-On the other hand, if the connection is reaaaallly slow, more delay might be better.
+On the other hand, if the connection is reaaaallly slow,
+longer animation might be better.
 But why to focus on such edge case?
 
-I decided to keep that 1-2s effect.
+I decided to keep the presented here effect.
 In my experience it's pretty close to the sweet spot.
 
 ### Why Not to Use Something Like Medium.com Thing 

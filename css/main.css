@@ -635,8 +635,7 @@ footer {
   margin-bottom: 1.5rem; }
 
 img {
-  border-radius: 4px;
-  transition: all 0.5s ease; }
+  border-radius: 4px; }
 
 .post img {
   background: #828282;
@@ -646,10 +645,39 @@ img {
   height: auto;
   width: 100%; }
 
-.img-blur {
-  -webkit-filter: blur(7px);
-  filter: blur(7px); }
+.img-blur-1 {
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-name: img-blur;
+  animation-name: img-blur; }
 
+.img-blur-2 {
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-name: img-blur;
+  animation-name: img-blur; }
+
+.img-blur-3 {
+  -webkit-animation-duration: 1.25s;
+  animation-duration: 1.25s;
+  -webkit-animation-name: img-blur;
+  animation-name: img-blur; }
+
+@-webkit-keyframes img-blur {
+  from {
+    -webkit-filter: blur(7px);
+    filter: blur(7px); }
+  to {
+    -webkit-filter: blur(0);
+    filter: blur(0); } }
+
+@keyframes img-blur {
+  from {
+    -webkit-filter: blur(7px);
+    filter: blur(7px); }
+  to {
+    -webkit-filter: blur(0);
+    filter: blur(0); } }
 .octicon {
   color: #363636; }
 

@@ -11,51 +11,45 @@ const imgAll = document.querySelectorAll('.page-content img');
 // so 260 threshold will fine 
 const imgThreshold = 260; 
 
-// add blur effect to all selected images
-[].forEach.call(imgAll, function(el) {
-  el.classList.add('img-blur');   
-});
-console.log("blur added");
+// if there's only one image
+if (imgAll[0] !== undefined &&
+  imgAll[1] === undefined) {
 
-if (imgAll[0] !== undefined) {
+  // if it's not loading fast enough, 
+  // add proper blur animation
+  if (imgAll[0].clientHeight < imgThreshold) {
 
-  // if first image is "uploaded enough" remove it's blur filter 
-  if (imgAll[0].clientHeight > imgThreshold) {
-    imgAll[0].classList.remove('img-blur');   
-    console.log('blur removed from img 0');
+    imgAll[0].classList.add('img-blur-1');   
+    console.log('img 0: blur 1');
+
   }
-
-  // if not, remove blur with delay
-  // ( += css transition time )
-  else  {
-    setTimeout(function() {
-      imgAll[0].classList.remove('img-blur');   
-      console.log('blur removed from img 0 (timeout: 300)');
-    }, 300);
-  }
-
 }
 
+// if there are two or more images, add proper blur animations 
 if (imgAll[1] !== undefined) {
 
-  // if second image is "uploaded enough" remove blur filter
-  // from all pics
-  if (imgAll[1].clientHeight > imgThreshold) {
-    [].forEach.call(imgAll, function(el) {
-      el.classList.remove('img-blur');   
-    });
-    console.log('blur removed from img 1');
+  // when only first image is loading fast enough
+  if (imgAll[0].clientHeight > imgThreshold &&
+    imgAll[1].clientHeight < imgThreshold) {
+
+    imgAll[0].classList.add('img-blur-1');   
+    console.log('img 0: blur 1');
+
+    for ( let i = 1; i < imgAll.length; i += 1 ) {
+      imgAll[i].classList.add('img-blur-2');   
+    }   
+    console.log('img rest: blur 2');
   }
 
-  // if not, remove blur with delay 
-  // ( += css transition time )
-  else  {
-    setTimeout(function() {
-      [].forEach.call(imgAll, function(el) {
-        el.classList.remove('img-blur');   
-      });   
-      console.log('blur removed from all img (timeout: 600)');
-    }, 600);
+  // when all images are not loading fast enough
+  else {
+    imgAll[0].classList.add('img-blur-2');   
+    console.log('img 0: blur 2');
+
+    for ( let i = 1; i < imgAll.length; i += 1 ) {
+      imgAll[i].classList.add('img-blur-3');   
+    }   
+    console.log('img rest: blur 3');
   }
 
 }

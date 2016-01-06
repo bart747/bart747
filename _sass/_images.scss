@@ -3,7 +3,6 @@
 //
 img {
   border-radius: 4px;
-  transition: all 0.5s ease; 
 }
 
 .post img {
@@ -15,8 +14,29 @@ img {
   width: 100%;
 }
 
-.img-blur {
-  filter: blur(7px);
+.img-blur-1 {
+  animation-duration: 0.3s;
+  animation-name: img-blur; 
 }
 
+.img-blur-2 {
+  animation-duration: 0.75s;
+  animation-name: img-blur; 
+}
 
+.img-blur-3 {
+  animation-duration: 1.25s;
+  animation-name: img-blur; 
+}
+
+@keyframes img-blur { 
+
+  from {
+    filter: blur(7px);
+  }
+
+  to {
+    filter: blur(0);
+  }
+
+}
