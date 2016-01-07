@@ -122,12 +122,12 @@ if (imgAll[1] !== undefined) {
 }
 
 .img-blur-2 {
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-name: img-blur; 
 }
 
 .img-blur-3 {
-  animation-duration: 1.5s;
+  animation-duration: 1.75s;
   animation-name: img-blur; 
 }
 
@@ -162,12 +162,23 @@ if (imgAll[1] !== undefined) {
 The <code>'clientHeght > imgThreshold'</code> comparison checks if
 the first image is "downloaded enough" at the time.
 In other words,
-I assume that if the picture is not bigger than 220px (height)
+I assume that if the picture is not bigger than 260px (height)
 when the script is in execution, it's load process is slow.
 
 If you use small pictures, like avatars,
 make sure that the script will select only big images.
 
+### Why 3 Different Blur Animations?
+
+I assumed that most of the time images are pixelated or 'unfinished'
+for about a second.
+Sometimes that process is quicker, sometimes far much longer.
+
+Without focusing on edge cases, I made 3 different animations for different load
+speeds.
+
+Of course it's a compromise. Won't help much with really slow Internet
+connection.
 
 ### Why Not Use 'window.onload' Instead of 'clientHeight'?
 
@@ -176,8 +187,8 @@ will become visible in full-size, but not necessarily perfectly sharp, earlier.
 
 So in this case <code>clientHeight</code> is faster.
 
-Notice that CSS transition also takes time,
-so <code>window.onload</code> would actually delay appearance of pictures.
+Notice that CSS animations also take time,
+so <code>window.onload</code> would actually delay the appearance of pictures.
 
 ## It's So Imperfect
 
@@ -185,14 +196,14 @@ As you can see, with this kind of solution you have to make assumptions.
 
 And CSS filter is unsupported by many browsers.  
 
-When the internet connection is slow (1-2 Mb/s),
+When the internet connection is slow (ca 1-4 Mb/s),
 the script will add blur effect that lasts around 0.5-1.75 second.
-It looks nicer than clunky, pixelated images.
+It looks nicer than clunky, pixelated images and smooths the paint process.
 On the other hand, if the connection is reaaaallly slow,
 longer animation might be better.
 But why to focus on such edge case?
 
-In my experience 0.5-1.75s it's pretty close to the sweet spot.
+In my experience 0.5-2s is pretty close to the sweet spot.
 
 ### Why Not to Use Something Like Medium.com Thing 
 
