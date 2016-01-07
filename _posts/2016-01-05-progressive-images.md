@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Progressive Image Exposure for Crappy Wi-Fi (with CSS Blur Filter and
-Transition)"  
+title: "Progressive Image Exposure for Crappy Wi-Fi (with CSS Blur Filter
+Animation)"  
 date: 2016-01-05
 ---
 
@@ -172,7 +172,7 @@ make sure that the script will select only big images.
 
 I assumed that most of the time images are pixelated or 'unfinished'
 for about a second.
-Sometimes that process is quicker, sometimes far much longer.
+Sometimes that process is quicker, sometimes much longer.
 
 Without focusing on edge cases, I made 3 different animations for different load
 speeds.
