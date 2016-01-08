@@ -9,7 +9,10 @@ const imgAll = document.querySelectorAll('.page-content img');
 // 
 // in my CSS, min. IMG height is set at 250px
 // so 260 threshold will fine 
-const imgThreshold = 260; 
+const imgThreshold = 260;
+
+console.log("img 0 threshold:" + imgAll[0].clientHeight);
+console.log("img 1 threshold:" + imgAll[1].clientHeight);
 
 // if there's only one image
 if (imgAll[0] !== undefined &&
@@ -25,7 +28,7 @@ if (imgAll[0] !== undefined &&
 }
 
 // if there are two or more images, add proper blur animations 
-if (imgAll[1] !== undefined) {
+else if (imgAll[1] !== undefined) {
 
   // when only first image is loading fast enough
   if (imgAll[0].clientHeight > imgThreshold &&
@@ -41,7 +44,9 @@ if (imgAll[1] !== undefined) {
   }
 
   // when all images are not loading fast enough
-  else {
+  else if (imgAll[0].clientHeight < imgThreshold &&
+    imgAll[1].clientHeight < imgThreshold) {
+
     imgAll[0].classList.add('img-blur-2');   
     console.log('img 0: blur 2');
 
