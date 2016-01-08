@@ -32,11 +32,11 @@
     // if there are two or more images, add proper blur animations
     else if (imgAll[1] !== undefined) {
 
+        console.log("img 0 threshold: " + imgAll[0].clientHeight);
+        console.log("img 1 threshold: " + imgAll[1].clientHeight);
+
         // when only first image is loading fast enough
         if (imgAll[0].clientHeight > imgThreshold && imgAll[1].clientHeight < imgThreshold) {
-
-          console.log("img 0 threshold: " + imgAll[0].clientHeight);
-          console.log("img 1 threshold: " + imgAll[1].clientHeight);
 
           imgAll[0].classList.add('img-blur-1');
           console.log('img 0: blur 1');
