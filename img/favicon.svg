@@ -9,41 +9,40 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   version="1.1"
-   width="400"
-   height="400"
+   width="200"
+   height="200"
    id="svg2"
+   version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="favicon.svg"
-   inkscape:export-filename="/home/bartek/dev/jekyllsite/img/favicon.png"
-   inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90">
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1056"
-     id="namedview7"
-     showgrid="true"
-     inkscape:zoom="0.834386"
-     inkscape:cx="584.79589"
-     inkscape:cy="202.36082"
-     inkscape:window-x="0"
-     inkscape:window-y="24"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="layer1">
-    <inkscape:grid
-       type="xygrid"
-       id="grid2984" />
-  </sodipodi:namedview>
+   sodipodi:docname="New document 1">
   <defs
      id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="-15.930311"
+     inkscape:cy="91.834001"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -52,19 +51,42 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(0,-652.36218)"
-     id="layer1">
-    <path
-       class="logo-path"
-       d="m -109.97881,892.36218 c 0,-160 -219.91279,-97.93556 -220,-210 l 470,0 230,170 -90,66 0,-86 -140,-100 0,240 100,-74 0,50 -100,74.00002 -470,0 c 0,-127.40024 50,-170.00002 100,-170.00002 118,0 60,150.00002 10,60 -50,90.00002 110,104.00002 110,-20 z"
-       id="path2987"
-       style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.94117647"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccccccccccscc" />
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-852.36218)">
+    <rect
+       style="fill:#1f2a40;fill-opacity:1;stroke:none"
+       id="rect2987"
+       width="200"
+       height="200"
+       x="0"
+       y="0"
+       transform="translate(0,852.36218)"
+       rx="10"
+       ry="10" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="rect2991"
+       width="100"
+       height="100"
+       x="50"
+       y="902.36218"
+       rx="10"
+       ry="9.9999971" />
+    <rect
+       ry="7.9999981"
+       rx="7.9999995"
+       y="912.36218"
+       x="60"
+       height="80"
+       width="80"
+       id="rect3761"
+       style="fill:#ff4136;fill-opacity:1;stroke:none" />
   </g>
 </svg>
