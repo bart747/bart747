@@ -2,7 +2,6 @@
 layout: post
 title: "Henry Ford for Makers: Quotes on Design"
 date: 2015-11-10
-categories: inspiration
 ---
 
 These are short excerpts from Henry Ford's "My Life and Work". I picked 

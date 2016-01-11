@@ -1,29 +1,35 @@
 ---
 layout: post
-title: "Progressive Image Load (With Blur and Transition)"  
+title: "Persuasive Newsletter Sign-Up Forms (No Pop-Ups)"  
 date: 2015-01-05
 ---
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">What happens to the &quot;bounce rate&quot; (% of people only viewing one page) when you take a pop-up box off your website <a href="https://t.co/vyOj0N3Ggw">pic.twitter.com/vyOj0N3Ggw</a></p>&mdash; Shane Parrish (@farnamstreet) <a href="https://twitter.com/farnamstreet/status/686404032823439360">January 11, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>)
 
-My Jekyll site was way too slow recently.
-It took around 1 minute per regeneration and much more for starting a server. 
+Putting newsletter sign-up forms into right attention spots is tricky. You don't
+want have one of "those marketing sites". On the other hand, you wan't big, well 
+developed funnel of potential clients.
 
-I made some improvement by excluding a few files from the conversion.
+From my point of view&mdash;as UI designer&mdash; there are two 
+key elements in this problem:
+- timing
+- copy
 
-_config.yml:
-{% highlighter ruby %}
-exclude: [file.js, somefolder, otherfolder]
-{% endhighlight %}
+You want to put your form in the place that visitors will easily notice.
+It should be *after* some greate piece of content, so it will not be proposition
+from a total stranger.
 
-It wasn't a big improvement so I kept digging.
-I re-installed gems.
-Didn't help.
+You show a little bit of what you represent.
+You give something valuable for free.
+Than ask for action.
 
-Then I found a solution that shortened the regeneration time to less than 0.2 second.
-It was excluding even more stuff.
+One of good places is below articles.
+It means focus on production and presentation of great content. That content is free
+value and presentation of yourself. Asking for sign-ups follows it.
 
-Beside the blog, I have also projects that use different node modules and other JS.  
-One 'node_modules' folder turned to be the painpoint. I didn't exclude it because
-it was hidden somewhere deeper in the directory.
+The copy part is about telling about benefits of your newsletter. It means that
+you don't just put a form with two descriptive sentences.
+Something like "sing-up now and be inform about all new stuff we do".
+What I'm writing about is more like bullet list's of benefits, unique value.
+It's not just info about new blog posts. 
 
-I reorganized a few things so now it's easy to locate and exclude unwanted
-(when it comes to Jekyll's conversion process) files.
