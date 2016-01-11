@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Persuasive Newsletter Sign-Up Forms: From a Reader Point of View"  
+title: "Persuasive Newsletter Sign-Up Forms: From a Reader's Point of View"  
 date: 2016-01-11
 ---
 
