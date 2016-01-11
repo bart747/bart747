@@ -86,27 +86,17 @@ bart747.github.io
 
 <div class="wrapper-post-like post-list">
 <ul>
-  <li>
-    <h3 class="post-list-title">
-      <a class="post-link" href="/how-to/2015/11/10/maintainable-ui.html">
-        Maintainable UI: How to Improve Code Editing with SASS
-      </a>
-    </h3>
-        <p>I guarantee you that changes are unavoidable. And you can’t predict the future.
-You also can’t solve problems in theory only, without prototyping.
-So make your life easier and build things that are easy to edit.</p>
-  </li>
+  {% for post in site.posts limit:3 %}
+    <li>
+      <h3 class="post-list-title">
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+          {{ post.title}}
+        </a>
+      </h3>
+      {{ post.excerpt }}
+    </li>
 
-  <li>
-    <h3 class="post-list-title">
-      <a class="post-link" href="/inspiration/2015/11/10/henry-ford-for-makers.html">
-        Henry Ford for Makers: Quotes on Design
-      </a>
-    </h3>
-        <p>These are short excerpts from Henry Ford’s “My Life and Work”. I picked
-the ones that will be helpful especially to makers—designers, developers, etc.</p>
-  </li>
-
+  {% endfor %}
 </ul>
 </div>
 
