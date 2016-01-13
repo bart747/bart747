@@ -527,13 +527,11 @@ img {
   to {
     fill: #222; } }
 .masthead {
-  background: #1F2A40;
-  color: white;
+  color: #1F2A40;
   font-size: 19px;
-  padding: 1.5rem 0; }
+  padding: 3rem 0; }
 
 .masthead-h1 {
-  color: white;
   font-size: 3rem;
   font-weight: bold;
   line-height: 1;
@@ -543,6 +541,7 @@ img {
   word-spacing: 0.05em; }
 
 .masthead-h1-super {
+  color: #1F2A40;
   font-size: 4.5rem;
   letter-spacing: -0.075em;
   margin: 0 0 1.5rem;
@@ -550,7 +549,7 @@ img {
   text-transform: none; }
 
 .masthead-h2 {
-  color: white;
+  color: #1F2A40;
   margin: 1.5rem 0; }
 
 .masthead-h1-extra {
