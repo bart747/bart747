@@ -129,7 +129,7 @@ setTimeout(function() {
 }
 
 .img-blur-1 {
-  animation-duration: 0.5s;
+  animation-duration: 0.75s;
   animation-name: img-blur; 
 }
 
