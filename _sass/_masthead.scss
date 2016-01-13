@@ -3,7 +3,6 @@
 //
 
 .masthead {
-  color: $blue-code;
   font-size: $base-font-size;
   padding: (2 * $u) 0;
  }
@@ -20,7 +19,7 @@
 }
 
 .masthead-h1-super {
-  color: $blue-code;
+  color: $black;
   font-size: 3 * $u;
   letter-spacing: -0.075em;
   margin: 0 0 $u; 
@@ -29,7 +28,7 @@
 }
 
 .masthead-h2 {
-  color: $blue-code;
+  color: $black;
   margin: $u 0;
 }
 
