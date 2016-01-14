@@ -11,18 +11,14 @@ button,
   border: 0;
   border-radius: 3px;
   text-align: center;
-  margin: 0.5rem;
+  margin: 0.5rem 0;
   max-width: 10 * $u;
   cursor: pointer;
 
-  &:hover {
+  &:hover, &:active {
     background-color: $blue-dark;
+    overflow: none;
   }
-
-  &:active {
-    box-shadow: none;
-  }
-
 }
 
 .btn-round {

@@ -1,0 +1,64 @@
+//
+// forms
+//
+
+
+form {
+  margin: $u 0;
+}
+
+label {
+  display: block;
+}
+
+input {
+  border: 1px solid $grey;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: $base-font-size;
+  margin: 0 0 $u;
+  padding: 0.5em 0.5em;
+  width: 80%;
+  max-width: 300px;
+}
+
+.input-line {
+  display: block;
+}
+
+input.input-success {
+  border-color: $green;
+  box-shadow: 0 0 2px $green;
+}
+
+input.input-error {
+  border-color: $red;
+  box-shadow: 0 0 2px $red;
+}
+
+input:focus {
+    border-color: $blue;
+    outline: none;
+  }
+
+.input-line .icon {
+  margin: 0 0.5em;
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.blink {
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-iteration-count: 2;
+}
+
+
+

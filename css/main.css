@@ -589,6 +589,59 @@ img {
   text-transform: none;
   margin: 0 0 0.75rem; }
 
+form {
+  margin: 1.5rem 0; }
+
+label {
+  display: block; }
+
+input {
+  border: 1px solid #828282;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 19px;
+  margin: 0 0 1.5rem;
+  padding: 0.5em 0.5em;
+  width: 80%;
+  max-width: 300px; }
+
+.input-line {
+  display: block; }
+
+input.input-success {
+  border-color: #189560;
+  box-shadow: 0 0 2px #189560; }
+
+input.input-error {
+  border-color: #ff4136;
+  box-shadow: 0 0 2px #ff4136; }
+
+input:focus {
+  border-color: #3050f0;
+  outline: none; }
+
+.input-line .icon {
+  margin: 0 0.5em; }
+
+@-webkit-keyframes blink {
+  from, to {
+    opacity: 1; }
+  50% {
+    opacity: 0.3; } }
+
+@keyframes blink {
+  from, to {
+    opacity: 1; }
+  50% {
+    opacity: 0.3; } }
+.blink {
+  -webkit-animation-name: blink;
+  animation-name: blink;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 2;
+  animation-iteration-count: 2; }
+
 button,
 .btn,
 a.cc_btn {
@@ -599,17 +652,16 @@ a.cc_btn {
   border: 0;
   border-radius: 3px;
   text-align: center;
-  margin: 0.5rem;
+  margin: 0.5rem 0;
   max-width: 15rem;
   cursor: pointer; }
-  button:hover,
+  button:hover, button:active,
   .btn:hover,
-  a.cc_btn:hover {
-    background-color: #1919a9; }
-  button:active,
+  a.cc_btn:hover,
   .btn:active,
   a.cc_btn:active {
-    box-shadow: none; }
+    background-color: #1919a9;
+    overflow: none; }
 
 .btn-round {
   border-radius: 50%;
@@ -736,6 +788,9 @@ a.cc_btn {
 
 .grey {
   color: #828282; }
+
+.green {
+  color: #189560; }
 
 .black {
   color: #222; }
