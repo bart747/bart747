@@ -4,6 +4,7 @@ var babel = require('gulp-babel');
 var autoprefixer = require('gulp-autoprefixer');
 var minifyCss = require('gulp-minify-css');
 var jshint = require('gulp-jshint');
+var concat = require('gulp-concat');
 var browserSync = require('browser-sync').create();
 var source = require('vinyl-source-stream');
 
@@ -33,7 +34,7 @@ gulp.task('minify-css', ['auto'], function() {
 
 // lint
 gulp.task('lint', function() {
-  return gulp.src('js/*.js')
+  return gulp.src('js/myscripts/*.js')
     .pipe(jshint({
         esnext: true
     }))
@@ -42,27 +43,34 @@ gulp.task('lint', function() {
 
 // babel
 gulp.task('babel', ['lint'], function() {
-    return gulp.src('./js/*.js')
+    return gulp.src('./js/myscripts/*.js')
         .pipe(babel())
         .pipe(gulp.dest('./js/babel'));
+});
+
+// concat
+gulp.task('concat', function() {
+  return gulp.src(['js/plugins/*.js', './js/babel/*.js'])
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('./js/dist'));
 });
 
 // serve
 gulp.task('serve', ['sass', 'auto'], function() {
 
   browserSync.init({
-    server: ''
+    server: '_site'
   });
 
   gulp.watch('./_scss/*.scss', ['sass']).on('change', browserSync.reload);
   gulp.watch('./css/*.css', ['auto', 'minify-css']).on('change', browserSync.reload);
-  gulp.watch('./js/*.js', ['lint', 'babel']).on('change', browserSync.reload);
+  gulp.watch('./js/*/*.js', ['lint', 'babel', 'concat']).on('change', browserSync.reload);
 });
 
 // watch
 gulp.task('watch', function() {
   gulp.watch('./_sass/*.scss', ['sass', 'auto', 'minify-css']);
-  gulp.watch('./js/*.js', ['lint', 'babel']);
+  gulp.watch('./js/*/*.js', ['lint', 'babel', 'concat']);
 });
 
 // default

@@ -2,46 +2,58 @@
 // forms
 //
 
+fieldset {
+  border: none;
+  padding: 0;
+}
 
 form {
   margin: $u 0;
 }
 
 label {
+  color: $grey-dark;
   display: block;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1rem 0 0;
 }
 
 input {
-  border: 1px solid $grey;
-  border-radius: 2px;
+  border: 2px solid $grey;
+  border-radius: 4px;
   display: inline-block;
   font-size: $base-font-size;
-  margin: 0 0 $u;
+  margin: 0;
   padding: 0.5em 0.5em;
   width: 80%;
   max-width: 300px;
+}
+
+.input-message {
+  color: $grey-dark;
+  font-size: 16px;
+  margin: 0 0 $u;
 }
 
 .input-line {
   display: block;
 }
 
+input:focus {
+  border-color: $blue;
+  outline: none;
+}
+
 input.input-success {
   border-color: $green;
-  box-shadow: 0 0 2px $green;
 }
 
 input.input-error {
   border-color: $red;
-  box-shadow: 0 0 2px $red;
 }
-
-input:focus {
-    border-color: $blue;
-    outline: none;
-  }
-
-.input-line .icon {
+.input-line .octicon {
   margin: 0 0.5em;
 }
 
@@ -60,5 +72,11 @@ input:focus {
   animation-iteration-count: 2;
 }
 
+input.cc-num {
+}
 
-
+input.cc-exp,
+input.cc-cvc {
+  max-width: 150px;
+  width: 40%;
+}
