@@ -29,6 +29,7 @@ input {
   padding: 0.5em 0.5em;
   width: 80%;
   max-width: 300px;
+  transition: border-color 0.5s;
 }
 
 .input-message {
@@ -72,11 +73,8 @@ input.input-error {
   animation-iteration-count: 2;
 }
 
-input.cc-num {
-}
-
-input.cc-exp,
-input.cc-cvc {
+input.cc-exp-input,
+input.cc-cvc-input {
   max-width: 150px;
   width: 40%;
 }

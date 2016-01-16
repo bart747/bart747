@@ -612,7 +612,8 @@ input {
   margin: 0;
   padding: 0.5em 0.5em;
   width: 80%;
-  max-width: 300px; }
+  max-width: 300px;
+  transition: border-color 0.5s; }
 
 .input-message {
   color: #4f4f4f;
@@ -654,8 +655,8 @@ input.input-error {
   -webkit-animation-iteration-count: 2;
   animation-iteration-count: 2; }
 
-input.cc-exp,
-input.cc-cvc {
+input.cc-exp-input,
+input.cc-cvc-input {
   max-width: 150px;
   width: 40%; }
 

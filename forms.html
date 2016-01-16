@@ -36,7 +36,7 @@ layout: default
         <input id="cc-num" class="input cc-num-input"
           type="text" pattern="[0-9 ]+"
           name="cardno">
-        </input>
+        </input> 
         <span class="cc-num-icon-success octicon octicon-check blink green hidden"></span>
         <span class="cc-num-icon-error octicon octicon-x blink red hidden"></span>
 
@@ -50,24 +50,24 @@ layout: default
 
       <div class="input-line cc-exp">
         <label for="cardexp" >Expiry Date</label>
-        <input class="input cc-exp"
+        <input class="input cc-exp-input"
           type="text" pattern="[0-9 /]+"
           name="cardexp">
         </input>
-        <span class="cc-exp icon icon-success green octicon octicon-check hidden"></span>
-        <span class="cc-exp icon icon-error red octicon octicon-x blink hidden"></span>
+        <span class="cc-exp-icon-success octicon octicon-check blink green hidden"></span>
+        <span class="cc-exp-icon-error octicon octicon-x blink red hidden"></span>
 
       </div>
 
       <div class="input-line cc-cvc">
         <label for="cardcvc" >CVC Code</label>
-        <input class="input cc-cvc"
-          type="text" pattern="[0-9 /]+"
+        <input class="input cc-cvc-input"
+          type="text" pattern="[0-9]+"
           name="cardcvc">
         </input>
         <img class="cc-cvc-pic" src="cccvc.svg"></img>
-        <span class="cc-cvc icon icon-success green octicon octicon-check hidden"></span>
-        <span class="cc-cvc icon icon-error red octicon octicon-x blink hidden"></span>
+        <span class="cc-cvc-icon-success green octicon octicon-check hidden"></span>
+        <span class="cc-cvc-icon-error red octicon octicon-x blink hidden"></span>
 
       </div>
     </fieldset>
