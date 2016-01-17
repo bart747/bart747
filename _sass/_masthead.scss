@@ -4,7 +4,7 @@
 
 .masthead {
   font-size: $base-font-size;
-  padding: (2 * $u) 0;
+  padding: (3 * $u) 0 $u;
  }
 
 
@@ -21,21 +21,23 @@
 .masthead-h1-super {
   color: $black;
   font-size: 3 * $u;
+  line-height: 0.8;
   letter-spacing: -0.075em;
-  margin: 0 0 $u; 
+  margin: 0 0 (2.5 * $u); 
   word-spacing: 0.05em;
   text-transform: none;
 }
 
 .masthead-h2 {
   color: $black;
+  font-weight: normal;
   margin: $u 0;
 }
 
 .masthead-h1-extra {
   color: $red;
-  font-size: 1.5em;
 }
+
 
 @media all and (min-width: $screen-mid) {
 
@@ -45,6 +47,5 @@
 
   .masthead-h1-super {
     font-size: 5 * $u;
-    margin: 0 0 $u; 
   }
 }

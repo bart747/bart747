@@ -528,7 +528,7 @@ img {
     fill: #222; } }
 .masthead {
   font-size: 19px;
-  padding: 3rem 0; }
+  padding: 4.5rem 0 1.5rem; }
 
 .masthead-h1 {
   font-size: 3rem;
@@ -542,26 +542,26 @@ img {
 .masthead-h1-super {
   color: #222;
   font-size: 4.5rem;
+  line-height: 0.8;
   letter-spacing: -0.075em;
-  margin: 0 0 1.5rem;
+  margin: 0 0 3.75rem;
   word-spacing: 0.05em;
   text-transform: none; }
 
 .masthead-h2 {
   color: #222;
+  font-weight: normal;
   margin: 1.5rem 0; }
 
 .masthead-h1-extra {
-  color: #ff4136;
-  font-size: 1.5em; }
+  color: #ff4136; }
 
 @media all and (min-width: 768px) {
   .masthead-h1 {
     font-size: 3.75rem; }
 
   .masthead-h1-super {
-    font-size: 7.5rem;
-    margin: 0 0 1.5rem; } }
+    font-size: 7.5rem; } }
 .menu-list ul {
   list-style: none;
   padding: 0; }
