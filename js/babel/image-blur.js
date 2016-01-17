@@ -3,15 +3,16 @@
 (function () {
 
   // select all images in page content 
-  var imgAll = document.querySelectorAll('.page-content img');
+  var imgAll = document.querySelectorAll('.post img');
 
   // set image upload threshold
   // - minimum height (in px) of IMG element which signals that
   // image is at least partly uploaded
   //
   // in my CSS, min. IMG height is set at 250px
-  // so 260 threshold will fine
+  // so 260 threshold will be fine
   var imgThreshold = 260;
+  var imgLen = imgAll.length;
 
   // setTiemout sets acceptable delay of rendering process
   setTimeout(function () {
@@ -20,6 +21,7 @@
     if (imgAll[0] !== undefined && imgAll[1] === undefined) {
 
       console.log("img 0 threshold: " + imgAll[0].clientHeight);
+
       // if it's not loading fast enough,
       // add proper blur animation
       if (imgAll[0].clientHeight < imgThreshold) {
@@ -41,7 +43,7 @@
           imgAll[0].classList.add('img-blur-1');
           console.log('img 0: blur 1');
 
-          for (var i = 1; i < imgAll.length; i += 1) {
+          for (var i = 1; i < imgLen; i += 1) {
             imgAll[i].classList.add('img-blur-2');
           }
           console.log('img rest: blur 2');
@@ -53,7 +55,7 @@
             imgAll[0].classList.add('img-blur-2');
             console.log('img 0: blur 2');
 
-            for (var i = 1; i < imgAll.length; i += 1) {
+            for (var i = 1; i < imgLen; i += 1) {
               imgAll[i].classList.add('img-blur-3');
             }
             console.log('img rest: blur 3');
