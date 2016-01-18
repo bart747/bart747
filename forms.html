@@ -34,7 +34,8 @@ layout: default
       <div class="input-line cc-num">
         <label for="cardno" >Card Number</label>
         <input id="cc-num" class="input cc-num-input"
-          type="text" pattern="[0-9 ]+"
+          type="tel" autocorrect="off" autocomplete="off" spellcheck="off
+          autocapitalize="off" pattern="[0-9 ]+"
           name="cardno">
         </input> 
         <span class="cc-num-icon-success octicon octicon-check blink green hidden"></span>
@@ -51,7 +52,8 @@ layout: default
       <div class="input-line cc-exp">
         <label for="cardexp" >Expiry Date</label>
         <input class="input cc-exp-input"
-          type="text" pattern="[0-9 /]+"
+          type="tel" autocorrect="off" autocomplete="off" spellcheck="off
+          autocapitalize="off" pattern="[0-9 /]+"
           name="cardexp">
         </input>
         <span class="cc-exp-icon-success octicon octicon-check blink green hidden"></span>
@@ -60,9 +62,10 @@ layout: default
       </div>
 
       <div class="input-line cc-cvc">
-        <label for="cardcvc" >CVC Code</label>
+        <label for="cardcvc">CVC Code</label>
         <input class="input cc-cvc-input"
-          type="text" pattern="[0-9]+"
+          type="tel" autocorrect="off" autocomplete="off" spellcheck="off
+          autocapitalize="off" pattern="[0-9]+"
           name="cardcvc">
         </input>
         <img class="cc-cvc-pic" src="cccvc.svg"></img>
