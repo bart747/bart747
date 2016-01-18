@@ -4,7 +4,6 @@
 
 .masthead {
   font-size: $base-font-size;
-  padding: (3 * $u) 0 $u;
  }
 
 
@@ -23,7 +22,7 @@
   font-size: 3 * $u;
   line-height: 0.8;
   letter-spacing: -0.075em;
-  margin: 0 0 (2.5 * $u); 
+  margin: (3 * $u) 0; 
   word-spacing: 0.05em;
   text-transform: none;
 }
