@@ -650,7 +650,7 @@
 
 $('.cc-num-input').payment('formatCardNumber');
 $('.cc-exp-input').payment('formatCardExpiry');
-//ccCvc.payment('formatCardCVC');
+$('.cc-cvc-input').payment('formatCardCVC');
 
 //
 // helpers
@@ -697,7 +697,7 @@ function showInputOkIcon(input, iconErr, iconSuc) {
 }
 
 // reset input icons
-function inputIconReset(input, iconErr, iconSuc) {
+function resetInputIcon(input, iconErr, iconSuc) {
   $(input).removeClass('input-error');
   $(iconSuc).addClass('hidden');
   $(iconErr).addClass('hidden');
@@ -707,6 +707,13 @@ function inputIconReset(input, iconErr, iconSuc) {
 //
 // check stuff
 //
+
+var cardNum = {
+  input: '.cc-num-input',
+  type: '.cc-type',
+  iconOk: '.cc-num-icon-success',
+  iconErr: '.cc-num-icon-error'
+};
 
 // check card number input
 function cardNrCheck() {
@@ -750,12 +757,12 @@ $('input.cc-num-input').on('input', function () {
 
     if ($(this).hasClass('amex') && $(this).val().length < 17) {
 
-      inputIconReset(this, '.cc-num-icon-error', '.cc-num-icon-success');
+      resetInputIcon(this, '.cc-num-icon-error', '.cc-num-icon-success');
     }
 
     if ($(this).hasClass('amex') === false && $(this).val().length < 19) {
 
-      inputIconReset(this, '.cc-num-icon-error', '.cc-num-icon-success');
+      resetInputIcon(this, '.cc-num-icon-error', '.cc-num-icon-success');
     }
 
     if ($(this).hasClass('unknown')) {
@@ -789,7 +796,7 @@ $('input.cc-exp-input').on('input', function () {
   if ($(this).val().length > 6) {
     expCheck();
   } else {
-    inputIconReset(this, '.cc-exp-icon-error', '.cc-exp-icon-success');
+    resetInputIcon(this, '.cc-exp-icon-error', '.cc-exp-icon-success');
   }
 });
 
@@ -814,7 +821,7 @@ $('input.cc-cvc-input').on('input', function () {
   if ($(this).val().length > 2) {
     cvcCheck(this);
   } else {
-    inputIconReset(this, '.cc-cvc-icon-error', '.cc-cvc-icon-success');
+    resetInputIcon(this, '.cc-cvc-icon-error', '.cc-cvc-icon-success');
   }
 });
 'use strict';
