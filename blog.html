@@ -6,19 +6,19 @@ layout: default
 
 <h1> Blog </h1>
 <div class="post-list">
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h3 class="post-list-title">
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-          {{ post.title}}
-        </a>
-      </h3>
-      {{ post.excerpt }}
-    </li>
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <h3 class="post-list-title">
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+            {{ post.title}}
+          </a>
+        </h3>
+        {{ post.excerpt }}
+      </li>
 
-  {% endfor %}
-</ul>
+    {% endfor %}
+  </ul>
 </div>
 
 </div>

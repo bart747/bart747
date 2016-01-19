@@ -33,9 +33,9 @@ Try to use it with disabled cache and simulate 1Mb/s
 connection in dev. tools. Than compare it with faster setup. Read comments in the
 console also.
 
-![](/img/nasa.jpg "Logo Title Text 1")
+![](/img/nasa.jpg)
 
-![](/img/building.jpg "Logo Title Text 1")
+![](/img/building.jpg)
 
 
 ## Here's the Code

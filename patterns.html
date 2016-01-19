@@ -62,42 +62,60 @@ bart747.github.io
     <p class="post-meta">Sep 9, 2015</p>
 
     <article class="post-content">
-      <p>Landjaeger short loin kevin ham hock, t-bone alcatra turducken pork chop ball tip bresaola meatball sirloin jerky brisket.
-         Ground round pig spare ribs, pork chop tri-tip biltong ham picanha kevin tongue venison porchetta.
+
+      <p>Landjaeger short loin kevin ham hock, t-bone alcatra turducken pork
+         chop ball tip bresaola meatball sirloin jerky brisket.
+         Ground round pig spare ribs, pork chop tri-tip biltong ham picanha
+         kevin tongue venison porchetta.
       </p>
+
       <h2>Bacon Ipsum</h2>
-      <p>Rump brisket beef tongue, ribeye pork landjaeger swine shoulder spare ribs cupim venison biltong kevin.
-      <a href=""> Chuck t-bone</a> tri-tip, turducken shank rump drumstick pig fatback venison.
-      Ground round frankfurter bresaola fatback porchetta.
+
+      <p>Rump brisket beef tongue, ribeye pork landjaeger swine shoulder spare
+         ribs cupim venison biltong kevin.
+      <a href=""> Chuck t-bone</a> tri-tip, turducken shank rump drumstick pig
+         fatback venison.
+         Ground round frankfurter bresaola fatback porchetta.
       </p>
+
+      <img src="/img/nasa.jpg" alt="" title="">
+
+      <p>Landjaeger short loin kevin ham hock, t-bone alcatra turducken pork
+         chop ball tip bresaola meatball sirloin jerky brisket.
+         Ground round pig spare ribs, pork chop tri-tip biltong ham picanha
+         kevin tongue venison porchetta.
+      </p>
+
       <blockquote>
         Spare ribs short ribs meatloaf shoulder bacon brisket alcatra.
-        Rump turducken short ribs ground round landjaeger spare ribs salami hamburger, cupim corned beef.
+        Rump turducken short ribs ground round landjaeger spare ribs salami
+        hamburger, cupim corned beef.
       </blockquote>
+
       <ul>
           <li>list item one</li>
           <li>list item two</li>
       </ul>
 
     </article>
+
   </div>
 
 <h2>Post List</h2>
 
 <div class="wrapper-post-like post-list">
-<ul>
-  {% for post in site.posts limit:3 %}
-    <li>
-      <h3 class="post-list-title">
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-          {{ post.title}}
-        </a>
-      </h3>
-      {{ post.excerpt }}
-    </li>
-
-  {% endfor %}
-</ul>
+  <ul>
+    {% for post in site.posts limit:3 %}
+      <li>
+        <h3 class="post-list-title">
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+            {{ post.title}}
+          </a>
+        </h3>
+        {{ post.excerpt }}
+      </li>
+    {% endfor %}
+  </ul>
 </div>
 
 <h2>Buttons</h2>
