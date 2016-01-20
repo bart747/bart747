@@ -59,7 +59,10 @@ gulp.task('concat', function() {
 gulp.task('serve', ['sass', 'auto'], function() {
 
   browserSync.init({
-    server: '_site'
+    host: "192.168.1.11",
+    server: {
+      baseDir: "_site"  
+    }
   });
 
   gulp.watch('./_scss/*.scss', ['sass']).on('change', browserSync.reload);

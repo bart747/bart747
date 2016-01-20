@@ -7,13 +7,13 @@ $base-font-family: "Source Sans Pro", sans-serif;
 $monospace:        "DejaVu Sans Mono", monospace;
 $base-font-size:   20px;
 $large-font-size:  1.4rem;
-$small-font-size:  0.8rem;
+$small-font-size:  17px;
 $base-line-height: 1.6;
 
 
-// base rhythm unit
-$u:                1.5rem;
-
+// base rhythm unit (=== leading)
+$u:                1rem * $base-line-height;
+$u2:               2rem * $base-line-height;
 
 // colors
 

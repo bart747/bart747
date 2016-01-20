@@ -2,7 +2,7 @@
 // typography
 //
 
-
+// $u === leading === 1rem x line-height
 p {
   margin: $u 0;
 }
@@ -17,20 +17,20 @@ h1, .h1-like {
   font-size: $u * 1.5;
   font-weight: bold;
   line-height: 1;
-  margin: ($u * 2) 0 $u;
+  margin: $u2 0 $u;
 }
 
 h2, .h2-like {
   font-size: $large-font-size;
   font-weight: 600;
   line-height: $u;
-  margin: ($u * 2) 0 $u 0;
+  margin: $u2 0 $u;
 }
 
 h3, .h3-like {
-  font-size: $base-font-size;
+  font-size: 1rem;
   text-transform: uppercase;
-  margin: ($u * 2) 0 $u;
+  margin: $u2 0 $u;
 }
 
 strong {
@@ -58,7 +58,7 @@ code,
 p code {
   font-size: $small-font-size;
   @media screen and (max-width: 568px) {
-    font-size: $small-font-size - 4;
+    font-size: $small-font-size - 3;
   }
 }
 

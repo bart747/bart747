@@ -3,7 +3,7 @@
 //
 
 //grid
-@media screen and (min-width: 760px) {
+@media screen and (min-width: $screen-mid) {
   .col {
     float: left;
     padding-right: $u;
@@ -27,11 +27,6 @@
   }
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .patterns-lib>h2 {
   background-color: $grey-light;
   color: $grey;
@@ -41,8 +36,4 @@ img {
   padding: 0 0.5em;
   text-transform: uppercase;
   letter-spacing: 0.25em;
-}
-
-.patterns-lib.logo-svg img {
-  max-width: 150px;
 }

@@ -9,7 +9,7 @@
   }
 
   li {
-    margin-bottom: $u;
+    margin-bottom: 1em;
   }
 }
 
@@ -17,16 +17,15 @@
 }
 
 .menu-list-title {
-  margin: (2 * $u) 0 $u;
+  margin: 2rem 0 1em;
 }
 
 .menu-list-small li {
-  margin-bottom: (0.25 * $u);
+  margin-bottom: 0.5em;
 }
 
 .menu-list-header {
   font-size: $small-font-size;
-  float: right;
   margin: 0 auto;
 }
 
@@ -37,7 +36,6 @@
 
 .menu-list-header li {
   display: inline;
-  line-height: 1;
   margin: 0 1em;
 }
 

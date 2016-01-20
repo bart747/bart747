@@ -5,23 +5,14 @@
 .masthead {
  }
 
-
 .masthead-h1 {
-  font-size: 2 * $u;
-  font-weight: bold;
-  line-height: 1;
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: -0.05em;
-  word-spacing: 0.05em;
-}
-
-.masthead-h1-super {
   color: $blue-night;
-  font-size: 3 * $u;
+  font-size: 5rem;
+  font-weight: bold;
   line-height: 0.8;
   letter-spacing: -0.075em;
-  margin: (3 * $u) 0; 
+  margin: 4rem 0; 
+  letter-spacing: -0.05em;
   word-spacing: 0.05em;
   text-transform: none;
 }
@@ -32,18 +23,10 @@
   margin: $u 0;
 }
 
-.masthead-h1-extra {
-  color: $red;
-}
-
-
 @media all and (min-width: $screen-mid) {
 
   .masthead-h1 {
-    font-size: 2.5 * $u;
-  }
-
-  .masthead-h1-super {
-    font-size: 5 * $u;
+    font-size: 6rem;
+    margin: 6rem 0; 
   }
 }

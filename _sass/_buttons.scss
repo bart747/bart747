@@ -12,7 +12,7 @@ button,
   border-radius: 3px;
   text-align: center;
   margin: 0.5rem 0;
-  max-width: 10 * $u;
+  max-width: 12rem;
   cursor: pointer;
 
   &:hover, &:active {
@@ -28,5 +28,5 @@ button,
 }
 
 .btn-social {
-  margin: ($u / 2) 0 ($u / 2) 2px;
+  margin: 1em 0 1em 2px;
 }
