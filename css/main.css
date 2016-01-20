@@ -359,7 +359,7 @@ html {
   line-height: 1.6; }
   @media screen and (max-width: 568px) {
     html {
-      font-size: 16px; } }
+      font-size: 17px; } }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -375,7 +375,7 @@ body {
   padding: 0 0.75rem 0; }
 
 a {
-  color: #1919a9;
+  color: #3530A5;
   text-decoration: none; }
   a:active, a:hover {
     color: #ff4136;
@@ -426,14 +426,14 @@ ol {
   padding-left: 1.25rem; }
 
 pre, code {
-  font-size: 15px; }
+  font-size: 16px; }
 
 p code {
   color: #189560;
   font-family: "DejaVu Sans Mono", monospace; }
   @media screen and (max-width: 568px) {
     p code {
-      font-size: 14px; } }
+      font-size: 15px; } }
 
 .secondary {
   color: #4f4f4f; }
@@ -677,7 +677,7 @@ a.cc_btn {
   a.cc_btn:hover,
   .btn:active,
   a.cc_btn:active {
-    background-color: #1919a9;
+    background-color: #3530A5;
     overflow: none; }
 
 .btn-round {
@@ -783,7 +783,7 @@ a.cc_btn {
 
 .txt-secondary {
   color: #828282;
-  font-size: 16px; }
+  font-size: 17px; }
 
 .bold {
   font-weight: bold; }
@@ -795,7 +795,7 @@ a.cc_btn {
   color: #3050f0; }
 
 .blue-dark {
-  color: #1919a9; }
+  color: #3530A5; }
 
 .blue-code {
   color: #10254B; }
