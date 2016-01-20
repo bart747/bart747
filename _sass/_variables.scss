@@ -6,14 +6,13 @@
 $base-font-family: "Source Sans Pro", sans-serif;
 $monospace:        "DejaVu Sans Mono", monospace;
 $base-font-size:   20px;
-$large-font-size:  26px;
-$small-font-size:  16px;
+$large-font-size:  1.4rem;
+$small-font-size:  0.8rem;
 $base-line-height: 1.6;
 
 
 // base rhythm unit
 $u:                1.5rem;
-$us:               $small-font-size * $base-line-height;
 
 
 // colors

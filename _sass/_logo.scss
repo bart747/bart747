@@ -3,50 +3,22 @@
 //
 
 .logo {
+  float: left;
   font-family: $monospace;
   font-size: 0.75rem;
-  stroke: $black;
   text-align: center;
   margin: 0 auto;
 }
 
-.logo,
 .logo a {
   border-bottom: none;
   color: white;
   font-weight: normal;
-  letter-spacing: 0.05em;
   line-height: 1;
-  fill: $black;
-  animation-name: logo;
-  animation-duration: 3s;
+  margin: 0 1em;
 
   &:hover {
     color: $red;
-    transition: fill, 0.5s;
   }
 }
 
-.logo svg {
-  margin: 0.5rem;
-}
-
-@keyframes logo {
-  from {
-    fill: $black;
-    opacity: 0;
-  }
-
-  15% {
-    opacity: 1;
-  }
-
-  50% {
-    fill: $red;
-  }
-
-
-  to {
-    fill: $black; 
-  }
-}

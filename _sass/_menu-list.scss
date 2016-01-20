@@ -3,8 +3,6 @@
 //
 
 .menu-list {
-  text-align: left;
-
   ul {
   list-style: none;
   padding: 0;
@@ -24,4 +22,29 @@
 
 .menu-list-small li {
   margin-bottom: (0.25 * $u);
+}
+
+.menu-list-header {
+  font-size: $small-font-size;
+  float: right;
+  margin: 0 auto;
+}
+
+.menu-list-header ul {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.menu-list-header li {
+  display: inline;
+  line-height: 1;
+  margin: 0 1em;
+}
+
+.menu-list-header a {
+  color: $grey;
+
+  &:hover, &:active {
+    color: inherit;
+  }
 }
