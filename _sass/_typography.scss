@@ -53,16 +53,17 @@ ol {
   padding-left: 1.25rem;
 }
 
-pre, code {
-  font-size: $small-font-size - 1;
+pre,
+code,
+p code {
+  font-size: $small-font-size;
+  @media screen and (max-width: 568px) {
+    font-size: $small-font-size - 4;
+  }
 }
 
 p code {
   color: $green;
-  font-family: $monospace;
-  @media screen and (max-width: 568px) {
-    font-size: $small-font-size - 2;
-  }
 }
 
 .secondary {

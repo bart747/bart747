@@ -359,7 +359,7 @@ html {
   line-height: 1.6; }
   @media screen and (max-width: 568px) {
     html {
-      font-size: 17px; } }
+      font-size: 16px; } }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -430,15 +430,18 @@ ol {
   margin: 1.5rem 0;
   padding-left: 1.25rem; }
 
-pre, code {
+pre,
+code,
+p code {
   font-size: 16px; }
+  @media screen and (max-width: 568px) {
+    pre,
+    code,
+    p code {
+      font-size: 12px; } }
 
 p code {
-  color: #189560;
-  font-family: "DejaVu Sans Mono", monospace; }
-  @media screen and (max-width: 568px) {
-    p code {
-      font-size: 15px; } }
+  color: #189560; }
 
 .secondary {
   color: #4f4f4f; }
@@ -790,7 +793,7 @@ a.cc_btn {
 
 .txt-secondary {
   color: #828282;
-  font-size: 17px; }
+  font-size: 16px; }
 
 .bold {
   font-weight: bold; }
