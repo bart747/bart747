@@ -355,8 +355,8 @@ th {
 
 html {
   box-sizing: border-box;
-  font-size: 19px;
-  line-height: 1.5; }
+  font-size: 20px;
+  line-height: 1.6; }
   @media screen and (max-width: 568px) {
     html {
       font-size: 16px; } }
@@ -405,7 +405,7 @@ h2, .h2-like {
   margin: 3rem 0 1.5rem 0; }
 
 h3, .h3-like {
-  font-size: 19px;
+  font-size: 20px;
   text-transform: uppercase;
   margin: 3rem 0 1.5rem; }
 
@@ -527,7 +527,7 @@ img {
   to {
     fill: #222; } }
 .masthead {
-  font-size: 19px; }
+  font-size: 20px; }
 
 .masthead-h1 {
   font-size: 3rem;
@@ -584,7 +584,7 @@ img {
   content: '..'; }
 
 .post-list-title {
-  font-size: 19px;
+  font-size: 20px;
   text-transform: none;
   margin: 0 0 0.75rem; }
 
@@ -607,7 +607,7 @@ input {
   border: 2px solid #828282;
   border-radius: 4px;
   display: inline-block;
-  font-size: 19px;
+  font-size: 20px;
   margin: 0;
   padding: 0.5em 0.5em;
   width: 80%;
