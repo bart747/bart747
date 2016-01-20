@@ -27,6 +27,12 @@ body {
   padding: 0 ( 0.5 * $u ) 0;
 }
 
+.wrapper-small {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 ( 0.5 * $u ) 0;
+}
+
 a {
   color: $blue-dark;
   text-decoration: none;

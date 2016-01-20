@@ -3,6 +3,7 @@
 //
 
 .menu-list {
+  text-align: left;
 
   ul {
   list-style: none;
@@ -10,7 +11,7 @@
   }
 
   li {
-    margin-bottom:( 0.5 * $u );
+    margin-bottom: $u;
   }
 }
 
@@ -18,7 +19,7 @@
 }
 
 .menu-list-title {
-  margin: (2 * $u) 0 ( 0.5 * $u );
+  margin: (2 * $u) 0 $u;
 }
 
 .menu-list-small li {
