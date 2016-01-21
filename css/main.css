@@ -532,6 +532,9 @@ p code {
 .menu-list-small li {
   margin-bottom: 0.5em; }
 
+.menu-list-small-title {
+  margin: 3rem 0 0.5em; }
+
 .menu-list-header {
   font-size: 17px;
   margin: 0 auto; }

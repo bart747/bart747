@@ -4,9 +4,9 @@
 
 .menu-list {
   ul {
-  line-height: 1.25;
-  list-style: none;
-  padding: 0;
+    line-height: 1.25;
+    list-style: none;
+    padding: 0;
   }
 
   li {
@@ -23,6 +23,10 @@
 
 .menu-list-small li {
   margin-bottom: 0.5em;
+}
+
+.menu-list-small-title {
+  margin: 3rem 0 0.5em;
 }
 
 .menu-list-header {
