@@ -2,12 +2,24 @@
 // post
 //
 
+.post {
+  font-size: $large-font-size;
+  @media screen and (max-width: $screen-mid) {
+    font-size: $base-font-size;
+  }
+}
+
+
 .post,
 .wrapper-post-like {
-  max-width: 34rem;
+  max-width: 36rem;
   margin: 0 auto;
   margin-bottom: 3rem;
   padding: 0 1em;
+}
+
+.post p {
+  margin-bottom: 1em * $base-line-height; 
 }
 
 .post-meta {

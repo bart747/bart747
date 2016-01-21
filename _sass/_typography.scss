@@ -14,23 +14,21 @@ h3 {
 }
 
 h1, .h1-like {
-  font-size: $u * 1.5;
+  font-size: $u;
   font-weight: bold;
   line-height: 1;
+  margin: 2em 0 1em;
+}
+
+h2, .h2-like,
+h3, .h3-like {
+  font-size: 1em;
+  font-weight: 600;
   margin: $u2 0 $u;
 }
 
 h2, .h2-like {
-  font-size: $large-font-size;
-  font-weight: 600;
-  line-height: $u;
-  margin: $u2 0 $u;
-}
-
-h3, .h3-like {
-  font-size: 1rem;
   text-transform: uppercase;
-  margin: $u2 0 $u;
 }
 
 strong {
@@ -56,9 +54,9 @@ ol {
 pre,
 code,
 p code {
-  font-size: $small-font-size;
-  @media screen and (max-width: 568px) {
-    font-size: $small-font-size - 3;
+  font-size: 16px;
+  @media screen and (max-width: $screen-mid) {
+    font-size: 14px;
   }
 }
 

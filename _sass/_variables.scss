@@ -5,22 +5,22 @@
 
 $base-font-family: "Source Sans Pro", sans-serif;
 $monospace:        "DejaVu Sans Mono", monospace;
-$base-font-size:   20px;
-$large-font-size:  1.4rem;
-$small-font-size:  17px;
+$base-font-size:   18px;
+$large-font-size:  20px;
+$small-font-size:  14px;
 $base-line-height: 1.6;
 
 
 // base rhythm unit (=== leading)
-$u:                1rem * $base-line-height;
-$u2:               2rem * $base-line-height;
+$u:                1.6em;
+$u2:               3.2em;
 
 // colors
 
 //brand
 $black:            #222;
 $brown:            #a77040;
-$blue-night:        #10254B;
+$blue-night:       #102060;
 $text-color:       #363636;
 $background-color: #fffcf8;
 $blue:             #3050f0;

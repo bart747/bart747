@@ -6,9 +6,6 @@ html {
   box-sizing: border-box;
   font-size: $base-font-size;
   line-height: $base-line-height;
-  @media screen and (max-width: 568px) {
-    font-size: $small-font-size;
-  }
 }
 
 *, *:before, *:after {

@@ -2,31 +2,31 @@
 // masthead
 //
 
-.masthead {
- }
+
 
 .masthead-h1 {
   color: $blue-night;
-  font-size: 5rem;
+  font-size: 4em;
   font-weight: bold;
   line-height: 0.8;
   letter-spacing: -0.075em;
-  margin: 4rem 0; 
+  margin: 0.75em 0; 
   letter-spacing: -0.05em;
   word-spacing: 0.05em;
   text-transform: none;
 }
 
 .masthead-h2 {
-  color: $black;
-  font-weight: normal;
-  margin: $u 0;
+  margin:  0;
+  text-transform: none;
 }
 
 @media all and (min-width: $screen-mid) {
+  .masthead {
+    font-size: $large-font-size;
+  }
 
   .masthead-h1 {
-    font-size: 6rem;
-    margin: 6rem 0; 
+    font-size: 5em;
   }
 }
