@@ -433,12 +433,12 @@ ol {
 pre,
 code,
 p code {
-  font-size: 15px; }
+  font-size: 16px; }
   @media screen and (max-width: 768px) {
     pre,
     code,
     p code {
-      font-size: 13px; } }
+      font-size: 14px; } }
 
 p code {
   color: #189560; }
@@ -880,8 +880,6 @@ a.cc_btn {
   .highlight .s {
     color: #189560; }
   .highlight .n {
-    color: #3530A5; }
-  .highlight .na {
     color: #3530A5; }
   .highlight .nb {
     color: #3530A5; }
