@@ -5,7 +5,7 @@
 
 
 .masthead-h1 {
-  color: $blue-night;
+  color: $black;
   font-size: 4em;
   font-weight: bold;
   line-height: 0.8;
@@ -28,5 +28,6 @@
 
   .masthead-h1 {
     font-size: 5em;
+    margin: 1em 0; 
   }
 }

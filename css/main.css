@@ -495,7 +495,7 @@ p code {
     color: #ff2211; }
 
 .masthead-h1 {
-  color: #102060;
+  color: #222;
   font-size: 4em;
   font-weight: bold;
   line-height: 0.8;
@@ -514,7 +514,8 @@ p code {
     font-size: 20px; }
 
   .masthead-h1 {
-    font-size: 5em; } }
+    font-size: 5em;
+    margin: 1em 0; } }
 .menu-list ul {
   line-height: 1.25;
   list-style: none;
