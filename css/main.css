@@ -873,8 +873,7 @@ a.cc_btn {
   .highlight .kr {
     color: #a12424; }
   .highlight .kt {
-    color: #a12424;
-    font-weight: bold; }
+    color: #a12424; }
   .highlight .m {
     color: #e46609; }
   .highlight .s {
@@ -901,8 +900,6 @@ a.cc_btn {
     color: #3530A5; }
   .highlight .nv {
     color: #3530A5; }
-  .highlight .ow {
-    font-weight: bold; }
   .highlight .w {
     color: #828282; }
   .highlight .mf {

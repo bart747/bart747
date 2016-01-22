@@ -34,7 +34,7 @@
     .kd    { color: $red-dark; } // Keyword.Declaration
     .kp    { color: $red-dark; } // Keyword.Pseudo
     .kr    { color: $red-dark; } // Keyword.Reserved
-    .kt    { color: $red-dark; font-weight: bold } // Keyword.Type
+    .kt    { color: $red-dark; } // Keyword.Type
     .m     { color: $orange } // Literal.Number
     .s     { color: $green } // Literal.String
     .n     { color: $blue-dark; } 
@@ -49,7 +49,7 @@
     .nn    { color: $blue-dark; } // Name.Namespace
     .nt    { color: $blue-dark; } // Name.Tag
     .nv    { color: $blue-dark; } // Name.Variable
-    .ow    { font-weight: bold } // Operator.Word
+    .ow    {  } // Operator.Word
     .w     { color: $grey } // Text.Whitespace
     .mf    { color: $orange } // Literal.Number.Float
     .mh    { color: $orange } // Literal.Number.Hex
