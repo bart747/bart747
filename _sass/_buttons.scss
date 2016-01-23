@@ -6,8 +6,8 @@ button,
 .btn {
   color: white;
   background-color: $blue;
-  box-shadow: 0 1px 2px $grey;
-  padding: 0.5rem 1rem;
+  background-image: linear-gradient(to bottom, $blue, $blue-dark);
+  padding: 0.5em 1em;
   border: 0;
   border-radius: 3px;
   text-align: center;
@@ -16,9 +16,13 @@ button,
   cursor: pointer;
 
   &:hover, &:active {
-    background-color: $blue-dark;
+    background-image: linear-gradient(to bottom, $blue-dark, $blue-dark);
     overflow: none;
   }
+  &:active {
+    text-shadow: 0 0 5px;
+  }
+
 }
 
 .btn-round {
