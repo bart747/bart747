@@ -3,9 +3,60 @@
 //
 
 .header {
-  background: $black;
   color: $background-color;
   text-align: center;
   padding: 0.5em;
+}
+
+.header-nav {
+  margin: 0 auto;
+}
+
+.header-nav ul {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.header-nav li {
+  display: inline;
+  margin: 0 1em;
+} 
+
+.header-left {
+  text-align: left;
+}
+
+.header-right {
+  text-align: right;
+}
+
+@media all and ( max-width: $screen-mid ) {
+
+  .header-left {
+  text-align: center;
+}
+
+.header-right {
+  text-align: center;
+}
+
+}
+// logo
+
+.logo {
+  font-family: $monospace;
+  font-size: 0.75rem;
+}
+
+.logo a {
+  border-bottom: none;
+  color: $red;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0 1em;
+
+  &:hover {
+    color: $blue-dark;
+  }
 }
 

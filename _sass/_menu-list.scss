@@ -29,24 +29,5 @@
   margin: 3rem 0 0.5em;
 }
 
-.menu-list-header {
-  margin: 0 auto;
-}
 
-.menu-list-header ul {
-  margin: 0 auto;
-  padding: 0;
-}
 
-.menu-list-header li {
-  display: inline;
-  margin: 0 1em;
-}
-
-.menu-list-header a {
-  color: $grey;
-
-  &:hover, &:active {
-    color: inherit;
-  }
-}
