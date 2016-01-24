@@ -4,7 +4,7 @@
 
 .post {
   font-size: $large-font-size;
-  @media screen and (max-width: $screen-mid) {
+  @media screen and (max-width: $screen-sml) {
     font-size: $base-font-size;
   }
 }

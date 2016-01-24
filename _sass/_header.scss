@@ -4,7 +4,6 @@
 
 .header {
   color: $background-color;
-  text-align: center;
   padding: 0.5em;
 }
 
@@ -20,26 +19,25 @@
 .header-nav li {
   display: inline;
   margin: 0 1em;
-} 
+}
 
 .header-left {
-  text-align: left;
+  text-align: center;
 }
 
 .header-right {
-  text-align: right;
+  text-align: center;
 }
 
-@media all and ( max-width: $screen-mid ) {
+@media all and ( min-width: $screen-mid ) {
 
   .header-left {
-  text-align: center;
-}
+    text-align: left;
+  }
 
-.header-right {
-  text-align: center;
-}
-
+  .header-right {
+    text-align: right;
+  }
 }
 // logo
 

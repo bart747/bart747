@@ -2,8 +2,6 @@
 // masthead
 //
 
-
-
 .masthead-h1 {
   color: $black;
   font-size: 4em;
@@ -21,7 +19,7 @@
   text-transform: none;
 }
 
-@media all and (min-width: $screen-mid) {
+@media all and (min-width: $screen-sml) {
   .masthead {
     font-size: $large-font-size;
   }
