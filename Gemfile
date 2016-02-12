@@ -3,5 +3,6 @@ source "https://rubygems.org"
 
 # gem "rails"
 gem "jekyll-assets"
+gem "jekyll-coffeescript"
 gem "jekyll-sitemap"
 #gem "autoprefixer-rails"

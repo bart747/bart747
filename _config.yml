@@ -16,5 +16,8 @@ exclude: [_sass, sass, gulpfile.js, node_modules, projects/*/node_modules]
 # links
 permalink: none
 
-gems:
+gems: 
   - jekyll-sitemap
+  - jekyll-assets
+
+
