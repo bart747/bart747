@@ -51,7 +51,7 @@ function resetInput(input, iconSuc, iconErr) {
 //
 
 // check CARD NUMBER 
-(function() { 
+(function checkCardNum() { 
 
   // card number css classes setting
   const cardNum = {
@@ -146,11 +146,10 @@ function resetInput(input, iconSuc, iconErr) {
 
   });
 
-}()); // END card number check
+}());
 
 
-// check EXPIRY DATE 
-(function() {
+(function checkExpDate() {
 
   // card expiry number css classes setting
   const cardExp = {
@@ -190,13 +189,11 @@ function resetInput(input, iconSuc, iconErr) {
     }
   });
 
-}()); // END expiry date check
+}());
 
 
-// check CVC NUMBER
-(function() {
+(function cvcCheck() {
 
-  // CVC number css classes setting
   const cardCVC = {
     input: '.cc-cvc-input',
     iconOk: '.cc-cvc-icon-success',
@@ -233,6 +230,6 @@ function resetInput(input, iconSuc, iconErr) {
     }
   });
 
-}()); // END cvc num check
+}());
 
 }());
