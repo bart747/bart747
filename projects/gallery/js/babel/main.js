@@ -65,7 +65,7 @@
         }
       },
 
-      select: function select(el) {
+      applyTo: function applyTo(el) {
         attr.frames.mini[el].click(function () {
           imgSelector.reset();
           image.highlightOn(attr.frames.mini[el]);
@@ -74,6 +74,8 @@
       }
     };
 
+    // start by creating placeholder from first thumbnail
+    // because it'll be loaded the fastest
     image.create(attr.images.mini[0], attr.placeholder);
     image.create(attr.images.full[0], attr.frames.full[0]);
     image.hide(attr.frames.full[0]);
@@ -85,6 +87,8 @@
 
     image.highlightOn(attr.frames.mini[0]);
 
+    // all full size images except the first one are loaded after a page is ready
+    // that way they don't "steal" bandwidth
     window.onload = function () {
 
       for (var i = 1; i < attr.imgNum; i += 1) {
@@ -97,7 +101,7 @@
 
       for (var i = 0; i < attr.imgNum; i += 1) {
         image.blurOff(attr.frames.mini[i]);
-        imgSelector.select(i);
+        imgSelector.applyTo(i);
       }
     };
   }
