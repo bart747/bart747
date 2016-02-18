@@ -1,94 +1,110 @@
 
 (function() {
 
-const picNr = 3;
+function gallery2step() {
 
-const sources = {
-    full: ["img/1.jpg", "img/2.jpg", "img/3.jpg"],
-    mini: ["img/1s.jpg", "img/2s.jpg", "img/3s.jpg"]
-};
+  const attr = {
 
-// div frames for images
-const frames = {
-    full: [$("div#pic-1"), $("div#pic-2"), $("div#pic-3")],
-    mini: [$("div#pic-mini-1"), $("div#pic-mini-2"), $("div#pic-mini-3")]
-};
+    imgNum: 3,
 
-// frame for image that will serve as placeholder until
-// first full size photo will be uploaded
-const placeholder = $("div#pic-1-placeholder");
+    images: {
+        full: ["img/1.jpg", "img/2.jpg", "img/3.jpg"],
+        mini: ["img/1s.jpg", "img/2s.jpg", "img/3s.jpg"]
+    },
 
-// helper to create IMG objects
-function imgCreate(source, frame) {
-    const img = new Image();
-    img.src = source;
-    frame.append(img);
-}
+    frames: {
+        full: [$("div#pic-1"), $("div#pic-2"), $("div#pic-3")],
+        mini: [$("div#pic-mini-1"), $("div#pic-mini-2"), $("div#pic-mini-3")]
+    },
 
-// create first miniature in placeholder frame
-// (miniatures are smaller so will appear earlier)
-imgCreate(sources.mini[0], placeholder);
+    placeholder: $("div#pic-1-placeholder")
 
-// create fist full size photo and hide it
-imgCreate(sources.full[0], frames.full[0]);
-frames.full[0].addClass("hidden");
+  };
 
-// create all miniatures in mini frames
-for (let i = 0; i < picNr; i += 1) {
-    imgCreate(sources.mini[i], frames.mini[i]);
-    frames.mini[i].addClass("blur");
-}
+  const image = {
 
-// add 'active' css state class to first miniature
-frames.mini[0].addClass("pic-active");
+    create: function(source, frame) {
+      const img = new Image();
+      img.src = source;
+      frame.append(img);
+    },
 
+    hide: function(frame) {
+      frame.addClass("hidden");
+    },
+    
+    show: function(frame) {
+      frame.removeClass("hidden");
+    },
 
-//  'ON CLICK' FUNCTIONALITY
-// add/remove on click css state classes in selected div frames
-function cssToggle(framesNr) {
+    highlightOn: function(frame) {
+      frame.addClass("pic-active");
+    },
 
-    // select right div frames
-    let main = frames.full[framesNr];
-    let miniature = frames.mini[framesNr];
+    highlightOff: function(frame) {
+      frame.removeClass("pic-active");
+    },
 
-    miniature.click(function() {
+    blurOn: function(frame) {
+      frame.addClass("blur");
+    },
 
-        // reset css state classes before adding changes
-        for (let i=0; i<picNr; i+=1) {
-            frames.full[i].addClass("hidden");
-            frames.mini[i].removeClass("pic-active");
+    blurOff: function(frame) {
+      frame.removeClass("blur");
     }
 
-        // add/remove proper css state classes to selected image frames
-        miniature.addClass("pic-active");
-        main.removeClass("hidden");
-    });
+  };
+
+
+  const imgSelector = {
+
+    reset: function() {
+      for (let i = 0; i < attr.imgNum; i += 1) {
+        image.hide(attr.frames.full[i]);
+        image.highlightOff(attr.frames.mini[i]);
+      }
+    },
+
+    select: function(el) {
+      attr.frames.mini[el].click(function() {
+        imgSelector.reset();
+        image.highlightOn(attr.frames.mini[el]);
+        image.show(attr.frames.full[el]);
+      });
+    }
+  };
+
+
+  image.create(attr.images.mini[0], attr.placeholder);
+  image.create(attr.images.full[0], attr.frames.full[0]);
+  image.hide(attr.frames.full[0]);
+
+  attr.frames.mini.forEach(function(element, index) {
+    image.create(attr.images.mini[index], element);
+    image.blurOn(element);
+  });
+
+  image.highlightOn(attr.frames.mini[0]);
+  
+  
+  window.onload = function () {
+  
+    for (let i = 1; i < attr.imgNum; i += 1) {
+      image.hide(attr.frames.full[i]);
+      image.create(attr.images.full[i], attr.frames.full[i]);
+    }
+
+    image.hide(attr.placeholder);
+    image.show(attr.frames.full[0]);
+
+    for (let i = 0; i < attr.imgNum; i += 1 ) {
+      image.blurOff(attr.frames.mini[i]);
+      imgSelector.select(i);
+    }
+  };
+  
 }
 
-// fire at the end of the document loading process
-function atPageReady() {
-    window.onload = function () {
-
-	// create all full size except the first one (already created)
-	for (let i = 1; i < picNr; i += 1) {
-
-	  // hide them upfront
-	  frames.full[i].addClass("hidden");
-	  imgCreate(sources.full[i], frames.full[i]);
-	}
-
-	// hide placeholder and show full size image
-	placeholder.addClass("hidden");
-	frames.full[0].removeClass("hidden");
-
-	// remove blur effect and apply cssToggle function to all image frames
-	for (let i = 0; i < picNr; i+=1 ) {
-	  frames.mini[i].removeClass("blur");
-	  cssToggle(i);
-	}
-    };
-}
-
-atPageReady();
+gallery2step();
 
 }());
