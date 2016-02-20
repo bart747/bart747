@@ -3,30 +3,41 @@
 
 function gallery2step() {
 
-  const attr = {
-
-    imgNum: 3,
-
-    images: {
-        full: ["img/1.jpg", "img/2.jpg", "img/3.jpg"],
-        mini: ["img/1s.jpg", "img/2s.jpg", "img/3s.jpg"]
-    },
-
-    frames: {
-        full: [$("div#pic-1"), $("div#pic-2"), $("div#pic-3")],
-        mini: [$("div#pic-mini-1"), $("div#pic-mini-2"), $("div#pic-mini-3")]
-    },
-
-    placeholder: $("div#pic-1-placeholder")
-
+  const images = {
+      full: ["img/1.jpg", "img/2.jpg", "img/3.jpg"],
+      mini: ["img/1s.jpg", "img/2s.jpg", "img/3s.jpg"]
   };
 
-  const image = {
+  const frames = {
+      full: [$("div#pic-1"), $("div#pic-2"), $("div#pic-3")],
+      mini: [$("div#pic-mini-1"), $("div#pic-mini-2"), $("div#pic-mini-3")]
+  };
 
-    create: function(source, frame) {
+  const placeholder = $("div#pic-1-placeholder");
+
+  class image {
+    constructor(file, divFrame) {
+      this.file = file;
+      this.divFrame = divFrame;
+    }
+
+    create() {
       const img = new Image();
-      img.src = source;
-      frame.append(img);
+      img.src = this.file;
+      this.divFrame.append(img);
+    }
+  };
+/*
+  class gallery {
+    constructor(images, frames, placeholder) {
+      this.images = images;
+      this.frames = frames;
+    }
+
+    imgCreate: function(imgSource, imgFrame) {
+      const img = new Image();
+      img.src = imgSource;
+      imgFrame.append(img);
     },
 
     hide: function(frame) {
@@ -55,6 +66,17 @@ function gallery2step() {
 
   };
 
+    images: {
+        full: ["img/1.jpg", "img/2.jpg", "img/3.jpg"],
+        mini: ["img/1s.jpg", "img/2s.jpg", "img/3s.jpg"]
+    },
+
+    frames: {
+        full: [$("div#pic-1"), $("div#pic-2"), $("div#pic-3")],
+        mini: [$("div#pic-mini-1"), $("div#pic-mini-2"), $("div#pic-mini-3")]
+    },
+
+    placeholder: $("div#pic-1-placeholder"),
 
   const imgSelector = {
 
@@ -76,9 +98,9 @@ function gallery2step() {
 
   // start by creating placeholder from first thumbnail
   // because it'll be loaded the fastest
-  image.create(attr.images.mini[0], attr.placeholder);
-  image.create(attr.images.full[0], attr.frames.full[0]);
-  image.hide(attr.frames.full[0]);
+  image.create(images.mini[0], attr.placeholder);
+  image.create(images.full[0], frames.full[0]);
+  image.hide(frames.full[0]);
 
   attr.frames.mini.forEach(function(element, index) {
     image.create(attr.images.mini[index], element);
@@ -104,7 +126,7 @@ function gallery2step() {
       imgSelector.applyTo(i);
     }
   };
-  
+*/
 }
 
 gallery2step();

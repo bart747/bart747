@@ -18,7 +18,13 @@
         mini: [$("div#pic-mini-1"), $("div#pic-mini-2"), $("div#pic-mini-3")]
       },
 
-      placeholder: $("div#pic-1-placeholder")
+      placeholder: $("div#pic-1-placeholder"),
+
+      imgCreate: function imgCreate(source, frame) {
+        var img = new Image();
+        img.src = source;
+        frame.append(img);
+      }
 
     };
 
@@ -76,9 +82,9 @@
 
     // start by creating placeholder from first thumbnail
     // because it'll be loaded the fastest
-    image.create(attr.images.mini[0], attr.placeholder);
-    image.create(attr.images.full[0], attr.frames.full[0]);
-    image.hide(attr.frames.full[0]);
+    image.create(images.mini[0], attr.placeholder);
+    image.create(images.full[0], frames.full[0]);
+    image.hide(frames.full[0]);
 
     attr.frames.mini.forEach(function (element, index) {
       image.create(attr.images.mini[index], element);
