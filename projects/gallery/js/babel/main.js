@@ -93,10 +93,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     imgsBig[0].create();
     imgsBig[0].displayOff();
 
-    var aa = function aa(e) {
-      thumbnails[e].highlightOn();
-    };
-
     // wait with HD stuff until page is ready
     // so it will not 'steal' bandwidth
     window.onload = function () {
@@ -116,6 +112,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       thumbnails.forEach(function (el, i) {
         el.divFrame.click(function () {
 
+          // reset
           thumbnails.forEach(function (el, i) {
             imgsBig[i].displayOff();
             el.highlightOff();

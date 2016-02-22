@@ -74,10 +74,6 @@ function gallery2step() {
   
   imgsBig[0].create();
   imgsBig[0].displayOff();
-
-  const aa = function(e) {
-    thumbnails[e].highlightOn();
-  };
  
 
   // wait with HD stuff until page is ready
@@ -99,6 +95,7 @@ function gallery2step() {
     thumbnails.forEach( function(el, i) {
       el.divFrame.click( function() {
 
+        // reset
         thumbnails.forEach(function(el, i) {
           imgsBig[i].displayOff();
           el.highlightOff();
