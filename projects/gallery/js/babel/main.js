@@ -1,114 +1,130 @@
 "use strict";
 
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 (function () {
 
   function gallery2step() {
 
-    var attr = {
-
-      imgNum: 3,
-
-      images: {
-        full: ["img/1.jpg", "img/2.jpg", "img/3.jpg"],
-        mini: ["img/1s.jpg", "img/2s.jpg", "img/3s.jpg"]
-      },
-
-      frames: {
-        full: [$("div#pic-1"), $("div#pic-2"), $("div#pic-3")],
-        mini: [$("div#pic-mini-1"), $("div#pic-mini-2"), $("div#pic-mini-3")]
-      },
-
-      placeholder: $("div#pic-1-placeholder"),
-
-      imgCreate: function imgCreate(source, frame) {
-        var img = new Image();
-        img.src = source;
-        frame.append(img);
-      }
-
+    var imgFiles = {
+      big: ["img/1.jpg", "img/2.jpg", "img/3.jpg"],
+      small: ["img/1s.jpg", "img/2s.jpg", "img/3s.jpg"]
     };
 
-    var image = {
-
-      create: function create(source, frame) {
-        var img = new Image();
-        img.src = source;
-        frame.append(img);
-      },
-
-      hide: function hide(frame) {
-        frame.addClass("hidden");
-      },
-
-      show: function show(frame) {
-        frame.removeClass("hidden");
-      },
-
-      highlightOn: function highlightOn(frame) {
-        frame.addClass("pic-active");
-      },
-
-      highlightOff: function highlightOff(frame) {
-        frame.removeClass("pic-active");
-      },
-
-      blurOn: function blurOn(frame) {
-        frame.addClass("blur");
-      },
-
-      blurOff: function blurOff(frame) {
-        frame.removeClass("blur");
-      }
-
+    var imgFrames = {
+      big: [$("div#pic-1"), $("div#pic-2"), $("div#pic-3")],
+      small: [$("div#pic-mini-1"), $("div#pic-mini-2"), $("div#pic-mini-3")]
     };
 
-    var imgSelector = {
+    var placeholder = $("div#pic-1-placeholder");
 
-      reset: function reset() {
-        for (var i = 0; i < attr.imgNum; i += 1) {
-          image.hide(attr.frames.full[i]);
-          image.highlightOff(attr.frames.mini[i]);
+    var image = (function () {
+      function image(file, divFrame) {
+        _classCallCheck(this, image);
+
+        this.file = file;
+        this.divFrame = divFrame;
+      }
+
+      _createClass(image, [{
+        key: "create",
+        value: function create() {
+          var img = new Image();
+          img.src = this.file;
+          this.divFrame.append(img);
         }
-      },
+      }, {
+        key: "displayOn",
+        value: function displayOn() {
+          this.divFrame.removeClass("hidden");
+        }
+      }, {
+        key: "displayOff",
+        value: function displayOff() {
+          this.divFrame.addClass("hidden");
+        }
+      }, {
+        key: "highlightOn",
+        value: function highlightOn() {
+          this.divFrame.addClass("pic-active");
+        }
+      }, {
+        key: "highlightOff",
+        value: function highlightOff() {
+          this.divFrame.removeClass("pic-active");
+        }
+      }, {
+        key: "blurOn",
+        value: function blurOn() {
+          this.divFrame.addClass("blur");
+        }
+      }, {
+        key: "blurOff",
+        value: function blurOff() {
+          this.divFrame.removeClass("blur");
+        }
+      }]);
 
-      applyTo: function applyTo(el) {
-        attr.frames.mini[el].click(function () {
-          imgSelector.reset();
-          image.highlightOn(attr.frames.mini[el]);
-          image.show(attr.frames.full[el]);
-        });
-      }
-    };
+      return image;
+    })();
 
-    // start by creating placeholder from first thumbnail
-    // because it'll be loaded the fastest
-    image.create(images.mini[0], attr.placeholder);
-    image.create(images.full[0], frames.full[0]);
-    image.hide(frames.full[0]);
+    // start by creating thumbnails and placeholder from small jpg
+    // - they'll show up faster than full size photos
 
-    attr.frames.mini.forEach(function (element, index) {
-      image.create(attr.images.mini[index], element);
-      image.blurOn(element);
+    var imgPlaceholder = new image(imgFiles.small[0], placeholder);
+    imgPlaceholder.create();
+
+    var thumbnails = [];
+    imgFrames.small.forEach(function (el, i) {
+      thumbnails[i] = new image(imgFiles.small[i], imgFrames.small[i]);
+      thumbnails[i].create();
+      thumbnails[i].blurOn();
     });
 
-    image.highlightOn(attr.frames.mini[0]);
+    thumbnails[0].highlightOn();
 
-    // all full size images except the first one are loaded after a page is ready
-    // that way they don't "steal" bandwidth
+    var imgsBig = [];
+    imgFrames.big.forEach(function (el, i) {
+      imgsBig[i] = new image(imgFiles.big[i], el);
+    });
+
+    imgsBig[0].create();
+    imgsBig[0].displayOff();
+
+    var aa = function aa(e) {
+      thumbnails[e].highlightOn();
+    };
+
+    // wait with HD stuff until page is ready
+    // so it will not 'steal' bandwidth
     window.onload = function () {
 
-      for (var i = 1; i < attr.imgNum; i += 1) {
-        image.hide(attr.frames.full[i]);
-        image.create(attr.images.full[i], attr.frames.full[i]);
-      }
+      thumbnails.forEach(function (el, i) {
+        el.blurOff();
+      });
 
-      image.hide(attr.placeholder);
-      image.show(attr.frames.full[0]);
+      imgPlaceholder.displayOff();
+      imgsBig[1].create();
+      imgsBig[2].create();
+      imgsBig.forEach(function (el) {
+        el.displayOff();
+      });
+      imgsBig[0].displayOn();
 
-      for (var i = 0; i < attr.imgNum; i += 1) {
-        image.blurOff(attr.frames.mini[i]);
-        imgSelector.applyTo(i);
-      }
+      thumbnails.forEach(function (el, i) {
+        el.divFrame.click(function () {
+
+          thumbnails.forEach(function (el, i) {
+            imgsBig[i].displayOff();
+            el.highlightOff();
+          });
+
+          el.highlightOn();
+          imgsBig[i].displayOn();
+        });
+      });
     };
   }
 
