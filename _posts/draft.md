@@ -1,35 +1,61 @@
 ---
 layout: post
-title: "Persuasive Newsletter Sign-Up Forms (No Pop-Ups)"  
-date: 2015-01-05
+title: "How Not to Be Afraid of the Future: Web Development and Lindy Effect"
+date: 2016-02-26
 ---
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">What happens to the &quot;bounce rate&quot; (% of people only viewing one page) when you take a pop-up box off your website <a href="https://t.co/vyOj0N3Ggw">pic.twitter.com/vyOj0N3Ggw</a></p>&mdash; Shane Parrish (@farnamstreet) <a href="https://twitter.com/farnamstreet/status/686404032823439360">January 11, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>)
 
-Putting newsletter sign-up forms into right attention spots is tricky. You don't
-want have one of "those marketing sites". On the other hand, you wan't big, well 
-developed funnel of potential clients.
+## "X Technology Will Rule The World"
 
-From my point of view&mdash;as UI designer&mdash; there are two 
-key elements in this problem:
-- timing
-- copy
+Of course, no one really knows the future,
+but there are some pretty clear patterns worth exploring. 
+One of them is human nature and Lindy Effect.
+Powerful things when combined together. (Actually, they are tightly connected.)
 
-You want to put your form in the place that visitors will easily notice.
-It should be *after* some greate piece of content, so it will not be proposition
-from a total stranger.
+Lindy Effects is a theory that says, in short, that the longer something exists, 
+the more likely it will survive in the future. It's about things like
+technology, books in print, old movies that people are still watching and
+procrastination.
 
-You show a little bit of what you represent.
-You give something valuable for free.
-Than ask for action.
+You can say that now we sell things on-line.
+People can buy things using smartphones.
+And anyone have one in his pocket. Ready to use.
+That sounds like a big, surprising shift,
+but actually it's an effect of a pretty boring process. 
 
-One of good places is below articles.
-It means focus on production and presentation of great content. That content is free
-value and presentation of yourself. Asking for sign-ups follows it.
+Lets stick to that cable/antenna stuff (a phone and the Internet).
+Since thousands of years we communicate and sell.
+Once we figured out postal services, we communicate farther and sell farther.
+Once we figured out a phone, we communicate more and deal with telemarketers.
+Once we figured out the Internet, we get e-commerce, social
+media and email.
+Once many people got email address, we use them to communicate
+with each other and sell at a big scale.
+And once we know we can sell with it at low cost, we
+overdo it.  
 
-The copy part is about telling about benefits of your newsletter. It means that
-you don't just put a form with two descriptive sentences.
-Something like "sing-up now and be inform about all new stuff we do".
-What I'm writing about is more like bullet list's of benefits, unique value.
-It's not just info about new blog posts. 
+Take a look at successful SAAS businesses. I mean, those that make solid money. 
+The top ones help you communicate, sell or both. Project management is communication.
+CRM is both. Analytics software helps figuring out better sales channels.
+
+People in SAAS like to use the word 'automation', but it's usually marketing
+automation, transaction automation or client-business communication automation. 
+
+Everything that can send a message at a big distance is
+used to communicate and sell.
+
+And it's something that supports our already present thinking patterns.
+It's never like "reshape your brain or die".
+Good new things are based on old, proven things. When they ignore the
+past, they die.
+
+When you see Google Maps, you know immediately, that it's a map. It looks similar
+to the old ones. It could look different with todays technology, but would it be
+better?
+
+The touch keyboard in your smartphone looks similar to an old,
+physical QWERTY.
+It's in a different context, but good makers know that they shouldn't
+confuse you. 
+
+What a world. Nothing is fucking changing here.
 
