@@ -50,7 +50,8 @@ gulp.task('js', function() {
   return gulp.src('js/myscripts/*.js')
     .pipe(sourcemaps.init())
       .pipe(jshint({
-        esnext: true
+        esnext: true,
+        asi: true
       }))
       .pipe(jshint.reporter('default'))
       .pipe(babel())
