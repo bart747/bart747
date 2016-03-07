@@ -3,7 +3,6 @@
 //
 
 .header {
-  color: $background-color;
   padding: 0.5em;
 }
 
@@ -48,13 +47,9 @@
 
 .logo a {
   border-bottom: none;
-  color: $black;
   font-weight: normal;
   line-height: 1;
   margin: 0 1em;
 
-  &:hover {
-    color: $blue-dark;
-  }
 }
 
