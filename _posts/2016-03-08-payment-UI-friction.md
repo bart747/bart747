@@ -4,7 +4,7 @@ title: "Payment UIs Can be Used to Reduce Friction"
 date: 2016-03-08
 ---
 
-A page with a final "buy" button or a credit card data form,
+A page with a final "buy" button or a credit card data form
 is a huge friction trigger. 
 It's the moment when you, as a buyer, think again about spendings
 and transaction safety.
