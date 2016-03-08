@@ -4,6 +4,7 @@ $.payment.fn = {}
 $.fn.payment = (method, args...) ->
   $.payment.fn[method].apply(this, args)
 
+
 # Utils
 
 defaultFormat = /(\d{1,4})/g

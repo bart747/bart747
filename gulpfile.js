@@ -17,13 +17,11 @@ var gutil = require('gulp-util');
 // sass => css
 gulp.task('sass-css', function() {
   return gulp.src('_sass/main.scss')
-    .pipe(sourcemaps.init())
-      .pipe(sass().on('error', sass.logError))
-      .pipe(autoprefixer({
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
       browsers: ['last 3 versions'],
       cascade: false
-      }))
-    .pipe(sourcemaps.write())
+    }))
     .pipe(gulp.dest('css'));
 });
 
@@ -37,25 +35,21 @@ gulp.task('minify-css', ['sass-css'], function() {
 // coffeescript 
 gulp.task('coffee', function() {
   return gulp.src('./js/myscripts/coffee/*.coffee')
-    .pipe(sourcemaps.init()
-      .pipe(coffeelint())
-      .pipe(coffeelint.reporter()))
-      .pipe(coffee({bare: true}).on('error', gutil.log))
-    .pipe(sourcemaps.write())
+    .pipe(coffeelint())
+    .pipe(coffeelint.reporter())
+    .pipe(coffee({bare: true}).on('error', gutil.log))
     .pipe(gulp.dest('./js/myscripts/coffee'));
 });
 
 // js
 gulp.task('js', function() {
   return gulp.src('js/myscripts/*.js')
-    .pipe(sourcemaps.init())
-      .pipe(jshint({
-        esnext: true,
-        asi: true
-      }))
-      .pipe(jshint.reporter('default'))
-      .pipe(babel())
-    .pipe(sourcemaps.write())
+    .pipe(jshint({
+      esnext: true,
+      asi: true
+    }))
+    .pipe(jshint.reporter('default'))
+    .pipe(babel())
     .pipe(gulp.dest('./js/babel'));
 });
 
