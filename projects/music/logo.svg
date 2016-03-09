@@ -27,7 +27,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
      inkscape:cx="102.75141"
-     inkscape:cy="-66.835206"
+     inkscape:cy="104.59337"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -52,7 +52,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -69,7 +69,7 @@
        sodipodi:cy="220"
        sodipodi:rx="180"
        sodipodi:ry="180"
-       d="m 400,220 a 180,180 0 1 1 -360,0 180,180 0 1 1 360,0 z"
+       d="M 400,220 C 400,319.41125 319.41125,400 220,400 120.58875,400 40,319.41125 40,220 40,120.58875 120.58875,40 220,40 c 99.41125,0 180,80.58875 180,180 z"
        transform="matrix(-0.83333333,0,0,-0.83333333,483.33333,1035.6955)" />
     <path
        sodipodi:end="3.1418667"
@@ -81,12 +81,12 @@
        sodipodi:cy="220"
        sodipodi:rx="180"
        sodipodi:ry="180"
-       d="M 400,220 A 180,180 0 1 1 40.000007,219.95067"
+       d="m 400,220 c 0,99.41125 -80.58875,180 -180,180 -99.41125,0 -180,-80.58875 -180,-180 0,-0.0164 2e-6,-0.0329 7e-6,-0.0493"
        transform="matrix(-0.83333333,0,0,-0.83333333,483.33333,1035.6955)"
        sodipodi:open="true" />
     <path
        transform="matrix(-0.83333333,0,0,-0.83333333,483.33333,1035.6955)"
-       d="M 400,220 A 180,180 0 0 1 44.464475,259.84068"
+       d="M 400,220 C 400,319.41125 319.41125,400 220,400 135.93859,400 63.070382,341.81714 44.464475,259.84068"
        sodipodi:ry="180"
        sodipodi:rx="180"
        sodipodi:cy="220"
@@ -107,26 +107,27 @@
        sodipodi:cy="220"
        sodipodi:rx="180"
        sodipodi:ry="180"
-       d="M 400,220 A 180,180 0 0 1 60.642792,303.69755 L 220,220 z"
+       d="M 400,220 C 400,319.41125 319.41125,400 220,400 153.11421,400 91.743776,362.91274 60.642792,303.69755 L 220,220 z"
        transform="matrix(-0.83333333,0,0,-0.83333333,483.33333,1035.6955)" />
     <g
-       style="font-size:200px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
+       style="font-size:200px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:none;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
        id="text2987"
        transform="translate(2.4037168,2.8)">
       <path
          d="m 96.067296,789.76218 -78.2,48.6 0,22.6 77.8,48.4 14.399994,-22.6 -64.999994,-37.2 64.999994,-38 -13.999994,-21.8"
-         style="fill:#333333;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
+         style="fill:#808080;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
          id="path3015"
          inkscape:connector-curvature="0" />
     </g>
     <g
-       style="font-size:200px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
+       style="font-size:200px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:none;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
        id="text2991"
        transform="translate(-6.4710127,2.8)">
       <path
          d="m 508,789.76218 -14,22.8 64.8,37 -64.8,38.2 14.2,21.6 78,-48.4 0,-22.8 -78.2,-48.4"
          id="path3018"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+         style="fill:#808080" />
     </g>
   </g>
 </svg>

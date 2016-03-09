@@ -17,6 +17,7 @@ body {
   color: $text-color;
   font-family: $base-font-family;
   text-align: center;
+  margin: 1rem 0 2rem;
 }
 
 .wrapper {
@@ -27,16 +28,16 @@ body {
 
 .wrapper-small {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 600px;
   padding: 0 1em 0;
 }
 
 a {
-  color: $blue-dark;
+  color: $blue-light;
   text-decoration: none;
 
   &:active, &:hover {
-    color: $red;
+    color: $blue;
     transition: color 0.25s;
   }
 }
