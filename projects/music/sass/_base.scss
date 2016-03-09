@@ -46,6 +46,28 @@ a {
   margin-bottom: 3rem;
 }
 
+button,
+.btn {
+  color: white;
+  background-color: $blue;
+  background-image: linear-gradient(to bottom, $blue-light);
+  padding: 0.5em 1em;
+  border: 0;
+  border-radius: 3px;
+  text-align: center;
+  margin: 0.5rem 0;
+  max-width: 12rem;
+  cursor: pointer;
+
+  &:hover, &:active {
+    background-image: linear-gradient(to bottom, $blue, $blue);
+    overflow: none;
+  }
+  &:active {
+    text-shadow: 0 0 5px;
+  }
+}
+
 .clearfix:after {
   content: "";
   display: table;

@@ -16,7 +16,7 @@ h1, .h1-like {
   font-size: 2 * $u;
   font-weight: 900;
   line-height: 1;
-  margin: 1em 0 1em;
+  margin: 1em 0 0;
 }
 
 h2, .h2-like,
@@ -42,6 +42,7 @@ blockquote {
  
 hr {
   border: none;
+  padding: 1rem;
 }
 
 ul {
