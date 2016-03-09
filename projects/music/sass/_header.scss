@@ -1,0 +1,55 @@
+//
+// header
+//
+
+.header {
+  padding: 0.5em;
+}
+
+.header-nav {
+  margin: 0 auto;
+}
+
+.header-nav ul {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.header-nav li {
+  display: inline;
+  margin: 0 1em;
+}
+
+.header-left {
+  text-align: center;
+}
+
+.header-right {
+  text-align: center;
+}
+
+@media all and ( min-width: $screen-mid ) {
+
+  .header-left {
+    text-align: left;
+  }
+
+  .header-right {
+    text-align: right;
+  }
+}
+// logo
+
+.logo {
+  font-family: $monospace;
+  font-size: 0.75rem;
+}
+
+.logo a {
+  border-bottom: none;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0 1em;
+
+}
+

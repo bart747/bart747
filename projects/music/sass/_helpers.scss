@@ -1,0 +1,73 @@
+//
+//  helpers
+//
+
+.center {
+  text-align: center;
+ }
+
+.txt-secondary {
+  color: $grey;
+  font-size: $small-font-size;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.blue {
+  color: $blue;
+}
+
+.blue-dark {
+  color: $blue-dark;
+}
+
+.blue-night {
+  color: $blue-night;
+}
+.red {
+  color: $red;
+}
+
+.red-dark {
+  color: $red-dark;
+}
+
+.grey {
+  color: $grey;
+}
+
+.green {
+  color: $green;
+}
+
+
+.black {
+  color: $black;
+}
+
+.grey {
+  color: $grey;
+}
+
+.grey-light {
+  color: $grey-light;
+}
+
+.purple {
+  color: $purple;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.white,
+.white .octicon {
+  color: #fff;
+}

@@ -1,0 +1,70 @@
+//
+// typography
+//
+
+// $u === leading === 1rem x line-height
+p {
+  margin: $u 0;
+}
+
+h1,
+h2,
+h3 {
+  color: $black;
+}
+
+h1, .h1-like {
+  font-size: $u;
+  font-weight: 900;
+  line-height: 1;
+  margin: 2em 0 1em;
+}
+
+h2, .h2-like,
+h3, .h3-like {
+  font-size: 1em;
+  font-weight: 600;
+  margin: $u2 0 $u;
+}
+
+h2, .h2-like {
+  text-transform: uppercase;
+}
+
+strong {
+  font-weight: bold;
+}
+
+blockquote {
+  border-left: 1px dotted $grey;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+ul {
+  margin: $u 0;
+  padding-left: 1rem;
+}
+
+ol {
+  margin: $u 0;
+  padding-left: 1.25rem;
+}
+
+pre,
+code,
+p code {
+  font-size: 16px;
+  @media screen and (max-width: $screen-mid) {
+    font-size: 14px;
+  }
+}
+
+p code {
+  color: $green;
+}
+
+.secondary {
+  color: $grey-dark;
+}
+

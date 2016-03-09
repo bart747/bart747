@@ -1,0 +1,52 @@
+//
+//  base
+//
+
+html {
+  box-sizing: border-box;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $base-font-family;
+  text-align: center;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 1em 0;
+}
+
+.wrapper-small {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 1em 0;
+}
+
+a {
+  color: $blue-dark;
+  text-decoration: none;
+
+  &:active, &:hover {
+    color: $red;
+    transition: color 0.25s;
+  }
+}
+
+.page {
+  margin-bottom: 3rem;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

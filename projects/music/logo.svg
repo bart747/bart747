@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="600"
+   height="400"
+   viewBox="0 0 600 400"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="logo.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="102.75141"
+     inkscape:cy="-66.835206"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-652.36218)">
+    <path
+       sodipodi:type="arc"
+       style="fill:#5fbcd3;fill-opacity:1;stroke:none"
+       id="path2987"
+       sodipodi:cx="220"
+       sodipodi:cy="220"
+       sodipodi:rx="180"
+       sodipodi:ry="180"
+       d="m 400,220 a 180,180 0 1 1 -360,0 180,180 0 1 1 360,0 z"
+       transform="matrix(-0.83333333,0,0,-0.83333333,483.33333,1035.6955)" />
+    <path
+       sodipodi:end="3.1418667"
+       sodipodi:start="0"
+       sodipodi:type="arc"
+       style="fill:#aca793;fill-opacity:1;stroke:none"
+       id="path2994"
+       sodipodi:cx="220"
+       sodipodi:cy="220"
+       sodipodi:rx="180"
+       sodipodi:ry="180"
+       d="M 400,220 A 180,180 0 1 1 40.000007,219.95067"
+       transform="matrix(-0.83333333,0,0,-0.83333333,483.33333,1035.6955)"
+       sodipodi:open="true" />
+    <path
+       transform="matrix(-0.83333333,0,0,-0.83333333,483.33333,1035.6955)"
+       d="M 400,220 A 180,180 0 0 1 44.464475,259.84068"
+       sodipodi:ry="180"
+       sodipodi:rx="180"
+       sodipodi:cy="220"
+       sodipodi:cx="220"
+       id="path2989"
+       style="fill:#b7c8c4;fill-opacity:1;stroke:none"
+       sodipodi:type="arc"
+       sodipodi:start="0"
+       sodipodi:end="2.9184073"
+       sodipodi:open="true" />
+    <path
+       sodipodi:end="2.6579734"
+       sodipodi:start="0"
+       sodipodi:type="arc"
+       style="fill:#afdde9;fill-opacity:1;stroke:none"
+       id="path2998"
+       sodipodi:cx="220"
+       sodipodi:cy="220"
+       sodipodi:rx="180"
+       sodipodi:ry="180"
+       d="M 400,220 A 180,180 0 0 1 60.642792,303.69755 L 220,220 z"
+       transform="matrix(-0.83333333,0,0,-0.83333333,483.33333,1035.6955)" />
+    <g
+       style="font-size:200px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
+       id="text2987"
+       transform="translate(2.4037168,2.8)">
+      <path
+         d="m 96.067296,789.76218 -78.2,48.6 0,22.6 77.8,48.4 14.399994,-22.6 -64.999994,-37.2 64.999994,-38 -13.999994,-21.8"
+         style="fill:#333333;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
+         id="path3015"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       style="font-size:200px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
+       id="text2991"
+       transform="translate(-6.4710127,2.8)">
+      <path
+         d="m 508,789.76218 -14,22.8 64.8,37 -64.8,38.2 14.2,21.6 78,-48.4 0,-22.8 -78.2,-48.4"
+         id="path3018"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

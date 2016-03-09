@@ -1,0 +1,48 @@
+//
+// variables
+//
+
+
+$base-font-family: "Lato", sans-serif;
+$monospace:        "DejaVu Sans Mono", monospace;
+$base-font-size:   18px;
+$large-font-size:  20px;
+$small-font-size:  14px;
+$base-line-height: 1.6;
+
+
+// base rhythm unit (=== leading)
+$u:                1.6em;
+$u2:               3.2em;
+
+// colors
+
+//brand
+$black:            #222;
+$text-color:       #363636;
+$red:              #E02020;
+$red-dark:         #a12424;
+$blue-night:       #102060;
+$background-color: #fafafa; //#fffcf8;
+$blue:             #3050f0;
+$blue-light:       #00ddee;
+$blue-dark:        #3530A5;
+$green:            #189560;
+$green-light:      #4ef400;
+$green-dark:       #1b3e2e;
+$orange-deep:      #ec3311;
+$orange:           #e46609;
+$purple:           #5818a3;
+$yellow:           #ffd600;
+
+$grey:             #828282;
+$grey-light:       lighten($grey, 40%);
+$grey-dark:        darken($grey, 20%);
+
+$graphite:         #2c2c36;
+
+
+// sceen sizes 
+$screen-big:       800px;
+$screen-mid:       768px;
+$screen-sml:       568px;
