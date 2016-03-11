@@ -108,23 +108,19 @@
 
         // validate number according to statements
         if ($(this).hasClass('amex') && $(this).val().length > 16) {
-
           validCardNum();
         }
 
         if ($(this).hasClass('identified') && $(this).val().length > 17) {
-
           validCardNum();
         }
 
         // reset input indicators according to statements
         if ($(this).hasClass('amex') && $(this).val().length < 17) {
-
           resetInput(this, cardNum.iconOk, cardNum.iconErr);
         }
 
         if ($(this).hasClass('amex') === false && $(this).val().length < 19) {
-
           resetInput(this, cardNum.iconOk, cardNum.iconErr);
         }
 

@@ -10,7 +10,6 @@
     el.addEventListener('click', function (event) {
       return el.classList.toggle('is-on');
     });
-    // other actions
   }
 
   switchArr.forEach(addListener);

@@ -45,8 +45,8 @@ gulp.task('coffee', function() {
 gulp.task('js', function() {
   return gulp.src('js/myscripts/*.js')
     .pipe(jshint({
-      esnext: true,
-      asi: true
+      esnext: true
+      // asi: true
     }))
     .pipe(jshint.reporter('default'))
     .pipe(babel())

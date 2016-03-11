@@ -7,19 +7,18 @@ button,
   outline: none;
   color: white;
   cursor: pointer;
-  background-color: $blue;
-  background-image: linear-gradient(
-                    to bottom, $blue, $blue-dark);
-  border: 0;
+  background: $blue;
+  border: solid $blue-dark;
+  border-width: 0 0 0.1em; 
   border-radius: 3px;
-  padding: 0.5em 1em;
+  padding: 0.4em 1em;
   text-align: center;
-  margin: 0.5rem;
+  margin: 0.5rem 0;
   max-width: 12rem;
 
   &:hover, &:active {
-    background-image: linear-gradient(
-                      to bottom, $blue-dark, $blue-dark);
+    background: $blue-dark;
+    transition: 0.2s ease;
   }
   &:active {
     text-shadow: 0 0 5px;
@@ -27,12 +26,11 @@ button,
 }
 
 .btn-neutral {
-  background-color: $grey;
-  background-image: linear-gradient(
-                    to bottom, $grey, $grey-dark);
+  border: solid $grey-dark;
+  border-width: 0 0 0.1em; 
+  background: $grey;
   &:hover, &:active {
-    background-image: linear-gradient(
-                      to bottom, $grey-dark, $grey-dark);
+    background: $grey-dark;
   }
 }
 
@@ -51,9 +49,9 @@ button,
     position: relative;
     top: -2px;
     right: 5px;
-    color: $grey;
+    color: $grey-light;
     content: ".";
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     line-height: 0;
   }
@@ -70,7 +68,7 @@ button,
 .btn-switch-icon .mega-octicon {
   position: relative;
   right: 5px;
-  color: $grey;
+  color: $grey-light;
   font-size: 1rem;
 }
 

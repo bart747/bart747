@@ -1,9 +1,9 @@
 (function() {
 
 // format card form inputs
-$('.cc-num-input').payment('formatCardNumber')
-$('.cc-exp-input').payment('formatCardExpiry')
-$('.cc-cvc-input').payment('formatCardCVC')
+$('.cc-num-input').payment('formatCardNumber');
+$('.cc-exp-input').payment('formatCardExpiry');
+$('.cc-cvc-input').payment('formatCardCVC');
 
 //
 // general helpers:
@@ -11,38 +11,38 @@ $('.cc-cvc-input').payment('formatCardCVC')
 
 // add error css class 
 function addErr(input) {
-  $(input).removeClass('input-success')
-  $(input).addClass('input-error')
+  $(input).removeClass('input-success');
+  $(input).addClass('input-error');
 }
 
 // add success css class
 function addOk(input) {
-  $(input).removeClass('input-error')
-  $(input).addClass('input-success')
+  $(input).removeClass('input-error');
+  $(input).addClass('input-success');
 }
 
 // show input error icon
 function showInputErrIcon(input, iconSuc, iconErr) {
   if ( $(input).hasClass('input-error') ) {
-    $(iconSuc).addClass('hidden')
-    $(iconErr).removeClass('hidden')
+    $(iconSuc).addClass('hidden');
+    $(iconErr).removeClass('hidden');
   }
 }
 
 // show input success icon
 function showInputOkIcon(input, iconSuc, iconErr) {
   if ( $(input).hasClass('input-success') ) {
-    $(iconSuc).removeClass('hidden')
-    $(iconErr).addClass('hidden')
+    $(iconSuc).removeClass('hidden');
+    $(iconErr).addClass('hidden');
   }
 }
 
 // reset input icons
 function resetInput(input, iconSuc, iconErr) {
-  $(input).removeClass('input-error')
-  $(iconSuc).addClass('hidden')
-  $(iconErr).addClass('hidden')
-  $(input).removeClass('input-success')
+  $(input).removeClass('input-error');
+  $(iconSuc).addClass('hidden');
+  $(iconErr).addClass('hidden');
+  $(input).removeClass('input-success');
 }
 
 
@@ -59,37 +59,37 @@ function resetInput(input, iconSuc, iconErr) {
     type:  '.cc-type',
     iconOk: '.cc-num-icon-success',
     iconErr: '.cc-num-icon-error'
-  }
+  };
 
   // highlight selected card type (brand)
   function markCardType(name) {
     if ( $(cardNum.input).hasClass(name) ) {
-      $(cardNum.type + '.' + name).addClass('blue')
+      $(cardNum.type + '.' + name).addClass('blue');
     }
   }
 
   // reset card type highlight
   function resetCardType() {
-    $(cardNum.type).removeClass('blue')
+    $(cardNum.type).removeClass('blue');
   }
 
   // validate card number input
   function validCardNum() {
     
     // get card number
-    const cardValue = $(cardNum.input).val()
+    const cardValue = $(cardNum.input).val();
 
     // validate card number
-    const cardValid = $.payment.validateCardNumber(cardValue)
+    const cardValid = $.payment.validateCardNumber(cardValue);
 
     // add proper indicators to valid/invalid number
     if ( cardValid === true ) {
-      addOk(cardNum.input) 
-      showInputOkIcon(cardNum.input, cardNum.iconOk, cardNum.iconErr)
+      addOk(cardNum.input);
+      showInputOkIcon(cardNum.input, cardNum.iconOk, cardNum.iconErr);
     }
     if ( cardValid === false ) {
-      addErr(cardNum.input) 
-      showInputErrIcon(cardNum.input, cardNum.iconOk, cardNum.iconErr)
+      addErr(cardNum.input); 
+      showInputErrIcon(cardNum.input, cardNum.iconOk, cardNum.iconErr);
     }
   }
 
@@ -100,51 +100,47 @@ function resetInput(input, iconSuc, iconErr) {
     if ( $(this).val().length > 1 ) {
       
       // highlight proper card type name
-      markCardType('visa')
-      markCardType('mastercard')
-      markCardType('amex')
-      markCardType('discover')
+      markCardType('visa');
+      markCardType('mastercard');
+      markCardType('amex');
+      markCardType('discover');
       
       // validate number according to statements
       if ( $(this).hasClass('amex')  &&
         $(this).val().length > 16 ) {
-        
-        validCardNum()
+          validCardNum();
       }
 
       if ( $(this).hasClass('identified') &&
         $(this).val().length > 17 ) {
-        
-        validCardNum()
+          validCardNum();
       }
       
       // reset input indicators according to statements
       if ( $(this).hasClass('amex') &&
         $(this).val().length < 17 ) {
-        
-        resetInput(this, cardNum.iconOk, cardNum.iconErr)
+          resetInput(this, cardNum.iconOk, cardNum.iconErr);
       }
       
       if ( $(this).hasClass('amex') === false &&
-          $(this).val().length < 19 ) {
-        
-        resetInput(this, cardNum.iconOk, cardNum.iconErr)
+        $(this).val().length < 19 ) {
+          resetInput(this, cardNum.iconOk, cardNum.iconErr);
       }
       
       // show error if unknown
       if ( $(this).hasClass('unknown') ) {
-        addErr(this)
-        showInputErrIcon(this, cardNum.iconOk, cardNum.iconErr)
+        addErr(this);
+        showInputErrIcon(this, cardNum.iconOk, cardNum.iconErr);
       }
 
     }
     
     else {
-    resetInput(this, cardNum.iconOk, cardNum.iconErr)
-    resetCardType()
+    resetInput(this, cardNum.iconOk, cardNum.iconErr);
+    resetCardType();
     }
 
-  })
+  });
 
 }());
 
@@ -156,7 +152,7 @@ function resetInput(input, iconSuc, iconErr) {
     input: '.cc-exp-input',
     iconOk: '.cc-exp-icon-success',
     iconErr: '.cc-exp-icon-error'
-  }
+  };
 
   // validate number
   function validExp() {
@@ -187,7 +183,7 @@ function resetInput(input, iconSuc, iconErr) {
     else {
       resetInput(this, cardExp.iconOk, cardExp.iconErr);
     }
-  })
+  });
 
 }());
 
