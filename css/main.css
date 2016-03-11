@@ -433,7 +433,8 @@ ol {
 pre,
 code,
 p code {
-  font-size: 16px; }
+  font-size: 16px;
+  font-family: "DejaVu Sans Mono", monospace; }
   @media screen and (max-width: 768px) {
     pre,
     code,
@@ -853,7 +854,7 @@ a.cc_btn {
 .highlight {
   border-left: 1px dotted #828282;
   color: #363636;
-  line-height: 1.44em;
+  line-height: 1.6;
   margin: 1.6em 0;
   padding-left: 0.5em; }
   .highlight .c {
