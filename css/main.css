@@ -377,7 +377,7 @@ body {
   padding: 0 1em 0; }
 
 a {
-  color: #3530A5;
+  color: #2233aa;
   text-decoration: none; }
   a:active, a:hover {
     color: #E02020;
@@ -597,7 +597,7 @@ input {
   display: block; }
 
 input:focus {
-  border-color: #3333aa;
+  border-color: #3355bb;
   outline: none; }
 
 input.input-success {
@@ -640,8 +640,8 @@ a.cc_btn {
   outline: none;
   color: white;
   cursor: pointer;
-  background: #3333aa;
-  border: solid #3530A5;
+  background: #3355bb;
+  border: solid #2233aa;
   border-width: 0 0 0.1em;
   border-radius: 3px;
   padding: 0.4em 1em;
@@ -653,7 +653,7 @@ a.cc_btn {
   a.cc_btn:hover,
   .btn:active,
   a.cc_btn:active {
-    background: #3530A5;
+    background: #2233aa;
     transition: 0.2s ease; }
   button:active,
   .btn:active,
@@ -814,10 +814,10 @@ a.cc_btn {
   display: none; }
 
 .blue {
-  color: #3333aa; }
+  color: #3355bb; }
 
 .blue-dark {
-  color: #3530A5; }
+  color: #2233aa; }
 
 .blue-night {
   color: #102060; }
@@ -867,7 +867,7 @@ a.cc_btn {
   .highlight .k {
     color: #a12424; }
   .highlight .o {
-    color: #3333aa; }
+    color: #3355bb; }
   .highlight .cm {
     color: #777;
     font-style: italic; }
@@ -914,27 +914,27 @@ a.cc_btn {
   .highlight .s {
     color: #189560; }
   .highlight .n {
-    color: #3530A5; }
+    color: #2233aa; }
   .highlight .nb {
-    color: #3530A5; }
+    color: #2233aa; }
   .highlight .nc {
-    color: #3530A5; }
+    color: #2233aa; }
   .highlight .nd {
-    color: #3530A5; }
+    color: #2233aa; }
   .highlight .no {
-    color: #3530A5; }
+    color: #2233aa; }
   .highlight .ni {
-    color: #3530A5; }
+    color: #2233aa; }
   .highlight .ne {
-    color: #3530A5; }
+    color: #2233aa; }
   .highlight .nf {
-    color: #3530A5; }
+    color: #2233aa; }
   .highlight .nn {
-    color: #3530A5; }
+    color: #2233aa; }
   .highlight .nt {
-    color: #3530A5; }
+    color: #2233aa; }
   .highlight .nv {
-    color: #3530A5; }
+    color: #2233aa; }
   .highlight .w {
     color: #777; }
   .highlight .mf {
@@ -968,15 +968,15 @@ a.cc_btn {
   .highlight .ss {
     color: #189560; }
   .highlight .bp {
-    color: #3530A5; }
+    color: #2233aa; }
   .highlight .vc {
-    color: #3530A5; }
+    color: #2233aa; }
   .highlight .vg {
-    color: #3530A5; }
+    color: #2233aa; }
   .highlight .vi {
-    color: #3530A5; }
+    color: #2233aa; }
   .highlight .il {
-    color: #3333aa; }
+    color: #3355bb; }
   .highlight .lineno {
     color: #bbb;
     margin-right: 0.5rem; }
