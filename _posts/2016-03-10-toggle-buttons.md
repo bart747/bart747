@@ -111,10 +111,10 @@ button,
 
 .btn-switch-dot {
   outline: none;
-  &:after {
+  &:before {
     position: relative;
     top: -2px;
-    right: -5px;    
+    right: 5px;    
     color: $grey-light;
     content: "."; // look ma, no icons
     font-size: 2rem;
