@@ -597,7 +597,7 @@ input {
   display: block; }
 
 input:focus {
-  border-color: #4455dd;
+  border-color: #3333aa;
   outline: none; }
 
 input.input-success {
@@ -640,7 +640,7 @@ a.cc_btn {
   outline: none;
   color: white;
   cursor: pointer;
-  background: #4455dd;
+  background: #3333aa;
   border: solid #3530A5;
   border-width: 0 0 0.1em;
   border-radius: 3px;
@@ -814,7 +814,7 @@ a.cc_btn {
   display: none; }
 
 .blue {
-  color: #4455dd; }
+  color: #3333aa; }
 
 .blue-dark {
   color: #3530A5; }
@@ -867,7 +867,7 @@ a.cc_btn {
   .highlight .k {
     color: #a12424; }
   .highlight .o {
-    color: #4455dd; }
+    color: #3333aa; }
   .highlight .cm {
     color: #777;
     font-style: italic; }
@@ -976,7 +976,7 @@ a.cc_btn {
   .highlight .vi {
     color: #3530A5; }
   .highlight .il {
-    color: #4455dd; }
+    color: #3333aa; }
   .highlight .lineno {
     color: #bbb;
     margin-right: 0.5rem; }
