@@ -636,27 +636,33 @@ input.cc-cvc-input {
 button,
 .btn,
 a.cc_btn {
+  outline: none;
   color: white;
+  cursor: pointer;
   background-color: #3050f0;
   background-image: linear-gradient(to bottom, #3050f0, #3530A5);
-  padding: 0.5em 1em;
   border: 0;
   border-radius: 3px;
+  padding: 0.5em 1em;
   text-align: center;
-  margin: 0.5rem 0;
-  max-width: 12rem;
-  cursor: pointer; }
+  margin: 0.5rem;
+  max-width: 12rem; }
   button:hover, button:active,
   .btn:hover,
   a.cc_btn:hover,
   .btn:active,
   a.cc_btn:active {
-    background-image: linear-gradient(to bottom, #3530A5, #3530A5);
-    overflow: none; }
+    background-image: linear-gradient(to bottom, #3530A5, #3530A5); }
   button:active,
   .btn:active,
   a.cc_btn:active {
     text-shadow: 0 0 5px; }
+
+.btn-neutral {
+  background-color: #828282;
+  background-image: linear-gradient(to bottom, #828282, #4f4f4f); }
+  .btn-neutral:hover, .btn-neutral:active {
+    background-image: linear-gradient(to bottom, #4f4f4f, #4f4f4f); }
 
 .btn-round {
   border-radius: 50%;
@@ -665,6 +671,31 @@ a.cc_btn {
 
 .btn-social {
   margin: 1em 0 1em 2px; }
+
+.btn-switch-dot:before {
+  position: relative;
+  top: -2px;
+  right: 5px;
+  color: #828282;
+  content: ".";
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 0; }
+
+.btn-switch-dot.is-on:before {
+  color: #4ef400;
+  text-shadow: 0 0 4px; }
+
+.btn-switch-icon .octicon,
+.btn-switch-icon .mega-octicon {
+  position: relative;
+  right: 5px;
+  color: #828282;
+  font-size: 1rem; }
+
+.is-on .octicon {
+  color: #FF3030;
+  text-shadow: 0 0 4px; }
 
 .post {
   font-size: 20px; }

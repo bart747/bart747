@@ -4,25 +4,36 @@
 
 button,
 .btn {
+  outline: none;
   color: white;
+  cursor: pointer;
   background-color: $blue;
-  background-image: linear-gradient(to bottom, $blue, $blue-dark);
-  padding: 0.5em 1em;
+  background-image: linear-gradient(
+                    to bottom, $blue, $blue-dark);
   border: 0;
   border-radius: 3px;
+  padding: 0.5em 1em;
   text-align: center;
-  margin: 0.5rem 0;
+  margin: 0.5rem;
   max-width: 12rem;
-  cursor: pointer;
 
   &:hover, &:active {
-    background-image: linear-gradient(to bottom, $blue-dark, $blue-dark);
-    overflow: none;
+    background-image: linear-gradient(
+                      to bottom, $blue-dark, $blue-dark);
   }
   &:active {
     text-shadow: 0 0 5px;
   }
+}
 
+.btn-neutral {
+  background-color: $grey;
+  background-image: linear-gradient(
+                    to bottom, $grey, $grey-dark);
+  &:hover, &:active {
+    background-image: linear-gradient(
+                      to bottom, $grey-dark, $grey-dark);
+  }
 }
 
 .btn-round {
@@ -33,4 +44,37 @@ button,
 
 .btn-social {
   margin: 1em 0 1em 2px;
+}
+
+.btn-switch-dot {
+  &:before {
+    position: relative;
+    top: -2px;
+    right: 5px;
+    color: $grey;
+    content: ".";
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 0;
+  }
+}
+
+.btn-switch-dot.is-on {
+  &:before {
+    color: $green-light;
+    text-shadow: 0 0 4px;
+  }
+}
+
+.btn-switch-icon .octicon,
+.btn-switch-icon .mega-octicon {
+  position: relative;
+  right: 5px;
+  color: $grey;
+  font-size: 1rem;
+}
+
+.is-on .octicon {
+  color: $red-light;
+  text-shadow: 0 0 4px;
 }
