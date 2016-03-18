@@ -4,7 +4,7 @@ title: "UI: Simple and Sane Toggle Buttons"
 date: 2016-03-10
 ---
 
-Typical 'on-off' toggle button has more than 100 lines of CSS code.
+A typical 'on-off' toggle button has more than 100 lines of CSS code.
 That's a lot for something like this. 
 But maybe it's worth doing in some occasions?
 Well, in some probably yes,
@@ -31,7 +31,7 @@ often give you poor usability. The main problem here is a copy (a lot
 of weird CSS is also annoying). 
 
 A common web button has a lot of place for a copy.
-You can write an action premise in a few words on it.
+You can write an action premise in a few words inside it.
 
 When you're limited only to "on/off" it won't be very descriptive. 
 Of course, you can write something more on a side, but it's not how a design 
@@ -46,7 +46,7 @@ It's good for copy, and it's good for user habits. It also means less code.
 Toggle buttons are sometimes used as a fancy version of check-boxes.
 It's a bad idea.
 
-When you think about toggle switch, you thing about something
+When you think about toggle switch/button, you think about something
 that will start some action immediately.
 For instance, lights will
 be turned on or audio will be muted. It's like start and stop.
@@ -203,3 +203,5 @@ switchArr.forEach(addListener);
 }());
 
 {% endhighlight %}
+
+That's it. Embrace simple patterns.

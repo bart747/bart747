@@ -15,7 +15,11 @@ summary (again).
 To remind an user about things like return policy, transaction safety
 and shipping time.
 
-It'll be another friction reducer. Even if you did that earlier in the process,
+Even if you did that earlier in the process,
 it's sometimes good to repeat yourself.
 Especially when it's about user's money or privacy.  
+
+It will make the process appear safer. There will be less users moving step or
+two back to just in case check data again.
+
 
