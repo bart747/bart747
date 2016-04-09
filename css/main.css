@@ -510,9 +510,9 @@ p code {
 
 .masthead-h1 {
   color: #222;
-  font-size: 4em;
+  font-size: 2.5em;
   font-weight: bold;
-  line-height: 0.8;
+  line-height: 1;
   letter-spacing: -0.075em;
   margin: 0.75em 0;
   letter-spacing: -0.05em;
@@ -527,7 +527,7 @@ p code {
   .masthead {
     font-size: 20px; }
   .masthead-h1 {
-    font-size: 5em;
+    font-size: 3em;
     margin: 0.5em 0 1em; } }
 
 .menu-list ul {

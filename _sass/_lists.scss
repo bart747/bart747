@@ -30,4 +30,26 @@
 }
 
 
+//
+// post list
+//
 
+.post-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post-list li {
+  margin-bottom: 2 * $u;
+}
+.post-list p {
+  &::after {
+    content: '..';
+  }
+}
+
+.post-list-title {
+  font-size: $base-font-size;
+  text-transform: none;
+  margin: 0  0 (0.5 * $u);
+}
