@@ -29,3 +29,42 @@
     margin: 0.5em 0 1em; 
   }
 }
+
+.anim-title-1 {
+  animation-name: letter-blink-1;
+  animation-duration: 3s;
+}
+
+.anim-title-2 {
+  animation-name: letter-blink-2;
+  animation-duration: 3s;
+}
+@keyframes letter-blink-1 {
+  from {
+    color: inherit;
+  }
+  33% { 
+    color: $blue;
+  }
+  66% { 
+    color: $blue;
+  }
+  to {
+    color: inherit;
+  }
+}
+
+@keyframes letter-blink-2 {
+  from {
+    color: inherit;
+  }
+  33% { 
+    color: $red;
+  }
+  66% { 
+    color: $red;
+  }
+  to {
+    color: inherit;
+  }
+}
