@@ -19,7 +19,7 @@ Even if you did that earlier in the process,
 it's sometimes good to repeat yourself.
 Especially when it's about user's money or privacy.  
 
-It will make the process appear safer. There will be less users moving step or
+It will make the process appear safer. There will be fewer users moving step or
 two back to just in case check data again.
 
 
