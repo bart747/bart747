@@ -1,0 +1,51 @@
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+.container {
+  background: #3fd;
+  margin: 1em 0;
+  padding: 0.5em;
+  &:before {
+    color: #555;
+    content: "container";
+  }
+}
+
+.container-title {
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 1rem;
+}
+
+.cell {
+  flex: 1 auto;
+}
+
+.cell-full {
+  flex: 1 100%;
+}
+
+.box {
+  background: #0af;
+  margin: 1em;
+  padding: 0.5em;
+  min-height: 200px;
+  min-width: 200px;  
+  &:before {
+    color: #555;
+    content: "box";
+  }
+}
+
+.box-cta {
+  background: #0af;
+  min-height: 100px;
+  min-width: 100px;  
+  &:before {
+    content: "call to action box (contains things like signup form, 'order
+    now' button)";
+  }
+}
