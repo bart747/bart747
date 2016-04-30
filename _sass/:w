@@ -9,7 +9,7 @@ fieldset {
 }
 
 form {
-  margin: $u 0 (2*$u);
+  margin: (2 * $u) 0;
 }
 
 label {
@@ -37,16 +37,11 @@ input {
   color: $grey-dark;
   font-size: 16px;
   margin: 0 0 $u;
-  opacity: 1;
-  transition: opacity 1s;
 }
 
 .input-line {
   display: block;
-}
-
-.input-line-fixed {
-  height: 5rem;
+  height: 6rem;
 }
 
 input:focus {
@@ -84,8 +79,4 @@ input.cc-exp-input,
 input.cc-cvc-input {
   max-width: 150px;
   width: 40%;
-}
-
-.form-wrapper-small {
-  height: 25rem;
 }
