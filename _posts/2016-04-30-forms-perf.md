@@ -1,11 +1,25 @@
 ---
 layout: post
-title: "Form Error Messages that Don't Trigger Massive Reflow"  
+title: "Form Error Messages that Don't Trigger Massive Reflow (Perf)"  
 date: 2016-04-30
 ---
 
+When a web form layout is changed&mdash;e.g., due to an error message&mdash;
+there's a good chance it will trigger a page reflow.
+It's an unwanted thing due to it's negative impact on website performance.
+I have a few tricks to significantly reduce it.
+
 
 ## Sample Problem (simplified)
+
+Here's some example.
+It shows how a simple,
+one line error indicator can force a browser to recalculate almost
+a whole layout.
+
+Tip: Use 'paint flashing' option in your dev tools. You will see how the
+whole page blinks in this example, and how I will reduce this effect
+in the next ones.
 
   <form>
     <fieldset>
@@ -47,20 +61,19 @@ date: 2016-04-30
     </fieldset>
     
     <button class="btn-form-perf" type="button">add error message</button>
+    <br>Yes, click here.
 
   </form>
 
 Notice the difference in the distances between the input fields.
 The tiny error message under the second field increased the height of the
 form.
+
 A moment of appearance of that kind of event triggers layout recalculation.
 In other words: reflow.
 
-Tip: Use 'paint flashing' option in your dev tools. You will see how the
-whole page blinks in this example, and how I will reduce this effect
-in the next ones.
 
-Here's the markup:
+Here's the form markup:
 
 {% highlight html %}
 <form>
@@ -153,10 +166,10 @@ Here's the markup:
 
   </form>
 
-Looks like nothing has changed?
+Looks like nothing has changed, huh?
 What I did is closing the form in a **fixed height wrapper**. Notice the extra
-whitespace on the bottom&mdash;the wrapper has to be a little bit bigger than
-expected maximum form height.
+whitespace on the bottom&mdash;the wrapper has to be a little bit taller than
+the expected maximum form height.
 
 This way the change in the form layout will only trigger recalculation of
 the wrapper content. The rest of a page will stay static.
@@ -210,14 +223,16 @@ inspector.)
 
   </form>
 
-This example also uses fixed height boxes. This time it's not the whole
+This example also contains fixed height wrappers. This time it's not the whole
 form. I only closed small groups of elements: input + icons + error
-message. The CSS class of that wrapper is <code>.input-line-fixed</code>. 
+message. The CSS class of that wrapper is <code>.input-line-fixed</code>.
+
+Now the message triggers only very small part of the layout to be recalculated.
+When you do something like that, your form has to have decent amount of
+whitespace between inputs.
+
 
 ## Which One?
-
-Both methods can be good choices.
-It depends on circumstances.
 
 The second solution is the most flexible when you know that error messages are
 always one-liners. It also demands an extra bit of default whitespace in-between
