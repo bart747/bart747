@@ -5,10 +5,9 @@ date: 2016-04-30
 ---
 
 When a web form layout is changed&mdash;e.g., due to an error message&mdash;
-there's a good chance it will trigger a page reflow.
-It's an unwanted thing due to it's negative impact on website performance.
+there's a good chance it will trigger a [browser reflow](https://developers.google.com/speed/articles/reflow).
+It has negative impact on website performance.
 I have a few tricks to significantly reduce it.
-
 
 ## Sample Problem (simplified)
 
@@ -17,9 +16,9 @@ It shows how a simple,
 one line error indicator can force a browser to recalculate almost
 a whole layout.
 
-Tip: Use 'paint flashing' option in your dev tools. You will see how the
-whole page blinks in this example, and how I will reduce this effect
-in the next ones.
+Tip: Use 'paint flashing' option in your dev tools.
+In this example you will see how the whole page blinks (massive reflow).
+Then I will show you two solutions to reduce this effect.
 
   <form>
     <fieldset>
@@ -73,62 +72,14 @@ A moment of appearance of that kind of event triggers layout recalculation.
 In other words: reflow.
 
 
-Here's the form markup:
-
-{% highlight html %}
-<form>
-  <fieldset>
-  
-    <div class="input-line">
-      <label for="one" >default</label>
-      <input id="one"
-             name="one"
-             type="text">
-        <span class="icon green octicon octicon-check hidden"></span>
-        <span class="icon red octicon octicon-x blink hidden"></span>
-      <div class="input-message hidden">invalid data</div>
-
-    </div>
-
-    <div class="input-line">
-      <label for="two">error</label>
-      <input id="two"
-             class="input-error"
-             name="two"
-             type="text">
-        <span class="icon green octicon octicon-check hidden"></span>
-        <span class="icon red octicon octicon-x blink"></span>
-      <div class="input-message">invalid data</div>
-    </div>
-
-    <div class="input-line">
-      <label for="three" >success</label>
-      <input id="three"
-             class="input-success"
-             name="three"
-             type="text">
-        <span class="icon green octicon octicon-check"></span>
-        <span class="icon red octicon octicon-x blink hidden"></span>
-      <div class="input-message hidden">invalid data</div>
-
-    </div>
-
-  </fieldset>
-
-  <button type="submit">send now</button>
-
-</form>
-
-{% endhighlight %}
-
 ## Solution 1 
 
   <form class="form-wrapper-small">
     <fieldset>
    
       <div class="input-line">
-        <label for="one" >default</label>
-        <input id="one"
+        <label for="one2" >default</label>
+        <input id="one2"
                name="one"
                type="text">
           <span class="icon green octicon octicon-check hidden"></span>
@@ -138,8 +89,8 @@ Here's the form markup:
       </div>
 
       <div class="input-line">
-        <label for="two">error</label>
-        <input id="two"
+        <label for="two2">error</label>
+        <input id="two2"
                class="input-error"
                name="two"
                type="text">
@@ -149,8 +100,8 @@ Here's the form markup:
       </div>
 
       <div class="input-line">
-        <label for="three" >success</label>
-        <input id="three"
+        <label for="three2" >success</label>
+        <input id="three2"
                class="input-success"
                name="three"
                type="text">
@@ -167,6 +118,7 @@ Here's the form markup:
   </form>
 
 Looks like nothing has changed, huh?
+
 What I did is closing the form in a **fixed height wrapper**. Notice the extra
 whitespace on the bottom&mdash;the wrapper has to be a little bit taller than
 the expected maximum form height.
@@ -184,8 +136,8 @@ inspector.)
     <fieldset>
    
       <div class="input-line input-line-fixed">
-        <label for="one" >default</label>
-        <input id="one"
+        <label for="one3" >default</label>
+        <input id="one3"
                name="one"
                type="text">
           <span class="icon green octicon octicon-check hidden"></span>
@@ -195,8 +147,8 @@ inspector.)
       </div>
 
       <div class="input-line input-line-fixed">
-        <label for="two">error</label>
-        <input id="two"
+        <label for="two3">error</label>
+        <input id="two3"
                class="input-error"
                name="two"
                type="text">
@@ -206,8 +158,8 @@ inspector.)
       </div>
 
       <div class="input-line input-line-fixed">
-        <label for="three" >success</label>
-        <input id="three"
+        <label for="three3" >success</label>
+        <input id="three3"
                class="input-success"
                name="three"
                type="text">
@@ -223,12 +175,12 @@ inspector.)
 
   </form>
 
-This example also contains fixed height wrappers. This time it's not the whole
-form. I only closed small groups of elements: input + icons + error
+The example above also contains fixed height wrappers. This time it's not the whole
+form. I only closed small groups of elements: input + icon + error
 message. The CSS class of that wrapper is <code>.input-line-fixed</code>.
 
-Now the message triggers only very small part of the layout to be recalculated.
-When you do something like that, your form has to have decent amount of
+Now the message triggers reflow of a very small part of the document.
+When you do something like that, your form has to have a decent amount of
 whitespace between inputs.
 
 
