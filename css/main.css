@@ -644,9 +644,7 @@ input {
 .input-message {
   color: #444444;
   font-size: 16px;
-  margin: 0 0 1.6em;
-  opacity: 1;
-  transition: opacity 1s; }
+  margin: 0 0 1.6em; }
 
 .input-line {
   display: block; }

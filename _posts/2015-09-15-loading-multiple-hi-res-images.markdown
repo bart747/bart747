@@ -126,10 +126,10 @@ frame2big.addClass("hidden");
 {% endhighlight %}
 
 As you can see, I made all big images uploaded with JS hidden.
-That way an user will not see all, or at least big part, of their loading process.
+That way a user will not see all, or at least big part, of their loading process.
 It's also because of how the gallery is meant to work.
 
-BTW, it's good to know that there will be some small but significant time frame between moment where an user sees
+BTW, it's good to know that there will be some small but significant time frame between moment where a user sees
 the first big image and miniatures, and when he/she decides to see other full-size photos.
 
 Now, to make gallery work right, you need to write some 'hide and show' thing like this:
