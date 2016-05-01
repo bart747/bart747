@@ -530,58 +530,6 @@ p code {
     font-size: 3em;
     margin: 0.5em 0 1em; } }
 
-.anim-title-1 {
-  -webkit-animation-name: letter-blink-1;
-  animation-name: letter-blink-1;
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s; }
-
-.anim-title-2 {
-  -webkit-animation-name: letter-blink-2;
-  animation-name: letter-blink-2;
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s; }
-
-@-webkit-keyframes letter-blink-1 {
-  from {
-    color: inherit; }
-  33% {
-    color: #3355bb; }
-  66% {
-    color: #3355bb; }
-  to {
-    color: inherit; } }
-
-@keyframes letter-blink-1 {
-  from {
-    color: inherit; }
-  33% {
-    color: #3355bb; }
-  66% {
-    color: #3355bb; }
-  to {
-    color: inherit; } }
-
-@-webkit-keyframes letter-blink-2 {
-  from {
-    color: inherit; }
-  33% {
-    color: #E02020; }
-  66% {
-    color: #E02020; }
-  to {
-    color: inherit; } }
-
-@keyframes letter-blink-2 {
-  from {
-    color: inherit; }
-  33% {
-    color: #E02020; }
-  66% {
-    color: #E02020; }
-  to {
-    color: inherit; } }
-
 .menu-list ul {
   line-height: 1.25;
   list-style: none;
