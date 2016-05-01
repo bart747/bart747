@@ -4,9 +4,9 @@ title: "Form Error Messages that Don't Trigger Massive Reflow (Perf)"
 date: 2016-04-30
 ---
 
-When a web form layout is changed&mdash;e.g., due to an error message&mdash;
+When a web form layout is changing&mdash;e.g., due to an error message&mdash;
 there's a good chance it will trigger a [browser reflow](https://developers.google.com/speed/articles/reflow).
-It has negative impact on website performance.
+It has a negative impact on website performance.
 I have a few tricks to significantly reduce it.
 
 ## Sample Problem (simplified)
@@ -18,7 +18,7 @@ a whole layout.
 
 Tip: Use 'paint flashing' option in your dev tools.
 In this example you will see how the whole page blinks (massive reflow).
-Then I will show you two solutions to reduce this effect.
+Then I will show you two solutions to reduce that effect.
 
   <form>
     <fieldset>
@@ -119,12 +119,13 @@ In other words: reflow.
 
 Looks like nothing has changed, huh?
 
-What I did is closing the form in a **fixed height wrapper**. Notice the extra
-whitespace on the bottom&mdash;the wrapper has to be a little bit taller than
-the expected maximum form height.
+What I did is closing the form in a **fixed height wrapper**.
+Notice the extra whitespace on the bottom&mdash;
+the wrapper has to be a little bit taller than an expected maximum form height.
 
-This way the change in the form layout will only trigger recalculation of
-the wrapper content. The rest of a page will stay static.
+This way the change in the form layout can only trigger recalculation of
+the wrapper content.
+The rest of the page stays static.
 
 (Tip: To dig deeper into the code of my examples use the dev tools'
 inspector.)
@@ -175,23 +176,25 @@ inspector.)
 
   </form>
 
-The example above also contains fixed height wrappers. This time it's not the whole
-form. I only closed small groups of elements: input + icon + error
-message. The CSS class of that wrapper is <code>.input-line-fixed</code>.
+The example above also contains fixed height wrappers.
+There are three of them&mdash;one per stack of:
+label + input + icon + error message.
+The CSS class of these wrappers is <code>.input-line-fixed</code>.
 
-Now the message triggers reflow of a very small part of the document.
+Now the message triggers the reflow of the very small part of the document.
 When you do something like that, your form has to have a decent amount of
 whitespace between inputs.
 
 
 ## Which One?
 
-The second solution is the most flexible when you know that error messages are
-always one-liners. It also demands an extra bit of default whitespace in-between
-form fields.
-
 The first solution is good when an error message can take a lot of place.
 It will create extra whitespace on the bottom of a form.
+
+The second solution is the most flexible when you know that error
+messages are always one-liners.
+It also demands an extra bit of default whitespace in-between form fields.
+
 
 <script>
 (function() {
