@@ -820,6 +820,9 @@ a.cc_btn {
   color: #777;
   font-size: 14px; }
 
+.link-active {
+  border-bottom: 1px solid; }
+
 .bold {
   font-weight: bold; }
 
