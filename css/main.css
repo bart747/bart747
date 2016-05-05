@@ -498,16 +498,6 @@ p code {
   .header-right {
     text-align: right; } }
 
-.logo {
-  font-family: "DejaVu Sans Mono", monospace;
-  font-size: 0.75rem; }
-
-.logo a {
-  border-bottom: none;
-  font-weight: normal;
-  line-height: 1;
-  margin: 0 1em; }
-
 .masthead-h1 {
   color: #222;
   font-size: 2.5em;
@@ -819,6 +809,18 @@ a.cc_btn {
 
 .hidden {
   display: none; }
+
+a.link-home,
+.link-home a {
+  text-decoration: none; }
+  a.link-home:active, a.link-home:hover,
+  .link-home a:active,
+  .link-home a:hover {
+    color: #E02020;
+    transition: color 0.25s; }
+  a.link-home:after,
+  .link-home a:after {
+    content: "f08d"; }
 
 .blue {
   color: #3355bb; }
