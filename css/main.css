@@ -498,6 +498,19 @@ p code {
   .header-right {
     text-align: right; } }
 
+.icon-logo {
+  text-align: center;
+  margin: 2rem auto 0; }
+
+.icon-logo img {
+  max-width: 30px;
+  height: auto;
+  transition: all 0.2s ease; }
+  .icon-logo img:hover {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+
 .masthead-h1 {
   color: #222;
   font-size: 2.5em;
@@ -710,6 +723,9 @@ a.cc_btn {
   margin-bottom: 3rem;
   padding: 0 1em; }
 
+.post h1 {
+  margin-top: 1.6em; }
+
 .post p {
   margin-bottom: 1.6em; }
 
@@ -809,18 +825,6 @@ a.cc_btn {
 
 .hidden {
   display: none; }
-
-a.link-home,
-.link-home a {
-  text-decoration: none; }
-  a.link-home:active, a.link-home:hover,
-  .link-home a:active,
-  .link-home a:hover {
-    color: #E02020;
-    transition: color 0.25s; }
-  a.link-home:after,
-  .link-home a:after {
-    content: "f08d"; }
 
 .blue {
   color: #3355bb; }

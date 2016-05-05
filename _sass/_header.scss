@@ -39,3 +39,17 @@
   }
 }
 
+.icon-logo {
+  text-align: center;
+  margin: 2rem auto 0;
+
+}
+
+.icon-logo img {
+  max-width: 30px;
+  height: auto;
+  transition: all 0.2s ease;
+  &:hover {
+    transform: rotate(45deg);
+  }
+}
