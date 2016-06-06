@@ -3,15 +3,6 @@
 //
 
 .masthead-h1 {
-  color: $black;
-  font-size: 2.5em;
-  font-weight: bold;
-  line-height: 1;
-  letter-spacing: -0.075em;
-  margin: 0.75em 0; 
-  letter-spacing: -0.05em;
-  word-spacing: 0.05em;
-  text-transform: none;
 }
 
 .masthead-h2 {
@@ -25,8 +16,10 @@
   }
 
   .masthead-h1 {
-    font-size: 3em;
-    margin: 0.5em 0 1em; 
+    font-size: 2.5rem;
+    letter-spacing: -0.025em;
+    margin: 2.5rem 0;
   }
+  
 }
 

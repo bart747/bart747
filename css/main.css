@@ -403,7 +403,7 @@ h1, .h1-like {
   font-size: 1.6em;
   font-weight: bold;
   line-height: 1;
-  margin: 2em 0 1em; }
+  margin: 1.6em 0 1.6em; }
 
 h2, .h2-like,
 h3, .h3-like {
@@ -511,17 +511,6 @@ p code {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg); }
 
-.masthead-h1 {
-  color: #222;
-  font-size: 2.5em;
-  font-weight: bold;
-  line-height: 1;
-  letter-spacing: -0.075em;
-  margin: 0.75em 0;
-  letter-spacing: -0.05em;
-  word-spacing: 0.05em;
-  text-transform: none; }
-
 .masthead-h2 {
   margin: 0;
   text-transform: none; }
@@ -530,8 +519,9 @@ p code {
   .masthead {
     font-size: 20px; }
   .masthead-h1 {
-    font-size: 3em;
-    margin: 0.5em 0 1em; } }
+    font-size: 2.5rem;
+    letter-spacing: -0.025em;
+    margin: 2.5rem 0; } }
 
 .menu-list ul {
   line-height: 1.25;
