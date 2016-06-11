@@ -1,10 +1,18 @@
-<header class="header clearfix">
+<header class="header clearfix wrapper">
 
-  <div class="header-nav header-left">
+  <div class="header-left">
+    <a class="link-home" href="{{ site.baseurl }}/">
+      <span class="header-left icon-logo">
+        <img src="/img/favicon.svg" alt="UI deisgn and developement">
+      </span>
+    </a>
+  </div>
+
+  <div class="header-nav header-right">
     <ul>
       <li>
         <a class="link-home" href="{{ site.baseurl }}/">
-          home
+                  home
         </a>
       </li>
       <li>
@@ -19,10 +27,5 @@
       </li>
     </ul>
   </div>
-  
-  <div class="icon-logo">
-    <a href="{{ site.baseurl }}/">
-      <img src="/img/favicon.svg" alt="UI deisgn and developement">
-    </a>
-  </div>
+
 </header>

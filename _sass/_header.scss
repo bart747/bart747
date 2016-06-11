@@ -3,7 +3,7 @@
 //
 
 .header {
-  padding: 0.5em;
+  padding: 1rem;
 }
 
 .header-nav {
@@ -17,15 +17,17 @@
 
 .header-nav li {
   display: inline;
-  margin: 0 1em;
+  margin: 0 1em 0 0;
 }
 
 .header-left {
-  text-align: center;
+  float: left;
+  text-align: left;
 }
 
 .header-right {
-  text-align: center;
+  float: right;
+  text-align: right;
 }
 
 @media all and ( min-width: $screen-mid ) {
@@ -42,11 +44,11 @@
 .icon-logo {
   text-align: center;
   line-height: 1;
-  margin: 1rem auto ;
+  margin: 0 auto;
 }
 
 .icon-logo img {
-  max-width: 30px;
+  max-width: 25px;
   height: auto;
   transition: all 0.2s ease;
   &:hover {
