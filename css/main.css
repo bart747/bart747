@@ -515,18 +515,7 @@ p code {
     transform: rotate(45deg); }
 
 .masthead {
-  background: #102060;
-  padding: 1rem 0; }
-
-.masthead-h1 {
-  color: #fffcf8; }
-
-.masthead-h2 {
-  margin: 0;
-  text-transform: none; }
-
-.masthead p {
-  color: #dddddd; }
+  padding: 1rem 0 0; }
 
 @media all and (min-width: 568px) {
   .masthead {
