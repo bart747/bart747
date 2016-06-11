@@ -1,14 +1,24 @@
 //
 // masthead
 //
+.masthead {
+  background: $blue-night;
+  padding: 1rem 0;
+}
 
 .masthead-h1 {
+  color: $background-color;
 }
 
 .masthead-h2 {
   margin:  0;
   text-transform: none;
 }
+
+.masthead p {
+  color: $grey-light;
+}
+
 
 @media all and (min-width: $screen-sml) {
   .masthead {
@@ -17,7 +27,7 @@
 
   .masthead-h1 {
     font-size: 2.5rem;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.0125em;
     margin: 2.5rem 0;
   }
   

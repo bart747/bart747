@@ -19,11 +19,11 @@
 }
 
 .post h1 {
-  margin-top: $u;
+  margin: 1rem 0 $u;
 }
 
 .post p {
-  margin-bottom: 1em * $base-line-height; 
+  margin-bottom: $u; 
 }
 
 .post-meta {

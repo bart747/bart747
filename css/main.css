@@ -500,7 +500,8 @@ p code {
 
 .icon-logo {
   text-align: center;
-  margin: 2rem auto 0; }
+  line-height: 1;
+  margin: 1rem auto; }
 
 .icon-logo img {
   max-width: 30px;
@@ -511,16 +512,26 @@ p code {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg); }
 
+.masthead {
+  background: #102060;
+  padding: 1rem 0; }
+
+.masthead-h1 {
+  color: #fffcf8; }
+
 .masthead-h2 {
   margin: 0;
   text-transform: none; }
+
+.masthead p {
+  color: #dddddd; }
 
 @media all and (min-width: 568px) {
   .masthead {
     font-size: 20px; }
   .masthead-h1 {
     font-size: 2.5rem;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.0125em;
     margin: 2.5rem 0; } }
 
 .menu-list ul {
@@ -714,7 +725,7 @@ a.cc_btn {
   padding: 0 1em; }
 
 .post h1 {
-  margin-top: 1.6em; }
+  margin: 1rem 0 1.6em; }
 
 .post p {
   margin-bottom: 1.6em; }
