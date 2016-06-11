@@ -3,6 +3,7 @@
 //
 
 .menu-list {
+  margin-bottom: 3rem;
   ul {
     line-height: 1.25;
     list-style: none;
@@ -14,11 +15,17 @@
   }
 }
 
+@media screen and (min-width: $screen-mid) {
+  .menu-list {
+    margin-bottom: 0;
+  }
+}
+
 .menu-list a {
 }
 
 .menu-list-title {
-  margin: 3rem 0 1.25em;
+  margin: 1.25rem 0;
 }
 
 .menu-list-small li {
@@ -26,7 +33,7 @@
 }
 
 .menu-list-small-title {
-  margin: 3rem 0 0.5em;
+  margin: 1.25rem 0 0.5em;
 }
 
 
