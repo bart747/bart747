@@ -4,8 +4,15 @@
 
 .header {
   padding: 1rem;
+  background: $blue-dark;
 }
 
+.header a {
+  color: white;
+  &:hover, :focus {
+    color: $black;
+  }
+}
 .header-nav {
   margin: 0 auto;
 }

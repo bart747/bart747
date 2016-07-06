@@ -8,12 +8,16 @@
   var homeLink = document.getElementsByClassName('link-home');
   var blogLink = document.getElementsByClassName('link-blog');
 
-  // console.log(homeDiv); console.log(homeLink);
-  // console.log(postDiv); console.log(blogLink);
+  window.onload = function () {
 
-  if (homeDiv[0] !== undefined) {
-    homeLink[0].classList.add('link-active');
-  } else if (postDiv[0] !== undefined || blogDiv[0] !== undefined) {
-    blogLink[0].classList.add('link-active');
-  }
+    if (homeDiv[0] !== undefined) {
+      homeLink[1].classList.add("link-active");
+    }
+
+    if (postDiv[0] !== undefined || blogDiv[0] !== undefined) {
+      blogLink[0].classList.add('link-active');
+    }
+    console.log(homeDiv);console.log(homeLink);
+    console.log(postDiv);console.log(blogLink);
+  };
 })();
