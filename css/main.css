@@ -797,6 +797,12 @@ img {
 .octicon {
   color: #363636; }
 
+.error-icon {
+  margin: 2em 0 1em; }
+
+.error-title {
+  margin: 1em 0; }
+
 .cc_banner {
   background: #dddddd;
   position: fixed;
@@ -876,6 +882,9 @@ a.cc_btn {
 .purple {
   color: #5818a3; }
 
+.orange {
+  color: #ee7700; }
+
 .yellow {
   color: #ffd600; }
 
@@ -940,7 +949,7 @@ a.cc_btn {
   .highlight .kt {
     color: #a12424; }
   .highlight .m {
-    color: #e46609; }
+    color: #ee7700; }
   .highlight .s {
     color: #189560; }
   .highlight .n {
@@ -968,13 +977,13 @@ a.cc_btn {
   .highlight .w {
     color: #777; }
   .highlight .mf {
-    color: #e46609; }
+    color: #ee7700; }
   .highlight .mh {
-    color: #e46609; }
+    color: #ee7700; }
   .highlight .mi {
-    color: #e46609; }
+    color: #ee7700; }
   .highlight .mo {
-    color: #e46609; }
+    color: #ee7700; }
   .highlight .sb {
     color: #189560; }
   .highlight .sc {
