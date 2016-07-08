@@ -407,6 +407,9 @@ h1, .h1-like {
   font-weight: bold;
   line-height: 1;
   margin: 3em 0 2em; }
+  @media screen and (max-width: 568px) {
+    h1, .h1-like {
+      margin: 2em 0 1em; } }
 
 h2, .h2-like {
   font-size: 1.3em;
@@ -736,10 +739,6 @@ a.cc_btn {
   margin: 0 auto;
   margin-bottom: 3rem;
   padding: 0 1em; }
-
-@media screen and (min-width: 568px) {
-  .post-title {
-    margin: 2.4em 0 1.6em; } }
 
 .post p {
   margin-bottom: 1.6em; }
