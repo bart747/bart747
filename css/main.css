@@ -406,7 +406,7 @@ h1, .h1-like {
   font-size: 1.6em;
   font-weight: bold;
   line-height: 1;
-  margin: 3em 0 2em; }
+  margin: 2em 0; }
   @media screen and (max-width: 568px) {
     h1, .h1-like {
       margin: 2em 0 1em; } }
@@ -484,7 +484,8 @@ p code {
 
 .header {
   padding: 1rem;
-  background: #2233aa; }
+  background: #2233aa;
+  border-bottom: 0.25em solid #fffcf8; }
 
 .header a {
   color: white; }
@@ -534,7 +535,7 @@ p code {
   margin: 3rem 0; }
 
 .masthead-h1 {
-  margin: 0 0 1.6em; }
+  margin: 1.6em 0; }
 
 @media all and (min-width: 568px) {
   .masthead {
@@ -542,8 +543,7 @@ p code {
   .masthead-h1 {
     font-size: 2.2em;
     line-height: 1;
-    letter-spacing: -0.0125em;
-    margin: 1.6em 0; } }
+    letter-spacing: -0.0125em; } }
 
 .menu-list {
   margin-bottom: 3rem; }
