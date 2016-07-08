@@ -528,7 +528,7 @@ p code {
     transform: rotate(45deg); }
 
 .masthead {
-  padding: 1rem 0; }
+  padding: 0 0 1rem; }
 
 @media all and (min-width: 568px) {
   .masthead {
