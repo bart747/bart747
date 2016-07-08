@@ -7,6 +7,10 @@ p {
   margin: $u 0;
 }
 
+.p-large {
+  font-size: $large-font-size + 3px;
+}
+
 h1,
 h2,
 h3 {
@@ -14,20 +18,25 @@ h3 {
 }
 
 h1, .h1-like {
-  font-size: $u;
+  font-size: 1.6em;
   font-weight: bold;
   line-height: 1;
-  margin: $u 0 $u;
-}
-
-h2, .h2-like,
-h3, .h3-like {
-  font-size: 1em;
-  font-weight: 600;
-  margin: $u2 0 $u;
+  margin: 3em 0 2em;
 }
 
 h2, .h2-like {
+  font-size: 1.3em;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 2.4em 0 1.2em;
+}
+
+h3, .h3-like {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 1em 0 2em;
+
   text-transform: uppercase;
 }
 

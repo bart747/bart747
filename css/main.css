@@ -394,6 +394,9 @@ a {
 p {
   margin: 1.6em 0; }
 
+.p-large {
+  font-size: 23px; }
+
 h1,
 h2,
 h3 {
@@ -403,15 +406,19 @@ h1, .h1-like {
   font-size: 1.6em;
   font-weight: bold;
   line-height: 1;
-  margin: 1.6em 0 1.6em; }
+  margin: 3em 0 2em; }
 
-h2, .h2-like,
+h2, .h2-like {
+  font-size: 1.3em;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 2.4em 0 1.2em; }
+
 h3, .h3-like {
   font-size: 1em;
   font-weight: 600;
-  margin: 3.2em 0 1.6em; }
-
-h2, .h2-like {
+  line-height: 1.6;
+  margin: 1em 0 2em;
   text-transform: uppercase; }
 
 strong {
@@ -527,9 +534,10 @@ p code {
   .masthead {
     font-size: 20px; }
   .masthead-h1 {
-    font-size: 2.5rem;
+    font-size: 2.2em;
+    line-height: 1;
     letter-spacing: -0.0125em;
-    margin: 4rem 0; } }
+    margin: 1.6em 0; } }
 
 .menu-list {
   margin-bottom: 3rem; }
