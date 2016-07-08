@@ -754,9 +754,8 @@ img {
   background: #777;
   margin: 0 auto;
   max-width: 600px;
-  min-height: 250px;
-  height: auto;
-  width: 100%; }
+  width: 100%;
+  height: auto; }
 
 .img-blur-1 {
   -webkit-animation-duration: 0.75s;
