@@ -578,9 +578,7 @@ p code {
   content: '..'; }
 
 .post-list-title {
-  font-size: 18px;
-  text-transform: none;
-  margin: 0 0 0.8em; }
+  margin: 0; }
 
 fieldset {
   border: none;
