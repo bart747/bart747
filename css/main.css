@@ -531,7 +531,10 @@ p code {
     transform: rotate(45deg); }
 
 .masthead {
-  padding: 0 0 1rem; }
+  margin: 3rem 0; }
+
+.masthead-h1 {
+  margin: 0 0 1.6em; }
 
 @media all and (min-width: 568px) {
   .masthead {
