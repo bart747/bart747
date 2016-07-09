@@ -21,7 +21,7 @@ h1, .h1-like {
   font-size: 1.6em;
   font-weight: bold;
   line-height: 1;
-  margin: 2em 0;
+  margin: 2em 0 2em;
   @media screen and (max-width: $screen-sml) {
     margin: 2em 0 1em;
   }

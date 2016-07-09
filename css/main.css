@@ -406,7 +406,7 @@ h1, .h1-like {
   font-size: 1.6em;
   font-weight: bold;
   line-height: 1;
-  margin: 2em 0; }
+  margin: 2em 0 2em; }
   @media screen and (max-width: 568px) {
     h1, .h1-like {
       margin: 2em 0 1em; } }
@@ -485,7 +485,7 @@ p code {
 .header {
   padding: 1rem;
   background: #2233aa;
-  border-bottom: 0.4em solid #fffcf8; }
+  border-bottom: 0.5em solid #fffcf8; }
 
 .header a {
   color: white; }
