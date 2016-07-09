@@ -485,7 +485,7 @@ p code {
 .header {
   padding: 1rem;
   background: #2233aa;
-  border-bottom: 0.25em solid #fffcf8; }
+  border-bottom: 0.4em solid #fffcf8; }
 
 .header a {
   color: white; }
