@@ -535,15 +535,19 @@ p code {
   margin: 3rem 0; }
 
 .masthead-h1 {
+  font-size: 1.8em;
   margin: 1.6em 0; }
 
 @media all and (min-width: 568px) {
   .masthead {
     font-size: 20px; }
   .masthead-h1 {
-    font-size: 2.2em;
     line-height: 1;
     letter-spacing: -0.0125em; } }
+
+@media all and (min-width: 768px) {
+  .masthead-h1 {
+    font-size: 3.2em; } }
 
 .menu-list {
   margin-bottom: 3rem; }
