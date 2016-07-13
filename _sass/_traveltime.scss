@@ -1,0 +1,121 @@
+//
+// travel-time 
+//
+
+.travel-time {
+  display: flex; 
+  flex-wrap: wrap;
+  align-content: flex-center;
+  justify-content: flex-start;
+}
+
+.travel-time h2,
+.travel-time h3 {
+  font-size: 1em;
+  margin: 0 0 1em 0;
+}
+
+.tt-table {
+  flex: 1;
+  min-width: 10rem;
+  margin: 0 3.2em 3.2em 0;
+  @media all and (max-width: $screen-sml) {
+    flex: 100%;
+    margin: 0 0 3.2em 0;
+  }
+}
+
+.tt-table ul {
+  margin: 0;
+  padding: 0;
+}
+
+.tt-table li {
+  list-style: none;
+}
+
+.tt-vehicle-block {
+}
+
+.tt-travel {
+  border: dotted $grey-light;
+  border-width: 0 0 2px 0px;
+  padding: 1em 1em;
+}
+
+.tt-layover {
+  background: $grey-light;
+  color: $grey;
+  padding: 0 1em;
+}
+
+.tt-name {
+  padding: 0 1em 0 1.33em ;
+}
+
+.tt-bus .tt-name {
+  &:before {
+    font-family: "Ionicons";
+    font-size: 1.3em;
+    color: $orange;
+    content: "\f36d";
+    margin-right: 0.25em;
+  } 
+}
+
+.tt-car .tt-name {
+  &:before {
+    font-family: "Ionicons";
+    font-size: 1.3em;
+    color: $red-dark;
+    content: "\f36f";
+    margin-right: 0.25em;
+  } 
+}
+
+.tt-plane .tt-name {
+  &:before {
+    font-family: "Ionicons";
+    font-size: 1.3em;
+    color: $blue;
+    content: "\f3a4";
+    margin-right: 0.25em;
+  } 
+}
+
+.tt-train {
+  border-color: $green;
+}
+
+.tt-train .tt-name {
+  &:before {
+    font-family: "Ionicons";
+    font-size: 1.3em;
+    color: $green;
+    content: "\f3b4";
+    margin-right: 0.25em;
+  } 
+}
+
+.tt-time-start {
+}
+
+.tt-time-start,
+.tt-time-end {
+ // font-weight: bold; 
+}
+
+.tt-name,
+.tt-cost {
+  display: inline-block;
+}
+
+
+.tt-cost {
+  color: $blue-dark;
+}
+
+.tt-sum {
+  font-size: 1.3em;
+  border-bottom: 2px dotted;
+}
