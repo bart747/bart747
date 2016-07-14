@@ -64,6 +64,7 @@ button,
   }
 }
 
+.btn-switch-icon .icon,
 .btn-switch-icon .octicon,
 .btn-switch-icon .mega-octicon {
   position: relative;
@@ -72,6 +73,7 @@ button,
   font-size: 1rem;
 }
 
+.is-on .icon,
 .is-on .octicon {
   color: $red-light;
   text-shadow: 0 0 4px;

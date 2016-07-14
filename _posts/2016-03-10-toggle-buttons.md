@@ -18,7 +18,7 @@ When you're thinking about using a switch, consider something like this:
 ...or, in some ocassions:
 
 <button class="btn-switch-icon is-switchable"> 
-  <span class="octicon octicon-mute"></span>
+  <span class="icon ion-android-volume-off"></span>
   mute
 </button>
 
@@ -135,11 +135,11 @@ button,
 ### Icon example:
 
 <button class="btn-switch-icon"> 
-  <span class="octicon octicon-mute"></span>
+  <span class="icon ion-android-volume-off"></span>
   mute
 </button>
 <button class="btn-switch-icon is-on"> 
-  <span class="octicon octicon-mute"></span>
+  <span class="icon ion-android-volume-off"></span>
   mute
 </button>
 
@@ -147,12 +147,12 @@ HTML:
 {% highlight html %}
 
 <button class="btn-switch-icon"> 
-  <span class="octicon octicon-mute"></span>
+  <span class="icon ion-android-volume-off"></span>
   mute
 </button>
 
 <button class="btn-switch-icon is-on"> 
-  <span class="octicon octicon-mute"></span>
+  <span class="icon ion-android-volume-off"></span>
   mute
 </button>
 
@@ -178,7 +178,7 @@ SCSS:
 
 <button class="btn-switch-dot is-switchable"> autocorrect </button>
 <button class="btn-switch-icon is-switchable"> 
-  <span class="octicon octicon-mute"></span>
+  <span class="icon ion-android-volume-off"></span>
   mute
 </button>
 
