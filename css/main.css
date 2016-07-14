@@ -805,6 +805,9 @@ img {
   font-family: "Ionicons";
   src: url("/bower_components/Ionicons/fonts/ionicons.woff"); }
 
+.icon {
+  padding: 0 0.25em; }
+
 .error-icon {
   margin: 2em 0 1em; }
 
