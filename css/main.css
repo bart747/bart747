@@ -1038,33 +1038,35 @@ a.cc_btn {
   -webkit-align-content: flex-center;
   -ms-flex-line-pack: flex-center;
   align-content: flex-center;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start; }
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
 
 .travel-time h2,
 .travel-time h3 {
   font-size: 1em;
   margin: 0 0 1em 0; }
 
-.tt-table {
+.tt-container {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  min-width: 10rem;
+  min-width: 12rem;
   margin: 0 3.2em 3.2em 0; }
+  .tt-container:last-of-type {
+    margin: 0 0 3.2em 0; }
   @media all and (max-width: 568px) {
-    .tt-table {
+    .tt-container {
       -webkit-flex: 100%;
       -ms-flex: 100%;
       flex: 100%;
       margin: 0 0 3.2em 0; } }
 
-.tt-table ul {
+.tt-container ul {
   margin: 0;
   padding: 0; }
 
-.tt-table li {
+.tt-container li {
   list-style: none; }
 
 .tt-travel {
@@ -1072,46 +1074,7 @@ a.cc_btn {
   border-width: 0 0 2px 0px;
   padding: 1em 1em; }
 
-.tt-layover {
-  background: #dddddd;
-  color: #777;
-  padding: 0 1em; }
-
-.tt-name {
-  padding: 0 1em 0 1.33em; }
-
-.tt-bus .tt-name:before {
-  font-family: "Ionicons";
-  font-size: 1.3em;
-  color: #ee7700;
-  content: "\f36d";
-  margin-right: 0.25em; }
-
-.tt-car .tt-name:before {
-  font-family: "Ionicons";
-  font-size: 1.3em;
-  color: #a12424;
-  content: "\f36f";
-  margin-right: 0.25em; }
-
-.tt-plane .tt-name:before {
-  font-family: "Ionicons";
-  font-size: 1.3em;
-  color: #3355bb;
-  content: "\f3a4";
-  margin-right: 0.25em; }
-
-.tt-train {
-  border-color: #189560; }
-
-.tt-train .tt-name:before {
-  font-family: "Ionicons";
-  font-size: 1.3em;
-  color: #189560;
-  content: "\f3b4";
-  margin-right: 0.25em; }
-
-.tt-name,
+.tt-type,
 .tt-cost {
   display: inline-block; }
 
@@ -1121,3 +1084,39 @@ a.cc_btn {
 .tt-sum {
   font-size: 1.3em;
   border-bottom: 2px dotted; }
+
+.tt-layover {
+  background: #dddddd;
+  color: #777;
+  padding: 0 1em; }
+
+.tt-type {
+  padding: 0 1em 0 1.33em; }
+
+.tt-bus:before {
+  font-family: "Ionicons";
+  font-size: 1.3em;
+  color: #ee7700;
+  content: "\f36d";
+  margin-right: 0.25em; }
+
+.tt-car:before {
+  font-family: "Ionicons";
+  font-size: 1.3em;
+  color: #a12424;
+  content: "\f36f";
+  margin-right: 0.25em; }
+
+.tt-plane:before {
+  font-family: "Ionicons";
+  font-size: 1.3em;
+  color: #3355bb;
+  content: "\f3a4";
+  margin-right: 0.25em; }
+
+.tt-train:before {
+  font-family: "Ionicons";
+  font-size: 1.3em;
+  color: #189560;
+  content: "\f3b4";
+  margin-right: 0.25em; }
