@@ -400,13 +400,13 @@ p {
 h1,
 h2,
 h3 {
-  color: #222; }
+  color: #222;
+  margin: 2.25em 0 1.5em; }
 
 h1, .h1-like {
   font-size: 1.6em;
   font-weight: bold;
-  line-height: 1;
-  margin: 2.25em 0 1.5em; }
+  line-height: 1; }
   @media screen and (max-width: 568px) {
     h1, .h1-like {
       margin: 2em 0 1em; } }
@@ -414,14 +414,12 @@ h1, .h1-like {
 h2, .h2-like {
   font-size: 1.3em;
   font-weight: 600;
-  line-height: 1.2;
-  margin: 2.25em 0 1.5em; }
+  line-height: 1.2; }
 
 h3, .h3-like {
   font-size: 1em;
   font-weight: 600;
   line-height: 1.6;
-  margin: 1.5em 0 1em;
   text-transform: uppercase; }
 
 strong {
