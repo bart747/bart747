@@ -2,9 +2,8 @@
 // typography
 //
 
-// $u === leading === 1rem x line-height
 p {
-  margin: 1.6em 0;
+  margin: 1em 0;
 }
 
 .p-large {
@@ -21,7 +20,7 @@ h1, .h1-like {
   font-size: 1.6em;
   font-weight: bold;
   line-height: 1;
-  margin: 2em 0 2em;
+  margin: 2.25em 0 1.5em;
   @media screen and (max-width: $screen-sml) {
     margin: 2em 0 1em;
   }
@@ -31,14 +30,14 @@ h2, .h2-like {
   font-size: 1.3em;
   font-weight: 600;
   line-height: 1.2;
-  margin: 2.4em 0 1.2em;
+  margin: 2.25em 0 1.5em;
 }
 
 h3, .h3-like {
   font-size: 1em;
   font-weight: 600;
   line-height: 1.6;
-  margin: 1em 0 2em;
+  margin: 1.5em 0 1em;
 
   text-transform: uppercase;
 }
@@ -54,12 +53,12 @@ blockquote {
 }
 
 ul {
-  margin: $u 0;
-  padding-left: 1rem;
+  margin: 1.5em 0;
+  //padding-left: 1rem;
 }
 
 ol {
-  margin: $u 0;
+  margin: 1.5 0;
   padding-left: 1.25rem;
 }
 

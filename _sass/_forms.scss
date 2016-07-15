@@ -9,7 +9,7 @@ fieldset {
 }
 
 form {
-  margin: $u 0 (2*$u);
+  margin: 1.5em 0 3em;
 }
 
 label {
@@ -36,7 +36,7 @@ input {
 .input-message {
   color: $grey-dark;
   font-size: 16px;
-  margin: 0 0 $u;
+  margin: 0 0 1.5em;
 }
 
 .input-line {

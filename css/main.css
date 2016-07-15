@@ -356,7 +356,7 @@ th {
 html {
   box-sizing: border-box;
   font-size: 18px;
-  line-height: 1.6; }
+  line-height: 1.5; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -392,7 +392,7 @@ a {
   clear: both; }
 
 p {
-  margin: 1.6em 0; }
+  margin: 1em 0; }
 
 .p-large {
   font-size: 23px; }
@@ -406,7 +406,7 @@ h1, .h1-like {
   font-size: 1.6em;
   font-weight: bold;
   line-height: 1;
-  margin: 2em 0 2em; }
+  margin: 2.25em 0 1.5em; }
   @media screen and (max-width: 568px) {
     h1, .h1-like {
       margin: 2em 0 1em; } }
@@ -415,13 +415,13 @@ h2, .h2-like {
   font-size: 1.3em;
   font-weight: 600;
   line-height: 1.2;
-  margin: 2.4em 0 1.2em; }
+  margin: 2.25em 0 1.5em; }
 
 h3, .h3-like {
   font-size: 1em;
   font-weight: 600;
   line-height: 1.6;
-  margin: 1em 0 2em;
+  margin: 1.5em 0 1em;
   text-transform: uppercase; }
 
 strong {
@@ -433,11 +433,10 @@ blockquote {
   padding-left: 1rem; }
 
 ul {
-  margin: 1.6em 0;
-  padding-left: 1rem; }
+  margin: 1.5em 0; }
 
 ol {
-  margin: 1.6em 0;
+  margin: 1.5 0;
   padding-left: 1.25rem; }
 
 pre,
@@ -460,7 +459,7 @@ p code {
 @media screen and (min-width: 768px) {
   .col {
     float: left;
-    padding-right: 1.6em; }
+    padding-right: 1.5em; }
     .col:last-of-type {
       padding-right: 0; }
   .col.half {
@@ -477,20 +476,20 @@ p code {
   color: #777;
   font-family: "DejaVu Sans Mono", monospace;
   font-size: 1rem;
-  line-height: 1.6em;
+  line-height: 1.5em;
   padding: 0 0.5em;
   text-transform: uppercase;
   letter-spacing: 0.25em; }
 
 .header {
   padding: 1rem;
-  background: #2233aa;
+  background: #333355;
   border-bottom: 0.5em solid #fffcf8; }
 
 .header a {
   color: white; }
   .header a:hover, .header a :focus {
-    color: #222; }
+    color: #E02020; }
 
 .header-nav {
   margin: 0 auto; }
@@ -536,25 +535,27 @@ p code {
 
 .masthead-h1 {
   font-size: 1.8em;
-  font-weight: normal;
-  margin: 1.6em 0; }
+  font-weight: bold;
+  margin: 3rem 0; }
 
 @media all and (min-width: 568px) {
   .masthead {
-    font-size: 20px; }
+    font-size: 20px;
+    margin: 4rem 0; }
   .masthead-h1 {
     line-height: 1;
     letter-spacing: -0.0125em; } }
 
 @media all and (min-width: 768px) {
   .masthead-h1 {
-    font-size: 3.2em; } }
+    font-size: 2.4em; } }
 
 .menu-list {
   margin-bottom: 3rem; }
   .menu-list ul {
     line-height: 1.25;
     list-style: none;
+    margin: 0 0 1.5em 0;
     padding: 0; }
   .menu-list li {
     margin-bottom: 1.25em; }
@@ -567,7 +568,7 @@ p code {
     margin-bottom: 0; } }
 
 .menu-list-title {
-  margin: 1.25rem 0; }
+  margin: 0 0 1.25rem 0; }
 
 .menu-list-small li {
   margin-bottom: 0.5em; }
@@ -580,7 +581,7 @@ p code {
   padding: 0; }
 
 .post-list li {
-  margin-bottom: 3.2em; }
+  margin-bottom: 3em; }
 
 .post-list p::after {
   content: '..'; }
@@ -594,7 +595,7 @@ fieldset {
   padding: 0; }
 
 form {
-  margin: 1.6em 0 3.2em; }
+  margin: 1.5em 0 3em; }
 
 label {
   color: #444444;
@@ -618,7 +619,7 @@ input {
 .input-message {
   color: #444444;
   font-size: 16px;
-  margin: 0 0 1.6em; }
+  margin: 0 0 1.5em; }
 
 .input-line {
   display: block; }
@@ -747,9 +748,6 @@ a.cc_btn {
   margin: 0 auto;
   margin-bottom: 3rem;
   padding: 0 1em; }
-
-.post p {
-  margin-bottom: 1.6em; }
 
 .post-meta {
   color: #777; }
@@ -907,7 +905,7 @@ a.cc_btn {
   border-left: 1px dotted #777;
   color: #363636;
   line-height: 1.6;
-  margin: 1.6em 0;
+  margin: 1.5em 0;
   padding-left: 0.5em; }
   .highlight .c {
     color: #777;

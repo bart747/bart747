@@ -7,6 +7,7 @@
   ul {
     line-height: 1.25;
     list-style: none;
+    margin: 0 0 1.5em 0;
     padding: 0;
   }
 
@@ -30,7 +31,7 @@
 }
 
 .menu-list-title {
-  margin: 1.25rem 0;
+  margin: 0 0 1.25rem 0;
 }
 
 .menu-list-small li {
@@ -52,8 +53,9 @@
 }
 
 .post-list li {
-  margin-bottom: 2 * $u;
+  margin-bottom: 3em;
 }
+
 .post-list p {
   &::after {
     content: '..';

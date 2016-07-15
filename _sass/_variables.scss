@@ -8,12 +8,8 @@ $monospace:        "DejaVu Sans Mono", monospace;
 $base-font-size:   18px;
 $large-font-size:  20px;
 $small-font-size:  14px;
-$base-line-height: 1.6;
+$base-line-height: 1.5;
 
-
-// base rhythm unit (=== leading)
-$u:                1.6em;
-$u2:               3.2em;
 
 // colors
 
@@ -25,6 +21,7 @@ $red:              #E02020;
 $red-light:        #FF7070;
 $red-dark:         #a12424;
 $blue-night:       #102060;
+$blue-fog:         #333355;
 $background-color: #fffcf8;
 $blue:             #3355bb;
 $blue-light:       #00d1ed;

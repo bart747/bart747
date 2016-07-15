@@ -9,7 +9,6 @@
   }
 }
 
-
 .post,
 .wrapper-post-like {
   max-width: 36rem;
@@ -21,10 +20,6 @@
 .post-title {
   @media screen and (min-width: $screen-sml) {
  }
-}
-
-.post p {
-  margin-bottom: $u; 
 }
 
 .post-meta {
