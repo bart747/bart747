@@ -63,6 +63,10 @@ input.input-error {
   margin: 0 0.5em;
 }
 
+form .icon {
+  padding: 0 0.5em;
+}
+
 @keyframes blink {
   from, to {
     opacity: 1;
@@ -74,8 +78,8 @@ input.input-error {
 
 .blink {
   animation-name: blink;
-  animation-duration: 0.5s;
-  animation-iteration-count: 2;
+  animation-duration: 0.75s;
+  animation-iteration-count: 1;
 }
 
 input.cc-exp-input,

@@ -3,31 +3,45 @@
 //
 
 p {
+  font-size: $base-font-size; 
+  @media screen and (min-width: $screen-sml) {
+    font-size: $large-font-size;
+  }
   margin: 1em 0;
+  max-width: 650px;
 }
 
 .p-large {
   font-size: $large-font-size + 3px;
+  @media screen and (max-width: $screen-sml) {
+    font-size: $large-font-size;
+  }
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4, {
   color: $black;
-  margin: 2em 0 1.5em;
+  margin: 2em 0 1em;
 }
 
 h1, .h1-like {
-  font-size: 1.6em;
+  font-size: 1.66em;
   font-weight: bold;
   line-height: 1;
   @media screen and (max-width: $screen-sml) {
-    margin: 2em 0 1em;
+    margin: 1.5em 0 1em;
   }
 }
 
+.h1-light {
+  @extend .h1-like;
+  font-weight: 400;
+}
+
 h2, .h2-like {
-  font-size: 1.3em;
+  font-size: 1.33em;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -35,7 +49,7 @@ h2, .h2-like {
 h3, .h3-like {
   font-size: 1em;
   font-weight: 600;
-  line-height: 1.6;
+  line-height: 1.5;
   text-transform: uppercase;
 }
 
@@ -51,12 +65,12 @@ blockquote {
 
 ul {
   margin: 1.5em 0;
-  //padding-left: 1rem;
+  padding-left: 1.5em;
 }
 
 ol {
-  margin: 1.5 0;
-  padding-left: 1.25rem;
+  margin: 1.5em 0;
+  padding-left: 1.5em;
 }
 
 pre,

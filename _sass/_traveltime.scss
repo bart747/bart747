@@ -18,11 +18,11 @@
 .tt-container {
   flex: 1;
   min-width: 12rem;
-  margin: 0 3.2em 3.2em 0;
+  margin: 0 3.2em 2em 0;
   &:last-of-type {
-    margin: 0 0 3.2em 0;
+    margin: 0 0 2em 0;
   }
-  @media all and (max-width: $screen-sml) {
+  @media all and (max-width: 799px) {
     flex: 100%;
     margin: 0 0 3.2em 0;
   }

@@ -4,6 +4,8 @@
 
 .center {
   text-align: center;
+  margin-right: auto;
+  margin-left: auto;
  }
 
 .txt-secondary {
@@ -13,6 +15,10 @@
 
 .link-active {
   border-bottom: 1px solid; 
+}
+
+.txt-highlight {
+  border-bottom: 2px solid $green; 
 }
 
 .bold {

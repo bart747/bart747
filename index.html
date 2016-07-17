@@ -2,27 +2,66 @@
 layout: default
 ---
 
-<div class="home">
+<div class="home wrapper">
 
   <div class="masthead">
-    <div class="wrapper">
      
-      <h1 class="masthead-h1">
-        Designing Fast Web Interfaces<br> 
-        with Quick Changes in Mind
-      </h1>
+    <h1 class="masthead-h1">
+      Designing Fast Web Interfaces<br> 
+      with Quick Changes in Mind
+    </h1>
 
-      <p>
-        I like to keep things small and agile. <br>
-        Simplify instead of managing complexity. <br>
-        Keep UI in form of modules that are easy to edit, add and delete.
-      </p>
+    <p class="">
+      I like to keep things small and agile. <br>
+      Simplify instead of managing complexity. <br>
+      Keep UI in form of modules that are easy to edit, add and delete.
+    </p>
 
-    </div>
   </div>
+  <section class="work-samples">
+  <h1 class="h1-light home-section-start">Quick Work Samples:</h1>
 
 
-  <div class="wrapper grid">
+
+  <h2>Combining event listeners with animated indicators</h2>
+
+  <p>It's better to know about an error early, than when you think
+  everyting is done.</p>
+
+  <form class="card home-form-example">
+    <div class="input-line cc-num">
+      <label for="cc-num" >Card Number</label>
+      <input id="cc-num" class="input cc-num-input"
+        type="tel" autocorrect="off" autocomplete="off" spellcheck="off"
+        autocapitalize="off" pattern="[0-9 ]+">
+      <span class="icon cc-num-icon-success ion-checkmark blink green hidden"></span>
+      <span class="icon cc-num-icon-error ion-android-sad blink red hidden"></span>
+
+      <div class="input-message">
+        <span class="cc-type mastercard">MasterCard</span>&nbsp;
+        <span class="cc-type visa">Visa</span>&nbsp;
+        <span class="cc-type amex">AmEx</span>&nbsp;
+        <span class="cc-type discover">Discover</span>
+      </div>
+    </div>
+  </form>
+
+  <ul>
+  <li>
+  Try to make some ruckus with numbers to see error indicators.
+  </li>
+  <li>
+    You can use “4242 4242 4242 4242” as a correct number. 
+  </li>
+  <li>
+    Are two digits enough data for the script to show an error
+    message?<br>
+    (No number of supported card brands starts with “11” or “00”.) 
+  </li>
+  </ul>
+</section>
+
+  <div class="grid home-section-start">
 
     <div class="menu-list col half">
     <ul>

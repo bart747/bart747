@@ -64,13 +64,13 @@ function resetInput(input, iconSuc, iconErr) {
   // highlight selected card type (brand)
   function markCardType(name) {
     if ( $(cardNum.input).hasClass(name) ) {
-      $(cardNum.type + '.' + name).addClass('blue');
+      $(cardNum.type + '.' + name).addClass('txt-highlight');
     }
   }
 
   // reset card type highlight
   function resetCardType() {
-    $(cardNum.type).removeClass('blue');
+    $(cardNum.type).removeClass('txt-highlight');
   }
 
   // validate card number input
@@ -100,6 +100,7 @@ function resetInput(input, iconSuc, iconErr) {
     if ( $(this).val().length > 1 ) {
       
       // highlight proper card type name
+      resetCardType();
       markCardType('visa');
       markCardType('mastercard');
       markCardType('amex');
