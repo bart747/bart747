@@ -2,13 +2,12 @@
 // masthead
 //
 .masthead {
-  margin: 3rem 0;
 }
 
 .masthead-h1 {
   font-size: 2em;
   font-weight: bold;
-  margin: 1.25em 0;
+  margin: 1.5em 0;
 }
 
 .masthead-h2 {
@@ -21,7 +20,6 @@
 @media all and (min-width: $screen-sml) {
   .masthead {
     font-size: $large-font-size;
-    margin: 4rem 0;
   }
 
   .masthead-h1 {

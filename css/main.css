@@ -367,7 +367,10 @@ body {
   font-family: "Source Sans Pro", sans-serif; }
 
 section {
-  margin: 5rem auto; }
+  margin: 5em 0; }
+  @media all and (max-width: 568px) {
+    section {
+      margin: 3.5em 0; } }
 
 .wrapper {
   margin: 0 auto;
@@ -544,18 +547,14 @@ p code {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg); }
 
-.masthead {
-  margin: 3rem 0; }
-
 .masthead-h1 {
   font-size: 2em;
   font-weight: bold;
-  margin: 1.25em 0; }
+  margin: 1.5em 0; }
 
 @media all and (min-width: 568px) {
   .masthead {
-    font-size: 20px;
-    margin: 4rem 0; }
+    font-size: 20px; }
   .masthead-h1 {
     line-height: 1;
     letter-spacing: -0.0125em; } }
@@ -771,7 +770,7 @@ a.cc_btn {
 
 .home-section-start {
   border-top: 3px dotted #ffd600;
-  padding-top: 0.33em; }
+  padding-top: 0.5em; }
 
 .home-section-end {
   border-bottom: 3px dotted #333355; }

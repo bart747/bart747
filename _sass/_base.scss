@@ -19,7 +19,10 @@ body {
 }
 
 section {
-  margin: 5rem auto;
+  margin: 5em 0;
+  @media all and (max-width: $screen-sml) {
+    margin: 3.5em 0;
+  }
 }
 
 .wrapper {

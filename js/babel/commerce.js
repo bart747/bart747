@@ -91,6 +91,7 @@
         addErr(cardNum.input);
         showInputErrIcon(cardNum.input, cardNum.iconOk, cardNum.iconErr);
       }
+      // console.log(cardValid);
     }
 
     // listen to card number input
@@ -107,21 +108,25 @@
         markCardType('discover');
 
         // validate number according to statements
-        if ($(this).hasClass('amex') && $(this).val().length > 16) {
+        if ($(this).hasClass('amex') && $(this).val().length === 17) {
           validCardNum();
+          // console.log($(this).val().length);
         }
 
-        if ($(this).hasClass('identified') && $(this).val().length > 17) {
+        if ($(this).hasClass('identified') && $(this).val().length === 19) {
           validCardNum();
+          // console.log($(this).val().length);
         }
 
         // reset input indicators according to statements
         if ($(this).hasClass('amex') && $(this).val().length < 17) {
           resetInput(this, cardNum.iconOk, cardNum.iconErr);
+          // console.log($(this).val().length);
         }
 
         if ($(this).hasClass('amex') === false && $(this).val().length < 19) {
           resetInput(this, cardNum.iconOk, cardNum.iconErr);
+          // console.log($(this).val().length);
         }
 
         // show error if unknown
@@ -149,17 +154,19 @@
     function validExp() {
 
       var expDate = $(cardExp.input).payment('cardExpiryVal');
-      var expValidation = $.payment.validateCardExpiry(expDate.month, expDate.year);
+      var expValid = $.payment.validateCardExpiry(expDate.month, expDate.year);
 
       // add proper indicators to valid/invalid number
-      if (expValidation === true) {
+      if (expValid === true) {
         addOk(cardExp.input);
         showInputOkIcon(cardExp.input, cardExp.iconOk, cardExp.iconErr);
       }
-      if (expValidation === false) {
+
+      if (expValid === false) {
         addErr(cardExp.input);
         showInputErrIcon(cardExp.input, cardExp.iconOk, cardExp.iconErr);
       }
+      // console.log(expValid);
     }
 
     // listen to input
@@ -200,6 +207,7 @@
         addErr(cardCVC.input);
         showInputErrIcon(cardCVC.input, cardCVC.iconOk, cardCVC.iconErr);
       }
+      // console.log(cvcValid);
     }
 
     // listen to input
