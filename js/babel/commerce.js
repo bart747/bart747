@@ -47,20 +47,19 @@
     $(input).removeClass('input-success');
   }
 
+  // card number css classes setting
+  var cardNum = {
+    input: '.cc-num-input',
+    type: '.cc-type',
+    iconOk: '.cc-num-icon-success',
+    iconErr: '.cc-num-icon-error'
+  };
   //
   // check stuff
   //
 
   // check CARD NUMBER
   (function checkCardNum() {
-
-    // card number css classes setting
-    var cardNum = {
-      input: '.cc-num-input',
-      type: '.cc-type',
-      iconOk: '.cc-num-icon-success',
-      iconErr: '.cc-num-icon-error'
-    };
 
     // highlight selected card type (brand)
     function markCardType(name) {
@@ -167,7 +166,7 @@
     $(cardExp.input).on('input', function () {
 
       // validate number when it's long enough
-      if ($(this).val().length > 6) {
+      if ($(this).val().length === 7 || $(this).val().length === 9) {
         validExp();
       }
 
@@ -192,6 +191,7 @@
       var cvcValid = $.payment.validateCardCVC(cvcNum);
 
       // add proper indicators to valid/invalid number
+
       if (cvcValid === true) {
         addOk(cardCVC.input);
         showInputOkIcon(cardCVC.input, cardCVC.iconOk, cardCVC.iconErr);
@@ -206,7 +206,13 @@
     $(cardCVC.input).on('input', function () {
 
       // validate number when it's long enough
-      if ($(this).val().length > 2) {
+      if ($(cardNum.input).hasClass('amex')) {
+        if ($(cardCVC.input).val().length > 3) {
+          cvcCheck(this);
+        } else {
+          resetInput(this, cardCVC.iconOk, cardCVC.iconErr);
+        }
+      } else if ($(this).val().length === 3) {
         cvcCheck(this);
       }
 
