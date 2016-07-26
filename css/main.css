@@ -398,18 +398,14 @@ a {
   clear: both; }
 
 p {
-  font-size: 18px;
   margin: 1em 0;
   max-width: 650px; }
-  @media screen and (min-width: 568px) {
-    p {
-      font-size: 20px; } }
 
 .p-large {
-  font-size: 23px; }
+  font-size: 24px; }
   @media screen and (max-width: 568px) {
     .p-large {
-      font-size: 20px; } }
+      font-size: 21px; } }
 
 h1,
 h2,
@@ -419,7 +415,7 @@ h4 {
   margin: 2em 0 1em; }
 
 h1, .h1-like, .h1-light {
-  font-size: 1.66em;
+  font-size: 1.75em;
   font-weight: bold;
   line-height: 1; }
   @media screen and (max-width: 568px) {
@@ -430,7 +426,7 @@ h1, .h1-like, .h1-light {
   font-weight: 400; }
 
 h2, .h2-like {
-  font-size: 1.33em;
+  font-size: 1.25em;
   font-weight: 600;
   line-height: 1.2; }
 
@@ -554,7 +550,7 @@ p code {
 
 @media all and (min-width: 568px) {
   .masthead {
-    font-size: 20px; }
+    font-size: 21px; }
   .masthead-h1 {
     line-height: 1;
     letter-spacing: -0.0125em; } }
@@ -632,7 +628,7 @@ input {
   border: 2px solid #777;
   border-radius: 4px;
   display: inline-block;
-  font-size: 20px;
+  font-size: 21px;
   margin: 0;
   padding: 0.5em 0.5em;
   width: 80%;
@@ -763,7 +759,10 @@ a.cc_btn {
   text-shadow: 0 0 4px; }
 
 .work-samples {
-  font-size: 20px; }
+  font-size: 21px; }
+  @media screen and (max-width: 568px) {
+    .work-samples {
+      font-size: 18px; } }
 
 .home-form-example {
   margin: 2.5em 0; }
@@ -775,18 +774,17 @@ a.cc_btn {
 .home-section-end {
   border-bottom: 3px dotted #333355; }
 
-.post {
-  font-size: 20px; }
-  @media screen and (max-width: 568px) {
-    .post {
-      font-size: 18px; } }
-
 .post,
 .wrapper-post-like {
-  max-width: 36rem;
+  font-size: 21px;
+  max-width: 36em;
   margin: 0 auto;
-  margin-bottom: 3rem;
+  margin-bottom: 3em;
   padding: 0 1em; }
+  @media screen and (max-width: 568px) {
+    .post,
+    .wrapper-post-like {
+      font-size: 18px; } }
 
 .post-meta {
   color: #777; }

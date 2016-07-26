@@ -3,10 +3,6 @@
 //
 
 p {
-  font-size: $base-font-size; 
-  @media screen and (min-width: $screen-sml) {
-    font-size: $large-font-size;
-  }
   margin: 1em 0;
   max-width: 650px;
 }
@@ -27,7 +23,7 @@ h4, {
 }
 
 h1, .h1-like {
-  font-size: 1.66em;
+  font-size: 1.75em;
   font-weight: bold;
   line-height: 1;
   @media screen and (max-width: $screen-sml) {
@@ -41,7 +37,7 @@ h1, .h1-like {
 }
 
 h2, .h2-like {
-  font-size: 1.33em;
+  font-size: 1.25em;
   font-weight: 600;
   line-height: 1.2;
 }

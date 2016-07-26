@@ -3,6 +3,9 @@
 //
 .work-samples {
   font-size: $large-font-size;
+  @media screen and (max-width: $screen-sml) {
+    font-size: $base-font-size;
+  }
 }
 
 .home-form-example {

@@ -2,18 +2,15 @@
 // post
 //
 
-.post {
+.post,
+.wrapper-post-like {
   font-size: $large-font-size;
   @media screen and (max-width: $screen-sml) {
     font-size: $base-font-size;
   }
-}
-
-.post,
-.wrapper-post-like {
-  max-width: 36rem;
+  max-width: 36em;
   margin: 0 auto;
-  margin-bottom: 3rem;
+  margin-bottom: 3em;
   padding: 0 1em;
 }
 
