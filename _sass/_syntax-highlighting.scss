@@ -4,16 +4,16 @@
 
 .highlight {
     border-left: 1px dotted $grey;
-    color: $text-color; 
+    color: $grey-dark; 
     line-height: 1.6;
-    margin: 1.5em 0;
+    margin: 1em 0;
     padding-left: 0.5em;
 
     .c     { color: $grey; font-style: italic } // Comment
     .err   { color: $red; } // Error
-    .k     { color: $red-dark; } // Keyword
+    .k     { color: $purple; } // Keyword
     .o     { color: $blue; } // Operator
-    .p     {  }
+    .p     { color: $grey; }
     .cm    { color: $grey; font-style: italic } // Comment.Multiline
     .cp    { color: $grey; font-weight: bold } // Comment.Preproc
     .c1    { color: $grey; font-style: italic } // Comment.Single
@@ -30,11 +30,11 @@
     .gs    { font-weight: bold } // Generic.Strong
     .gu    { color: $grey } // Generic.Subheading
     .gt    { color: $red } // Generic.Traceback
-    .kc    { color: $red-dark; } // Keyword.Constant
-    .kd    { color: $red-dark; } // Keyword.Declaration
-    .kp    { color: $red-dark; } // Keyword.Pseudo
-    .kr    { color: $red-dark; } // Keyword.Reserved
-    .kt    { color: $red-dark; } // Keyword.Type
+    .kc    { color: $purple; } // Keyword.Constant
+    .kd    { color: $purple; } // Keyword.Declaration
+    .kp    { color: $purple; } // Keyword.Pseudo
+    .kr    { color: $purple; } // Keyword.Reserved
+    .kt    { color: $purple; } // Keyword.Type
     .m     { color: $orange } // Literal.Number
     .s     { color: $green } // Literal.String
     .n     { color: $blue-dark; } 

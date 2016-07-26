@@ -29,6 +29,15 @@
   display: none;
 }
 
+.sandbox {
+  background: #eee;
+  border-radius: 0.25em;
+  text-align: center;
+  min-height: 3em;
+  margin: 1em 0 2em;
+  padding: 1em;
+}
+
 .blue {
   color: $blue;
 }
