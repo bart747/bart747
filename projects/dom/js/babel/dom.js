@@ -3,6 +3,21 @@
 (function () {
 
   //
+  // debug
+  //
+
+  var dbg = {
+    isOn: true,
+    log: function log(trigger, action, description) {
+      if (this.isOn === true) {
+        console.log(description);
+        console.log(trigger);
+        console.log(action);
+      }
+    }
+  };
+
+  //
   // button
   //
 
@@ -102,6 +117,7 @@
       span.classList.add("icon", "iconPlane", "ion-plane", "blue");
       sandbox6.appendChild(span);
     }
+    dbg.log(this, iconPlane[0], "show plane icon on button click");
   }
 
   function carToggle() {
@@ -114,6 +130,7 @@
       span.classList.add("icon", "iconCar", "ion-android-car", "orange");
       sandbox6.appendChild(span);
     }
+    dbg.log(this, iconCar[0], "show car icon on button click");
   }
 
   btnPlane.addEventListener("click", planeToggle);

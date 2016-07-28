@@ -243,6 +243,70 @@ btnCar.addEventListener("click", carToggle);
       </div>
     </div>
 
+<h2>Getting Better Feedback</h2>
+
+<p>
+It's good to have browser dev tools and a linter running,
+but you can get even more with smart use of <code>console.log()</code>.
+</p>
+
+<p>Here's an example of a cool, little method:</p>
+{% highlight js %}
+const dbg = {
+  isOn:  true,
+  log:   function(trigger, action, description) {
+           if (this.isOn === true) {
+             console.log(description);
+             console.log(trigger);
+             console.log(action);
+           }
+         }
+};
+{% endhighlight %} 
+
+<p>This is how you use it:</p>
+
+{% highlight js %}
+...
+function planeToggle() {
+  let iconPlane = document.getElementsByClassName("iconPlane");
+
+  if (iconPlane[0]) {
+    iconPlane[0].classList.toggle("hidden");
+  }
+  else {
+    let span = document.createElement("span");
+    span.classList.add("icon", "iconPlane", "ion-plane", "blue");
+    sandbox6.appendChild(span);
+  }
+  // here, just one extra line
+  dbg.log(this, iconPlane[0], "show plane icon on button click");
+}
+...
+{% endhighlight %} 
+
+<p>
+I used it in the previous sandbox with the “plane” and “car” buttons.
+Open the console, click on them and see
+how it works for yourself. Now, for instance, you can see if
+<code>hidden</code> class is added or removed properly.
+</p> 
+
+<p>
+The “isOn” variable is quite important. It's like a toggle switch.
+You might want to turn off these logs after a development phase.
+Too much data noise in your console also can be a problem.
+</p>
+
+<p>
+Btw:
+<ul>
+  <li><code>console.log</code> prints elements in an HTML-like tree,</li>
+  <li><code>console.dir</code> uses a JSON-like tree.</li>
+</ul>
+</p>
+
+
 </div>
 <script src="./js/dist/all.js"></script>
 

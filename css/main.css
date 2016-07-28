@@ -472,7 +472,8 @@ p code {
 
 p code,
 li code {
-  color: #189560; }
+  color: #189560;
+  padding: 0 0.25em; }
 
 .secondary {
   color: #444444; }
