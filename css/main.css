@@ -399,7 +399,7 @@ a {
 
 p {
   margin: 1em 0;
-  max-width: 650px; }
+  max-width: 32em; }
 
 .p-large {
   font-size: 24px; }
@@ -435,6 +435,13 @@ h3, .h3-like {
   font-weight: 600;
   line-height: 1.5;
   text-transform: uppercase; }
+
+.h1-mega {
+  font-size: 2.5em;
+  margin: 1.5em 0 1.5em; }
+  @media screen and (max-width: screen-sml) {
+    .h1-mega {
+      font-size: 2em; } }
 
 strong {
   font-weight: bold; }
@@ -949,7 +956,7 @@ a.cc_btn {
   border-left: 1px dotted #777;
   color: #444444;
   line-height: 1.6;
-  margin: 1em 0;
+  margin: 2em 0;
   padding-left: 0.5em; }
   .highlight .c {
     color: #777;

@@ -1,10 +1,14 @@
 ---
-layout: post 
-title: DOM Manipulation with Vanilla JavaScript
+layout: default 
+title: Creating DOM Elements with Vanilla JavaScript
 ---
 
+<div class="wrapper-post-like">
+
+<h1 class="h1-mega purple">Creating DOM Elements<br> with Vanilla JavaScript</h1>
+
 <p>
-A guide to DOM manipulation.
+A guide to DOM manipulation with focus on creating new UI parts.
 No frameworks and libraries.
 Pure JavaScript.
 Starting simple, ending fancy.
@@ -12,8 +16,9 @@ Starting simple, ending fancy.
 
 <h2>Your First Simple Element</h2>
 
-<p>There are two basic steps in creating a new DOM element.</p>  
-  
+  <p>There are two basic steps in cr
+  eating a new DOM element.</p>  
+
   <ol>
     <li>Creating an HTML element (DOM node): <br>
       <code>const newElement = document.createElement("div")</code> </li>
@@ -28,11 +33,6 @@ Starting simple, ending fancy.
   </div>
 
   <h3>Lets add a button:</h3>
-{% highlight js %}
-
-
-{% endhighlight %}
-
 
 {% highlight js %}
 const sandbox1 = document.getElementById("dom-sandbox-1");
@@ -40,10 +40,10 @@ const btn1 = document.createElement("button");
 sandbox1.appendChild(btn1);
 {% endhighlight %} 
 
-  <div id="dom-sandbox-1" class="sandbox">
-  </div>
+      <div id="dom-sandbox-1" class="sandbox">
+      </div>
 
-  <p>An empty button is not very useful. We Need Some Text:</p>
+      <p>An empty button is not very useful. We Need Some Text:</p>
 
 {% highlight js %}
 const sandbox2 = document.getElementById("dom-sandbox-2");
@@ -53,54 +53,56 @@ btn2.appendChild(textBtn2);
 sandbox2.appendChild(btn2);
 {% endhighlight %} 
 
-<div id="dom-sandbox-2" class="sandbox">
-</div>
+    <div id="dom-sandbox-2" class="sandbox">
+    </div>
 
-<p>Notice that “createTextNode”, “createElement” and “getElementById” are
-following the same pattern.</p>
+    <p>Notice that “createTextNode”, “createElement” and “getElementById” are
+    following the same pattern.</p>
 
 <h2>
 Adding Groups of Elements
 </h2>
 
-<p>
-By using a document fragment
-&mdash;<code>document.createDocumentFragment()</code>&mdash;
-you can create a group of elements. 
-It will happen in memory, outside of the DOM tree.
-That might be good for performance.
-</p> 
+  <p>
+  By using a document fragment
+  &mdash;<code>document.createDocumentFragment()</code>&mdash;
+  you can create a group of elements. 
+  It will happen in memory, outside of the DOM tree.
+  That might be good for performance.
+  </p> 
 
-<p>
-You'll be able to show the whole group using single
-<code>append</code> operation.
-</p>
+  <p>
+  You'll be able to show the whole group using single
+  <code>append</code> operation.
+  </p>
 
-<h3>First, Simple Group</h3>
+  <h3>First, Simple Group</h3>
+
 {% highlight js %}
 const sandbox3 = document.getElementById("dom-sandbox-3");
 const fragment = document.createDocumentFragment();
 // css classes that select icons
 const iconClasses = ["ion-paper-airplane",
-                     "ion-plane",
-                     "ion-jet"]
+                    "ion-plane",
+                    "ion-jet"];
 
 iconClasses.forEach(el => {
   let span = document.createElement("span");
   span.classList.add("icon", el);
   fragment.appendChild(span);
-})
+});
 
 sandbox3.appendChild(fragment);
 {% endhighlight %} 
 
-<div id="dom-sandbox-3" class="sandbox">
-</div>
+    <div id="dom-sandbox-3" class="sandbox">
+    </div>
 
-
-<h3>What About More than One Data Set</h3>
+  <h3>What About More than One Data Set</h3>
 
 {% highlight js %}
+const sandbox4 = document.getElementById("dom-sandbox-4");
+const fragmentBig = document.createDocumentFragment();
 const sandbox4 = document.getElementById("dom-sandbox-4");
 const fragmentBig = document.createDocumentFragment();
 
@@ -108,8 +110,8 @@ const skySet = ["ion-paper-airplane",
                 "ion-plane",
                 "ion-jet"];
 const roadSet = ["ion-android-bicycle",
-                 "ion-android-car",
-                 "ion-android-bus"];
+                "ion-android-car",
+                "ion-android-bus"];
 
 const skyDiv = document.createElement("div");
 const roadDiv = document.createElement("div");
@@ -118,33 +120,34 @@ skySet.forEach(el => {
   let span = document.createElement("span");
   span.classList.add("icon", el, "blue");
   skyDiv.appendChild(span);
-})
+});
 
 roadSet.forEach(el => {
   let span = document.createElement("span");
   span.classList.add("icon", el, "orange");
   roadDiv.appendChild(span);
-})
+});
 
 fragmentBig.appendChild(skyDiv);
 fragmentBig.appendChild(roadDiv);
 sandbox4.appendChild(fragmentBig);
 {% endhighlight %} 
 
-<div id="dom-sandbox-4" class="sandbox">
-</div>
+    <div id="dom-sandbox-4" class="sandbox">
+    </div>
 
 <h2>On-Click/Touch Functionality</h2>
 
-<p>
-The most interesting things happen when you can make your stuff
-interactive. Lets use some event listeners&mdash;
-<code>EventTarget.addEventListener()</code>.
-</p>
+  <p>
+  The most interesting things happen when you can make your stuff
+  interactive. Lets use some event listeners:
+  <code>eventTarget.addEventListener()</code>.
+  </p>
 
-<h3>Create New Element On-Click</h3>
-<p>I'll use the arrays from the previous example and add two buttons that 
-will visualize them.</p>
+  <h3>Create New Element On-Click</h3>
+
+    <p>I'll use the arrays from the previous example and add two buttons that 
+    will visualize them.</p>
 
 {% highlight js %}
 const sandbox5 = document.getElementById("dom-sandbox-5");
@@ -171,39 +174,39 @@ btnSky.addEventListener("click", showSky);
 btnRoad.addEventListener("click", showRoad);
 {% endhighlight %} 
 
-<div id="dom-sandbox-5" class="sandbox">
-  <div>
-    <button id="btnSky">airplanes</button>
-    <button id="btnRoad">vehicles</button>
-  </div>
-</div>
+    <div id="dom-sandbox-5" class="sandbox">
+      <div>
+        <button id="btnSky">airplanes</button>
+        <button id="btnRoad">vehicles</button>
+      </div>
+    </div>
 
 
-<h3>Creating, Hiding, Showing</h3>
+ <h3>Creating, Hiding, Showing</h3>
 
-<p>
-Lets assume that I don't wont to just create new elements over and over
-again. Lets create something that adds and removes what I want and when I
-want.
-</p>
+    <p>
+    Lets assume that I don't want to just create new elements over and over
+    again. Lets create something that adds and removes what I want and when I
+    want.
+    </p>
 
-<p>
-To remove an element I could use <code>element.removeChild(child)</code>.
-But what if I will wont to show and hide it multiple times?
-</p>
-<p>
-It'll be
-better to create that element on a first request. Than
-I'll use a CSS class containing <code>display: none</code> to show it or
-hide it: <code>element.classList.toggle("hidden")</code>.
-</p>
+    <p>
+    To remove an element I could use <code>element.removeChild(child)</code>.
+    But what if I will want to show and hide it multiple times?
+    </p>
+    <p>
+    It'll be
+    better to create that element on a first request. Than
+    I'll use a CSS class containing <code>display: none</code> to show it or
+    hide it: <code>element.classList.toggle("hidden")</code>.
+    </p>
 
 {% highlight js %}
 const sandbox6 = document.getElementById("dom-sandbox-6");
 const btnPlane = document.getElementById("btnPlane");
 const btnCar = document.getElementById("btnCar");
 
-function planeAction() {
+function planeToggle() {
   let iconPlane = document.getElementsByClassName("iconPlane");
 
   if (iconPlane[0]) {
@@ -216,7 +219,7 @@ function planeAction() {
   }
 }
 
-function carAction() {
+function carToggle() {
   let iconCar = document.getElementsByClassName("iconCar");
 
   if (iconCar[0]) {
@@ -229,145 +232,19 @@ function carAction() {
   }
 }
 
-btnPlane.addEventListener("click", planeAction);
-btnCar.addEventListener("click", carAction);
+btnPlane.addEventListener("click", planeToggle);
+btnCar.addEventListener("click", carToggle);
 {% endhighlight %} 
 
-<div id="dom-sandbox-6" class="sandbox">
-  <div>
-    <button id="btnPlane">Plane</button>
-    <button id="btnCar">Car</button>
-  </div>
+    <div id="dom-sandbox-6" class="sandbox">
+      <div>
+        <button id="btnPlane">plane</button>
+        <button id="btnCar">car</button>
+      </div>
+    </div>
+
 </div>
-<script>
-
-//
-// button
-//
-const sandbox1 = document.getElementById("dom-sandbox-1");
-const btn1 = document.createElement("button");
-sandbox1.appendChild(btn1);
-
-//---------
-const sandbox2 = document.getElementById("dom-sandbox-2");
-const btn2 = document.createElement("button");
-const textBtn2 = document.createTextNode("I'm Clickable");
-btn2.appendChild(textBtn2);
-sandbox2.appendChild(btn2);
-
-//
-// document fragment
-//
-const sandbox3 = document.getElementById("dom-sandbox-3");
-const fragment = document.createDocumentFragment();
-// css classes that select icons
-const iconClasses = ["ion-paper-airplane",
-                     "ion-plane",
-                     "ion-jet"]
-
-iconClasses.forEach(el => {
-  let span = document.createElement("span");
-  span.classList.add("icon", el);
-  fragment.appendChild(span);
-})
-
-sandbox3.appendChild(fragment);
-
-//------------
-const sandbox4 = document.getElementById("dom-sandbox-4");
-const fragmentBig = document.createDocumentFragment();
-
-const skySet = ["ion-paper-airplane",
-                "ion-plane",
-                "ion-jet"];
-const roadSet = ["ion-android-bicycle",
-                 "ion-android-car",
-                 "ion-android-bus"];
-
-const skyDiv = document.createElement("div");
-const roadDiv = document.createElement("div");
-
-skySet.forEach(el => {
-  let span = document.createElement("span");
-  span.classList.add("icon", el, "blue");
-  skyDiv.appendChild(span);
-})
-
-roadSet.forEach(el => {
-  let span = document.createElement("span");
-  span.classList.add("icon", el, "orange");
-  roadDiv.appendChild(span);
-})
-
-fragmentBig.appendChild(skyDiv);
-fragmentBig.appendChild(roadDiv);
-sandbox4.appendChild(fragmentBig);
-
-
-//
-// event listeners
-//
-
-const sandbox5 = document.getElementById("dom-sandbox-5");
-const btnSky = document.getElementById("btnSky");
-const btnRoad = document.getElementById("btnRoad");
-
-function showSky() {
-  skySet.forEach(el => {
-    let span = document.createElement("span");
-    span.classList.add("icon", el, "blue");
-    sandbox5.appendChild(span);
-  });
-}
-
-function showRoad() {
-  roadSet.forEach(el => {
-    let span = document.createElement("span");
-    span.classList.add("icon", el, "orange");
-    sandbox5.appendChild(span);
-  });
-}
-
-btnSky.addEventListener("click", showSky);
-btnRoad.addEventListener("click", showRoad);
-
-
-//------------
-
-const sandbox6 = document.getElementById("dom-sandbox-6");
-const btnPlane = document.getElementById("btnPlane");
-const btnCar = document.getElementById("btnCar");
-
-function planeAction() {
-  let iconPlane = document.getElementsByClassName("iconPlane");
-
-  if (iconPlane[0]) {
-    iconPlane[0].classList.toggle("hidden");
-  }
-  else {
-    let span = document.createElement("span");
-    span.classList.add("icon", "iconPlane", "ion-plane", "blue");
-    sandbox6.appendChild(span);
-  }
-}
-
-function carAction() {
-  let iconCar = document.getElementsByClassName("iconCar");
-
-  if (iconCar[0]) {
-    iconCar[0].classList.toggle("hidden");
-  }
-  else {
-    let span = document.createElement("span");
-    span.classList.add("icon", "iconCar", "ion-android-car", "orange");
-    sandbox6.appendChild(span);
-  }
-}
-
-btnPlane.addEventListener("click", planeAction);
-btnCar.addEventListener("click", carAction);
-
-</script>
+<script src="./js/dist/all.js"></script>
 
 
 
