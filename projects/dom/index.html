@@ -28,13 +28,13 @@ Pure JavaScript.
       <code>existingElement.appendChild(newElement)</code> </li>
   </ol>
 
-  <p>Lets do some experiment. Here's a sandbox&mdash;a DIV where
-  I'll add some new stuff:<p>
+  <h3>Lets add a button</h3>
 
-  <div  class="sandbox">
-  </div>
+    <p>Lets do some experiment. Here's a sandbox&mdash;a DIV where
+    I'll add some new stuff:<p>
 
-  <h3>Lets add a button:</h3>
+    <div  class="sandbox">
+    </div>
 
 {% highlight js %}
 const sandbox1 = document.getElementById("dom-sandbox-1");
@@ -42,10 +42,12 @@ const btn1 = document.createElement("button");
 sandbox1.appendChild(btn1);
 {% endhighlight %} 
 
-      <div id="dom-sandbox-1" class="sandbox">
-      </div>
+    
+    <p>Tada:</p>
+    <div id="dom-sandbox-1" class="sandbox">
+    </div>
 
-      <p>An empty button is not very useful. We Need Some Text:</p>
+    <p>An empty button is not very useful. We Need Some Text:</p>
 
 {% highlight js %}
 const sandbox2 = document.getElementById("dom-sandbox-2");
@@ -73,7 +75,7 @@ Adding Groups of Elements
   </p> 
 
   <p>
-  Than you'll be able to show the whole group using single
+  Than you'll be able to show the whole group using a single
   <code>append</code> operation.
   That might be good for performance.
   </p>
@@ -266,7 +268,7 @@ const dbg = {
 };
 {% endhighlight %} 
 
-  <p>This is how you use it:</p>
+  <p>This is how I use it:</p>
 
 {% highlight js %}
 ...
@@ -328,18 +330,20 @@ A user might not even notice the delay of the below the fold images.
 With decent wi-fi they'll be ready before she will scroll down enough.
 </p>
 
-<p>
-Time for an example. I'll use event listener listening to <code>load</code>
-event.
-To give you a better example of that mechanism,
-I'll upload three pictures in a sort of domino effect. 
-</p>
+  <h3>Example</h3>
+    
+    <p>
+    To give you an example of that mechanism,
+    I'll upload three pictures in a sort of domino effect. 
+    I'll use event listener listening to <code>load</code>
+    event.
+    </p>
 
-<p>
-P.S.:
-In Chrome dev tools you can use the network throttling option too see everything
-better.
-</p>
+    <p>
+    P.S.:
+    In Chrome dev tools you can use the network throttling option too see everything
+    better.
+    </p>
 
 {% highlight js %}
 const sandbox7 = document.getElementById("dom-sandbox-7");
@@ -361,7 +365,8 @@ img1.addEventListener("load", () => {
     sandbox7.appendChild(img3);
     dbg.log(img2, img3, "load img3 after img2");
   });
-});{% endhighlight %} 
+});
+{% endhighlight %} 
 
   <div id="dom-sandbox-7" class="sandbox">
   </div>
