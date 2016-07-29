@@ -135,4 +135,38 @@
 
   btnPlane.addEventListener("click", planeToggle);
   btnCar.addEventListener("click", carToggle);
+
+  //
+  // lazy load
+  //
+
+  var sandbox7 = document.getElementById("dom-sandbox-7");
+
+  var img1 = document.createElement("img");
+  var img2 = document.createElement("img");
+  var img3 = document.createElement("img");
+
+  img1.src = "http://dummyimage.com/200x200/000/9fe300";
+
+  sandbox7.appendChild(img1);
+
+  img1.addEventListener("load", function () {
+    img2.src = "http://dummyimage.com/200x200/000/fff";
+    sandbox7.appendChild(img2);
+    dbg.log(img1, img2, "load img2 after img1");
+
+    img2.addEventListener("load", function () {
+      img3.src = "http://dummyimage.com/200x200/000/dd00ed";
+      sandbox7.appendChild(img3);
+      dbg.log(img2, img3, "load img3 after img2");
+    });
+  });
+
+  /*
+  const sandbox2 = document.getElementById("dom-sandbox-2");
+  const btn2 = document.createElement("button");
+  const textBtn2 = document.createTextNode("I'm Clickable");
+  btn2.appendChild(textBtn2);
+  sandbox2.appendChild(btn2);
+  */
 })();

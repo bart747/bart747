@@ -3,14 +3,13 @@
 //
 img {
   border-radius: 4px;
+  margin: 0 auto;
 }
 
 .post img {
   background: $grey;
   margin: 0 auto;
   max-width: 600px;
-  width: 100%;
-  height: auto;
 }
 
 .img-blur-1 {

@@ -8,16 +8,18 @@ title: Creating DOM Elements with Vanilla JavaScript
 <h1 class="h1-mega purple">Creating DOM Elements<br> with Vanilla JavaScript</h1>
 
 <p>
-A guide to DOM manipulation with focus on creating new UI parts.
+An introduction to DOM manipulation with focus on creating new UI parts.
 No frameworks and libraries.
 Pure JavaScript.
-Starting simple, ending fancy.
 </p>
+
+<p>(draft | last edit: 29.07.2016)</p>
 
 <h2>Your First Simple Element</h2>
 
-  <p>There are two basic steps in cr
-  eating a new DOM element.</p>  
+  <p>
+  There are two basic steps in creating a new DOM element.
+  </p>  
 
   <ol>
     <li>Creating an HTML element (DOM node): <br>
@@ -68,12 +70,12 @@ Adding Groups of Elements
   &mdash;<code>document.createDocumentFragment()</code>&mdash;
   you can create a group of elements. 
   It will happen in memory, outside of the DOM tree.
-  That might be good for performance.
   </p> 
 
   <p>
-  You'll be able to show the whole group using single
+  Than you'll be able to show the whole group using single
   <code>append</code> operation.
+  That might be good for performance.
   </p>
 
   <h3>First, Simple Group</h3>
@@ -182,7 +184,7 @@ btnRoad.addEventListener("click", showRoad);
     </div>
 
 
- <h3>Creating, Hiding, Showing</h3>
+  <h3>Creating, Hiding, Showing</h3>
 
     <p>
     Lets assume that I don't want to just create new elements over and over
@@ -236,21 +238,21 @@ btnPlane.addEventListener("click", planeToggle);
 btnCar.addEventListener("click", carToggle);
 {% endhighlight %} 
 
-    <div id="dom-sandbox-6" class="sandbox">
-      <div>
-        <button id="btnPlane">plane</button>
-        <button id="btnCar">car</button>
-      </div>
+  <div id="dom-sandbox-6" class="sandbox">
+    <div>
+      <button id="btnPlane">plane</button>
+      <button id="btnCar">car</button>
     </div>
+  </div>
 
 <h2>Getting Better Feedback</h2>
 
-<p>
-It's good to have browser dev tools and a linter running,
-but you can get even more with smart use of <code>console.log()</code>.
-</p>
+  <p>
+  It's good to have browser dev tools and a linter running,
+  but you can get even more with smart use of <code>console.log()</code>.
+  </p>
 
-<p>Here's an example of a cool, little method:</p>
+  <p>Here's an example of a cool, little method:</p>
 {% highlight js %}
 const dbg = {
   isOn:  true,
@@ -264,7 +266,7 @@ const dbg = {
 };
 {% endhighlight %} 
 
-<p>This is how you use it:</p>
+  <p>This is how you use it:</p>
 
 {% highlight js %}
 ...
@@ -285,27 +287,93 @@ function planeToggle() {
 ...
 {% endhighlight %} 
 
-<p>
-I used it in the previous sandbox with the “plane” and “car” buttons.
-Open the console, click on them and see
-how it works for yourself. Now, for instance, you can see if
-<code>hidden</code> class is added or removed properly.
-</p> 
+  <p>
+  I used it in the previous sandbox with the “plane” and “car” buttons.
+  Open the console, click on them and see
+  how it works for yourself. Now, for instance, you can see if
+  <code>hidden</code> class is added or removed properly.
+  </p> 
 
+  <p>
+  The “isOn” variable is quite important. It's like a toggle switch.
+  You might want to turn off these logs after a development phase.
+  Too much data noise in your console also can be a problem.
+  </p>
+
+  <p>
+  Btw:
+  <ul>
+    <li><code>console.log</code> prints elements in an HTML-like tree,</li>
+    <li><code>console.dir</code> uses a JSON-like tree.</li>
+  </ul>
+  </p>
+
+<h2>Uploading Heavy, Below the Fold Content Later</h2> 
+ 
 <p>
-The “isOn” variable is quite important. It's like a toggle switch.
-You might want to turn off these logs after a development phase.
-Too much data noise in your console also can be a problem.
+Lets assume that you have some pretty heavy images to show on your
+page.
+Some will be shown above the fold, some below. Uploading them all at
+once will slow down everything.
+That's why it's a good idea to render some of them with a delay.
 </p>
 
 <p>
-Btw:
-<ul>
-  <li><code>console.log</code> prints elements in an HTML-like tree,</li>
-  <li><code>console.dir</code> uses a JSON-like tree.</li>
-</ul>
+The above the fold ones will be uploaded first&mdash;they are a priority.
+The rest will wait until they are ready.
 </p>
 
+<p>
+A user might not even notice the delay of the below the fold images.
+With decent wi-fi they'll be ready before she will scroll down enough.
+</p>
+
+<p>
+Time for an example. I'll use event listener listening to <code>load</code>
+event.
+To give you a better example of that mechanism,
+I'll upload three pictures in a sort of domino effect. 
+</p>
+
+<p>
+P.S.:
+In Chrome dev tools you can use the network throttling option too see everything
+better.
+</p>
+
+{% highlight js %}
+const sandbox7 = document.getElementById("dom-sandbox-7");
+
+const img1 = document.createElement("img");
+const img2 = document.createElement("img");
+const img3 = document.createElement("img");
+
+img1.src = "http://dummyimage.com/200x200/000/9fe300";
+sandbox7.appendChild(img1);
+
+img1.addEventListener("load", () => { 
+  img2.src = "http://dummyimage.com/200x200/000/fff";
+  sandbox7.appendChild(img2);
+  dbg.log(img1, img2, "load img2 after img1");
+
+  img2.addEventListener("load", () => {
+    img3.src = "http://dummyimage.com/200x200/000/dd00ed";
+    sandbox7.appendChild(img3);
+    dbg.log(img2, img3, "load img3 after img2");
+  });
+});{% endhighlight %} 
+
+  <div id="dom-sandbox-7" class="sandbox">
+  </div>
+
+  <p>
+    Notice that image sources are described right before
+    <code>.addpendChild</code>.
+    If I had done that right after image variables, it wouldn't work the right way.
+    The second and third picture would've been uploaded too quickly.
+    The <code>load</code> property has to be setted before the
+    <code>.src</code>. 
+  </p>
 
 </div>
 <script src="./js/dist/all.js"></script>

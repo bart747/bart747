@@ -18,11 +18,8 @@ body {
   font-family: $base-font-family;
 }
 
-section {
-  margin: 5em 0;
-  @media all and (max-width: $screen-sml) {
-    margin: 3.5em 0;
-  }
+.section {
+  margin: 3rem 0;
 }
 
 .wrapper {
@@ -49,6 +46,11 @@ a {
 
 .page {
   margin-bottom: 3rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .clearfix:after {

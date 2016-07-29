@@ -366,11 +366,8 @@ body {
   color: #363636;
   font-family: "Source Sans Pro", sans-serif; }
 
-section {
-  margin: 5em 0; }
-  @media all and (max-width: 568px) {
-    section {
-      margin: 3.5em 0; } }
+.section {
+  margin: 3rem 0; }
 
 .wrapper {
   margin: 0 auto;
@@ -391,6 +388,10 @@ a {
 
 .page {
   margin-bottom: 3rem; }
+
+img {
+  max-width: 100%;
+  height: auto; }
 
 .clearfix:after {
   content: "";
@@ -802,14 +803,13 @@ footer {
   margin-bottom: 4.8rem; }
 
 img {
-  border-radius: 4px; }
+  border-radius: 4px;
+  margin: 0 auto; }
 
 .post img {
   background: #777;
   margin: 0 auto;
-  max-width: 600px;
-  width: 100%;
-  height: auto; }
+  max-width: 600px; }
 
 .img-blur-1 {
   -webkit-animation-duration: 0.75s;
@@ -909,6 +909,9 @@ a.cc_btn {
   min-height: 3em;
   margin: 1em 0 2em;
   padding: 1em; }
+
+.sandbox img {
+  max-width: 200px; }
 
 .blue {
   color: #3355bb; }
