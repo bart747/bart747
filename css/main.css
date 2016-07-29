@@ -413,12 +413,13 @@ h2,
 h3,
 h4 {
   color: #222;
-  margin: 2em 0; }
+  margin: 2em 0 1em; }
 
 h1, .h1-like, .h1-light {
   font-size: 1.75em;
   font-weight: bold;
-  line-height: 1; }
+  line-height: 1;
+  margin: 2em 0; }
   @media screen and (max-width: 568px) {
     h1, .h1-like, .h1-light {
       margin: 1.5em 0; } }

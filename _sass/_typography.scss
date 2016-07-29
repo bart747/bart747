@@ -19,13 +19,14 @@ h2,
 h3,
 h4, {
   color: $black;
-  margin: 2em 0;
+  margin: 2em 0 1em;
 }
 
 h1, .h1-like {
   font-size: 1.75em;
   font-weight: bold;
   line-height: 1;
+  margin: 2em 0;
   @media screen and (max-width: $screen-sml) {
     margin: 1.5em 0;
   }
