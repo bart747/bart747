@@ -141,7 +141,7 @@ roadSet.forEach(el => {
   roadDiv.appendChild(span);
 });
 
-// append bot sets of icons to one document fragment
+// append both sets of icons to one document fragment
 fragmentBig.appendChild(skyDiv);
 fragmentBig.appendChild(roadDiv);
 
@@ -376,13 +376,13 @@ const img3 = document.createElement("img");
 img1.src = "http://dummyimage.com/200x200/000/9fe300";
 sandbox7.appendChild(img1);
 
-// upload image 2 after 1 is ready
+// when imag1 is ready, upload img2 
 img1.addEventListener("load", () => { 
   img2.src = "http://dummyimage.com/200x200/000/fff";
   sandbox7.appendChild(img2);
   dbg.log(img1, img2, "load img2 after img1");
 
-  // upload image 3 after 2 is ready
+  // when img2 is ready, upload img3 
   img2.addEventListener("load", () => {
     img3.src = "http://dummyimage.com/200x200/000/dd00ed";
     sandbox7.appendChild(img3);
