@@ -37,29 +37,34 @@
         `m 200,632.36223 c 160,${position} 360,${position} 520,0`);
     }
 
-    /* 
-     * gain = increase per frame
-     * startLvl = starting level that will be changed by gain
+    /*
+     * time: 1000 is 1s;
+     * hue: based on hsl notation - from 0 to 360;
+     * startLvl: saturation start lvl - 0 is grayscale, 100 full color;
+     * direction: 1 or -1;
+     * colorFunc: function that sets the color of given element;
      */
-    function saturation(time, tone, startLvl, direction, elmt) {
+    function saturation(time, hue, startLvl, direction, colorFunc) {
       const gain = (100 / (time / frameRate)) * direction;
       // console.log("gain:" + gain);
       
       (function iter() {
-        let color = `hsla(${tone}, ${startLvl}%, 50%, 1)`;
+        let color = `hsla(${hue}, ${startLvl}%, 50%, 1)`;
 
         if ( startLvl < 0 || startLvl > 100 ) {
           console.log("warning: color saturation lvl is out of range");
         }
         
-        if (typeof elmt === "function") {
-          elmt(color);
+        if (typeof colorFunc === "function") {
+          colorFunc(color);
           // console.log(wire.arr[3].style.stroke);
         }
 
-        // repeat with changed values
+        /*
+         * repeat with changed values
+         * 0.01 is not a precise solution but good enough to trick the eye
+         */
         if ( time > frameRate - 0.01) {
-
           time = time - frameRate;
           startLvl = startLvl + gain;
 
@@ -70,22 +75,24 @@
       }());
     }
     
-    /* 
-     * position = starting point for movement animation
-     * pxPerFrame = how many px to move per 1 frame 
+    /*
+     * time: 1000 is 1s;
+     * position: starting point for movement animation;
+     * pxPerFrame: how many px to move per 1 frame;
+     * direction: 1 or -1;
+     * pathFunc: function that sets the path (SVG) of a given element;
      */
-    function animatePath(time, position, pxPerFrame, direction, elmt) {     
+    function animatePath(time, position, pxPerFrame, direction, pathFunc) {     
 
       (function iter() {
 
-        if (typeof elmt === "function") {
-          elmt(position);
+        if (typeof pathFunc === "function") {
+          pathFunc(position);
           // console.log(string.getAttribute("d"));     
         }
 
         // repeat with changed values
         if ( time > frameRate - 0.01) { 
-          
           time = time - frameRate;
           position = position + (pxPerFrame * direction);
           
@@ -109,7 +116,6 @@
       setWireColor(wire.color);
     }
    
-
     function moveString() {
       animatePath(380, 0, 0.5, 1, setStringMovement);
       

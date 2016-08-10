@@ -5,9 +5,26 @@ title: How to Draw SVG Graphs with Code
 
 <div class="wrapper-post-like">
 
-  <h1 class="h1-mega purple">JS Animation Scripts and SVG</h1>
+  <h1 class="h1-mega purple">JS Animation Script + SVG Graph in 60fps</h1>
 
-<p>Symbolic presentation of how an electric guitar works:</p>
+<section>
+
+  <h2>Test graph:</h2>
+
+  <p>Symbolic presentation of how an electric guitar works:</p>
+    <ul>
+      <li>
+        The black rectangle is a magnet.</li>
+    <li>
+        The wire forms a coil around the magnet
+      </li>
+    <li>
+        The string above the magnet is made from steel, nickel or both.
+        It's vibrations happen in the magnets field.</li>
+    <li>
+        All that together induces alternating current in the wire.
+    </li>
+</ul>
 
 <div class="center">
   <object id="svgGuitar"
@@ -15,12 +32,17 @@ title: How to Draw SVG Graphs with Code
           type="image/svg+xml">
   </object>
   <br>
-  <button id="strumBtn">strum</button>
+  <button id="strumBtn" class="btn-round icon icon ion-play"></button>
 </div>
+
+</section>
+
+<section>
 
 gibberish:
 
-{% highlight js %}
+{% highlight js linenos %}
+
 (function() {
   "use strict";
 
@@ -28,6 +50,10 @@ gibberish:
   const strumBtn = document.getElementById("strumBtn");
 
   svgObj.addEventListener('load', function() { 
+
+    /*
+     *  ----- SVG graph related stuff -----
+     */
 
     const svgGuitar = svgObj.contentDocument;
     const string = svgGuitar.getElementById("string1");
@@ -60,29 +86,38 @@ gibberish:
         `m 200,632.36223 c 160,${position} 360,${position} 520,0`);
     }
 
-    /* 
-     * gain = increase per frame
-     * startLvl = starting level that will be changed by gain
+    /*
+     *  ----- animations -----
      */
-    function saturation(time, tone, startLvl, direction, elmt) {
+
+    /*
+     * time: 1000 is 1s;
+     * hue: based on hsl notation - from 0 to 360;
+     * startLvl: saturation start lvl - 0 is grayscale, 100 full color;
+     * direction: 1 or -1;
+     * colorFunc: function that sets the color of given element;
+     */
+    function saturation(time, hue, startLvl, direction, colorFunc) {
       const gain = (100 / (time / frameRate)) * direction;
       // console.log("gain:" + gain);
       
       (function iter() {
-        let color = `hsla(${tone}, ${startLvl}%, 50%, 1)`;
+        let color = `hsla(${hue}, ${startLvl}%, 50%, 1)`;
 
         if ( startLvl < 0 || startLvl > 100 ) {
           console.log("warning: color saturation lvl is out of range");
         }
         
-        if (typeof elmt === "function") {
-          elmt(color);
+        if (typeof colorFunc === "function") {
+          colorFunc(color);
           // console.log(wire.arr[3].style.stroke);
         }
 
-        // repeat with changed values
+        /*
+         * repeat with changed values
+         * 0.01 is not a precise solution but good enough to trick the eye
+         */
         if ( time > frameRate - 0.01) {
-
           time = time - frameRate;
           startLvl = startLvl + gain;
 
@@ -93,22 +128,24 @@ gibberish:
       }());
     }
     
-    /* 
-     * position = starting point for movement animation
-     * pxPerFrame = how many px to move per 1 frame 
+    /*
+     * time: 1000 is 1s;
+     * position: starting point for movement animation;
+     * pxPerFrame: how many px to move per 1 frame;
+     * direction: 1 or -1;
+     * pathFunc: function that sets the path (SVG) of a given element;
      */
-    function animatePath(time, position, pxPerFrame, direction, elmt) {     
+    function animatePath(time, position, pxPerFrame, direction, pathFunc) {     
 
       (function iter() {
 
-        if (typeof elmt === "function") {
-          elmt(position);
+        if (typeof pathFunc === "function") {
+          pathFunc(position);
           // console.log(string.getAttribute("d"));     
         }
 
         // repeat with changed values
         if ( time > frameRate - 0.01) { 
-          
           time = time - frameRate;
           position = position + (pxPerFrame * direction);
           
@@ -132,7 +169,6 @@ gibberish:
       setWireColor(wire.color);
     }
    
-
     function moveString() {
       animatePath(380, 0, 0.5, 1, setStringMovement);
       
@@ -160,6 +196,9 @@ gibberish:
     }, false);
 
   });
-}());{% endhighlight %}
+}());
+{% endhighlight %}
+
+</section>
 
 </div>
