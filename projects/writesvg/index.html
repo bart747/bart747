@@ -7,9 +7,63 @@ title: How to Draw SVG Graphs with Code
 
   <h1 class="h1-mega purple">How to Draw SVG Graphs<br> with Code</h1>
 
-<p>
+<h2> Basic figures: circle and square</h2>
 
-</p>
+{% highlight xml %}
+<circle cx="6cm" cy="2cm" r="50" fill="red"
+                    transform="translate(0,50)" />
 
+<rect x="0" y="0" width="100" height="100" />
+
+
+{% endhighlight %}
+
+
+<svg width="200" height="200"
+     viewBox="0 0 100 100">
+
+     <g>
+<circle cx="50" cy="20" r="20" fill="green" />
+<rect x="0" y="0" width="50" height="200" />
+</g>
+</svg>
+
+
+{% highlight xml %}
+<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+  <rect x="10" y="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
+  <rect x="60" y="10" rx="10" ry="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
+
+  <circle cx="25" cy="75" r="20" stroke="red" fill="transparent" stroke-width="5"/>
+  <ellipse cx="75" cy="75" rx="20" ry="5" stroke="red" fill="transparent" stroke-width="5"/>
+
+  <line x1="10" x2="50" y1="110" y2="150" stroke="orange" fill="transparent" stroke-width="5"/>
+  <polyline points="60 110 65 120 70 115 75 130 80 125 85 140 90 135 95 150 100 145"
+      stroke="orange" fill="transparent" stroke-width="5"/>
+
+  <polygon points="50 160 55 180 70 180 60 190 65 205 50 195 35 205 40 190 30 180 45 180"
+      stroke="green" fill="transparent" stroke-width="5"/>
+
+  <path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/>
+</svg>
+{% endhighlight%}
+<svg class="sandbox" width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+  <rect x="10" y="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
+  <rect x="60" y="10" rx="10" ry="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
+
+  <circle cx="25" cy="75" r="20" stroke="red" fill="transparent" stroke-width="5"/>
+  <ellipse cx="75" cy="75" rx="20" ry="5" stroke="red" fill="transparent" stroke-width="5"/>
+
+  <line x1="10" x2="50" y1="110" y2="150" stroke="orange" fill="transparent" stroke-width="5"/>
+  <polyline points="60 110 65 120 70 115 75 130 80 125 85 140 90 135 95 150 100 145"
+      stroke="orange" fill="transparent" stroke-width="5"/>
+
+  <polygon points="50 160 55 180 70 180 60 190 65 205 50 195 35 205 40 190 30 180 45 180"
+      stroke="green" fill="transparent" stroke-width="5"/>
+
+  <path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/>
+</svg>
 <p>(draft | last edit: 01.08.2016)</p>
 

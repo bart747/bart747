@@ -389,10 +389,6 @@ a {
 .page {
   margin-bottom: 3rem; }
 
-img {
-  max-width: 100%;
-  height: auto; }
-
 .clearfix:after {
   content: "";
   display: table;
