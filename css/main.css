@@ -458,19 +458,23 @@ ol {
   padding-left: 1.5em; }
 
 pre,
-code,
-p code {
-  font-size: 16px;
+code {
+  font-size: 15px;
   font-family: "DejaVu Sans Mono", monospace; }
   @media screen and (max-width: 768px) {
     pre,
-    code,
-    p code {
-      font-size: 14px; } }
+    code {
+      font-size: 13.5px; } }
+  @media screen and (max-width: 568px) {
+    pre,
+    code {
+      font-size: 12px; } }
 
 p code,
 li code {
   color: #189560;
+  font-size: 0.80em;
+  font-family: "DejaVu Sans Mono", monospace;
   padding: 0 0.25em; }
 
 .secondary {
