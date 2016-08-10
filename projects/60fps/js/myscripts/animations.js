@@ -6,6 +6,11 @@
 
   svgObj.addEventListener('load', function() { 
 
+
+    /*
+     *  ----- SVG graph related stuff -----
+     */
+
     const svgGuitar = svgObj.contentDocument;
     const string = svgGuitar.getElementById("string1");
     const wire = {
@@ -19,6 +24,9 @@
     const fps60 = 16.66;
     const frameRate = fps60;
 
+    const stringPath = string.getAttribute('d');
+    // console.log(stringPath);
+
     function setWireColor(color) {
       wire.arr.forEach( el => {
         el.style.stroke = color;
@@ -29,13 +37,15 @@
       string.style.stroke = color;
     }
 
-    const stringPath = string.getAttribute('d');
-    // console.log(stringPath);
-
-    function setStringMovement(position) {
+    function setStringCurve(position) {
       string.setAttribute("d",
         `m 200,632.36223 c 160,${position} 360,${position} 520,0`);
     }
+
+
+    /*
+     *  ----- animations -----
+     */
 
     /*
      * time: 1000 is 1s;
@@ -103,35 +113,33 @@
       }());
     }
 
-    setStringMovement(0);
-
     function colorizeWire() {
       saturation(600, 35, 0, 1, setWireColor);
       window.setTimeout( () => {
         saturation(900, 35, 100, -1, setWireColor);
       }, 850);
     } 
-    
-    function colorizeWireReset() {
-      setWireColor(wire.color);
-    }
    
     function moveString() {
-      animatePath(380, 0, 0.5, 1, setStringMovement);
+      animatePath(380, 0, 0.5, 1, setStringCurve);
       
       window.setTimeout( () => {
-        animatePath(500, 11, 0.5, -1, setStringMovement);
+        animatePath(500, 11, 0.5, -1, setStringCurve);
         
         window.setTimeout( () => {
-          animatePath(140, -4, 0.5, 1, setStringMovement);
+          animatePath(140, -4, 0.5, 1, setStringCurve);
         }, 500);
 
       }, 380);
 
     }
-
+      
+    function colorizeWireReset() {
+      setWireColor(wire.color);
+    }
+  
     function moveStringReset() {
-      string.setAttribute("d", `m 200,632 c 160,0 360,0 520,0`);
+      setStringCurve(0);
     }
 
     colorizeWireReset();

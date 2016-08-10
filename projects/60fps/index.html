@@ -12,34 +12,50 @@ title: How to Draw SVG Graphs with Code
   <h2>Test graph:</h2>
 
   <p>Symbolic presentation of how an electric guitar works:</p>
+
+  <div class="center">
+    <object id="svgGuitar"
+            data="./img/guitar.svg"
+            type="image/svg+xml">
+    </object>
+    <br>
+    <button id="strumBtn" class="btn-round icon icon ion-play"></button>
+  </div>
+  <ul>
+    <li>
+      The black rectangle is a magnet.</li>
+    <li>
+      The wire forms a coil around the magnet
+    </li>
+    <li>
+      The string above the magnet is made from steel, nickel or both.
+      It's vibrations happen in the magnets field.</li>
+    <li>
+      All that together induces alternating current in the wire.
+    </li>
+  </ul>
+  
+  <p>
+    There following JavaScript animations. Each does one iteration per
+    frame, 60fps.
+    
     <ul>
       <li>
-        The black rectangle is a magnet.</li>
-    <li>
-        The wire forms a coil around the magnet
+        Change the wire color and saturation by transforming HSLA color code.
       </li>
-    <li>
-        The string above the magnet is made from steel, nickel or both.
-        It's vibrations happen in the magnets field.</li>
-    <li>
-        All that together induces alternating current in the wire.
-    </li>
-</ul>
 
-<div class="center">
-  <object id="svgGuitar"
-          data="./img/guitar.svg"
-          type="image/svg+xml">
-  </object>
-  <br>
-  <button id="strumBtn" class="btn-round icon icon ion-play"></button>
-</div>
-
+      <li>
+        Change the string's SVG path by transforming two of it's numbers
+        &mdash;
+        the ones that shape the curve.
+      </li>
+    </ul>
+  </p>
 </section>
 
 <section>
 
-gibberish:
+Commented gibberish:
 
 {% highlight js linenos %}
 
@@ -50,6 +66,7 @@ gibberish:
   const strumBtn = document.getElementById("strumBtn");
 
   svgObj.addEventListener('load', function() { 
+
 
     /*
      *  ----- SVG graph related stuff -----
@@ -68,6 +85,9 @@ gibberish:
     const fps60 = 16.66;
     const frameRate = fps60;
 
+    const stringPath = string.getAttribute('d');
+    // console.log(stringPath);
+
     function setWireColor(color) {
       wire.arr.forEach( el => {
         el.style.stroke = color;
@@ -78,13 +98,11 @@ gibberish:
       string.style.stroke = color;
     }
 
-    const stringPath = string.getAttribute('d');
-    // console.log(stringPath);
-
-    function setStringMovement(position) {
+    function setStringCurve(position) {
       string.setAttribute("d",
         `m 200,632.36223 c 160,${position} 360,${position} 520,0`);
     }
+
 
     /*
      *  ----- animations -----
@@ -156,35 +174,33 @@ gibberish:
       }());
     }
 
-    setStringMovement(0);
-
     function colorizeWire() {
       saturation(600, 35, 0, 1, setWireColor);
       window.setTimeout( () => {
         saturation(900, 35, 100, -1, setWireColor);
       }, 850);
     } 
-    
-    function colorizeWireReset() {
-      setWireColor(wire.color);
-    }
    
     function moveString() {
-      animatePath(380, 0, 0.5, 1, setStringMovement);
+      animatePath(380, 0, 0.5, 1, setStringCurve);
       
       window.setTimeout( () => {
-        animatePath(500, 11, 0.5, -1, setStringMovement);
+        animatePath(500, 11, 0.5, -1, setStringCurve);
         
         window.setTimeout( () => {
-          animatePath(140, -4, 0.5, 1, setStringMovement);
+          animatePath(140, -4, 0.5, 1, setStringCurve);
         }, 500);
 
       }, 380);
 
     }
-
+      
+    function colorizeWireReset() {
+      setWireColor(wire.color);
+    }
+  
     function moveStringReset() {
-      string.setAttribute("d", `m 200,632 c 160,0 360,0 520,0`);
+      setStringCurve(0);
     }
 
     colorizeWireReset();
@@ -196,8 +212,7 @@ gibberish:
     }, false);
 
   });
-}());
-{% endhighlight %}
+}());{% endhighlight %}
 
 </section>
 

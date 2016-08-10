@@ -379,6 +379,9 @@ section {
   max-width: 800px;
   padding: 0 1em 0; }
 
+object {
+  width: 100%; }
+
 a {
   color: #2233aa;
   text-decoration: none; }
@@ -845,6 +848,11 @@ img {
   to {
     -webkit-filter: blur(0);
     filter: blur(0); } }
+
+svg {
+  width: 100%;
+  height: auto;
+  margin: 0 auto; }
 
 .error-icon {
   margin: 2em 0 1em; }
