@@ -3,20 +3,16 @@
  *  ----- animations -----
  */
 
-// set frames per second as time period for 1 frame
 const fps60 = 16.66;
 const frameRate = fps60;
 
-/*
-  * time: 1000 is 1s;
-  * hue: based on hsl notation - from 0 to 360;
-  * startLvl: saturation start lvl - 0 is grayscale, 100 full color;
-  * direction: 1 or -1;
-  * colorFunc: function that sets the color of given element;
-  */
-this.saturation = function(time, hue, startLvl, direction, colorFunc) {
-  const gain = (100 / (time / frameRate)) * direction;
-  // console.log("gain:" + gain);
+this.saturation = function(duration,
+                           hue,
+                           startLvl,
+                           direction,
+                           setColorFunc) {
+  const gain = (100 / (duration / frameRate)) * direction;
+  dbg("gain:" + gain);
   
   (function iter() {
     let color = `hsla(${hue}, ${startLvl}%, 50%, 1)`;
@@ -25,17 +21,15 @@ this.saturation = function(time, hue, startLvl, direction, colorFunc) {
       console.log("warning: color saturation lvl is out of range");
     }
     
-    if (typeof colorFunc === "function") {
-      colorFunc(color);
-      // console.log(wire.arr[3].style.stroke);
+    if (typeof setColorFunc === "function") {
+      setColorFunc(color);
     }
 
-    /*
-      * repeat with changed values
-      * 0.01 is not a precise solution but good enough to trick the eye
-      */
-    if ( time > frameRate - 0.01) {
-      time = time - frameRate;
+    dbg("sturation: " + startLvl);
+
+    // 0.01 is not a precise solution but good enough to trick the eye
+    if ( duration > frameRate - 0.01) {
+      duration = duration - frameRate;
       startLvl = startLvl + gain;
 
       setTimeout( () => {
@@ -45,26 +39,23 @@ this.saturation = function(time, hue, startLvl, direction, colorFunc) {
   }());
 };
 
-/*
-  * time: 1000 is 1s;
-  * position: starting point for movement animation;
-  * pxPerFrame: how many px to move per 1 frame;
-  * direction: 1 or -1;
-  * pathFunc: function that sets the path (SVG) of a given element;
-  */
-this.animatePath = function(time, position, pxPerFrame, direction, pathFunc) {     
 
+this.animatePath = function(duration,
+                            startPosition,
+                            pxPerFrame,
+                            direction,
+                            setPathFunc) {     
   (function iter() {
 
-    if (typeof pathFunc === "function") {
-      pathFunc(position);
-      // console.log(string.getAttribute("d"));     
+    if (typeof setPathFunc === "function") {
+      setPathFunc(startPosition);
     }
 
-    // repeat with changed values
-    if ( time > frameRate - 0.01) { 
-      time = time - frameRate;
-      position = position + (pxPerFrame * direction);
+    dbg("path position: " + startPosition);     
+
+    if ( duration > frameRate - 0.01) { 
+      duration = duration - frameRate;
+      startPosition = startPosition + (pxPerFrame * direction);
       
       setTimeout( () => {
         iter();

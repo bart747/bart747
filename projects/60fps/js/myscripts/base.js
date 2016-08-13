@@ -19,56 +19,43 @@ svgObj.addEventListener('load', function() {
       // console.log(wire[3].style.stroke);
     });
   }
-    // graph.setWireColor("hsla(200, 50, 50%, 1)");
-    // set frames per second as time period for 1 frame
 
-    function setStringColor(color) {
-      string.style.stroke = color;
-    }
+  function setStringColor(color) {
+    string.style.stroke = color;
+  }
 
-    function setStringCurve(position) {
-      string.setAttribute("d",
-        `m 200,632.36223 c 160,${position} 360,${position} 520,0`);
-    }
+  function setStringCurve(position) {
+    string.setAttribute("d",
+      `m 200,632.36223 c 160,${position} 360,${position} 520,0`);
+  }
 
-    function colorizeWire() {
-      saturation(600, 35, 0, 1, setWireColor);
-      setTimeout( () => {
-        saturation(900, 35, 100, -1, setWireColor);
-      }, 850);
-    } 
-   
-    function moveString() {
-      animatePath(380, 0, 0.5, 1, setStringCurve);
-      
-      setTimeout( () => {
-        animatePath(500, 11, 0.5, -1, setStringCurve);
-        
-        setTimeout( () => {
-          animatePath(140, -4, 0.5, 1, setStringCurve);
-        }, 500);
-
-      }, 380);
-
-    }
-      
-   // function colorizeWireReset() {
-   //   setWireColor(wire.color);
-   // }
+  function colorizeWire() {
+    saturation(600, 35, 0, 1, setWireColor);
+    setTimeout( () => {
+      saturation(800, 35, 100, -1, setWireColor);
+    }, 850);
+  } 
   
-    function moveStringReset() {
-     // setStringCurve(0);
-    }
+  function moveString() {
+    animatePath(380, 0, 0.5, 1, setStringCurve);
+    
+    setTimeout( () => {
+      animatePath(500, 11, 0.5, -1, setStringCurve);
+      
+      setTimeout( () => {
+        animatePath(140, -4, 0.5, 1, setStringCurve);
+      }, 500);
 
-   // colorizeWireReset();
-  //  moveStringReset();
+    }, 380);
 
-    const strumBtn = document.getElementById("strumBtn");
+  }
 
-    strumBtn.addEventListener("click", () => {
-      colorizeWire();
-      moveString();
-    }, false);
+  const strumBtn = document.getElementById("strumBtn");
+
+  strumBtn.addEventListener("click", () => {
+    colorizeWire();
+    moveString();
+  }, false);
 
   });
 })();
