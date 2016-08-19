@@ -4,7 +4,7 @@
 
 fieldset {
   border: none;
-  margin: 1rem 0 2rem;
+  margin: 1rem 0 ;
   padding: 0;
 }
 
@@ -15,28 +15,27 @@ form {
 label {
   color: $grey-dark;
   display: block;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
-  text-transform: uppercase;
-  margin: 1rem 0 0;
+  margin: 1em 0 0;
 }
 
 input {
   border: 2px solid $grey;
   border-radius: 4px;
   display: inline-block;
-  font-size: $large-font-size;
+  font-size: $base-font-size;
   margin: 0;
-  padding: 0.5em 0.5em;
+  padding: 0.5em 0.62em;
   width: 80%;
   max-width: 300px;
-  transition: border-color 0.5s;
+  transition: border-color 0.25s;
 }
 
 .input-message {
   color: $grey-dark;
   font-size: 16px;
-  margin: 0 0 1.5em;
+  margin: 0 0 1em;
 }
 
 .input-line {
@@ -44,11 +43,12 @@ input {
 }
 
 .input-line-fixed {
-  height: 5rem;
+  height: 4.5em;
 }
 
 input:focus {
   border-color: $blue;
+  box-shadow: 0 0 2px $blue-light inset;
   outline: none;
 }
 
@@ -82,6 +82,8 @@ form .icon {
   animation-iteration-count: 1;
 }
 
+
+
 input.cc-exp-input,
 input.cc-cvc-input {
   max-width: 150px;
@@ -90,4 +92,33 @@ input.cc-cvc-input {
 
 .form-wrapper-small {
   height: 25rem;
+}
+
+.form-boring input {
+  font-size: $small-font-size;
+  padding: 0.4em;
+}
+
+.form-boring label {
+  margin: 0.5rem 0 0;
+}
+
+.form-fieldset-toggle {
+  height: 25em;
+}
+
+#form-sign-up,
+#form-sign-in {
+  animation-name: show-up;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes show-up {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

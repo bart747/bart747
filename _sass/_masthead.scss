@@ -5,8 +5,7 @@
 }
 
 .masthead-h1 {
-  font-size: 2em;
-  font-weight: bold;
+  font-weight: normal;
   margin: 1.5em 0;
 }
 
@@ -19,14 +18,14 @@
 
 @media all and (min-width: $screen-sml) {
   .masthead {
-    font-size: $large-font-size;
   }
 
   .masthead-h1 {
-    line-height: 1;
+    font-size: 2em;
+    line-height: 1.25;
     letter-spacing: -0.0125em;
   }
-  
+
 }
 
 @media all and (min-width: $screen-mid) {
@@ -34,5 +33,5 @@
   .masthead-h1 {
     font-size: 2.33em;
   }
-  
+
 }

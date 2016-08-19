@@ -4,12 +4,13 @@
 
 button,
 .btn {
+  display: inline-block;
   outline: none;
   color: white;
   cursor: pointer;
   background: $blue;
   border: solid $blue-dark;
-  border-width: 0 0 0.1em; 
+  border-width: 1px 1px 3px;
   border-radius: 3px;
   padding: 0.4em 1em;
   text-align: center;
@@ -27,7 +28,6 @@ button,
 
 .btn-neutral {
   border: solid $grey-dark;
-  border-width: 0 0 0.1em; 
   background: $grey;
   &:hover, &:active {
     background: $grey-dark;
@@ -42,6 +42,18 @@ button,
 
 .btn-social {
   margin: 1em 0 1em 2px;
+}
+
+.btn-in-txt {
+  background: $yellow-light;
+  color: $text-color;
+  padding:  0 0.25em;
+  margin: 0 0.25em;
+  border-color: $yellow;
+  border-width: 1px 1px 2px 1px ;
+  &:hover, &:active {
+    background: $yellow;
+  }
 }
 
 .btn-switch-dot {

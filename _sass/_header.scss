@@ -3,17 +3,11 @@
 //
 
 .header {
+  background: none;
+  font-size: $small-font-size;
   padding: 1rem;
-  background: $blue-fog;
-  border-bottom: 0.5em solid $background-color;
 }
 
-.header a {
-  color: white;
-  &:hover, :focus {
-    color: $red;
-  }
-}
 .header-nav {
   margin: 0 auto;
 }

@@ -5,15 +5,15 @@
 
 $base-font-family: "Source Sans Pro", sans-serif;
 $monospace:        "DejaVu Sans Mono", monospace;
-$base-font-size:   18px;
-$large-font-size:  21px;
-$small-font-size:  14px;
+$base-font-size:   21px;
+$small-font-size:  18px;
+$tiny-font-size:   16px;
 $base-line-height: 1.5;
 
 
+$radius:           0.25em; 
 // colors
 
-//brand
 $black:            #222;
 $white:            #fff;
 $text-color:       #363636;
@@ -24,17 +24,18 @@ $blue-night:       #102060;
 $blue-fog:         #333355;
 $background-color: #fffcf8;
 $blue:             #3355bb;
-$blue-light:       #00d1ed;
+$blue-light:       #00aadd;
 $blue-dark:        #2233aa;
 $green:            #189560;
 $green-light:      #4ef400;
 $green-dark:       #1b3e2e;
+$lime:             #a0f725;
 $orange-deep:      #ec4422;
 $orange:           #ee7700;
 $purple:           #7722bb;
 $purple-light:     #aa40ee;
 $yellow:           #ffd600;
-$yellow-light:     #ffdd55;
+$yellow-light:     #ffee99;
 
 $grey:             #777;
 $grey-light:       lighten($grey, 40%);
@@ -44,7 +45,7 @@ $graphite:         #2c2c36;
 $sand:             #eeece6;
 
 
-// sceen sizes 
+// sceen sizes
 $screen-big:       1024px;
 $screen-mid:       768px;
 $screen-sml:       568px;

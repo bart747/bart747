@@ -5,66 +5,105 @@ layout: default
 <div class="home wrapper">
 
   <section class="masthead">
-     
+
+    <div class="center home-pic">
+      <img src="./img/homepicSM.jpg"
+        srcset="./img/homepicMD.jpg 1.5x"
+        srcset="./img/homepic.jpg 2x"
+        alt="UI design">
+    </div>
+
     <h1 class="masthead-h1">
-      Making Fast Web Interfaces<br> 
-      for Avarage Joe's Hardware<br>
-      and Half-Decent Wi-Fi<br>
-      that Will Help You Sell
+      Making Fast Web Interfaces<br>
+      that Work Smoothly on Avarage Devices<br>
+      and Will Help You Sell
     </h1>
 
     <p class="">
-      I like to keep things small and agile. <br>
-      Simplify instead of managing complexity. <br>
-      Keep UI in form of modules that are easy to edit.
+      Hi, I'm Bartosz and I make interfaces. <br>
+      My UIs are in form of modules that are easy to edit and A/B test. <br>
+      It means better fine tuning for conversion and usability.
+    </p>
+    <p>
+      I believe in gradual, organic-like improvements as reactions to actual needs.<br>
+      Grandiose &mdash; “I want it all” &mdash; designs are like astrology.
     </p>
 
   </section>
-<!--
-  <section class="work-samples">
-  <h1 class="h1-light home-section-start">Quick Work Samples:</h1>
 
-
-
-  <h2>Combining event listeners with animated indicators</h2>
-
-  <p>It's better to know about an error early, than when you think
-  everyting is done.</p>
-
-  <form class="card home-form-example">
-    <div class="input-line cc-num">
-      <label for="cc-num" >Card Number</label>
-      <input id="cc-num" class="input cc-num-input"
-        type="tel" autocorrect="off" autocomplete="off" spellcheck="off"
-        autocapitalize="off" pattern="[0-9 ]+">
-      <span class="icon cc-num-icon-success ion-checkmark blink green hidden"></span>
-      <span class="icon cc-num-icon-error ion-android-sad blink red hidden"></span>
-
-      <div class="input-message">
-        <span class="cc-type mastercard">MasterCard</span>&nbsp;
-        <span class="cc-type visa">Visa</span>&nbsp;
-        <span class="cc-type amex">AmEx</span>&nbsp;
-        <span class="cc-type discover">Discover</span>
-      </div>
-    </div>
-  </form>
-
-  <ul>
-  <li>
-  Try to make some ruckus with numbers to see error indicators.
-  </li>
-  <li>
-    You can use “4242 4242 4242 4242” as a correct number. 
-  </li>
-  <li>
-    Are two digits enough data for the script to show an error
-    message?<br>
-    (No number of supported card brands starts with “11” or “00”.) 
-  </li>
-  </ul>
-</section>
--->
   <section>
+    <h2 class="home-h2">Forms: Before & After</h2>
+
+    <h3 class="home-h3" id="form-boring-home">Typical Signup Form:</h3>
+    <div class="home-example-ui">
+      <form class="form-boring">
+        <fieldset>
+          <label>Your Email</label>
+          <input type="email">
+          <label>Create a Password</label>
+          <input type="password">
+          <div class="txt-secondary">Use at least 8 characters including a number</div>
+
+        </fieldset>
+        <button type="button">Sign Up</button>
+
+        <p class="txt-secondary">Alerady a user? <a href="#form-boring-home">Sign In</a>.</p>
+
+      </form>
+    </div>
+
+    <div class="note">
+    <p>It's not bad, but if you already have an account, you need to go to other page by clicking a link.</p>
+    <p>The form is the main thing here, so the “redirect” link is not visible at a glance.
+        A user might be confused also because sign-up and sign-in forms can look similar.</p>
+    </div>
+    <h3 class="home-h3">After Redesign:</h3>
+
+    <div class="form-fieldset-toggle home-example-ui">
+      <form id="form-sign-up" class=" ">
+        <h3>Create a New Account</h3>
+        <fieldset>
+          <label>Your Email</label>
+          <input type="email">
+          <label>Create a Password</label>
+          <input type="password">
+          <div class="txt-secondary">Use at least 8 characters including a number</div>
+
+        </fieldset>
+        <button type="button">Create an Account</button>
+
+        <p class="txt-secondary">Already have one? <span class="btn btn-in-txt sign-in-link">Sign In</span></p>
+      </form>
+
+      <form id="form-sign-in" class="hidden">
+        <h3>Sign In</h3>
+        <fieldset>
+          <label>Your Email</label>
+          <input type="email">
+          <label>Your Password</label>
+          <input type="password">
+        </fieldset>
+        <button type="button">Sign In</button>
+
+        <p class="txt-secondary">Need to create a new account? <span class="btn btn-in-txt sign-in-link">Sign Up</span></p>
+
+      </form>
+    </div>
+    <div class="note">
+     <p>
+        Now you can switch forms easily.
+        The appropriate form appears without page reload.
+     </p>
+     <p>
+        Input labels won't confuse you &mdash;
+        there's a significant difference between “your password” and “create a new password”.
+        Inputs are also more readable because of more whitespace.
+     </p>
+    </div>
+  </section>
+
+  <section>
+
     <div class="grid home-section-start">
 
       <div class="menu-list col half">
@@ -86,14 +125,14 @@ layout: default
       <div class="menu-list col half">
         <ul>
         <h3 class="menu-list-title">Projects</h3>
-        
+
         <li>
           <a href="/projects/dom">
             Creating DOM Elements with
             Vanilla JavaScript (a guide)
           </a>
         </li>
-        
+
         <li>
           <a href="/projects/60fps">
             60fps Animations with JS and SVG from Scratch (experimenting)
@@ -120,5 +159,7 @@ layout: default
     </div>
 
   </div>
+
+</section>
 
 </div>

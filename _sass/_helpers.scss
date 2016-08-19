@@ -10,15 +10,16 @@
 
 .txt-secondary {
   color: $grey;
-  font-size: $small-font-size;
+  font-size: $tiny-font-size;
+  text-transform: none;
 }
 
 .link-active {
-  border-bottom: 1px solid; 
+  border-bottom: 1px solid;
 }
 
 .txt-highlight {
-  border-bottom: 2px solid $green; 
+  border-bottom: 2px solid $green;
 }
 
 .bold {

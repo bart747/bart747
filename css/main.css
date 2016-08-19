@@ -355,7 +355,7 @@ th {
 
 html {
   box-sizing: border-box;
-  font-size: 18px;
+  font-size: 21px;
   line-height: 1.5; }
 
 *, *:before, *:after {
@@ -367,7 +367,7 @@ body {
   font-family: "Source Sans Pro", sans-serif; }
 
 section {
-  margin: 3rem 0; }
+  margin: 4rem 0; }
 
 .wrapper {
   margin: 0 auto;
@@ -483,6 +483,10 @@ li code {
 .secondary {
   color: #444444; }
 
+.note {
+  border-left: 5px solid #ffee99;
+  padding: 0 0 0 1em; }
+
 @media screen and (min-width: 768px) {
   .col {
     float: left;
@@ -509,14 +513,9 @@ li code {
   letter-spacing: 0.25em; }
 
 .header {
-  padding: 1rem;
-  background: #333355;
-  border-bottom: 0.5em solid #fffcf8; }
-
-.header a {
-  color: white; }
-  .header a:hover, .header a :focus {
-    color: #E02020; }
+  background: none;
+  font-size: 18px;
+  padding: 1rem; }
 
 .header-nav {
   margin: 0 auto; }
@@ -558,15 +557,13 @@ li code {
     transform: rotate(45deg); }
 
 .masthead-h1 {
-  font-size: 2em;
-  font-weight: bold;
+  font-weight: normal;
   margin: 1.5em 0; }
 
 @media all and (min-width: 568px) {
-  .masthead {
-    font-size: 21px; }
   .masthead-h1 {
-    line-height: 1;
+    font-size: 2em;
+    line-height: 1.25;
     letter-spacing: -0.0125em; } }
 
 @media all and (min-width: 768px) {
@@ -574,6 +571,7 @@ li code {
     font-size: 2.33em; } }
 
 .menu-list {
+  font-size: 18px;
   margin-bottom: 3rem; }
   .menu-list ul {
     line-height: 1.25;
@@ -624,7 +622,7 @@ li code {
 
 fieldset {
   border: none;
-  margin: 1rem 0 2rem;
+  margin: 1rem 0;
   padding: 0; }
 
 form {
@@ -633,10 +631,9 @@ form {
 label {
   color: #444444;
   display: block;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
-  text-transform: uppercase;
-  margin: 1rem 0 0; }
+  margin: 1em 0 0; }
 
 input {
   border: 2px solid #777;
@@ -644,24 +641,25 @@ input {
   display: inline-block;
   font-size: 21px;
   margin: 0;
-  padding: 0.5em 0.5em;
+  padding: 0.5em 0.62em;
   width: 80%;
   max-width: 300px;
-  transition: border-color 0.5s; }
+  transition: border-color 0.25s; }
 
 .input-message {
   color: #444444;
   font-size: 16px;
-  margin: 0 0 1.5em; }
+  margin: 0 0 1em; }
 
 .input-line {
   display: block; }
 
 .input-line-fixed {
-  height: 5rem; }
+  height: 4.5em; }
 
 input:focus {
   border-color: #3355bb;
+  box-shadow: 0 0 2px #00aadd inset;
   outline: none; }
 
 input.input-success {
@@ -704,15 +702,47 @@ input.cc-cvc-input {
 .form-wrapper-small {
   height: 25rem; }
 
+.form-boring input {
+  font-size: 18px;
+  padding: 0.4em; }
+
+.form-boring label {
+  margin: 0.5rem 0 0; }
+
+.form-fieldset-toggle {
+  height: 25em; }
+
+#form-sign-up,
+#form-sign-in {
+  -webkit-animation-name: show-up;
+  animation-name: show-up;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out; }
+
+@-webkit-keyframes show-up {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes show-up {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 button,
 .btn,
 a.cc_btn {
+  display: inline-block;
   outline: none;
   color: white;
   cursor: pointer;
   background: #3355bb;
   border: solid #2233aa;
-  border-width: 0 0 0.1em;
+  border-width: 1px 1px 3px;
   border-radius: 3px;
   padding: 0.4em 1em;
   text-align: center;
@@ -732,7 +762,6 @@ a.cc_btn {
 
 .btn-neutral {
   border: solid #444444;
-  border-width: 0 0 0.1em;
   background: #777; }
   .btn-neutral:hover, .btn-neutral:active {
     background: #444444; }
@@ -744,6 +773,16 @@ a.cc_btn {
 
 .btn-social {
   margin: 1em 0 1em 2px; }
+
+.btn-in-txt {
+  background: #ffee99;
+  color: #363636;
+  padding: 0 0.25em;
+  margin: 0 0.25em;
+  border-color: #ffd600;
+  border-width: 1px 1px 2px 1px; }
+  .btn-in-txt:hover, .btn-in-txt:active {
+    background: #ffd600; }
 
 .btn-switch-dot:before {
   position: relative;
@@ -774,19 +813,35 @@ a.cc_btn {
 
 .work-samples {
   font-size: 21px; }
-  @media screen and (max-width: 568px) {
-    .work-samples {
-      font-size: 18px; } }
 
 .home-form-example {
   margin: 2.5em 0; }
 
 .home-section-start {
-  border-top: 3px dotted #ffd600;
   padding-top: 0.5em; }
 
 .home-section-end {
   border-bottom: 3px dotted #333355; }
+
+.home-h2 {
+  font-size: 2em; }
+
+.home-h3 {
+  font-size: 1.5em;
+  text-transform: none; }
+
+.home-example-ui {
+  background: #f4ede6;
+  border: 1px dotted #777;
+  border-radius: 0.25em;
+  padding: 1em; }
+
+.home-pic img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  border: 1px solid #222;
+  box-shadow: 0 0 5px #777; }
 
 .post,
 .wrapper-post-like {
@@ -897,7 +952,8 @@ a.cc_btn {
 
 .txt-secondary {
   color: #777;
-  font-size: 14px; }
+  font-size: 16px;
+  text-transform: none; }
 
 .link-active {
   border-bottom: 1px solid; }
