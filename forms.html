@@ -5,10 +5,11 @@ layout: default
 <div class="wrapper">
   <form>
     <fieldset>
-   
+
       <div class="input-line">
         <label for="one" >default</label>
         <input id="one"
+               class="input-icon"
                name="one"
                type="text">
           <span class="icon green ion-checkmark hidden"></span>
@@ -20,7 +21,7 @@ layout: default
       <div class="input-line">
         <label for="two">error</label>
         <input id="two"
-               class="input-error"
+               class="input-error input-icon"
                name="two"
                type="text">
           <span class="icon green ion-checkmark hidden"></span>
@@ -31,7 +32,7 @@ layout: default
       <div class="input-line">
         <label for="three" >success</label>
         <input id="three"
-               class="input-success"
+               class="input-success input-icon"
                name="three"
                type="text">
           <span class="icon green ion-checkmark"></span>
@@ -48,10 +49,10 @@ layout: default
 
   <form class="card">
     <fieldset>
-      <legend>Your Card Data</legend> 
+      <legend>Your Card Data</legend>
       <div class="input-line cc-num">
         <label for="cc-num" >Card Number</label>
-        <input id="cc-num" class="input cc-num-input"
+        <input id="cc-num" class="input cc-num-input input-icon"
           type="tel" autocorrect="off" autocomplete="off" spellcheck="off"
           autocapitalize="off" pattern="[0-9 ]+">
         <span class="cc-num-icon-success ion-checkmark blink green hidden"></span>
@@ -67,7 +68,7 @@ layout: default
 
       <div class="input-line cc-exp">
         <label for="cardexp" >Expiry Date</label>
-        <input class="input cc-exp-input"
+        <input class="input cc-exp-input input-icon"
           type="tel" autocorrect="off" autocomplete="off" spellcheck="off"
           autocapitalize="off" pattern="[0-9 /]+"
           name="cardexp">
@@ -78,7 +79,7 @@ layout: default
 
       <div class="input-line cc-cvc">
         <label for="cardcvc">CVC</label>
-        <input class="input cc-cvc-input"
+        <input class="input cc-cvc-input input-icon"
           type="tel" autocorrect="off" autocomplete="off" spellcheck="off"
           autocapitalize="off" pattern="[0-9]+"
           name="cardcvc">
@@ -101,5 +102,3 @@ layout: default
 
 
 </div>
-
-

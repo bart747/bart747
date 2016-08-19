@@ -642,9 +642,12 @@ input {
   font-size: 21px;
   margin: 0;
   padding: 0.5em 0.62em;
-  width: 80%;
+  width: 100%;
   max-width: 300px;
   transition: border-color 0.25s; }
+
+input.input-icon {
+  width: 80%; }
 
 .input-message {
   color: #444444;
