@@ -840,8 +840,7 @@ a.cc_btn {
   width: 150px;
   height: auto;
   border-radius: 50%;
-  border: 1px solid #222;
-  box-shadow: 0 0 5px #777; }
+  border: 1px solid #222; }
 
 .post,
 .wrapper-post-like {
