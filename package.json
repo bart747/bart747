@@ -1,0 +1,24 @@
+{
+  "name": "my-jekyll-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bart747/bart747.github.io.git"
+  },
+  "author": "Bartosz Wieczorek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bart747/bart747.github.io/issues"
+  },
+  "homepage": "https://github.com/bart747/bart747.github.io#readme",
+  "devDependencies": {
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.13.2"
+  }
+}
