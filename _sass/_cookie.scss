@@ -1,15 +1,17 @@
-// 
+//
 // cookie banner
-// 
+//
 
 .cc_banner {
-  background: $grey-light;
+  background: #eee;
   position: fixed;
   bottom: 0;
-  left: 0; 
-  font-size: 15px;
-  min-width: 33%;
+  left: 0;
+  font-size: 16px;
+  min-width: 52%;
   padding: 0 1em;
+  border-radius: $radius;
+  box-shadow: 0 -1px 1px 0 $grey;
 
   &::after {
     content: "";
@@ -34,6 +36,6 @@ a.cc_btn {
   @extend .btn;
   color: white;
   float: right;
-  padding: 0.25em 0.5em;
+  padding: 0.25em 1em;
   height: 70%;
 }
