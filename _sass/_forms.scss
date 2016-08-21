@@ -9,6 +9,7 @@ fieldset {
 }
 
 form {
+  text-align: left;
   margin: 1.5em 0 3em;
 }
 
@@ -28,8 +29,18 @@ input {
   margin: 0;
   padding: 0.5em 0.62em;
   width: 100%;
-  max-width: 300px;
+  max-width: 15em;
   transition: border-color 0.25s;
+}
+
+input:focus {
+  border-color: $blue;
+  box-shadow: 0 0 2px $blue-light inset;
+  outline: none;
+}
+
+.inputs-long input {
+  max-width: 18em;
 }
 
 input.input-icon {
@@ -50,21 +61,12 @@ input.input-icon {
   height: 4.5em;
 }
 
-input:focus {
-  border-color: $blue;
-  box-shadow: 0 0 2px $blue-light inset;
-  outline: none;
-}
-
 input.input-success {
   border-color: $green;
 }
 
 input.input-error {
   border-color: $red;
-}
-.input-line .octicon {
-  margin: 0 0.5em;
 }
 
 form .icon {
@@ -95,7 +97,11 @@ input.cc-cvc-input {
 }
 
 .form-wrapper-small {
-  height: 25rem;
+  height: 20em;
+}
+
+.form-wrapper-narrow {
+  max-width: 16em;
 }
 
 .form-boring input {

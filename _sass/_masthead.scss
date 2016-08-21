@@ -1,18 +1,13 @@
 //
 // masthead
 //
+
 .masthead {
+  text-align: center;
 }
 
 .masthead-h1 {
-  font-weight: normal;
-  margin: 1.5em 0;
-}
-
-.masthead-h2 {
-}
-
-.masthead p {
+  
 }
 
 
@@ -20,18 +15,12 @@
   .masthead {
   }
 
-  .masthead-h1 {
-    font-size: 2em;
-    line-height: 1.25;
-    letter-spacing: -0.0125em;
-  }
+
 
 }
 
 @media all and (min-width: $screen-mid) {
 
-  .masthead-h1 {
-    font-size: 2.33em;
-  }
+
 
 }
