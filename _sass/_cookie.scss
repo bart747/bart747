@@ -29,13 +29,13 @@
 .cc_message {
   float: left;
   margin: 1em;
-  max-width: 75%;
+  max-width: 65%;
 }
 
 a.cc_btn {
   @extend .btn;
   color: white;
   float: right;
-  padding: 0.25em 1em;
+  padding: 0.5em 0.75em;
   height: 70%;
 }
