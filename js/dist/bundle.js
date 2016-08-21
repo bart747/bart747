@@ -1,1 +1,1049 @@
-!function(t){function n(r){if(e[r])return e[r].exports;var i=e[r]={exports:{},id:r,loaded:!1};return t[r].call(i.exports,i,i.exports,n),i.loaded=!0,i.exports}var e={};return n.m=t,n.c=e,n.p="",n(0)}([function(t,n,e){"use strict";e(1),e(2),e(3),e(4),e(5)},function(t,n){"use strict";!function(){function t(t){t.addEventListener("click",function(n){return t.classList.toggle("is-on")})}var n=document.getElementsByClassName("is-switchable"),e=[].slice.call(n);e.forEach(t)}()},function(t,n){"use strict";!function(){function t(t,n,e){t.addEventListener("click",function(t){n.classList.toggle("hidden"),e.classList.toggle("hidden")})}var n=document,e=n.getElementById("form-sign-in"),r=n.getElementById("form-sign-up"),i=n.getElementsByClassName("sign-in-link");i[1]&&(t(i[0],e,r),t(i[1],e,r))}()},function(t,n){"use strict";!function(){var t=(document.getElementsByClassName("home"),document.getElementsByClassName("post")),n=document.getElementsByClassName("blog"),e=(document.getElementsByClassName("link-home"),document.getElementsByClassName("link-blog"));window.onload=function(){void 0===t[0]&&void 0===n[0]||e[0].classList.add("link-active")}}()},function(t,n){"use strict";var e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol?"symbol":typeof t};(function(){var t,n,r,i,a,o,s,c,u,l,h,p,f,d,m,g,v,y,C,$,k,E,x,w,T=[].slice,S=[].indexOf||function(t){for(var n=0,e=this.length;n<e;n++)if(n in this&&this[n]===t)return n;return-1};t=window.jQuery||window.Zepto||window.$,t.payment={},t.payment.fn={},t.fn.payment=function(){var n,e;return e=arguments[0],n=2<=arguments.length?T.call(arguments,1):[],t.payment.fn[e].apply(this,n)},a=/(\d{1,4})/g,t.payment.cards=i=[{type:"visaelectron",patterns:[4026,417500,4405,4508,4844,4913,4917],format:a,length:[16],cvcLength:[3],luhn:!0},{type:"maestro",patterns:[5018,502,503,56,58,639,6220,67],format:a,length:[12,13,14,15,16,17,18,19],cvcLength:[3],luhn:!0},{type:"forbrugsforeningen",patterns:[600],format:a,length:[16],cvcLength:[3],luhn:!0},{type:"dankort",patterns:[5019],format:a,length:[16],cvcLength:[3],luhn:!0},{type:"visa",patterns:[4],format:a,length:[13,16],cvcLength:[3],luhn:!0},{type:"mastercard",patterns:[51,52,53,54,55,22,23,24,25,26,27],format:a,length:[16],cvcLength:[3],luhn:!0},{type:"amex",patterns:[34,37],format:/(\d{1,4})(\d{1,6})?(\d{1,5})?/,length:[15],cvcLength:[3,4],luhn:!0},{type:"dinersclub",patterns:[30,36,38,39],format:/(\d{1,4})(\d{1,6})?(\d{1,4})?/,length:[14],cvcLength:[3],luhn:!0},{type:"discover",patterns:[60,64,65,622],format:a,length:[16],cvcLength:[3],luhn:!0},{type:"unionpay",patterns:[62,88],format:a,length:[16,17,18,19],cvcLength:[3],luhn:!1},{type:"jcb",patterns:[35],format:a,length:[16],cvcLength:[3],luhn:!0}],n=function(t){var n,e,r,a,o,s,c,u;for(t=(t+"").replace(/\D/g,""),e=0,a=i.length;e<a;e++)for(n=i[e],u=n.patterns,r=0,o=u.length;r<o;r++)if(c=u[r],s=c+"",t.substr(0,s.length)===s)return n},r=function(t){var n,e,r;for(e=0,r=i.length;e<r;e++)if(n=i[e],n.type===t)return n},f=function(t){var n,e,r,i,a,o;for(a=!0,o=0,e=(t+"").split("").reverse(),r=0,i=e.length;r<i;r++)n=e[r],n=parseInt(n,10),(a=!a)&&(n*=2),n>9&&(n-=9),o+=n;return o%10===0},p=function(t){var n;return null!=t.prop("selectionStart")&&t.prop("selectionStart")!==t.prop("selectionEnd")||!(null==("undefined"!=typeof document&&null!==document&&null!=(n=document.selection)?n.createRange:void 0)||!document.selection.createRange().text)},x=function(t,n){var e,r,i,a;try{e=n.prop("selectionStart")}catch(i){r=i,e=null}if(a=n.val(),n.val(t),null!==e&&n.is(":focus"))return e===a.length&&(e=t.length),n.prop("selectionStart",e),n.prop("selectionEnd",e)},y=function(t){var n,e,r,i,a,o,s,c;for(null==t&&(t=""),r="０１２３４５６７８９",i="0123456789",c="",n=t.split(""),a=0,s=n.length;a<s;a++)e=n[a],o=r.indexOf(e),o>-1&&(e=i[o]),c+=e;return c},v=function(n){return setTimeout(function(){var e,r;return e=t(n.currentTarget),r=e.val(),r=y(r),r=r.replace(/\D/g,""),x(r,e)})},m=function(n){return setTimeout(function(){var e,r;return e=t(n.currentTarget),r=e.val(),r=y(r),r=t.payment.formatCardNumber(r),x(r,e)})},c=function(e){var r,i,a,o,s,c,u;if(a=String.fromCharCode(e.which),/^\d+$/.test(a)&&(r=t(e.currentTarget),u=r.val(),i=n(u+a),o=(u.replace(/\D/g,"")+a).length,c=16,i&&(c=i.length[i.length.length-1]),!(o>=c||null!=r.prop("selectionStart")&&r.prop("selectionStart")!==u.length)))return s=i&&"amex"===i.type?/^(\d{4}|\d{4}\s\d{6})$/:/(?:^|\s)(\d{4})$/,s.test(u)?(e.preventDefault(),setTimeout(function(){return r.val(u+" "+a)})):s.test(u+a)?(e.preventDefault(),setTimeout(function(){return r.val(u+a+" ")})):void 0},o=function(n){var e,r;if(e=t(n.currentTarget),r=e.val(),8===n.which&&(null==e.prop("selectionStart")||e.prop("selectionStart")===r.length))return/\d\s$/.test(r)?(n.preventDefault(),setTimeout(function(){return e.val(r.replace(/\d\s$/,""))})):/\s\d?$/.test(r)?(n.preventDefault(),setTimeout(function(){return e.val(r.replace(/\d$/,""))})):void 0},g=function(n){return setTimeout(function(){var e,r;return e=t(n.currentTarget),r=e.val(),r=y(r),r=t.payment.formatExpiry(r),x(r,e)})},u=function(n){var e,r,i;if(r=String.fromCharCode(n.which),/^\d+$/.test(r))return e=t(n.currentTarget),i=e.val()+r,/^\d$/.test(i)&&"0"!==i&&"1"!==i?(n.preventDefault(),setTimeout(function(){return e.val("0"+i+" / ")})):/^\d\d$/.test(i)?(n.preventDefault(),setTimeout(function(){var t,n;return t=parseInt(i[0],10),n=parseInt(i[1],10),n>2&&0!==t?e.val("0"+t+" / "+n):e.val(i+" / ")})):void 0},l=function(n){var e,r,i;if(r=String.fromCharCode(n.which),/^\d+$/.test(r))return e=t(n.currentTarget),i=e.val(),/^\d\d$/.test(i)?e.val(i+" / "):void 0},h=function(n){var e,r,i;if(i=String.fromCharCode(n.which),"/"===i||" "===i)return e=t(n.currentTarget),r=e.val(),/^\d$/.test(r)&&"0"!==r?e.val("0"+r+" / "):void 0},s=function(n){var e,r;if(e=t(n.currentTarget),r=e.val(),8===n.which&&(null==e.prop("selectionStart")||e.prop("selectionStart")===r.length))return/\d\s\/\s$/.test(r)?(n.preventDefault(),setTimeout(function(){return e.val(r.replace(/\d\s\/\s$/,""))})):void 0},d=function(n){return setTimeout(function(){var e,r;return e=t(n.currentTarget),r=e.val(),r=y(r),r=r.replace(/\D/g,"").slice(0,4),x(r,e)})},E=function(t){var n;return!(!t.metaKey&&!t.ctrlKey)||32!==t.which&&(0===t.which||(t.which<33||(n=String.fromCharCode(t.which),!!/[\d\s]/.test(n))))},$=function(e){var r,i,a,o;if(r=t(e.currentTarget),a=String.fromCharCode(e.which),/^\d+$/.test(a)&&!p(r))return o=(r.val()+a).replace(/\D/g,""),i=n(o),i?o.length<=i.length[i.length.length-1]:o.length<=16},k=function(n){var e,r,i;if(e=t(n.currentTarget),r=String.fromCharCode(n.which),/^\d+$/.test(r)&&!p(e))return i=e.val()+r,i=i.replace(/\D/g,""),!(i.length>6)&&void 0},C=function(n){var e,r,i;if(e=t(n.currentTarget),r=String.fromCharCode(n.which),/^\d+$/.test(r)&&!p(e))return i=e.val()+r,i.length<=4},w=function(n){var e,r,a,o,s;if(e=t(n.currentTarget),s=e.val(),o=t.payment.cardType(s)||"unknown",!e.hasClass(o))return r=function(){var t,n,e;for(e=[],t=0,n=i.length;t<n;t++)a=i[t],e.push(a.type);return e}(),e.removeClass("unknown"),e.removeClass(r.join(" ")),e.addClass(o),e.toggleClass("identified","unknown"!==o),e.trigger("payment.cardType",o)},t.payment.fn.formatCardCVC=function(){return this.on("keypress",E),this.on("keypress",C),this.on("paste",d),this.on("change",d),this.on("input",d),this},t.payment.fn.formatCardExpiry=function(){return this.on("keypress",E),this.on("keypress",k),this.on("keypress",u),this.on("keypress",h),this.on("keypress",l),this.on("keydown",s),this.on("change",g),this.on("input",g),this},t.payment.fn.formatCardNumber=function(){return this.on("keypress",E),this.on("keypress",$),this.on("keypress",c),this.on("keydown",o),this.on("keyup",w),this.on("paste",m),this.on("change",m),this.on("input",m),this.on("input",w),this},t.payment.fn.restrictNumeric=function(){return this.on("keypress",E),this.on("paste",v),this.on("change",v),this.on("input",v),this},t.payment.fn.cardExpiryVal=function(){return t.payment.cardExpiryVal(t(this).val())},t.payment.cardExpiryVal=function(t){var n,e,r,i;return r=t.split(/[\s\/]+/,2),n=r[0],i=r[1],2===(null!=i?i.length:void 0)&&/^\d+$/.test(i)&&(e=(new Date).getFullYear(),e=e.toString().slice(0,2),i=e+i),n=parseInt(n,10),i=parseInt(i,10),{month:n,year:i}},t.payment.validateCardNumber=function(t){var e,r;return t=(t+"").replace(/\s+|-/g,""),!!/^\d+$/.test(t)&&(e=n(t),!!e&&(r=t.length,S.call(e.length,r)>=0&&(e.luhn===!1||f(t))))},t.payment.validateCardExpiry=function(n,r){var i,a,o;return"object"===("undefined"==typeof n?"undefined":e(n))&&"month"in n&&(o=n,n=o.month,r=o.year),!(!n||!r)&&(n=t.trim(n),r=t.trim(r),!!/^\d+$/.test(n)&&(!!/^\d+$/.test(r)&&(1<=n&&n<=12&&(2===r.length&&(r=r<70?"20"+r:"19"+r),4===r.length&&(a=new Date(r,n),i=new Date,a.setMonth(a.getMonth()-1),a.setMonth(a.getMonth()+1,1),a>i)))))},t.payment.validateCardCVC=function(n,e){var i,a;return n=t.trim(n),!!/^\d+$/.test(n)&&(i=r(e),null!=i?(a=n.length,S.call(i.cvcLength,a)>=0):n.length>=3&&n.length<=4)},t.payment.cardType=function(t){var e;return t?(null!=(e=n(t))?e.type:void 0)||null:null},t.payment.formatCardNumber=function(e){var r,i,a,o;return e=e.replace(/\D/g,""),(r=n(e))?(o=r.length[r.length.length-1],e=e.slice(0,o),r.format.global?null!=(a=e.match(r.format))?a.join(" "):void 0:(i=r.format.exec(e),null!=i?(i.shift(),i=t.grep(i,function(t){return t}),i.join(" ")):void 0)):e},t.payment.formatExpiry=function(t){var n,e,r,i;return(e=t.match(/^\D*(\d{1,2})(\D+)?(\d{1,4})?/))?(n=e[1]||"",r=e[2]||"",i=e[3]||"",i.length>0?r=" / ":" /"===r?(n=n.substring(0,1),r=""):2===n.length||r.length>0?r=" / ":1===n.length&&"0"!==n&&"1"!==n&&(n="0"+n,r=" / "),n+r+i):""}}).call(void 0)},function(t,n){"use strict";!function(){function t(t){$(t).removeClass("input-success"),$(t).addClass("input-error")}function n(t){$(t).removeClass("input-error"),$(t).addClass("input-success")}function e(t,n,e){$(t).hasClass("input-error")&&($(n).addClass("hidden"),$(e).removeClass("hidden"))}function r(t,n,e){$(t).hasClass("input-success")&&($(n).removeClass("hidden"),$(e).addClass("hidden"))}function i(t,n,e){$(t).removeClass("input-error"),$(n).addClass("hidden"),$(e).addClass("hidden"),$(t).removeClass("input-success")}$(".cc-num-input").payment("formatCardNumber"),$(".cc-exp-input").payment("formatCardExpiry"),$(".cc-cvc-input").payment("formatCardCVC");var a={input:".cc-num-input",type:".cc-type",iconOk:".cc-num-icon-success",iconErr:".cc-num-icon-error"};!function(){function o(t){$(a.input).hasClass(t)&&$(a.type+"."+t).addClass("txt-highlight")}function s(){$(a.type).removeClass("txt-highlight")}function c(){var i=$(a.input).val(),o=$.payment.validateCardNumber(i);o===!0&&(n(a.input),r(a.input,a.iconOk,a.iconErr)),o===!1&&(t(a.input),e(a.input,a.iconOk,a.iconErr))}$(a.input).on("input",function(){$(this).val().length>1?(s(),o("visa"),o("mastercard"),o("amex"),o("discover"),$(this).hasClass("amex")&&17===$(this).val().length&&c(),$(this).hasClass("identified")&&19===$(this).val().length&&c(),$(this).hasClass("amex")&&$(this).val().length<17&&i(this,a.iconOk,a.iconErr),$(this).hasClass("amex")===!1&&$(this).val().length<19&&i(this,a.iconOk,a.iconErr),$(this).hasClass("unknown")&&(t(this),e(this,a.iconOk,a.iconErr))):(i(this,a.iconOk,a.iconErr),s())})}(),function(){function a(){var i=$(o.input).payment("cardExpiryVal"),a=$.payment.validateCardExpiry(i.month,i.year);a===!0&&(n(o.input),r(o.input,o.iconOk,o.iconErr)),a===!1&&(t(o.input),e(o.input,o.iconOk,o.iconErr))}var o={input:".cc-exp-input",iconOk:".cc-exp-icon-success",iconErr:".cc-exp-icon-error"};$(o.input).on("input",function(){7===$(this).val().length||9===$(this).val().length?a():i(this,o.iconOk,o.iconErr)})}(),function o(){function o(i){var a=$(s.input).val(),o=$.payment.validateCardCVC(a);o===!0&&(n(s.input),r(s.input,s.iconOk,s.iconErr)),o===!1&&(t(s.input),e(s.input,s.iconOk,s.iconErr))}var s={input:".cc-cvc-input",iconOk:".cc-cvc-icon-success",iconErr:".cc-cvc-icon-error"};$(s.input).on("input",function(){$(a.input).hasClass("amex")?$(s.input).val().length>3?o(this):i(this,s.iconOk,s.iconErr):3===$(this).val().length?o(this):i(this,s.iconOk,s.iconErr)})}()}()}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var switchGeneral = __webpack_require__(1);
+	var formSwitch = __webpack_require__(2);
+	var linkStates = __webpack_require__(3);
+	var paymentPlugin = __webpack_require__(4);
+	var formsCommerce = __webpack_require__(5);
+
+/***/ },
+/* 1 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	(function () {
+
+	  var switchEls = document.getElementsByClassName('is-switchable');
+
+	  var switchArr = [].slice.call(switchEls);
+
+	  function addListener(el) {
+	    el.addEventListener('click', function (event) {
+	      return el.classList.toggle('is-on');
+	    });
+	  }
+
+	  switchArr.forEach(addListener);
+	})();
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	(function () {
+
+	  var doc = document;
+	  var formSignIn = doc.getElementById('form-sign-in');
+	  var formSignUp = doc.getElementById('form-sign-up');
+	  var formToggle = doc.getElementsByClassName('sign-in-link');
+
+	  function addListener(activator, form1, form2) {
+	    activator.addEventListener('click', function (event) {
+	      form1.classList.toggle('hidden');
+	      form2.classList.toggle('hidden');
+	    });
+	  }
+
+	  if (formToggle[1]) {
+	    addListener(formToggle[0], formSignIn, formSignUp);
+	    addListener(formToggle[1], formSignIn, formSignUp);
+	  }
+	})();
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	(function () {
+
+	  var homeDiv = document.getElementsByClassName('home');
+	  var postDiv = document.getElementsByClassName('post');
+	  var blogDiv = document.getElementsByClassName('blog');
+	  var homeLink = document.getElementsByClassName('link-home');
+	  var blogLink = document.getElementsByClassName('link-blog');
+
+	  window.onload = function () {
+
+	    //if (homeDiv[0] !== undefined) {
+	    //  homeLink[0].classList.add("link-active");
+	    //}
+
+	    if (postDiv[0] !== undefined || blogDiv[0] !== undefined) {
+	      blogLink[0].classList.add('link-active');
+	    }
+	    // console.log(homeDiv); console.log(homeLink);
+	    // console.log(postDiv); console.log(blogLink);
+	  };
+	})();
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
+	// Generated by CoffeeScript 1.10.0
+	(function () {
+	  var $,
+	      cardFromNumber,
+	      cardFromType,
+	      cards,
+	      defaultFormat,
+	      formatBackCardNumber,
+	      formatBackExpiry,
+	      formatCardNumber,
+	      formatExpiry,
+	      formatForwardExpiry,
+	      formatForwardSlashAndSpace,
+	      hasTextSelected,
+	      luhnCheck,
+	      reFormatCVC,
+	      reFormatCardNumber,
+	      reFormatExpiry,
+	      reFormatNumeric,
+	      replaceFullWidthChars,
+	      restrictCVC,
+	      restrictCardNumber,
+	      restrictExpiry,
+	      restrictNumeric,
+	      safeVal,
+	      setCardType,
+	      slice = [].slice,
+	      indexOf = [].indexOf || function (item) {
+	    for (var i = 0, l = this.length; i < l; i++) {
+	      if (i in this && this[i] === item) return i;
+	    }return -1;
+	  };
+
+	  $ = window.jQuery || window.Zepto || window.$;
+
+	  $.payment = {};
+
+	  $.payment.fn = {};
+
+	  $.fn.payment = function () {
+	    var args, method;
+	    method = arguments[0], args = 2 <= arguments.length ? slice.call(arguments, 1) : [];
+	    return $.payment.fn[method].apply(this, args);
+	  };
+
+	  defaultFormat = /(\d{1,4})/g;
+
+	  $.payment.cards = cards = [{
+	    type: 'visaelectron',
+	    patterns: [4026, 417500, 4405, 4508, 4844, 4913, 4917],
+	    format: defaultFormat,
+	    length: [16],
+	    cvcLength: [3],
+	    luhn: true
+	  }, {
+	    type: 'maestro',
+	    patterns: [5018, 502, 503, 56, 58, 639, 6220, 67],
+	    format: defaultFormat,
+	    length: [12, 13, 14, 15, 16, 17, 18, 19],
+	    cvcLength: [3],
+	    luhn: true
+	  }, {
+	    type: 'forbrugsforeningen',
+	    patterns: [600],
+	    format: defaultFormat,
+	    length: [16],
+	    cvcLength: [3],
+	    luhn: true
+	  }, {
+	    type: 'dankort',
+	    patterns: [5019],
+	    format: defaultFormat,
+	    length: [16],
+	    cvcLength: [3],
+	    luhn: true
+	  }, {
+	    type: 'visa',
+	    patterns: [4],
+	    format: defaultFormat,
+	    length: [13, 16],
+	    cvcLength: [3],
+	    luhn: true
+	  }, {
+	    type: 'mastercard',
+	    patterns: [51, 52, 53, 54, 55, 22, 23, 24, 25, 26, 27],
+	    format: defaultFormat,
+	    length: [16],
+	    cvcLength: [3],
+	    luhn: true
+	  }, {
+	    type: 'amex',
+	    patterns: [34, 37],
+	    format: /(\d{1,4})(\d{1,6})?(\d{1,5})?/,
+	    length: [15],
+	    cvcLength: [3, 4],
+	    luhn: true
+	  }, {
+	    type: 'dinersclub',
+	    patterns: [30, 36, 38, 39],
+	    format: /(\d{1,4})(\d{1,6})?(\d{1,4})?/,
+	    length: [14],
+	    cvcLength: [3],
+	    luhn: true
+	  }, {
+	    type: 'discover',
+	    patterns: [60, 64, 65, 622],
+	    format: defaultFormat,
+	    length: [16],
+	    cvcLength: [3],
+	    luhn: true
+	  }, {
+	    type: 'unionpay',
+	    patterns: [62, 88],
+	    format: defaultFormat,
+	    length: [16, 17, 18, 19],
+	    cvcLength: [3],
+	    luhn: false
+	  }, {
+	    type: 'jcb',
+	    patterns: [35],
+	    format: defaultFormat,
+	    length: [16],
+	    cvcLength: [3],
+	    luhn: true
+	  }];
+
+	  cardFromNumber = function cardFromNumber(num) {
+	    var card, i, j, len, len1, p, pattern, ref;
+	    num = (num + '').replace(/\D/g, '');
+	    for (i = 0, len = cards.length; i < len; i++) {
+	      card = cards[i];
+	      ref = card.patterns;
+	      for (j = 0, len1 = ref.length; j < len1; j++) {
+	        pattern = ref[j];
+	        p = pattern + '';
+	        if (num.substr(0, p.length) === p) {
+	          return card;
+	        }
+	      }
+	    }
+	  };
+
+	  cardFromType = function cardFromType(type) {
+	    var card, i, len;
+	    for (i = 0, len = cards.length; i < len; i++) {
+	      card = cards[i];
+	      if (card.type === type) {
+	        return card;
+	      }
+	    }
+	  };
+
+	  luhnCheck = function luhnCheck(num) {
+	    var digit, digits, i, len, odd, sum;
+	    odd = true;
+	    sum = 0;
+	    digits = (num + '').split('').reverse();
+	    for (i = 0, len = digits.length; i < len; i++) {
+	      digit = digits[i];
+	      digit = parseInt(digit, 10);
+	      if (odd = !odd) {
+	        digit *= 2;
+	      }
+	      if (digit > 9) {
+	        digit -= 9;
+	      }
+	      sum += digit;
+	    }
+	    return sum % 10 === 0;
+	  };
+
+	  hasTextSelected = function hasTextSelected($target) {
+	    var ref;
+	    if ($target.prop('selectionStart') != null && $target.prop('selectionStart') !== $target.prop('selectionEnd')) {
+	      return true;
+	    }
+	    if ((typeof document !== "undefined" && document !== null ? (ref = document.selection) != null ? ref.createRange : void 0 : void 0) != null) {
+	      if (document.selection.createRange().text) {
+	        return true;
+	      }
+	    }
+	    return false;
+	  };
+
+	  safeVal = function safeVal(value, $target) {
+	    var cursor, error, error1, last;
+	    try {
+	      cursor = $target.prop('selectionStart');
+	    } catch (error1) {
+	      error = error1;
+	      cursor = null;
+	    }
+	    last = $target.val();
+	    $target.val(value);
+	    if (cursor !== null && $target.is(":focus")) {
+	      if (cursor === last.length) {
+	        cursor = value.length;
+	      }
+	      $target.prop('selectionStart', cursor);
+	      return $target.prop('selectionEnd', cursor);
+	    }
+	  };
+
+	  replaceFullWidthChars = function replaceFullWidthChars(str) {
+	    var chars, chr, fullWidth, halfWidth, i, idx, len, value;
+	    if (str == null) {
+	      str = '';
+	    }
+	    fullWidth = '０１２３４５６７８９';
+	    halfWidth = '0123456789';
+	    value = '';
+	    chars = str.split('');
+	    for (i = 0, len = chars.length; i < len; i++) {
+	      chr = chars[i];
+	      idx = fullWidth.indexOf(chr);
+	      if (idx > -1) {
+	        chr = halfWidth[idx];
+	      }
+	      value += chr;
+	    }
+	    return value;
+	  };
+
+	  reFormatNumeric = function reFormatNumeric(e) {
+	    return setTimeout(function () {
+	      var $target, value;
+	      $target = $(e.currentTarget);
+	      value = $target.val();
+	      value = replaceFullWidthChars(value);
+	      value = value.replace(/\D/g, '');
+	      return safeVal(value, $target);
+	    });
+	  };
+
+	  reFormatCardNumber = function reFormatCardNumber(e) {
+	    return setTimeout(function () {
+	      var $target, value;
+	      $target = $(e.currentTarget);
+	      value = $target.val();
+	      value = replaceFullWidthChars(value);
+	      value = $.payment.formatCardNumber(value);
+	      return safeVal(value, $target);
+	    });
+	  };
+
+	  formatCardNumber = function formatCardNumber(e) {
+	    var $target, card, digit, length, re, upperLength, value;
+	    digit = String.fromCharCode(e.which);
+	    if (!/^\d+$/.test(digit)) {
+	      return;
+	    }
+	    $target = $(e.currentTarget);
+	    value = $target.val();
+	    card = cardFromNumber(value + digit);
+	    length = (value.replace(/\D/g, '') + digit).length;
+	    upperLength = 16;
+	    if (card) {
+	      upperLength = card.length[card.length.length - 1];
+	    }
+	    if (length >= upperLength) {
+	      return;
+	    }
+	    if ($target.prop('selectionStart') != null && $target.prop('selectionStart') !== value.length) {
+	      return;
+	    }
+	    if (card && card.type === 'amex') {
+	      re = /^(\d{4}|\d{4}\s\d{6})$/;
+	    } else {
+	      re = /(?:^|\s)(\d{4})$/;
+	    }
+	    if (re.test(value)) {
+	      e.preventDefault();
+	      return setTimeout(function () {
+	        return $target.val(value + ' ' + digit);
+	      });
+	    } else if (re.test(value + digit)) {
+	      e.preventDefault();
+	      return setTimeout(function () {
+	        return $target.val(value + digit + ' ');
+	      });
+	    }
+	  };
+
+	  formatBackCardNumber = function formatBackCardNumber(e) {
+	    var $target, value;
+	    $target = $(e.currentTarget);
+	    value = $target.val();
+	    if (e.which !== 8) {
+	      return;
+	    }
+	    if ($target.prop('selectionStart') != null && $target.prop('selectionStart') !== value.length) {
+	      return;
+	    }
+	    if (/\d\s$/.test(value)) {
+	      e.preventDefault();
+	      return setTimeout(function () {
+	        return $target.val(value.replace(/\d\s$/, ''));
+	      });
+	    } else if (/\s\d?$/.test(value)) {
+	      e.preventDefault();
+	      return setTimeout(function () {
+	        return $target.val(value.replace(/\d$/, ''));
+	      });
+	    }
+	  };
+
+	  reFormatExpiry = function reFormatExpiry(e) {
+	    return setTimeout(function () {
+	      var $target, value;
+	      $target = $(e.currentTarget);
+	      value = $target.val();
+	      value = replaceFullWidthChars(value);
+	      value = $.payment.formatExpiry(value);
+	      return safeVal(value, $target);
+	    });
+	  };
+
+	  formatExpiry = function formatExpiry(e) {
+	    var $target, digit, val;
+	    digit = String.fromCharCode(e.which);
+	    if (!/^\d+$/.test(digit)) {
+	      return;
+	    }
+	    $target = $(e.currentTarget);
+	    val = $target.val() + digit;
+	    if (/^\d$/.test(val) && val !== '0' && val !== '1') {
+	      e.preventDefault();
+	      return setTimeout(function () {
+	        return $target.val("0" + val + " / ");
+	      });
+	    } else if (/^\d\d$/.test(val)) {
+	      e.preventDefault();
+	      return setTimeout(function () {
+	        var m1, m2;
+	        m1 = parseInt(val[0], 10);
+	        m2 = parseInt(val[1], 10);
+	        if (m2 > 2 && m1 !== 0) {
+	          return $target.val("0" + m1 + " / " + m2);
+	        } else {
+	          return $target.val(val + " / ");
+	        }
+	      });
+	    }
+	  };
+
+	  formatForwardExpiry = function formatForwardExpiry(e) {
+	    var $target, digit, val;
+	    digit = String.fromCharCode(e.which);
+	    if (!/^\d+$/.test(digit)) {
+	      return;
+	    }
+	    $target = $(e.currentTarget);
+	    val = $target.val();
+	    if (/^\d\d$/.test(val)) {
+	      return $target.val(val + " / ");
+	    }
+	  };
+
+	  formatForwardSlashAndSpace = function formatForwardSlashAndSpace(e) {
+	    var $target, val, which;
+	    which = String.fromCharCode(e.which);
+	    if (!(which === '/' || which === ' ')) {
+	      return;
+	    }
+	    $target = $(e.currentTarget);
+	    val = $target.val();
+	    if (/^\d$/.test(val) && val !== '0') {
+	      return $target.val("0" + val + " / ");
+	    }
+	  };
+
+	  formatBackExpiry = function formatBackExpiry(e) {
+	    var $target, value;
+	    $target = $(e.currentTarget);
+	    value = $target.val();
+	    if (e.which !== 8) {
+	      return;
+	    }
+	    if ($target.prop('selectionStart') != null && $target.prop('selectionStart') !== value.length) {
+	      return;
+	    }
+	    if (/\d\s\/\s$/.test(value)) {
+	      e.preventDefault();
+	      return setTimeout(function () {
+	        return $target.val(value.replace(/\d\s\/\s$/, ''));
+	      });
+	    }
+	  };
+
+	  reFormatCVC = function reFormatCVC(e) {
+	    return setTimeout(function () {
+	      var $target, value;
+	      $target = $(e.currentTarget);
+	      value = $target.val();
+	      value = replaceFullWidthChars(value);
+	      value = value.replace(/\D/g, '').slice(0, 4);
+	      return safeVal(value, $target);
+	    });
+	  };
+
+	  restrictNumeric = function restrictNumeric(e) {
+	    var input;
+	    if (e.metaKey || e.ctrlKey) {
+	      return true;
+	    }
+	    if (e.which === 32) {
+	      return false;
+	    }
+	    if (e.which === 0) {
+	      return true;
+	    }
+	    if (e.which < 33) {
+	      return true;
+	    }
+	    input = String.fromCharCode(e.which);
+	    return !!/[\d\s]/.test(input);
+	  };
+
+	  restrictCardNumber = function restrictCardNumber(e) {
+	    var $target, card, digit, value;
+	    $target = $(e.currentTarget);
+	    digit = String.fromCharCode(e.which);
+	    if (!/^\d+$/.test(digit)) {
+	      return;
+	    }
+	    if (hasTextSelected($target)) {
+	      return;
+	    }
+	    value = ($target.val() + digit).replace(/\D/g, '');
+	    card = cardFromNumber(value);
+	    if (card) {
+	      return value.length <= card.length[card.length.length - 1];
+	    } else {
+	      return value.length <= 16;
+	    }
+	  };
+
+	  restrictExpiry = function restrictExpiry(e) {
+	    var $target, digit, value;
+	    $target = $(e.currentTarget);
+	    digit = String.fromCharCode(e.which);
+	    if (!/^\d+$/.test(digit)) {
+	      return;
+	    }
+	    if (hasTextSelected($target)) {
+	      return;
+	    }
+	    value = $target.val() + digit;
+	    value = value.replace(/\D/g, '');
+	    if (value.length > 6) {
+	      return false;
+	    }
+	  };
+
+	  restrictCVC = function restrictCVC(e) {
+	    var $target, digit, val;
+	    $target = $(e.currentTarget);
+	    digit = String.fromCharCode(e.which);
+	    if (!/^\d+$/.test(digit)) {
+	      return;
+	    }
+	    if (hasTextSelected($target)) {
+	      return;
+	    }
+	    val = $target.val() + digit;
+	    return val.length <= 4;
+	  };
+
+	  setCardType = function setCardType(e) {
+	    var $target, allTypes, card, cardType, val;
+	    $target = $(e.currentTarget);
+	    val = $target.val();
+	    cardType = $.payment.cardType(val) || 'unknown';
+	    if (!$target.hasClass(cardType)) {
+	      allTypes = function () {
+	        var i, len, results;
+	        results = [];
+	        for (i = 0, len = cards.length; i < len; i++) {
+	          card = cards[i];
+	          results.push(card.type);
+	        }
+	        return results;
+	      }();
+	      $target.removeClass('unknown');
+	      $target.removeClass(allTypes.join(' '));
+	      $target.addClass(cardType);
+	      $target.toggleClass('identified', cardType !== 'unknown');
+	      return $target.trigger('payment.cardType', cardType);
+	    }
+	  };
+
+	  $.payment.fn.formatCardCVC = function () {
+	    this.on('keypress', restrictNumeric);
+	    this.on('keypress', restrictCVC);
+	    this.on('paste', reFormatCVC);
+	    this.on('change', reFormatCVC);
+	    this.on('input', reFormatCVC);
+	    return this;
+	  };
+
+	  $.payment.fn.formatCardExpiry = function () {
+	    this.on('keypress', restrictNumeric);
+	    this.on('keypress', restrictExpiry);
+	    this.on('keypress', formatExpiry);
+	    this.on('keypress', formatForwardSlashAndSpace);
+	    this.on('keypress', formatForwardExpiry);
+	    this.on('keydown', formatBackExpiry);
+	    this.on('change', reFormatExpiry);
+	    this.on('input', reFormatExpiry);
+	    return this;
+	  };
+
+	  $.payment.fn.formatCardNumber = function () {
+	    this.on('keypress', restrictNumeric);
+	    this.on('keypress', restrictCardNumber);
+	    this.on('keypress', formatCardNumber);
+	    this.on('keydown', formatBackCardNumber);
+	    this.on('keyup', setCardType);
+	    this.on('paste', reFormatCardNumber);
+	    this.on('change', reFormatCardNumber);
+	    this.on('input', reFormatCardNumber);
+	    this.on('input', setCardType);
+	    return this;
+	  };
+
+	  $.payment.fn.restrictNumeric = function () {
+	    this.on('keypress', restrictNumeric);
+	    this.on('paste', reFormatNumeric);
+	    this.on('change', reFormatNumeric);
+	    this.on('input', reFormatNumeric);
+	    return this;
+	  };
+
+	  $.payment.fn.cardExpiryVal = function () {
+	    return $.payment.cardExpiryVal($(this).val());
+	  };
+
+	  $.payment.cardExpiryVal = function (value) {
+	    var month, prefix, ref, year;
+	    ref = value.split(/[\s\/]+/, 2), month = ref[0], year = ref[1];
+	    if ((year != null ? year.length : void 0) === 2 && /^\d+$/.test(year)) {
+	      prefix = new Date().getFullYear();
+	      prefix = prefix.toString().slice(0, 2);
+	      year = prefix + year;
+	    }
+	    month = parseInt(month, 10);
+	    year = parseInt(year, 10);
+	    return {
+	      month: month,
+	      year: year
+	    };
+	  };
+
+	  $.payment.validateCardNumber = function (num) {
+	    var card, ref;
+	    num = (num + '').replace(/\s+|-/g, '');
+	    if (!/^\d+$/.test(num)) {
+	      return false;
+	    }
+	    card = cardFromNumber(num);
+	    if (!card) {
+	      return false;
+	    }
+	    return (ref = num.length, indexOf.call(card.length, ref) >= 0) && (card.luhn === false || luhnCheck(num));
+	  };
+
+	  $.payment.validateCardExpiry = function (month, year) {
+	    var currentTime, expiry, ref;
+	    if ((typeof month === 'undefined' ? 'undefined' : _typeof(month)) === 'object' && 'month' in month) {
+	      ref = month, month = ref.month, year = ref.year;
+	    }
+	    if (!(month && year)) {
+	      return false;
+	    }
+	    month = $.trim(month);
+	    year = $.trim(year);
+	    if (!/^\d+$/.test(month)) {
+	      return false;
+	    }
+	    if (!/^\d+$/.test(year)) {
+	      return false;
+	    }
+	    if (!(1 <= month && month <= 12)) {
+	      return false;
+	    }
+	    if (year.length === 2) {
+	      if (year < 70) {
+	        year = "20" + year;
+	      } else {
+	        year = "19" + year;
+	      }
+	    }
+	    if (year.length !== 4) {
+	      return false;
+	    }
+	    expiry = new Date(year, month);
+	    currentTime = new Date();
+	    expiry.setMonth(expiry.getMonth() - 1);
+	    expiry.setMonth(expiry.getMonth() + 1, 1);
+	    return expiry > currentTime;
+	  };
+
+	  $.payment.validateCardCVC = function (cvc, type) {
+	    var card, ref;
+	    cvc = $.trim(cvc);
+	    if (!/^\d+$/.test(cvc)) {
+	      return false;
+	    }
+	    card = cardFromType(type);
+	    if (card != null) {
+	      return ref = cvc.length, indexOf.call(card.cvcLength, ref) >= 0;
+	    } else {
+	      return cvc.length >= 3 && cvc.length <= 4;
+	    }
+	  };
+
+	  $.payment.cardType = function (num) {
+	    var ref;
+	    if (!num) {
+	      return null;
+	    }
+	    return ((ref = cardFromNumber(num)) != null ? ref.type : void 0) || null;
+	  };
+
+	  $.payment.formatCardNumber = function (num) {
+	    var card, groups, ref, upperLength;
+	    num = num.replace(/\D/g, '');
+	    card = cardFromNumber(num);
+	    if (!card) {
+	      return num;
+	    }
+	    upperLength = card.length[card.length.length - 1];
+	    num = num.slice(0, upperLength);
+	    if (card.format.global) {
+	      return (ref = num.match(card.format)) != null ? ref.join(' ') : void 0;
+	    } else {
+	      groups = card.format.exec(num);
+	      if (groups == null) {
+	        return;
+	      }
+	      groups.shift();
+	      groups = $.grep(groups, function (n) {
+	        return n;
+	      });
+	      return groups.join(' ');
+	    }
+	  };
+
+	  $.payment.formatExpiry = function (expiry) {
+	    var mon, parts, sep, year;
+	    parts = expiry.match(/^\D*(\d{1,2})(\D+)?(\d{1,4})?/);
+	    if (!parts) {
+	      return '';
+	    }
+	    mon = parts[1] || '';
+	    sep = parts[2] || '';
+	    year = parts[3] || '';
+	    if (year.length > 0) {
+	      sep = ' / ';
+	    } else if (sep === ' /') {
+	      mon = mon.substring(0, 1);
+	      sep = '';
+	    } else if (mon.length === 2 || sep.length > 0) {
+	      sep = ' / ';
+	    } else if (mon.length === 1 && mon !== '0' && mon !== '1') {
+	      mon = "0" + mon;
+	      sep = ' / ';
+	    }
+	    return mon + sep + year;
+	  };
+	}).call(undefined);
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	(function () {
+
+	  // format card form inputs
+	  $('.cc-num-input').payment('formatCardNumber');
+	  $('.cc-exp-input').payment('formatCardExpiry');
+	  $('.cc-cvc-input').payment('formatCardCVC');
+
+	  //
+	  // general helpers:
+	  //
+
+	  // add error css class 
+	  function addErr(input) {
+	    $(input).removeClass('input-success');
+	    $(input).addClass('input-error');
+	  }
+
+	  // add success css class
+	  function addOk(input) {
+	    $(input).removeClass('input-error');
+	    $(input).addClass('input-success');
+	  }
+
+	  // show input error icon
+	  function showInputErrIcon(input, iconSuc, iconErr) {
+	    if ($(input).hasClass('input-error')) {
+	      $(iconSuc).addClass('hidden');
+	      $(iconErr).removeClass('hidden');
+	    }
+	  }
+
+	  // show input success icon
+	  function showInputOkIcon(input, iconSuc, iconErr) {
+	    if ($(input).hasClass('input-success')) {
+	      $(iconSuc).removeClass('hidden');
+	      $(iconErr).addClass('hidden');
+	    }
+	  }
+
+	  // reset input icons
+	  function resetInput(input, iconSuc, iconErr) {
+	    $(input).removeClass('input-error');
+	    $(iconSuc).addClass('hidden');
+	    $(iconErr).addClass('hidden');
+	    $(input).removeClass('input-success');
+	  }
+
+	  // card number css classes setting
+	  var cardNum = {
+	    input: '.cc-num-input',
+	    type: '.cc-type',
+	    iconOk: '.cc-num-icon-success',
+	    iconErr: '.cc-num-icon-error'
+	  };
+	  //
+	  // check stuff
+	  //
+
+	  // check CARD NUMBER 
+	  (function checkCardNum() {
+
+	    // highlight selected card type (brand)
+	    function markCardType(name) {
+	      if ($(cardNum.input).hasClass(name)) {
+	        $(cardNum.type + '.' + name).addClass('txt-highlight');
+	      }
+	    }
+
+	    // reset card type highlight
+	    function resetCardType() {
+	      $(cardNum.type).removeClass('txt-highlight');
+	    }
+
+	    // validate card number input
+	    function validCardNum() {
+
+	      // get card number
+	      var cardValue = $(cardNum.input).val();
+
+	      // validate card number
+	      var cardValid = $.payment.validateCardNumber(cardValue);
+
+	      // add proper indicators to valid/invalid number
+	      if (cardValid === true) {
+	        addOk(cardNum.input);
+	        showInputOkIcon(cardNum.input, cardNum.iconOk, cardNum.iconErr);
+	      }
+	      if (cardValid === false) {
+	        addErr(cardNum.input);
+	        showInputErrIcon(cardNum.input, cardNum.iconOk, cardNum.iconErr);
+	      }
+	      // console.log(cardValid);
+	    }
+
+	    // listen to card number input
+	    $(cardNum.input).on('input', function () {
+
+	      // when input is long enough...
+	      if ($(this).val().length > 1) {
+
+	        // highlight proper card type name
+	        resetCardType();
+	        markCardType('visa');
+	        markCardType('mastercard');
+	        markCardType('amex');
+	        markCardType('discover');
+
+	        // validate number according to statements
+	        if ($(this).hasClass('amex') && $(this).val().length === 17) {
+	          validCardNum();
+	          // console.log($(this).val().length);
+	        }
+
+	        if ($(this).hasClass('identified') && $(this).val().length === 19) {
+	          validCardNum();
+	          // console.log($(this).val().length);
+	        }
+
+	        // reset input indicators according to statements
+	        if ($(this).hasClass('amex') && $(this).val().length < 17) {
+	          resetInput(this, cardNum.iconOk, cardNum.iconErr);
+	          // console.log($(this).val().length);
+	        }
+
+	        if ($(this).hasClass('amex') === false && $(this).val().length < 19) {
+	          resetInput(this, cardNum.iconOk, cardNum.iconErr);
+	          // console.log($(this).val().length);
+	        }
+
+	        // show error if unknown
+	        if ($(this).hasClass('unknown')) {
+	          addErr(this);
+	          showInputErrIcon(this, cardNum.iconOk, cardNum.iconErr);
+	        }
+	      } else {
+	        resetInput(this, cardNum.iconOk, cardNum.iconErr);
+	        resetCardType();
+	      }
+	    });
+	  })();
+
+	  (function checkExpDate() {
+
+	    // card expiry number css classes setting
+	    var cardExp = {
+	      input: '.cc-exp-input',
+	      iconOk: '.cc-exp-icon-success',
+	      iconErr: '.cc-exp-icon-error'
+	    };
+
+	    // validate number
+	    function validExp() {
+
+	      var expDate = $(cardExp.input).payment('cardExpiryVal');
+	      var expValid = $.payment.validateCardExpiry(expDate.month, expDate.year);
+
+	      // add proper indicators to valid/invalid number
+	      if (expValid === true) {
+	        addOk(cardExp.input);
+	        showInputOkIcon(cardExp.input, cardExp.iconOk, cardExp.iconErr);
+	      }
+
+	      if (expValid === false) {
+	        addErr(cardExp.input);
+	        showInputErrIcon(cardExp.input, cardExp.iconOk, cardExp.iconErr);
+	      }
+	      // console.log(expValid);
+	    }
+
+	    // listen to input
+	    $(cardExp.input).on('input', function () {
+
+	      // validate number when it's long enough
+	      if ($(this).val().length === 7 || $(this).val().length === 9) {
+	        validExp();
+	      }
+
+	      // otherwise, reset indicators
+	      else {
+	          resetInput(this, cardExp.iconOk, cardExp.iconErr);
+	        }
+	    });
+	  })();
+
+	  (function cvcCheck() {
+
+	    var cardCVC = {
+	      input: '.cc-cvc-input',
+	      iconOk: '.cc-cvc-icon-success',
+	      iconErr: '.cc-cvc-icon-error'
+	    };
+
+	    // validate number
+	    function cvcCheck(input) {
+	      var cvcNum = $(cardCVC.input).val();
+	      var cvcValid = $.payment.validateCardCVC(cvcNum);
+
+	      // add proper indicators to valid/invalid number
+
+	      if (cvcValid === true) {
+	        addOk(cardCVC.input);
+	        showInputOkIcon(cardCVC.input, cardCVC.iconOk, cardCVC.iconErr);
+	      }
+	      if (cvcValid === false) {
+	        addErr(cardCVC.input);
+	        showInputErrIcon(cardCVC.input, cardCVC.iconOk, cardCVC.iconErr);
+	      }
+	      // console.log(cvcValid);
+	    }
+
+	    // listen to input
+	    $(cardCVC.input).on('input', function () {
+
+	      // validate number when it's long enough
+	      if ($(cardNum.input).hasClass('amex')) {
+	        if ($(cardCVC.input).val().length > 3) {
+	          cvcCheck(this);
+	        } else {
+	          resetInput(this, cardCVC.iconOk, cardCVC.iconErr);
+	        }
+	      } else if ($(this).val().length === 3) {
+	        cvcCheck(this);
+	      }
+
+	      // otherwise, reset indicators
+	      else {
+	          resetInput(this, cardCVC.iconOk, cardCVC.iconErr);
+	        }
+	    });
+	  })();
+	})();
+
+/***/ }
+/******/ ]);
