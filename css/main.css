@@ -364,7 +364,11 @@ html {
 body {
   background-color: #fffcf8;
   color: #363636;
-  font-family: "Source Sans Pro", sans-serif; }
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 21px; }
+  @media screen and (max-width: 568px) {
+    body {
+      font-size: 18px; } }
 
 section {
   margin: 4rem 0; }
@@ -847,15 +851,10 @@ a.cc_btn {
 
 .post,
 .wrapper-post-like {
-  font-size: 21px;
   max-width: 36em;
   margin: 0 auto;
   margin-bottom: 3em;
   padding: 0 1em; }
-  @media screen and (max-width: 568px) {
-    .post,
-    .wrapper-post-like {
-      font-size: 18px; } }
 
 .post-meta {
   color: #777; }

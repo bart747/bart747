@@ -4,10 +4,6 @@
 
 .post,
 .wrapper-post-like {
-  font-size: $base-font-size;
-  @media screen and (max-width: $screen-sml) {
-    font-size: $small-font-size;
-  }
   max-width: 36em;
   margin: 0 auto;
   margin-bottom: 3em;
