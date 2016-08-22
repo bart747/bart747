@@ -1,5 +1,5 @@
 # Site settings
-title: UI Designer-Developer
+title: UIs
 subtitle: Designing fast and clear web interfaces.
 email: hello.bartosz@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
@@ -9,5 +9,6 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://bart747.github.io" # the base hostname & protocol for your site
 twitter_username: bwhimself
 github_username: bart747
+gems: [jekyll-sitemap]
 
 exclude: [_sass, sass, gulpfile.js, node_modules, projects/*/node_modules]
