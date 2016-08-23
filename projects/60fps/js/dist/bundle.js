@@ -60,15 +60,15 @@
 	 *  ----- SVG graph related stuff -----
 	 */
 	const svgObj = document.getElementById("svgGuitar");
-	svgObj.addEventListener('load', function() { 
+	svgObj.addEventListener('load', function() {
 
-	  const svgGuitar = svgObj.contentDocument;   
+	  const svgGuitar = svgObj.contentDocument;
 	  const string = svgGuitar.getElementById("string1");
 	  const stringPath = string.getAttribute('d');
 	  const wire = [].slice
 	                .call(svgGuitar
 	                .getElementsByClassName("wire"));
-	 
+
 	  function setWireColor(color) {
 	    wire.forEach( el => {
 	      el.style.stroke = color;
@@ -86,18 +86,18 @@
 	  }
 
 	  function colorizeWire() {
-	    saturation(600, 35, 0, 1, setWireColor);
+	    saturation(600, 35, 0, 2.6, setWireColor);
 	    setTimeout( () => {
-	      saturation(800, 35, 100, -1, setWireColor);
+	      saturation(800, 35, 100, -2, setWireColor);
 	    }, 850);
-	  } 
-	  
+	  }
+
 	  function moveString() {
 	    animatePath(380, 0, 0.5, 1, setStringCurve);
-	    
+
 	    setTimeout( () => {
 	      animatePath(500, 11, 0.5, -1, setStringCurve);
-	      
+
 	      setTimeout( () => {
 	        animatePath(140, -4, 0.5, 1, setStringCurve);
 	      }, 500);
@@ -132,34 +132,31 @@
 	this.saturation = function(duration,
 	                           hue,
 	                           startLvl,
-	                           direction,
+	                           changePerFrame,
 	                           setColorFunc) {
-	  const gain = (100 / (duration / frameRate)) * direction;
-	  dbg("gain:" + gain);
-	  
+
 	  (function iter() {
 	    let color = `hsla(${hue}, ${startLvl}%, 50%, 1)`;
 
 	    if ( startLvl < 0 || startLvl > 100 ) {
 	      console.log("warning: color saturation lvl is out of range");
 	    }
-	    
+
 	    if (typeof setColorFunc === "function") {
 	      setColorFunc(color);
 	    }
 
 	    dbg("sturation: " + startLvl);
 
-	    // 0.01 is not a precise solution but good enough to trick the eye
-	    if ( duration > frameRate - 0.01) {
+	    if ( duration >= frameRate) {
 	      duration = duration - frameRate;
-	      startLvl = startLvl + gain;
+	      startLvl = startLvl + changePerFrame;
 
 	      setTimeout( () => {
 	        iter();
 	      }, frameRate);
 	    }
-	  }());
+	  })();
 	};
 
 
@@ -167,28 +164,28 @@
 	                            startPosition,
 	                            pxPerFrame,
 	                            direction,
-	                            setPathFunc) {     
+	                            setPathFunc) {
+
 	  (function iter() {
 
 	    if (typeof setPathFunc === "function") {
 	      setPathFunc(startPosition);
 	    }
 
-	    dbg("path position: " + startPosition);     
+	    dbg("path position: " + startPosition);
 
-	    if ( duration > frameRate - 0.01) { 
+	    if ( duration >= frameRate) {
 	      duration = duration - frameRate;
 	      startPosition = startPosition + (pxPerFrame * direction);
-	      
+
 	      setTimeout( () => {
 	        iter();
 	      }, frameRate);
 	    }
-	  }());
+	  })();
 	};
 
 	})();
-
 
 
 /***/ },
@@ -197,7 +194,7 @@
 
 	(function() {
 
-	dbgIsOn = false;
+	dbgIsOn = true;
 	this.dbg = (msg1, msg2, msg3) => {
 	  if (dbgIsOn === true) {
 	    console.log(msg1);
@@ -205,7 +202,7 @@
 	    msg2 = (typeof msg3 === 'undefined') ? null : console.log(msg3);
 	  }
 	};
-	  
+
 	}());
 
 

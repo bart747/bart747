@@ -4,15 +4,15 @@
  *  ----- SVG graph related stuff -----
  */
 const svgObj = document.getElementById("svgGuitar");
-svgObj.addEventListener('load', function() { 
+svgObj.addEventListener('load', function() {
 
-  const svgGuitar = svgObj.contentDocument;   
+  const svgGuitar = svgObj.contentDocument;
   const string = svgGuitar.getElementById("string1");
   const stringPath = string.getAttribute('d');
   const wire = [].slice
                 .call(svgGuitar
                 .getElementsByClassName("wire"));
- 
+
   function setWireColor(color) {
     wire.forEach( el => {
       el.style.stroke = color;
@@ -30,18 +30,18 @@ svgObj.addEventListener('load', function() {
   }
 
   function colorizeWire() {
-    saturation(600, 35, 0, 1, setWireColor);
+    saturation(600, 35, 0, 2.6, setWireColor);
     setTimeout( () => {
-      saturation(800, 35, 100, -1, setWireColor);
+      saturation(800, 35, 100, -2, setWireColor);
     }, 850);
-  } 
-  
+  }
+
   function moveString() {
     animatePath(380, 0, 0.5, 1, setStringCurve);
-    
+
     setTimeout( () => {
       animatePath(500, 11, 0.5, -1, setStringCurve);
-      
+
       setTimeout( () => {
         animatePath(140, -4, 0.5, 1, setStringCurve);
       }, 500);
