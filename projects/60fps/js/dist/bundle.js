@@ -152,7 +152,7 @@
 	      duration = duration - frameRate;
 	      startLvl = startLvl + changePerFrame;
 
-	      setTimeout( () => {
+	      setTimeout( _ => {
 	        iter();
 	      }, frameRate);
 	    }
@@ -178,7 +178,7 @@
 	      duration = duration - frameRate;
 	      startPosition = startPosition + (pxPerFrame * direction);
 
-	      setTimeout( () => {
+	      setTimeout( _ => {
 	        iter();
 	      }, frameRate);
 	    }

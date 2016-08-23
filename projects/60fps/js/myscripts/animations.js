@@ -29,7 +29,7 @@ this.saturation = function(duration,
       duration = duration - frameRate;
       startLvl = startLvl + changePerFrame;
 
-      setTimeout( () => {
+      setTimeout( _ => {
         iter();
       }, frameRate);
     }
@@ -55,7 +55,7 @@ this.animatePath = function(duration,
       duration = duration - frameRate;
       startPosition = startPosition + (pxPerFrame * direction);
 
-      setTimeout( () => {
+      setTimeout( _ => {
         iter();
       }, frameRate);
     }

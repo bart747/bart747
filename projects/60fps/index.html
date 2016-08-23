@@ -1,5 +1,5 @@
 ---
-layout: project 
+layout: project
 title: JS Animation Script + SVG Graph in 60fps
 ---
 
@@ -34,11 +34,14 @@ title: JS Animation Script + SVG Graph in 60fps
       All that together induces alternating current in the wire.
     </li>
   </ul>
-  
+</section>
+
+<section>
+  <h2>The Code:</h2>
   <p>
     There are following JavaScript animations. Each does one iteration per
     frame, 60fps.
-    
+
     <ul>
       <li>
         Change the wire color and saturation by transforming HSLA color code.
@@ -51,15 +54,9 @@ title: JS Animation Script + SVG Graph in 60fps
       </li>
     </ul>
   </p>
-</section>
 
-<section>
-
-<h2>The code:</h2>
 
 {% highlight js linenos %}
-
-(function() {
 
 const fps60 = 16.66;
 const frameRate = fps60;
@@ -67,34 +64,29 @@ const frameRate = fps60;
 this.saturation = function(duration,
                            hue,
                            startLvl,
-                           direction,
+                           changePerFrame,
                            setColorFunc) {
-  const gain = (100 / (duration / frameRate)) * direction;
-  dbg("gain:" + gain);
-  
+
   (function iter() {
     let color = `hsla(${hue}, ${startLvl}%, 50%, 1)`;
 
     if ( startLvl < 0 || startLvl > 100 ) {
       console.log("warning: color saturation lvl is out of range");
     }
-    
+
     if (typeof setColorFunc === "function") {
       setColorFunc(color);
     }
 
-    dbg("sturation: " + startLvl);
-
-    // 0.01 is not a precise solution but good enough to trick the eye
-    if ( duration > frameRate - 0.01) {
+    if ( duration >= frameRate) {
       duration = duration - frameRate;
-      startLvl = startLvl + gain;
+      startLvl = startLvl + changePerFrame;
 
-      setTimeout( () => {
+      setTimeout( _ => {
         iter();
       }, frameRate);
     }
-  }());
+  })();
 };
 
 
@@ -102,34 +94,29 @@ this.animatePath = function(duration,
                             startPosition,
                             pxPerFrame,
                             direction,
-                            setPathFunc) {     
+                            setPathFunc) {
+
   (function iter() {
 
     if (typeof setPathFunc === "function") {
       setPathFunc(startPosition);
     }
 
-    dbg("path position: " + startPosition);     
-
-    if ( duration > frameRate - 0.01) { 
+    if ( duration >= frameRate) {
       duration = duration - frameRate;
       startPosition = startPosition + (pxPerFrame * direction);
-      
-      setTimeout( () => {
+
+      setTimeout( _ => {
         iter();
       }, frameRate);
     }
-  }());
+  })();
 };
-
-})();
 {% endhighlight %}
 
 
 <h2>Debugging Helper</h2>
 {% highlight js %}
-
-(function() {
 
 dbgIsOn = true;
 this.dbg = (msg1, msg2, msg3) => {
@@ -139,8 +126,6 @@ this.dbg = (msg1, msg2, msg3) => {
     msg2 = (typeof msg3 === 'undefined') ? null : console.log(msg3);
   }
 };
-  
-}());
 
 {% endhighlight %}
 
