@@ -23,7 +23,7 @@ It was excluding even more stuff.
 
 Beside the blog,
 I have also projects that use different node modules and other JS.
-One 'node_modules' folder turned to be the painpoint. I didn't exclude it because
+One 'node_modules' folder turned to be the pain point. I didn't exclude it because
 it was hidden somewhere deeper in the directory.
 
 I reorganized my files so now it's easy to locate that kind of stuff.

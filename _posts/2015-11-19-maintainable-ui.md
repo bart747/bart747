@@ -8,7 +8,7 @@ I guarantee you that changes are unavoidable. And you can’t predict the future
 You also can’t solve problems in theory only, without prototyping.
 So make your life easier and build things that are easy to edit.
 
-Here are some examples of SASS based solutions that you can use to make UI more maintainable and themable.
+Here are some examples of SASS based solutions that you can use to make UI more maintainable and “themable”.
 
 
 ## Variables
@@ -93,7 +93,7 @@ It will keep everything well aligned. It equals your default leading size.
 
 For instance, when you have two different UI blocks (like media object) in-line,
 it will prevent misalignment.
-Just use it to set up margins and paddings.
+Just use it to set up margins and padding.
 If there's a headline that's bigger than basic font size,
 fit it into a line-hight that equals one $u.
 
