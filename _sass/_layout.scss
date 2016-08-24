@@ -4,29 +4,31 @@
 
 
 //grid
-@media screen and (min-width: $screen-mid) {
-  .col {
-    float: left;
-    padding-right: 1.5em;
-    &:last-of-type {
-      padding-right: 0;
-    }
- }
 
-  .col.half {
-    width: 50%;
-  }
-
-  .col.third {
-    width: 33.33%;
-  }
-
-  .grid:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+.grid {
+  display: flex;
 }
+
+.col {
+  flex: 1;
+  margin: 0 1em;
+}
+
+.col:first-child {
+  margin: 0 1em 0 0;
+}
+
+.col:last-child {
+  margin: 0 0 0 1em;
+}
+ // .col.half
+  
+
+ // .col.third 
+
+
+ // .grid:after 
+
 
 .patterns-lib>h2 {
   background-color: $grey-light;
