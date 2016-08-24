@@ -7,6 +7,7 @@ description: > # this means to ignore newlines until "baseurl:"
   CSS/SASS, HTML, JavaScript.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://bart747.github.io" # the base hostname & protocol for your site
+permalink: none
 twitter_username: bwhimself
 github_username: bart747
 gems: [jekyll-sitemap]
