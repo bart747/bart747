@@ -2,17 +2,20 @@
 // header
 //
 
-.header {
-  background: none;
+header .wrapper {
+  display: flex;
   font-size: $small-font-size;
+  justify-content: space-between;
   padding: 1rem;
 }
 
 .header-nav {
+  flex: 1 1 auto;
   margin: 0 auto;
 }
 
 .header-nav ul {
+  text-align: right;
   margin: 0 auto;
   padding: 0;
 }
@@ -22,29 +25,8 @@
   margin: 0 1em 0 0;
 }
 
-.header-left {
-  float: left;
-  text-align: left;
-}
-
-.header-right {
-  float: right;
-  text-align: right;
-}
-
-@media all and ( min-width: $screen-mid ) {
-
-  .header-left {
-    text-align: left;
-  }
-
-  .header-right {
-    text-align: right;
-  }
-}
-
 .icon-logo {
-  text-align: center;
+ // text-align: center;
   line-height: 1;
   margin: 0 auto;
 }
@@ -52,7 +34,8 @@
 .icon-logo img {
   max-width: 25px;
   height: auto;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
+  vertical-align: top;
   &:hover {
     transform: rotate(45deg);
   }
