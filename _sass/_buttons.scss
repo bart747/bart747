@@ -56,6 +56,12 @@ button,
   }
 }
 
+.btn-subtext {
+  color: $yellow-light;
+  display: block;
+  font-size: 0.76em;
+}
+
 .btn-switch-dot {
   &:before {
     position: relative;

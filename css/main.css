@@ -782,6 +782,11 @@ a.cc_btn {
   .btn-in-txt:hover, .btn-in-txt:active {
     background: #ffd600; }
 
+.btn-subtext {
+  color: #fff1ac;
+  display: block;
+  font-size: 0.76em; }
+
 .btn-switch-dot:before {
   position: relative;
   top: -2px;
