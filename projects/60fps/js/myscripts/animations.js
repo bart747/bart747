@@ -5,12 +5,14 @@
 
 const fps60 = 16.66;
 
-// estimated function call delay
+// estimated delay caused by scripting
 // they vary
-const funcCallDelay = 3;
+const scriptDelay = 3;
 
 // DOM accepts integers only
 const frameRate = Math.floor(fps60);
+
+const frameDelay = frameRate - scriptDelay;
 
 this.saturation = function(duration,
                            hue,
@@ -32,12 +34,12 @@ this.saturation = function(duration,
     dbg("sturation: " + startLvl);
 
     if ( duration >= frameRate) {
-      duration = duration - frameRate - funcCallDelay;
+      duration = duration - frameDelay - scriptDelay;
       startLvl = startLvl + changePerFrame;
 
       setTimeout( _ => {
         iter();
-      }, frameRate);
+      }, frameDelay);
     }
   })();
 };
@@ -58,12 +60,12 @@ this.animatePath = function(duration,
     dbg("path position: " + startPosition);
 
     if ( duration >= frameRate) {
-      duration = duration - frameRate - funcCallDelay;
+      duration = duration - frameDelay - scriptDelay;
       startPosition = startPosition + (pxPerFrame * direction);
 
       setTimeout( _ => {
         iter();
-      }, frameRate);
+      }, frameDelay);
     }
   })();
 };

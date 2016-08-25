@@ -1,6 +1,6 @@
 (function() {
 
-dbgIsOn = false;
+dbgIsOn = true;
 this.dbg = (msg1, msg2, msg3) => {
   if (dbgIsOn === true) {
     console.log(msg1);

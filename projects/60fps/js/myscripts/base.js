@@ -30,9 +30,9 @@ svgObj.addEventListener('load', function() {
   }
 
   function colorizeWire() {
-    saturation(600, 35, 0, 3, setWireColor);
+    saturation(600, 35, 0, 2.6, setWireColor);
     setTimeout( () => {
-      saturation(800, 35, 100, -2.3, setWireColor);
+      saturation(800, 35, 100, -2, setWireColor);
     }, 850);
   }
 
@@ -40,10 +40,10 @@ svgObj.addEventListener('load', function() {
     animatePath(380, 0, 0.5, 1, setStringCurve);
 
     setTimeout( () => {
-      animatePath(600, 10, 0.5, -1, setStringCurve);
+      animatePath(600, 11, 0.5, -1, setStringCurve);
 
       setTimeout( () => {
-        animatePath(220, -5.5, 0.5, 1, setStringCurve);
+        animatePath(240, -7.5, 0.5, 1, setStringCurve);
       }, 600);
 
     }, 380);
