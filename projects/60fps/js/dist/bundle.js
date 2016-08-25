@@ -86,9 +86,9 @@
 	  }
 
 	  function colorizeWire() {
-	    saturation(600, 35, 0, 2.6, setWireColor);
+	    saturation(600, 35, 0, 3, setWireColor);
 	    setTimeout( () => {
-	      saturation(800, 35, 100, -2, setWireColor);
+	      saturation(800, 35, 100, -2.3, setWireColor);
 	    }, 850);
 	  }
 
@@ -96,11 +96,11 @@
 	    animatePath(380, 0, 0.5, 1, setStringCurve);
 
 	    setTimeout( () => {
-	      animatePath(500, 11, 0.5, -1, setStringCurve);
+	      animatePath(600, 10, 0.5, -1, setStringCurve);
 
 	      setTimeout( () => {
-	        animatePath(140, -4, 0.5, 1, setStringCurve);
-	      }, 500);
+	        animatePath(220, -5.5, 0.5, 1, setStringCurve);
+	      }, 600);
 
 	    }, 380);
 
@@ -127,7 +127,13 @@
 	 */
 
 	const fps60 = 16.66;
-	const frameRate = fps60;
+
+	// estimated function call delay
+	// they vary
+	const funcCallDelay = 3;
+
+	// DOM accepts integers only
+	const frameRate = Math.floor(fps60);
 
 	this.saturation = function(duration,
 	                           hue,
@@ -149,7 +155,7 @@
 	    dbg("sturation: " + startLvl);
 
 	    if ( duration >= frameRate) {
-	      duration = duration - frameRate;
+	      duration = duration - frameRate - funcCallDelay;
 	      startLvl = startLvl + changePerFrame;
 
 	      setTimeout( _ => {
@@ -175,7 +181,7 @@
 	    dbg("path position: " + startPosition);
 
 	    if ( duration >= frameRate) {
-	      duration = duration - frameRate;
+	      duration = duration - frameRate - funcCallDelay;
 	      startPosition = startPosition + (pxPerFrame * direction);
 
 	      setTimeout( _ => {
@@ -194,7 +200,7 @@
 
 	(function() {
 
-	dbgIsOn = true;
+	dbgIsOn = false;
 	this.dbg = (msg1, msg2, msg3) => {
 	  if (dbgIsOn === true) {
 	    console.log(msg1);
