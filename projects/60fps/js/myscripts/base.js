@@ -33,7 +33,7 @@ svgObj.addEventListener('load', function() {
     saturation(600, 35, 0, 2.6, setWireColor);
     setTimeout( () => {
       saturation(800, 35, 100, -2, setWireColor);
-    }, 850);
+    }, 860);
   }
 
   function moveString() {

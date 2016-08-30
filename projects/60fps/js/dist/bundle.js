@@ -89,7 +89,7 @@
 	    saturation(600, 35, 0, 2.6, setWireColor);
 	    setTimeout( () => {
 	      saturation(800, 35, 100, -2, setWireColor);
-	    }, 850);
+	    }, 860);
 	  }
 
 	  function moveString() {
@@ -137,6 +137,7 @@
 
 	const frameDelay = frameRate - scriptDelay;
 
+
 	this.saturation = function(duration,
 	                           hue,
 	                           startLvl,
@@ -157,7 +158,7 @@
 	    dbg("sturation: " + startLvl);
 
 	    if ( duration >= frameRate) {
-	      duration = duration - frameDelay - scriptDelay;
+	      duration = duration - frameRate;
 	      startLvl = startLvl + changePerFrame;
 
 	      setTimeout( _ => {
@@ -183,7 +184,7 @@
 	    dbg("path position: " + startPosition);
 
 	    if ( duration >= frameRate) {
-	      duration = duration - frameDelay - scriptDelay;
+	      duration = duration - frameRate;
 	      startPosition = startPosition + (pxPerFrame * direction);
 
 	      setTimeout( _ => {

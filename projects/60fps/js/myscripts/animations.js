@@ -14,6 +14,7 @@ const frameRate = Math.floor(fps60);
 
 const frameDelay = frameRate - scriptDelay;
 
+
 this.saturation = function(duration,
                            hue,
                            startLvl,
@@ -34,7 +35,7 @@ this.saturation = function(duration,
     dbg("sturation: " + startLvl);
 
     if ( duration >= frameRate) {
-      duration = duration - frameDelay - scriptDelay;
+      duration = duration - frameRate;
       startLvl = startLvl + changePerFrame;
 
       setTimeout( _ => {
@@ -60,7 +61,7 @@ this.animatePath = function(duration,
     dbg("path position: " + startPosition);
 
     if ( duration >= frameRate) {
-      duration = duration - frameDelay - scriptDelay;
+      duration = duration - frameRate;
       startPosition = startPosition + (pxPerFrame * direction);
 
       setTimeout( _ => {
