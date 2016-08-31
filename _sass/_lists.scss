@@ -17,6 +17,10 @@
   }
 }
 
+.menu-list li:last-child {
+  margin-bottom: 0;
+}
+
 .list-indent li {
   padding-left: 1em;
 }
@@ -65,4 +69,43 @@
 
 .post-list-title {
   margin: 0;
+}
+
+
+.menu-toggle {
+  position: relative;
+  top: 3px;
+  padding: 0;
+  z-index: 2;
+}
+
+.menu-toggle ul {
+  margin-bottom: 0;
+}
+
+.menu-icons li {
+  list-style: none;
+  margin-left: 1.5em;
+}
+
+.menu-toggle-content {
+  position: absolute;
+  top: 2.9em;
+  margin: 0 auto;
+  background: #eee;
+  border-radius: 0 0 $radius $radius;  
+  border-top: 6px solid $blue-dark;
+  box-shadow: 0 8px 8px $grey;
+  padding: 1em 1em 1em;
+  text-align: left;
+  width: auto;
+  width: 16em;
+  z-index: 2;
+  animation-name: show-up;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in;
+}
+
+.menu-icons .li-has-icon {
+  margin-left: 0;
 }

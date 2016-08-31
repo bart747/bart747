@@ -6,7 +6,7 @@ button,
 .btn {
   display: inline-block;
   outline: none;
-  color: white;
+  color: #fff;
   cursor: pointer;
   background: $blue;
   border: solid $blue-dark;
@@ -24,6 +24,12 @@ button,
   &:active {
     text-shadow: 0 0 5px;
   }
+}
+
+button.is-active,
+.btn.is-active {
+  color: $lime;
+  text-shadow: 0 0 5px;
 }
 
 .btn-neutral {
@@ -54,6 +60,16 @@ button,
   &:hover, &:active {
     background: $yellow;
   }
+}
+
+.btn-menu-square {
+  text-align: center;
+  line-height: 1;
+  margin: 0 0 1em 0;
+  padding: 0 0.25em 0.5em;
+  width: 3em;
+  height: 3em;
+  vertical-align: top;
 }
 
 .btn-subtext {
@@ -95,4 +111,23 @@ button,
 .is-on .octicon {
   color: $red-light;
   text-shadow: 0 0 4px;
+}
+
+ .indicator-green.is-on .icon {
+  color: $green-light;
+  text-shadow: 0 0 6px;
+  transition: 0.2s ease;
+}
+
+.is-on-txt {
+  color: $yellow-light;
+  text-shadow: 0 0 6px;
+  transition: 0.2s ease;
+}
+
+.toggle-is-on {
+  background: $blue-dark;
+  color: $yellow-light;
+  text-shadow: 0 0 6px;
+  transition: 0.2s ease;
 }

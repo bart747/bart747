@@ -6,11 +6,14 @@
 }
 
 .home-example-ui {
-//  background: #f4ede6;
-  box-shadow: 0 1px 5px 0 $grey;
+  @include shadow;
   border-radius: $radius;
   padding: 1em;
-  margin: 3em;
+  margin: 3em auto;
+}
+
+.home-example-toggle-menu {
+  height: 30em;
 }
 
 .home-pic img {

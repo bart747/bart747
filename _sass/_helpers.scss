@@ -8,6 +8,10 @@
   margin-left: auto;
  }
 
+.left {
+  text-align: left;
+ }
+
 .txt-secondary {
   color: $grey-dark;
   font-size: $tiny-font-size;
@@ -16,6 +20,17 @@
 
 .link-active {
   border-bottom: 1px solid;
+}
+
+.link-like {
+  color: $blue-dark;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:active, &:hover {
+    color: $red;
+    transition: color 0.25s;
+  }
 }
 
 .txt-highlight {
@@ -98,4 +113,8 @@
 .white,
 .white .octicon {
   color: #fff;
+}
+
+@mixin shadow {
+  box-shadow: 0 1px 5px 0 $grey;
 }

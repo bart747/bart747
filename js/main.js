@@ -1,5 +1,6 @@
 
 const switchGeneral = require('./my/switch.js');
+const toggleMenu = require('./my/togglemenu.js');
 const formSwitch = require('./my/formswitch.js');
 const linkStates = require('./my/linkstates.js');
 const paymentPlugin = require('./plugins/jquery.payment.js');

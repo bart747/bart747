@@ -102,6 +102,7 @@ input.cc-cvc-input {
 
 .form-wrapper-narrow {
   max-width: 16em;
+  margin: 0 auto;
 }
 
 .form-boring input {
@@ -127,11 +128,4 @@ input.cc-cvc-input {
   animation-timing-function: ease-out;
 }
 
-@keyframes show-up {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+
