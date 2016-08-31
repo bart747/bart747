@@ -9,19 +9,25 @@
 
   .grid {
     display: flex;
+    justify-content: center;
   }
 
   .col {
     flex: 1 1 auto;
-    margin: 0 1em;
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+
+  .col-50-50 {
+    flex-basis: 50%;
   }
 
   .col:first-child {
-    margin: 0 1em 0 0;
+    margin-left: 1em;
   }
 
   .col:last-child {
-    margin: 0 0 0 1em;
+    margin-right: 1em;
   }
 
   .patterns-lib>h2 {

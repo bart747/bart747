@@ -91,6 +91,10 @@
 .menu-toggle-content {
   position: absolute;
   top: 2.9em;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   margin: 0 auto;
   background: #eee;
   border-radius: 0 0 $radius $radius;  

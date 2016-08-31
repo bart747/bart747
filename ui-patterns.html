@@ -4,45 +4,86 @@ layout: default
 
 <div class="wrapper center">
 
-<section>
-<h2>Sign up/Sign in Forms</h2>
+<section class=" ">
 
-<div class="form-fieldset-toggle
-            form-wrapper-narrow
-            home-example-ui
-            center">
+<h2 id="form-boring-home">Typical Signup Form:</h2>
 
-  <form id="form-sign-up" class=" ">
-    <h3>Create an Account</h3>
+<div class="grid wrapper-small">
+  <div class="home-example-ui form-wrapper-narrow center col col-50-50">
+    <form class="form-boring inputs-long">
+      <h3>Sign up</h3>
 
-    <fieldset>
-      <label for="email2-expo">Your Email</label>
-      <input type="email" id="email2-expo">
-      <label for="password2-expo">Create a Password</label>
-      <input type="password" id="password2-expo">
-      <div class="txt-secondary">at least 8 characters including a number</div>
-    </fieldset>
+      <fieldset>
+        <label for="email1-expo">Email</label>
+        <input type="email" id="email1-expo">
+        <label for="password1-expo">Password</label>
+        <input type="password" id="password1-expo">
+        <div class="txt-secondary">at least 8 characters including a number</div>
+      </fieldset>
 
-    <button type="button">Create an Account</button>
+      <button type="button">Sign up</button>
 
-    <p class="txt-secondary">Already got one? <span class="btn btn-in-txt sign-in-link">Log in</span></p>
-  </form>
+      <p class="txt-secondary">Already a user? <a href="#form-boring-home">Sign in</a>.</p>
 
-  <form id="form-sign-in" class="hidden">
-    <h3>Log in</h3>
+    </form>
+  </div>
 
-    <fieldset>
-      <label for="email3-expo">Your Email</label>
-      <input type="email" id="email3-expo">
-      <label for="password3-expo">Your Password</label>
-      <input type="password" id="password3-expo">
-    </fieldset>
+  <div class="form-fieldset-toggle
+              form-wrapper-narrow
+              home-example-ui
+              center
+              col col-50-50">
 
-    <button type="button">Log in</button>
+    <form id="form-sign-up" class=" ">
+      <h3>Create an Account</h3>
 
-    <p class="txt-secondary">Need to create a new account? <span class="btn btn-in-txt sign-in-link">Sign up</span></p>
-  </form>
-</div>
+      <fieldset>
+        <label for="email2-expo">Your Email</label>
+        <input type="email" id="email2-expo">
+        <label for="password2-expo">Create a Password</label>
+        <input type="password" id="password2-expo">
+        <div class="txt-secondary">at least 8 characters including a number</div>
+      </fieldset>
+
+      <button type="button">Create an Account</button>
+
+      <p class="txt-secondary">Already got one? <span class="btn btn-in-txt sign-in-link">Log in</span></p>
+    </form>
+
+    <form id="form-sign-in" class="hidden">
+      <h3>Log in</h3>
+
+      <fieldset>
+        <label for="email3-expo">Your Email</label>
+        <input type="email" id="email3-expo">
+        <label for="password3-expo">Your Password</label>
+        <input type="password" id="password3-expo">
+      </fieldset>
+
+      <button type="button">Log in</button>
+
+      <p class="txt-secondary">Need to create a new account? <span class="btn btn-in-txt sign-in-link">Sign up</span></p>
+
+    </form>
+  </div>
+  </div>
+
+
+  <p>Sign up and Sign in forms can be confusing. Aren't they?
+   
+    <p> 
+      Lets assume that you want to log in but what you see is a sing up page.
+      In the “after” example, you can switch to the right form easily.
+      The appropriate one will appear without the page reload.
+      [The first one uses link (inactive here) to other page.]
+    </p>
+    <p>
+      Input labels won't confuse you &mdash;
+      there's a significant difference between “your password” and “create a password”.
+      Input text is more readable because of bigger font size and more whitespace.
+    </p>
+
+
 
 </section>
 
@@ -50,12 +91,12 @@ layout: default
 <section class="">
 <h2>Big Mobile Menu</h2>
 
-<div class="grid wrapper-post-like">
+<div class="grid wrapper-small">
 
-  <div class="home-example-toggle-menu col">
+  <div class="home-example-toggle-menu col col-50-50">
   <h3>Before</h3>
 
-    <div class="menu-list menu-toggle left">
+    <div class="menu-list menu-toggle ">
 
       <button class="menu-toggle-btn is-switchable toggle-is-on">
         menu 
@@ -95,8 +136,7 @@ layout: default
         </li>
         <li class=" ">
           <span class="link-like">
-            
-            get started with free trial
+            free trial
           </span>
         </li>
         <li class=" ">
@@ -112,23 +152,27 @@ layout: default
     
   </div>
 
-  <div class="col home-example-toggle-menu">
+  <div class="home-example-toggle-menu col col-50-50">
   <h3>After</h3>
 
-    <div class="menu-list menu-toggle menu-icons left">
+    <div class="menu-list menu-toggle menu-icons ">
 
       <button class="menu-toggle-btn is-switchable toggle-is-on">
         menu 
       </button>
+      &emsp;
+      <span class="link-like">
+        products
+      </span>
+      &emsp;
+      <span class="link-like">
+        log in
+      </span>
+       
 
       <div class="menu-toggle-content"> 
 
       <ul>
-        <li class="li-has-icon">
-          <span class="link-like">
-            <span class="icon ion-star purple"></span>
-            products</a>
-        </li>
         <li>
           <span class="link-like">case studies</span>
         </li>
@@ -161,12 +205,7 @@ layout: default
             get started with free trial
           </span>
         </li>
-        <li class="li-has-icon">
-          <span class="link-like">
-            <span class="icon ion-log-in purple"></span>
-            log in
-          </span>
-        </li>
+
       </ul>
       </div>
 
@@ -176,15 +215,24 @@ layout: default
 
 </div>
 
-<p>Mobile menus with many links actually hide content.
-  You can't assume that a site visitor will give you full attention and enough time to read everything carefully.
-  That's why you need to prioritize the key parts of content.
-  </p>
+<p>
+  Mobile menus with many links actually hide content.
+</p>
+<p>
+  You can't assume that a site visitor will give you enough attention and time
+  to read everything on your page carefully.
+  That's why you need to prioritize the key parts.
+  If there's no immediately visible action a user would like to take, you will lose her/him.
+</p>
 
-  <p>In this example I prioritize product section (In practice, it always depends on context).
-     Visitors who are aleready users familiar with the site might want to log in quickly  or find help about the product they use.
-     For them, I used icons and a bit of whitespace to differentiate the links they are looking for.
-     </p>
+<p>
+  In this example I prioritize <i>product</i> and <i>log in</i> section
+  (in practice, it always depends on context and testing).
+</p>
+
+<p>
+  There are also easy to spot icons that will help users get quickly to other crucial pages.
+</p>
 </section>
 
 </div>
