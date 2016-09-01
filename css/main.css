@@ -906,8 +906,8 @@ a.is-active.cc_btn {
   margin: 1em 0 1em 2px; }
 
 .btn-in-txt {
-  background: #fff1ac;
-  color: #363636;
+  background: transparent;
+  color: #2233aa;
   padding: 0 0.25em;
   margin: 0 0.25em;
   border-color: #ffd600;
