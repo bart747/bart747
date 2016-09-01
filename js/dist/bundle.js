@@ -105,21 +105,28 @@
 	(function () {
 
 	  var doc = document;
-	  var formSignIn = doc.getElementById('form-sign-in');
-	  var formSignUp = doc.getElementById('form-sign-up');
-	  var formToggle = doc.getElementsByClassName('sign-in-link');
 
-	  function addListener(activator, form1, form2) {
-	    activator.addEventListener('click', function (event) {
-	      form1.classList.toggle('hidden');
-	      form2.classList.toggle('hidden');
+	  var formsToggle = [].slice.call(doc.getElementsByClassName('forms-toggle'));
+
+	  formsToggle.forEach(function (el) {
+
+	    var btn = el.getElementsByClassName('form-switch');
+	    var formSignIn = el.getElementsByClassName('form-sign-in');
+	    var formSignUp = el.getElementsByClassName('form-sign-up');
+
+	    function hideShow() {
+	      formSignIn[0].classList.toggle('hidden');
+	      formSignUp[0].classList.toggle('hidden');
+	    }
+
+	    btn[0].addEventListener('click', function (_) {
+	      hideShow();
 	    });
-	  }
 
-	  if (formToggle[1]) {
-	    addListener(formToggle[0], formSignIn, formSignUp);
-	    addListener(formToggle[1], formSignIn, formSignUp);
-	  }
+	    btn[1].addEventListener('click', function (_) {
+	      hideShow();
+	    });
+	  });
 	})();
 
 /***/ },

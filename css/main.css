@@ -720,7 +720,7 @@ header .wrapper {
   background: #eee;
   border-radius: 0 0 0.25em 0.25em;
   border-top: 6px solid #2233aa;
-  box-shadow: 0 8px 8px #777;
+  box-shadow: 0 4px 4px #777;
   padding: 1em 1em 1em;
   text-align: left;
   width: auto;
@@ -837,20 +837,20 @@ input.cc-cvc-input {
   margin: 0 auto; }
 
 .form-boring input {
-  font-size: 18px;
+  font-size: 0.9em;
   padding: 0.4em; }
 
 .form-boring label {
   margin: 0.5rem 0 0; }
 
-.form-fieldset-toggle {
+.forms-toggle {
   height: 25em; }
   @media screen and (max-width: 568px) {
-    .form-fieldset-toggle {
+    .forms-toggle {
       height: 28em; } }
 
-#form-sign-up,
-#form-sign-in {
+.form-sign-up,
+.form-sign-in {
   -webkit-animation-name: show-up;
   animation-name: show-up;
   -webkit-animation-duration: 0.5s;
@@ -976,13 +976,13 @@ a.is-active.cc_btn {
   font-size: 21px; }
 
 .home-example-ui {
-  box-shadow: 0 1px 5px 0 #777;
+  box-shadow: 0 1px 4px 0 #777;
   border-radius: 0.25em;
   padding: 1em;
-  margin: 3em auto; }
+  margin: 2em auto; }
 
 .home-example-toggle-menu {
-  height: 30em;
+  height: 31em;
   margin: 0 auto; }
 
 .home-pic img {

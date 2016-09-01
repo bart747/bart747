@@ -36,84 +36,270 @@ layout: default
   <section class="center">
     <h1>Before & After Examples</h1>
 
-    <h2 id="form-boring-home">Typical Signup Form:</h2>
-    <div class="home-example-ui form-wrapper-narrow center">
-      <form class="form-boring inputs-long">
+    <section class=" ">
 
-        <fieldset>
-          <label for="email1-expo">Email</label>
-          <input type="email" id="email1-expo">
-          <label for="password1-expo">Password</label>
-          <input type="password" id="password1-expo">
-          <div class="txt-secondary">at least 8 characters including a number</div>
-        </fieldset>
+    <h2 id="form-boring-home">Sign up & Sign in Forms</h2>
 
-        <button type="button">Sign up</button>
+    <div class="grid wrapper-small">
 
-        <p class="txt-secondary">Already a user? <a href="#form-boring-home">Sign in</a>.</p>
+      <div class="col col-50-50">
 
-      </form>
+      <h3>Before</h3>
+
+        <div class="form-boring
+                    forms-toggle
+                    form-wrapper-narrow
+                    home-example-ui
+                    center">
+
+                    
+
+          <form class="form-sign-up">
+            <h3>Sign up</h3>
+
+            <fieldset>
+              <label for="email2-expo">Email</label>
+              <input type="email" id="email2-expo">
+              <label for="password2-expo">Password</label>
+              <input type="password" id="password2-expo">
+              <div class="txt-secondary">8+ characters including a number</div>
+            </fieldset>
+
+            <button type="button">Sign up</button>
+
+            <p class="txt-secondary">Already a user? <span class="link-like form-switch">Sign in</span></p>
+          </form>
+
+          <form class="form-sign-in hidden">
+            <h3>Sign in</h3>
+
+            <fieldset>
+              <label for="email3-expo">Email</label>
+              <input type="email" id="email3-expo">
+              <label for="password3-expo">Password</label>
+              <input type="password" id="password3-expo">
+            </fieldset>
+
+            <button type="button">Sign in</button>
+
+            <p class="txt-secondary">Don't have an account? <span class="link-like form-switch">Sign up</span></p>
+
+          </form>
+        </div>
+      </div>
+
+      <div class="col col-50-50">
+
+        <h3>After</h3>
+
+        <div class="forms-toggle
+                    form-wrapper-narrow
+                    home-example-ui
+                    center"> 
+
+          <form class="form-sign-up">
+            <h3>Create Account</h3>
+
+            <fieldset>
+              <label for="email2-expo">Your Email</label>
+              <input type="email" id="email2-expo">
+              <label for="password2-expo">Create Password</label>
+              <input type="password" id="password2-expo">
+              <div class="txt-secondary">8+ characters including a number</div>
+            </fieldset>
+
+            <button type="button">Create Free Account</button>
+
+            <p class="txt-secondary">Already got one? <span class="btn btn-in-txt form-switch">Log in</span></p>
+          </form>
+
+          <form class="form-sign-in hidden">
+            <h3>Log in</h3>
+
+            <fieldset>
+              <label for="email3-expo">Your Email</label>
+              <input type="email" id="email3-expo">
+              <label for="password3-expo">Your Password</label>
+              <input type="password" id="password3-expo">
+            </fieldset>
+
+            <button type="button">Log in</button>
+
+            <p class="txt-secondary">Don't have an account? <span class="btn btn-in-txt form-switch">Sign up</span></p>
+
+          </form>
+        </div>
+      </div>
+      </div>
+
+
+      <p>Sign up and sign in forms can be confusing. Aren't they?</p>
+      
+      <p> 
+        Lets assume that you want to log in but what you see is a sing up page.
+        In the <i>after</i> example, you can notice a switch button easily.
+        The appropriate form will appear without a page reload.
+      </p>
+      <p>
+        Labels won't confuse you.
+        For example: there's a significant difference between <i>your password</i> and <i>create password</i>.
+        <i>Create Free Account</i> is also more descriptive call to action.
+      </p>
+      <p>
+        Input text has great readability because of bigger font size and more whitespace.
+      </p>
+
+
+
+    </section>
+
+
+    <section class="">
+    <h2>Big Mobile Menu</h2>
+
+    <div class="grid wrapper-small">
+
+      <div class="home-example-toggle-menu col col-50-50">
+      <h3>Before</h3>
+
+        <div class="menu-list menu-toggle ">
+
+          <button class="menu-toggle-btn is-switchable toggle-is-on">
+            menu 
+          </button>
+
+          <div class="menu-toggle-content"> 
+
+          <ul>
+            <li class=" ">
+              <span class="link-like">
+                
+                products</a>
+            </li>
+            <li>
+              <span class="link-like">case studies</span>
+            </li>
+            <li>
+              <span class="link-like">guides</span>
+            </li>
+            <li>
+              <span class="link-like">blog</span>
+            </li>
+            <li>
+              <span class="link-like">for developers</span>
+            </li>
+            <li>
+              <span class="link-like">our team</span>
+            </li>
+            <li>
+              <span class="link-like">contact</span>
+            </li>
+            <li class=" ">
+              <span class="link-like">
+                
+                FAQ & help
+              </span>
+            </li>
+            <li class=" ">
+              <span class="link-like">
+                free trial
+              </span>
+            </li>
+            <li class=" ">
+              <span class="link-like">
+                
+                log in
+              </span>
+            </li>
+          </ul>
+          </div>
+        
+        </div>
+        
+      </div>
+
+      <div class="home-example-toggle-menu col col-50-50">
+      <h3>After</h3>
+
+        <div class="menu-list menu-toggle menu-icons ">
+
+          <button class="menu-toggle-btn is-switchable toggle-is-on">
+            menu 
+          </button>
+          &emsp;
+          <span class="link-like">
+            products
+          </span>
+          &emsp;
+          <span class="link-like">
+            log in
+          </span>
+          
+
+          <div class="menu-toggle-content"> 
+
+          <ul>
+            <li>
+              <span class="link-like">case studies</span>
+            </li>
+            <li>
+              <span class="link-like">guides</span>
+            </li>
+            <li>
+              <span class="link-like">blog</span>
+            </li>
+            <li>
+              <span class="link-like">for developers</span>
+            </li>
+            <li>
+              <span class="link-like">our team</span>
+            </li>
+            <li>
+              <span class="link-like">contact</span>
+            </li>
+
+            <br>
+            <li class="li-has-icon">
+              <span class="link-like">
+                <span class="icon ion-help-circled purple"></span>
+                FAQ & help
+              </span>
+            </li>
+            <li class="li-has-icon">
+              <span class="link-like">
+                <span class="icon ion-log-in purple"></span>
+                get started with free trial
+              </span>
+            </li>
+
+          </ul>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
 
-
-    <div class=" ">
-    <p>It's not bad, but if you already have an account, you need to go to other page by clicking a tiny link.</p>
-    <p>The form is the main thing here, so the “redirect” link is not visible at a glance.
-        A user might be confused also because sign-up and sign-in forms can look similar.</p>
-    </div>
-    <h2>After Redesign:</h2>
-
-    <div class="form-fieldset-toggle
-                form-wrapper-narrow
-                home-example-ui
-                center">
-
-      <form id="form-sign-up" class=" ">
-        <h3>Create an Account</h3>
-
-        <fieldset>
-          <label for="email2-expo">Your Email</label>
-          <input type="email" id="email2-expo">
-          <label for="password2-expo">Create a Password</label>
-          <input type="password" id="password2-expo">
-          <div class="txt-secondary">at least 8 characters including a number</div>
-        </fieldset>
-
-        <button type="button">Create an Account</button>
-
-        <p class="txt-secondary">Already got one? <span class="btn btn-in-txt sign-in-link">Log in</span></p>
-      </form>
-
-      <form id="form-sign-in" class="hidden">
-        <h3>Log in</h3>
-
-        <fieldset>
-          <label for="email3-expo">Your Email</label>
-          <input type="email" id="email3-expo">
-          <label for="password3-expo">Your Password</label>
-          <input type="password" id="password3-expo">
-        </fieldset>
-
-        <button type="button">Log in</button>
-
-        <p class="txt-secondary">Need to create a new account? <span class="btn btn-in-txt sign-in-link">Sign up</span></p>
-
-      </form>
-    </div>
-    
-    <div class=" ">
-     <p>
-        Now you can switch forms easily.
-        The appropriate one will appear without the page reload.
-     </p>
-     <p>
-        Input labels won't confuse you &mdash;
-        there's a significant difference between “your password” and “create a new password”.
-        Input text is more readable because of bigger font size and more whitespace.
-     </p>
-    </div>
+    <p>
+      Mobile menus with many links actually hide content.
+    </p>
+    <p>
+      If there's no immediately visible action a user would like to take, you will lose her or him.
+      You can't expect that a site visitor will give you full attention and more time than several seconds.
+      That's why you need to prioritize the key parts.  
+    </p>
+    <p>
+      In this example I put <i>product</i> and <i>log in</i> sections on the top shelf.
+      In practice, it always depends on context and testing.
+    </p>
+    <p>
+      There are also easy to spot icons that will help users get faster to other crucial pages.
+    </p>
+    </section>
   </section>
 
+<hr>
   <section>
 
     <div class="grid">

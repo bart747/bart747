@@ -88,8 +88,6 @@ form .icon {
   animation-iteration-count: 1;
 }
 
-
-
 input.cc-exp-input,
 input.cc-cvc-input {
   max-width: 150px;
@@ -106,7 +104,7 @@ input.cc-cvc-input {
 }
 
 .form-boring input {
-  font-size: $small-font-size;
+  font-size: 0.9em;
   padding: 0.4em;
 }
 
@@ -114,15 +112,15 @@ input.cc-cvc-input {
   margin: 0.5rem 0 0;
 }
 
-.form-fieldset-toggle {
+.forms-toggle {
   height: 25em;
   @media screen and (max-width: $screen-sml) {
     height: 28em;
   }
 }
 
-#form-sign-up,
-#form-sign-in {
+.form-sign-up,
+.form-sign-in {
   animation-name: show-up;
   animation-duration: 0.5s;
   animation-timing-function: ease-out;

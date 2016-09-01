@@ -6,82 +6,116 @@ layout: default
 
 <section class=" ">
 
-<h2 id="form-boring-home">Typical Signup Form:</h2>
+<h2 id="form-boring-home">Sign up & Sign in Forms</h2>
 
 <div class="grid wrapper-small">
-  <div class="home-example-ui form-wrapper-narrow center col col-50-50">
-    <form class="form-boring inputs-long">
-      <h3>Sign up</h3>
 
-      <fieldset>
-        <label for="email1-expo">Email</label>
-        <input type="email" id="email1-expo">
-        <label for="password1-expo">Password</label>
-        <input type="password" id="password1-expo">
-        <div class="txt-secondary">at least 8 characters including a number</div>
-      </fieldset>
+  <div class="col col-50-50">
 
-      <button type="button">Sign up</button>
+  <h3>Before</h3>
 
-      <p class="txt-secondary">Already a user? <a href="#form-boring-home">Sign in</a>.</p>
+    <div class="form-boring
+                forms-toggle
+                form-wrapper-narrow
+                home-example-ui
+                center">
 
-    </form>
+                
+
+      <form class="form-sign-up">
+        <h3>Sign up</h3>
+
+        <fieldset>
+          <label for="email2-expo">Email</label>
+          <input type="email" id="email2-expo">
+          <label for="password2-expo">Password</label>
+          <input type="password" id="password2-expo">
+          <div class="txt-secondary">8+ characters including a number</div>
+        </fieldset>
+
+        <button type="button">Sign up</button>
+
+        <p class="txt-secondary">Already a user? <span class="link-like form-switch">Sign in</span></p>
+      </form>
+
+      <form class="form-sign-in hidden">
+        <h3>Sign in</h3>
+
+        <fieldset>
+          <label for="email3-expo">Email</label>
+          <input type="email" id="email3-expo">
+          <label for="password3-expo">Password</label>
+          <input type="password" id="password3-expo">
+        </fieldset>
+
+        <button type="button">Sign in</button>
+
+        <p class="txt-secondary">Don't have an account? <span class="link-like form-switch">Sign up</span></p>
+
+      </form>
+    </div>
   </div>
 
-  <div class="form-fieldset-toggle
-              form-wrapper-narrow
-              home-example-ui
-              center
-              col col-50-50">
+  <div class="col col-50-50">
 
-    <form id="form-sign-up" class=" ">
-      <h3>Create an Account</h3>
+    <h3>After</h3>
 
-      <fieldset>
-        <label for="email2-expo">Your Email</label>
-        <input type="email" id="email2-expo">
-        <label for="password2-expo">Create a Password</label>
-        <input type="password" id="password2-expo">
-        <div class="txt-secondary">at least 8 characters including a number</div>
-      </fieldset>
+    <div class="forms-toggle
+                form-wrapper-narrow
+                home-example-ui
+                center"> 
 
-      <button type="button">Create an Account</button>
+      <form class="form-sign-up">
+        <h3>Create Account</h3>
 
-      <p class="txt-secondary">Already got one? <span class="btn btn-in-txt sign-in-link">Log in</span></p>
-    </form>
+        <fieldset>
+          <label for="email2-expo">Your Email</label>
+          <input type="email" id="email2-expo">
+          <label for="password2-expo">Create Password</label>
+          <input type="password" id="password2-expo">
+          <div class="txt-secondary">8+ characters including a number</div>
+        </fieldset>
 
-    <form id="form-sign-in" class="hidden">
-      <h3>Log in</h3>
+        <button type="button">Create Free Account</button>
 
-      <fieldset>
-        <label for="email3-expo">Your Email</label>
-        <input type="email" id="email3-expo">
-        <label for="password3-expo">Your Password</label>
-        <input type="password" id="password3-expo">
-      </fieldset>
+        <p class="txt-secondary">Already got one? <span class="btn btn-in-txt form-switch">Log in</span></p>
+      </form>
 
-      <button type="button">Log in</button>
+      <form class="form-sign-in hidden">
+        <h3>Log in</h3>
 
-      <p class="txt-secondary">Need to create a new account? <span class="btn btn-in-txt sign-in-link">Sign up</span></p>
+        <fieldset>
+          <label for="email3-expo">Your Email</label>
+          <input type="email" id="email3-expo">
+          <label for="password3-expo">Your Password</label>
+          <input type="password" id="password3-expo">
+        </fieldset>
 
-    </form>
+        <button type="button">Log in</button>
+
+        <p class="txt-secondary">Don't have an account? <span class="btn btn-in-txt form-switch">Sign up</span></p>
+
+      </form>
+    </div>
   </div>
   </div>
 
 
-  <p>Sign up and Sign in forms can be confusing. Aren't they?
+  <p>Sign up and sign in forms can be confusing. Aren't they?</p>
    
-    <p> 
-      Lets assume that you want to log in but what you see is a sing up page.
-      In the “after” example, you can switch to the right form easily.
-      The appropriate one will appear without the page reload.
-      [The first one uses link (inactive here) to other page.]
-    </p>
-    <p>
-      Input labels won't confuse you &mdash;
-      there's a significant difference between “your password” and “create a password”.
-      Input text is more readable because of bigger font size and more whitespace.
-    </p>
+  <p> 
+    Lets assume that you want to log in but what you see is a sing up page.
+    In the <i>after</i> example, you can notice a switch button easily.
+    The appropriate form will appear without a page reload.
+  </p>
+  <p>
+    Labels won't confuse you.
+    For example: there's a significant difference between <i>your password</i> and <i>create password</i>.
+    <i>Create Free Account</i> is also more descriptive call to action.
+  </p>
+  <p>
+    Input text has great readability because of bigger font size and more whitespace.
+  </p>
 
 
 
@@ -219,19 +253,16 @@ layout: default
   Mobile menus with many links actually hide content.
 </p>
 <p>
-  You can't assume that a site visitor will give you enough attention and time
-  to read everything on your page carefully.
-  That's why you need to prioritize the key parts.
-  If there's no immediately visible action a user would like to take, you will lose her/him.
+  If there's no immediately visible action a user would like to take, you will lose her or him.
+  You can't expect that a site visitor will give you full attention and more time than several seconds.
+  That's why you need to prioritize the key parts.  
 </p>
-
 <p>
-  In this example I prioritize <i>product</i> and <i>log in</i> section
-  (in practice, it always depends on context and testing).
+  In this example I put <i>product</i> and <i>log in</i> sections on the top shelf.
+  In practice, it always depends on context and testing.
 </p>
-
 <p>
-  There are also easy to spot icons that will help users get quickly to other crucial pages.
+  There are also easy to spot icons that will help users get faster to other crucial pages.
 </p>
 </section>
 
