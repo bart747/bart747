@@ -637,13 +637,10 @@ header .wrapper {
   margin: 0 1em 0 0; }
 
 .icon-logo {
-  line-height: 1;
-  margin: 0 auto; }
-
-.icon-logo {
   background: #ffd600;
   border-color: #665600;
-  color: #222; }
+  color: #222;
+  line-height: 1; }
   .icon-logo:active, .icon-logo:hover {
     background: #ec4422; }
   .icon-logo:active {
@@ -1069,6 +1066,10 @@ img {
   to {
     opacity: 1; } }
 
+svg {
+  margin: 0 auto;
+  width: 100%; }
+
 .error-icon {
   margin: 2em 0 1em; }
 
@@ -1247,6 +1248,10 @@ a.cc_btn {
   -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
   fill: #ffd600; }
+
+#crest-txt {
+  font-size: 40px;
+  font-weight: bold; }
 
 @-webkit-keyframes crest-rect {
   0% {

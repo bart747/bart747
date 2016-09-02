@@ -26,15 +26,10 @@ header .wrapper {
 }
 
 .icon-logo {
- // text-align: center;
-  line-height: 1;
-  margin: 0 auto;
-}
-
-.icon-logo {
   background: $yellow;
   border-color: darken($yellow, 30%);
   color: $black;
+  line-height: 1;
   
   &:active, &:hover {
     background: $orange-deep;
