@@ -82,14 +82,17 @@ layout: default
             <h3>Sign up</h3>
 
             <fieldset>
-              <label for="email2-expo">Email</label>
-              <input type="email" id="email2-expo">
-              <label for="password2-expo">Password</label>
-              <input type="password" id="password2-expo">
+
+              <label for="email1-expo">Email</label>
+              <input type="email" id="email1-expo" required>
+
+              <label for="password1-expo">Password</label>
+              <input type="password" id="password1-expo" pattern=".{8,}" required>
               <div class="txt-secondary">8+ characters including a number</div>
+
             </fieldset>
 
-            <button type="button">Sign up</button>
+            <button class="btn-prevent">Sign up</button>
 
             <p class="txt-secondary">Already a user? <span class="link-like form-switch">Sign in</span></p>
           </form>
@@ -98,13 +101,16 @@ layout: default
             <h3>Sign in</h3>
 
             <fieldset>
-              <label for="email3-expo">Email</label>
-              <input type="email" id="email3-expo">
-              <label for="password3-expo">Password</label>
-              <input type="password" id="password3-expo">
+
+              <label for="email2-expo">Email</label>
+              <input type="email" id="email2-expo" required>
+
+              <label for="password2-expo">Password</label>
+              <input type="password" id="password2-expo" pattern=".{8,}" required>
+
             </fieldset>
 
-            <button type="button">Sign in</button>
+            <button class="btn-prevent">Sign in</button>
 
             <p class="txt-secondary">Don't have an account? <span class="link-like form-switch">Sign up</span></p>
 
@@ -125,14 +131,17 @@ layout: default
             <h3>Create Account</h3>
 
             <fieldset>
+
               <label for="email2-expo">Your Email</label>
-              <input type="email" id="email2-expo">
+              <input type="email" id="email2-expo" required>
+
               <label for="password2-expo">Create Password</label>
-              <input type="password" id="password2-expo">
+              <input type="password" id="password2-expo" pattern=".{8,}" required>
               <div class="txt-secondary">8+ characters including a number</div>
+
             </fieldset>
 
-            <button type="button">Create Free Account</button>
+            <button class="btn-prevent">Create Free Account</button>
 
             <p class="txt-secondary">Already got one? <span class="btn btn-in-txt form-switch">Log in</span></p>
           </form>
@@ -141,13 +150,16 @@ layout: default
             <h3>Log in</h3>
 
             <fieldset>
+
               <label for="email3-expo">Your Email</label>
-              <input type="email" id="email3-expo">
+              <input type="email" id="email3-expo" required>
+
               <label for="password3-expo">Your Password</label>
-              <input type="password" id="password3-expo">
+              <input type="password" id="password3-expo" pattern=".{8,}" required>
+
             </fieldset>
 
-            <button type="button">Log in</button>
+            <button class="btn-prevent">Log in</button>
 
             <p class="txt-secondary">Don't have an account? <span class="btn btn-in-txt form-switch">Sign up</span></p>
 
