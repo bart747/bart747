@@ -19,7 +19,7 @@ button,
 
   &:hover, &:active {
     background: $blue-dark;
-    transition: 0.2s ease;
+    transition: all 0.2s ease;
   }
   &:active {
     border-color: $blue-dark;

@@ -885,7 +885,7 @@ a.cc_btn {
   .btn:active,
   a.cc_btn:active {
     background: #2233aa;
-    transition: 0.2s ease; }
+    transition: all 0.2s ease; }
   button:active,
   .btn:active,
   a.cc_btn:active {
@@ -1241,8 +1241,8 @@ a.cc_btn {
 #crest-rect {
   -webkit-animation-name: crest-rect;
   animation-name: crest-rect;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 1.25s;
+  animation-duration: 1.25s;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   -webkit-animation-timing-function: ease-in;
