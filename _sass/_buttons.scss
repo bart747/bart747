@@ -9,9 +9,9 @@ button,
   color: #fff;
   cursor: pointer;
   background: $blue;
-  border: solid $blue-dark;
+  border: solid $blue-night;
   border-width: 1px 1px 3px;
-  border-radius: 3px;
+  border-radius: $radius;
   padding: 0.4em 1em;
   text-align: center;
   margin: 0.5rem 0;
@@ -22,7 +22,7 @@ button,
     transition: 0.2s ease;
   }
   &:active {
-    text-shadow: 0 0 5px;
+    border-color: $blue-dark;
   }
 }
 
@@ -127,6 +127,7 @@ button.is-active,
 
 .toggle-is-on {
   background: $blue-dark;
+  border-color: $blue-dark;
   color: $yellow-light;
   text-shadow: 0 0 6px;
   transition: 0.2s ease;

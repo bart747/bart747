@@ -23,7 +23,7 @@ label {
 
 input {
   border: 2px solid $grey;
-  border-radius: 4px;
+  border-radius: $radius;
   display: inline-block;
   font-size: $base-font-size;
   margin: 0;

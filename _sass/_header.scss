@@ -31,6 +31,19 @@ header .wrapper {
   margin: 0 auto;
 }
 
+.icon-logo {
+  background: $yellow;
+  border-color: darken($yellow, 30%);
+  color: $black;
+  
+  &:active, &:hover {
+    background: $orange-deep;
+  }
+  &:active {
+    border-color: $orange-deep;
+  }
+}
+
 .icon-logo img {
   max-width: 25px;
   height: auto;
@@ -40,3 +53,4 @@ header .wrapper {
     transform: rotate(45deg);
   }
 }
+

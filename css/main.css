@@ -398,13 +398,13 @@ th {
   max-width: 200px; }
 
 .blue {
-  color: #3355bb; }
+  color: #4466cc; }
 
 .blue-dark {
   color: #2233aa; }
 
 .blue-night {
-  color: #102060; }
+  color: #102070; }
 
 .red {
   color: #E02020; }
@@ -477,7 +477,7 @@ a {
   color: #2233aa;
   text-decoration: none; }
   a:active, a:hover {
-    color: #E02020;
+    color: #ec4422;
     transition: color 0.25s; }
 
 .page {
@@ -640,6 +640,15 @@ header .wrapper {
   line-height: 1;
   margin: 0 auto; }
 
+.icon-logo {
+  background: #ffd600;
+  border-color: #665600;
+  color: #222; }
+  .icon-logo:active, .icon-logo:hover {
+    background: #ec4422; }
+  .icon-logo:active {
+    border-color: #ec4422; }
+
 .icon-logo img {
   max-width: 25px;
   height: auto;
@@ -764,7 +773,7 @@ label {
 
 input {
   border: 2px solid #777;
-  border-radius: 4px;
+  border-radius: 0.25em;
   display: inline-block;
   font-size: 21px;
   margin: 0;
@@ -774,7 +783,7 @@ input {
   transition: border-color 0.25s; }
 
 input:focus {
-  border-color: #3355bb;
+  border-color: #4466cc;
   box-shadow: 0 0 2px #00aadd inset;
   outline: none; }
 
@@ -865,10 +874,10 @@ a.cc_btn {
   outline: none;
   color: #fff;
   cursor: pointer;
-  background: #3355bb;
-  border: solid #2233aa;
+  background: #4466cc;
+  border: solid #102070;
   border-width: 1px 1px 3px;
-  border-radius: 3px;
+  border-radius: 0.25em;
   padding: 0.4em 1em;
   text-align: center;
   margin: 0.5rem 0;
@@ -883,7 +892,7 @@ a.cc_btn {
   button:active,
   .btn:active,
   a.cc_btn:active {
-    text-shadow: 0 0 5px; }
+    border-color: #2233aa; }
 
 button.is-active,
 .btn.is-active,
@@ -968,6 +977,7 @@ a.is-active.cc_btn {
 
 .toggle-is-on {
   background: #2233aa;
+  border-color: #2233aa;
   color: #fff1ac;
   text-shadow: 0 0 6px;
   transition: 0.2s ease; }
@@ -1059,11 +1069,6 @@ img {
   to {
     opacity: 1; } }
 
-svg {
-  width: 100%;
-  height: auto;
-  margin: 0 auto; }
-
 .error-icon {
   margin: 2em 0 1em; }
 
@@ -1116,7 +1121,7 @@ a.cc_btn {
   .highlight .k {
     color: #7722bb; }
   .highlight .o {
-    color: #3355bb; }
+    color: #4466cc; }
   .highlight .p {
     color: #777; }
   .highlight .cm {
@@ -1227,10 +1232,67 @@ a.cc_btn {
   .highlight .vi {
     color: #2233aa; }
   .highlight .il {
-    color: #3355bb; }
+    color: #4466cc; }
   .highlight .lineno {
     color: #bbb;
     margin-right: 0.5rem; }
+
+#crest-rect {
+  -webkit-animation-name: crest-rect;
+  animation-name: crest-rect;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  fill: #ffd600; }
+
+@-webkit-keyframes crest-rect {
+  0% {
+    rx: 5;
+    ry: 5; }
+  30% {
+    rx: 30;
+    ry: 30; }
+  55% {
+    rx: 17;
+    ry: 17; }
+  85% {
+    rx: 23;
+    ry: 23; }
+  100% {
+    rx: 20;
+    ry: 20; } }
+
+@keyframes crest-rect {
+  0% {
+    rx: 5;
+    ry: 5; }
+  30% {
+    rx: 30;
+    ry: 30; }
+  55% {
+    rx: 17;
+    ry: 17; }
+  85% {
+    rx: 23;
+    ry: 23; }
+  100% {
+    rx: 20;
+    ry: 20; } }
+
+@-webkit-keyframes crest-txt {
+  0% {
+    opacity: 0.25; }
+  100% {
+    opacity: 1; } }
+
+@keyframes crest-txt {
+  0% {
+    opacity: 0.25; }
+  100% {
+    opacity: 1; } }
 
 .travel-time {
   display: -webkit-flex;
@@ -1314,7 +1376,7 @@ a.cc_btn {
 .tt-plane:before {
   font-family: "Ionicons";
   font-size: 1.3em;
-  color: #3355bb;
+  color: #4466cc;
   content: "\f3a4";
   margin-right: 0.25em; }
 
