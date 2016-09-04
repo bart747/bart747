@@ -86,7 +86,7 @@ layout: default
             <fieldset>
 
               <label for="email1-expo">Email</label>
-              <input type="email" id="email1-expo" required>
+              <input type="email" id="email1-expo" autocomplete="email" required>
 
               <label for="password1-expo">Password</label>
               <input type="password" id="password1-expo" pattern=".{8,}" required>
@@ -105,7 +105,7 @@ layout: default
             <fieldset>
 
               <label for="email2-expo">Email</label>
-              <input type="email" id="email2-expo" required>
+              <input type="email" id="email2-expo" autocomplete="email" required>
 
               <label for="password2-expo">Password</label>
               <input type="password" id="password2-expo" pattern=".{8,}" required>
@@ -133,13 +133,23 @@ layout: default
             <h3>Create Account</h3>
 
             <fieldset>
+              
+              <div class="validate">
+                <label for="email2-expo">Your Email
+                  <span class="icon icon-error ion-android-sad"></span>
+                  <span class="icon icon-success ion-android-happy"></span>
+                </label>
+                <input type="email" id="email2-expo" autocomplete="email" pattern="^[^@\s]+@[^@\s]+[^@.\s]+$" required>
+              </div>
 
-              <label for="email2-expo">Your Email</label>
-              <input type="email" id="email2-expo" class="validate" pattern="^[^@\s]+@[^@\s]+[.][^@\s]+[^.\s]$" required>
-
-              <label for="password2-expo">Create Password</label>
-              <input type="password" id="password2-expo" class="validate" pattern=".{8,}" required>
-              <div class="txt-secondary">8+ characters including a number</div>
+              <div class="validate">
+                <label for="password2-expo">Create Password
+                  <span class="icon icon-error ion-android-sad"></span>
+                  <span class="icon icon-success ion-android-happy"></span>
+                </label>
+                <input type="password" id="password2-expo" class="input-password" pattern=".{8,}" required>
+                <div class="txt-secondary">8+ characters including a number</div>
+              </div>
 
             </fieldset>
 
@@ -152,13 +162,21 @@ layout: default
             <h3>Log in</h3>
 
             <fieldset>
+              <div class="validate">
+                <label for="email3-expo">Your Email
+                  <span class="icon icon-error ion-android-sad"></span>
+                  <span class="icon icon-success ion-android-happy"></span>
+                </label>
+                <input type="email" id="email3-expo" autocomplete="email" pattern="^[^@\s]+@[^@\s]+[^@.\s]+$" required>
+              </div>
 
-              <label for="email3-expo">Your Email</label>
-              <input type="email" id="email3-expo" class="validate" pattern="^[^@\s]+@[^@\s]+[.][^@\s]+[^.\s]$" required>
-
-              <label for="password3-expo">Your Password</label>
-              <input type="password" id="password3-expo" class="validate" pattern=".{8,}" required>
-
+              <div class="validate">
+                <label for="password3-expo">Your Password
+                  <span class="icon icon-error ion-android-sad"></span>
+                  <span class="icon icon-success ion-android-happy"></span>
+                </label>
+                <input type="password" id="password3-expo" class="" pattern=".{8,}" required>
+              </div>
             </fieldset>
 
             <button class="btn-prevent">Log in</button>
@@ -178,6 +196,7 @@ layout: default
         In the <i>after</i> example, you can notice a switch button easily.
         The appropriate form will appear without a page reload.
       </p>
+
       <p>
         Labels won't confuse you.
         For example: there's a significant difference between <i>your password</i> and <i>create password</i>.
@@ -187,7 +206,10 @@ layout: default
         Input text has great readability because of bigger font size and more whitespace.
       </p>
 
-
+      <p>The <i>after</i> example does also <b>live validation</b>.
+        Try to type in an email address with two <i>@</i> symbols.
+        Errors will be detected right after you'll switch to another input field.
+      </p>
 
     </section>
 

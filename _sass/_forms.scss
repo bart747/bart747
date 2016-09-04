@@ -36,7 +36,6 @@ input {
 
 input:focus {
   border-color: $blue;
-  box-shadow: 0 0 2px $blue-light inset;
   outline: none;
 }
 
@@ -62,19 +61,29 @@ input.input-icon {
   height: 4.5em;
 }
 
-input.input-success {
+.validate.input-success input {
   border-color: $green;
 }
 
-input.input-error {
+.validate.input-error input {
   border-color: $red;
-  box-shadow: 0 0 2px $red inset;
-
 }
 
-input.input-error .icon {
+.validate .icon-error,
+.validate .icon-success {
+  display: none;
+}
+
+.validate.input-error .icon-error {
+  color: $red;
   display: inline;
 }
+
+.validate.input-success .icon-success {
+  color: $green;
+  display: inline;
+}
+
 form .icon {
   padding: 0 0.5em;
 }

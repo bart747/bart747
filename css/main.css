@@ -784,7 +784,6 @@ input {
 
 input:focus {
   border-color: #4466cc;
-  box-shadow: 0 0 2px #00aadd inset;
   outline: none; }
 
 .inputs-long input {
@@ -804,14 +803,22 @@ input.input-icon {
 .input-line-fixed {
   height: 4.5em; }
 
-input.input-success {
+.validate.input-success input {
   border-color: #189560; }
 
-input.input-error {
-  border-color: #E02020;
-  box-shadow: 0 0 2px #E02020 inset; }
+.validate.input-error input {
+  border-color: #E02020; }
 
-input.input-error .icon {
+.validate .icon-error,
+.validate .icon-success {
+  display: none; }
+
+.validate.input-error .icon-error {
+  color: #E02020;
+  display: inline; }
+
+.validate.input-success .icon-success {
+  color: #189560;
   display: inline; }
 
 form .icon {
