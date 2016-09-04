@@ -137,7 +137,7 @@
 
 	      if (input) {
 
-	        input.addEventListener('focusout', function (_) {
+	        input.addEventListener('blur', function (_) {
 
 	          onKeyupValid(el, input);
 

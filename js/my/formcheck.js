@@ -23,7 +23,7 @@ if (inputDivs[0]) {
 
     if (input) {
 
-      input.addEventListener('focusout', _=> {
+      input.addEventListener('blur', _=> {
 
         onKeyupValid(el, input);
 
