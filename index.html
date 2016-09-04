@@ -135,15 +135,15 @@ layout: default
             <fieldset>
 
               <label for="email2-expo">Your Email</label>
-              <input type="email" id="email2-expo" pattern="^.+@[^@\s]+[^.\s]$" required>
+              <input type="email" id="email2-expo" class="validate" pattern="^[^@\s]+@[^@\s]+[.][^@\s]+[^.\s]$" required>
 
               <label for="password2-expo">Create Password</label>
-              <input type="password" id="password2-expo" pattern=".{8,}" required>
+              <input type="password" id="password2-expo" class="validate" pattern=".{8,}" required>
               <div class="txt-secondary">8+ characters including a number</div>
 
             </fieldset>
 
-            <button type="submit" class="btn-prevent">Create Free Account</button>
+            <button class="btn-prevent">Create Free Account</button>
 
             <p class="txt-secondary">Already got one? <span class="btn btn-in-txt form-switch">Log in</span></p>
           </form>
@@ -154,10 +154,10 @@ layout: default
             <fieldset>
 
               <label for="email3-expo">Your Email</label>
-              <input type="email" id="email3-expo" pattern="^.+@[^@\s]+[^.\s]}$" required>
+              <input type="email" id="email3-expo" class="validate" pattern="^[^@\s]+@[^@\s]+[.][^@\s]+[^.\s]$" required>
 
               <label for="password3-expo">Your Password</label>
-              <input type="password" id="password3-expo" pattern=".{8,}" required>
+              <input type="password" id="password3-expo" class="validate" pattern=".{8,}" required>
 
             </fieldset>
 

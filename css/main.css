@@ -361,6 +361,9 @@ th {
 .left {
   text-align: left; }
 
+.small {
+  font-size: 16px; }
+
 .txt-secondary {
   color: #444444;
   font-size: 16px;
@@ -805,7 +808,11 @@ input.input-success {
   border-color: #189560; }
 
 input.input-error {
-  border-color: #E02020; }
+  border-color: #E02020;
+  box-shadow: 0 0 2px #E02020 inset; }
+
+input.input-error .icon {
+  display: inline; }
 
 form .icon {
   padding: 0 0.5em; }

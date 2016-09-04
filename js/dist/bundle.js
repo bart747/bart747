@@ -48,7 +48,7 @@
 
 	var switchGeneral = __webpack_require__(1);
 	var toggleMenu = __webpack_require__(2);
-	var formSwitch = __webpack_require__(3);
+	var formCheck = __webpack_require__(3);
 	var linkStates = __webpack_require__(4);
 	var paymentPlugin = __webpack_require__(5);
 	var formsCommerce = __webpack_require__(6);
@@ -115,29 +115,30 @@
 
 	(function () {
 
-	  var doc = document;
+	  var inputs = [].slice.call(document.getElementsByClassName("validate"));
 
-	  var formsToggle = [].slice.call(doc.getElementsByClassName('forms-toggle'));
+	  if (inputs[0]) {
 
-	  formsToggle.forEach(function (el) {
+	    inputs.forEach(function (el) {
 
-	    var btn = el.getElementsByClassName('form-switch');
-	    var formSignIn = el.getElementsByClassName('form-sign-in');
-	    var formSignUp = el.getElementsByClassName('form-sign-up');
+	      el.addEventListener('focusout', function (_) {
+	        if (el.validity.patternMismatch) {
 
-	    function hideShow() {
-	      formSignIn[0].classList.toggle('hidden');
-	      formSignUp[0].classList.toggle('hidden');
-	    }
+	          el.classList.add('input-error');
 
-	    btn[0].addEventListener('click', function (_) {
-	      hideShow();
+	          el.addEventListener('keyup', function (_) {
+	            if (el.validity.valid) {
+	              el.classList.remove('input-error');
+	            } else {
+	              el.classList.add('input-error');
+	            }
+	          });
+	        } else if (el.validity.valid && el.classList.contains('input-error')) {
+	          el.classList.remove('input-error');
+	        }
+	      });
 	    });
-
-	    btn[1].addEventListener('click', function (_) {
-	      hideShow();
-	    });
-	  });
+	  }
 	})();
 
 /***/ },

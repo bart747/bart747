@@ -12,6 +12,10 @@
   text-align: left;
  }
 
+.small {
+  font-size: $tiny-font-size;
+}
+
 .txt-secondary {
   color: $grey-dark;
   font-size: $tiny-font-size;

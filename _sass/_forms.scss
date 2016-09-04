@@ -31,6 +31,7 @@ input {
   width: 100%;
   max-width: 15em;
   transition: border-color 0.25s;
+
 }
 
 input:focus {
@@ -67,8 +68,13 @@ input.input-success {
 
 input.input-error {
   border-color: $red;
+  box-shadow: 0 0 2px $red inset;
+
 }
 
+input.input-error .icon {
+  display: inline;
+}
 form .icon {
   padding: 0 0.5em;
 }
