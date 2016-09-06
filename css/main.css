@@ -649,7 +649,7 @@ header .wrapper {
   margin: 0 1em 0 0; }
 
 .icon-logo {
-  background: #ffd600;
+  background: transparent;
   border-color: #665600;
   color: #222;
   line-height: 1;
