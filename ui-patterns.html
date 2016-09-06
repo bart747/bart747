@@ -4,266 +4,357 @@ layout: default
 
 <div class="wrapper center">
 
-<section class=" ">
+  <section class="masthead center">
 
-<h2 id="form-boring-home">Sign up & Sign in Forms</h2>
+    <svg id="crest" version="1.1"
+        baseProfile="full"
+        width="100" height="100"
+        viewBox="0 0 100 100"
+        xmlns="http://www.w3.org/2000/svg">
 
-<div class="grid wrapper-small">
+    
+      <rect id="crest-rect"
+            x="0" y="0"
+            width="100" height="100"
+            rx="20" ry="20"
+            fill="yellow"
+      />
 
-  <div class="col col-50-50">
+      <text id="crest-txt"
+            x="50" y="63"
+            font-size="60"
+            font-sizze="bold"
+            font-weight="bold"
+            text-anchor="middle"
+            fill="black">=>
+      </text>
 
-  <h3>Before</h3>
 
-    <div class="form-boring
-                forms-toggle
-                form-wrapper-narrow
-                home-example-ui
-                center">
+    </svg>
+ 
+    <h1 class="masthead-h1">
+      Making Fast Web Interfaces
+      that Work Smoothly on Average Devices
+      and Will Help You Sell
+    </h1>
 
+    <p class="">
+      Hi, I'm Bartosz and I make interfaces.
+    </p>
+
+    <p>
+      My UIs are focused on what's essential.
+      No fancy ornaments.
+      Every element has to pay for itself by improving usability.
+      They are packed in form of simple blocks that can be presented in any order.
+      All that means great fine tuning for marketing goals, usability and loading speed.
+    </p>
+
+  </section>
+
+  <section class="center">
+
+    <h1>Before & After Examples</h1>
+    
+    <section>
+
+    <h2 id="form-boring-home">Sign up & Sign in Forms</h2>
+
+    <div class="grid wrapper-small">
+
+      <div class="col col-50-50">
+
+      <h3>Before</h3>
+
+        <div class="form-boring
+                    forms-toggle
+                    form-wrapper-narrow
+                    home-example-ui
+                    center">
+
+                    
+
+          <form class="form-sign-up">
+            <h3>Sign up</h3>
+
+            <fieldset>
+
+              <label for="email1-expo">Email</label>
+              <input type="email" id="email1-expo" autocomplete="email" required>
+
+              <label for="password1-expo">Password</label>
+              <input type="password" id="password1-expo" pattern=".{8,}" required>
+              <div class="txt-secondary">8+ characters including a number</div>
+
+            </fieldset>
+
+            <button class="btn-prevent">Sign up</button>
+
+            <p class="txt-secondary">Already a user? <span class="link-like form-switch">Sign in</span></p>
+          </form>
+
+          <form class="form-sign-in hidden">
+            <h3>Sign in</h3>
+
+            <fieldset>
+
+              <label for="email2-expo">Email</label>
+              <input type="email" id="email2-expo" autocomplete="email" required>
+
+              <label for="password2-expo">Password</label>
+              <input type="password" id="password2-expo" pattern=".{8,}" required>
+
+            </fieldset>
+
+            <button class="btn-prevent">Sign in</button>
+
+            <p class="txt-secondary">Don't have an account? <span class="link-like form-switch">Sign up</span></p>
+
+          </form>
+        </div>
+      </div>
+
+      <div class="col col-50-50">
+
+        <h3>After</h3>
+
+        <div class="forms-toggle
+                    form-wrapper-narrow
+                    home-example-ui
+                    center"> 
+
+          <form class="form-sign-up">
+            <h3>Create Account</h3>
+
+            <fieldset>
+              
+              <div class="validate">
+                <label for="email2-expo">Your Email
+                  <span class="icon icon-error ion-android-sad"></span>
+                  <span class="icon icon-success ion-android-happy"></span>
+                </label>
+                <input type="email" id="email2-expo" autocomplete="email" pattern="^[^@\s]+@[^@\s]+[^@.\s]+$" required>
+              </div>
+
+              <div class="validate">
+                <label for="password2-expo">Create Password
+                  <span class="icon icon-error ion-android-sad"></span>
+                  <span class="icon icon-success ion-android-happy"></span>
+                </label>
+                <input type="password" id="password2-expo" class="input-password" pattern=".{8,}" required>
+                <div class="txt-secondary">8+ characters including a number</div>
+              </div>
+
+            </fieldset>
+
+            <button class="btn-prevent">Create Free Account</button>
+
+            <p class="txt-secondary">Already got one? <span class="btn btn-in-txt form-switch">Log in</span></p>
+          </form>
+
+          <form class="form-sign-in hidden">
+            <h3>Log in</h3>
+
+            <fieldset>
+              <div class=" ">
+                <label for="email3-expo">Your Email
+                  
+                </label>
+                <input type="email" id="email3-expo" autocomplete="email" pattern="^[^@\s]+@[^@\s]+[^@.\s]+$" required>
+              </div>
+
+              <div class=" ">
+                <label for="password3-expo">Your Password
+                  
+                </label>
+                <input type="password" id="password3-expo" class="" pattern=".{8,}" required>
+              </div>
+            </fieldset>
+
+            <button class="btn-prevent">Log in</button>
+
+            <p class="txt-secondary">Don't have an account? <span class="btn btn-in-txt form-switch">Sign up</span></p>
+
+          </form>
+        </div>
+      </div>
+      </div>
+
+
+      <p>Sign up and sign in forms can be confusing. Aren't they?</p>
+      
+      <p> 
+        Lets assume that you want to log in but what you see is a sing up page.
+        In the <i>after</i> example, you can notice a switch button easily.
+        The appropriate form will appear without a page reload.
+      </p>
+
+      <p>
+        Labels won't confuse you.
+        For example: there's a significant difference between <i>your password</i> and <i>create password</i>.
+        <i>Create Free Account</i> is also more descriptive call to action.
+      </p>
+      <p>
+        Input text has great readability because of bigger font size and more whitespace.
+      </p>
+
+      <p>The <i>after</i> example does also <b>live validation</b>.
+        In <i>Create ACcount</i>, try to type in an email address with two <i>@</i> symbols.
+        Errors will be detected right after you'll switch to another input field.
+      </p>
+      
+    </section>
+
+    <section>
+
+    <h2>Big Mobile Menu</h2>
+
+    <div class="grid wrapper-small">
+
+      <div class="home-example-toggle-menu col col-50-50">
+      <h3>Before</h3>
+
+        <div class="menu-list menu-toggle ">
+
+          <button class="menu-toggle-btn is-switchable toggle-is-on">
+            menu 
+          </button>
+
+          <div class="menu-toggle-content"> 
+
+          <ul>
+            <li class=" ">
+              <span class="link-like">
                 
+                products</a>
+            </li>
+            <li>
+              <span class="link-like">case studies</span>
+            </li>
+            <li>
+              <span class="link-like">guides</span>
+            </li>
+            <li>
+              <span class="link-like">blog</span>
+            </li>
+            <li>
+              <span class="link-like">for developers</span>
+            </li>
+            <li>
+              <span class="link-like">our team</span>
+            </li>
+            <li>
+              <span class="link-like">contact</span>
+            </li>
+            <li class=" ">
+              <span class="link-like">
+                
+                FAQ & help
+              </span>
+            </li>
+            <li class=" ">
+              <span class="link-like">
+                free trial
+              </span>
+            </li>
+            <li class=" ">
+              <span class="link-like">
+                
+                log in
+              </span>
+            </li>
+          </ul>
+          </div>
+        
+        </div>
+        
+      </div>
 
-      <form class="form-sign-up">
-        <h3>Sign up</h3>
+      <div class="home-example-toggle-menu col col-50-50">
+      <h3>After</h3>
 
-        <fieldset>
-          <label for="email2-expo">Email</label>
-          <input type="email" id="email2-expo">
-          <label for="password2-expo">Password</label>
-          <input type="password" id="password2-expo">
-          <div class="txt-secondary">8+ characters including a number</div>
-        </fieldset>
+        <div class="menu-list menu-toggle menu-icons ">
 
-        <button type="button">Sign up</button>
-
-        <p class="txt-secondary">Already a user? <span class="link-like form-switch">Sign in</span></p>
-      </form>
-
-      <form class="form-sign-in hidden">
-        <h3>Sign in</h3>
-
-        <fieldset>
-          <label for="email3-expo">Email</label>
-          <input type="email" id="email3-expo">
-          <label for="password3-expo">Password</label>
-          <input type="password" id="password3-expo">
-        </fieldset>
-
-        <button type="button">Sign in</button>
-
-        <p class="txt-secondary">Don't have an account? <span class="link-like form-switch">Sign up</span></p>
-
-      </form>
-    </div>
-  </div>
-
-  <div class="col col-50-50">
-
-    <h3>After</h3>
-
-    <div class="forms-toggle
-                form-wrapper-narrow
-                home-example-ui
-                center"> 
-
-      <form class="form-sign-up">
-        <h3>Create Account</h3>
-
-        <fieldset>
-          <label for="email2-expo">Your Email</label>
-          <input type="email" id="email2-expo">
-          <label for="password2-expo">Create Password</label>
-          <input type="password" id="password2-expo">
-          <div class="txt-secondary">8+ characters including a number</div>
-        </fieldset>
-
-        <button type="button">Create Free Account</button>
-
-        <p class="txt-secondary">Already got one? <span class="btn btn-in-txt form-switch">Log in</span></p>
-      </form>
-
-      <form class="form-sign-in hidden">
-        <h3>Log in</h3>
-
-        <fieldset>
-          <label for="email3-expo">Your Email</label>
-          <input type="email" id="email3-expo">
-          <label for="password3-expo">Your Password</label>
-          <input type="password" id="password3-expo">
-        </fieldset>
-
-        <button type="button">Log in</button>
-
-        <p class="txt-secondary">Don't have an account? <span class="btn btn-in-txt form-switch">Sign up</span></p>
-
-      </form>
-    </div>
-  </div>
-  </div>
-
-
-  <p>Sign up and sign in forms can be confusing. Aren't they?</p>
-   
-  <p> 
-    Lets assume that you want to log in but what you see is a sing up page.
-    In the <i>after</i> example, you can notice a switch button easily.
-    The appropriate form will appear without a page reload.
-  </p>
-  <p>
-    Labels won't confuse you.
-    For example: there's a significant difference between <i>your password</i> and <i>create password</i>.
-    <i>Create Free Account</i> is also more descriptive call to action.
-  </p>
-  <p>
-    Input text has great readability because of bigger font size and more whitespace.
-  </p>
-
-
-
-</section>
-
-
-<section class="">
-<h2>Big Mobile Menu</h2>
-
-<div class="grid wrapper-small">
-
-  <div class="home-example-toggle-menu col col-50-50">
-  <h3>Before</h3>
-
-    <div class="menu-list menu-toggle ">
-
-      <button class="menu-toggle-btn is-switchable toggle-is-on">
-        menu 
-      </button>
-
-      <div class="menu-toggle-content"> 
-
-      <ul>
-        <li class=" ">
+          <button class="menu-toggle-btn is-switchable toggle-is-on">
+            menu 
+          </button>
+          &emsp;
           <span class="link-like">
-            
-            products</a>
-        </li>
-        <li>
-          <span class="link-like">case studies</span>
-        </li>
-        <li>
-          <span class="link-like">guides</span>
-        </li>
-        <li>
-          <span class="link-like">blog</span>
-        </li>
-        <li>
-          <span class="link-like">for developers</span>
-        </li>
-        <li>
-          <span class="link-like">our team</span>
-        </li>
-        <li>
-          <span class="link-like">contact</span>
-        </li>
-        <li class=" ">
-          <span class="link-like">
-            
-            FAQ & help
+            products
           </span>
-        </li>
-        <li class=" ">
+          &emsp;
           <span class="link-like">
-            free trial
-          </span>
-        </li>
-        <li class=" ">
-          <span class="link-like">
-            
             log in
           </span>
-        </li>
-      </ul>
-      </div>
-    
-    </div>
-    
-  </div>
+          
 
-  <div class="home-example-toggle-menu col col-50-50">
-  <h3>After</h3>
+          <div class="menu-toggle-content"> 
 
-    <div class="menu-list menu-toggle menu-icons ">
+          <ul>
+            <li>
+              <span class="link-like">case studies</span>
+            </li>
+            <li>
+              <span class="link-like">guides</span>
+            </li>
+            <li>
+              <span class="link-like">blog</span>
+            </li>
+            <li>
+              <span class="link-like">for developers</span>
+            </li>
+            <li>
+              <span class="link-like">our team</span>
+            </li>
+            <li>
+              <span class="link-like">contact</span>
+            </li>
 
-      <button class="menu-toggle-btn is-switchable toggle-is-on">
-        menu 
-      </button>
-      &emsp;
-      <span class="link-like">
-        products
-      </span>
-      &emsp;
-      <span class="link-like">
-        log in
-      </span>
-       
+            <br>
+            <li class="li-has-icon">
+              <span class="link-like">
+                <span class="icon ion-help-circled purple"></span>
+                FAQ & help
+              </span>
+            </li>
+            <li class="li-has-icon">
+              <span class="link-like">
+                <span class="icon ion-log-in purple"></span>
+                get started with free trial
+              </span>
+            </li>
 
-      <div class="menu-toggle-content"> 
+          </ul>
+          </div>
 
-      <ul>
-        <li>
-          <span class="link-like">case studies</span>
-        </li>
-        <li>
-          <span class="link-like">guides</span>
-        </li>
-        <li>
-          <span class="link-like">blog</span>
-        </li>
-        <li>
-          <span class="link-like">for developers</span>
-        </li>
-        <li>
-          <span class="link-like">our team</span>
-        </li>
-        <li>
-          <span class="link-like">contact</span>
-        </li>
+        </div>
 
-        <br>
-        <li class="li-has-icon">
-          <span class="link-like">
-            <span class="icon ion-help-circled purple"></span>
-            FAQ & help
-          </span>
-        </li>
-        <li class="li-has-icon">
-          <span class="link-like">
-            <span class="icon ion-log-in purple"></span>
-            get started with free trial
-          </span>
-        </li>
-
-      </ul>
       </div>
 
     </div>
 
-  </div>
+    <p>
+      Mobile menus with many links actually hide content.
+    </p>
+    <p>
+      If there's no immediately visible action a user would like to take, you will lose her or him.
+      You can't expect that a site visitor will give you full attention and more time than several seconds.
+      That's why you need to prioritize the key parts.  
+    </p>
+    <p>
+      In this example I put <i>product</i> and <i>log in</i> sections on the top shelf.
+      In practice, it always depends on context and testing.
+    </p>
+    <p>
+      There are also easy to spot icons that will help users get faster to other crucial pages.
+    </p>
 
-</div>
+    </section>
 
-<p>
-  Mobile menus with many links actually hide content.
-</p>
-<p>
-  If there's no immediately visible action a user would like to take, you will lose her or him.
-  You can't expect that a site visitor will give you full attention and more time than several seconds.
-  That's why you need to prioritize the key parts.  
-</p>
-<p>
-  In this example I put <i>product</i> and <i>log in</i> sections on the top shelf.
-  In practice, it always depends on context and testing.
-</p>
-<p>
-  There are also easy to spot icons that will help users get faster to other crucial pages.
-</p>
-</section>
+  </section>
+
+  <section>
+
+  </section>
 
 </div>
