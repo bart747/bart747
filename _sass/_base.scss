@@ -23,7 +23,7 @@ body {
 }
 
 section {
-  margin: 4rem 0;
+  margin: 3rem 0;
 }
 
 .wrapper {
@@ -52,6 +52,11 @@ a {
   }
 }
 
+hr {
+  border: none;
+  border-bottom: 1px dotted;
+  padding: 1em 0;
+}
 .page {
   margin-bottom: 3rem;
 }

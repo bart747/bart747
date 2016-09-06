@@ -58,6 +58,11 @@ h3, .h3-like {
   font-size: 2em;}
 }
 
+.col > h2,
+.col > h3 {
+  margin: 1em 0;
+}
+
 strong {
   font-weight: bold;
 }

@@ -461,7 +461,7 @@ body {
       font-size: 18px; } }
 
 section {
-  margin: 4rem 0; }
+  margin: 3rem 0; }
 
 .wrapper {
   margin: 0 auto;
@@ -482,6 +482,11 @@ a {
   a:active, a:hover {
     color: #ec4422;
     transition: color 0.25s; }
+
+hr {
+  border: none;
+  border-bottom: 1px dotted;
+  padding: 1em 0; }
 
 .page {
   margin-bottom: 3rem; }
@@ -538,6 +543,10 @@ h3, .h3-like {
   @media screen and (max-width: screen-sml) {
     .h1-mega {
       font-size: 2em; } }
+
+.col > h2,
+.col > h3 {
+  margin: 1em 0; }
 
 strong {
   font-weight: bold; }
@@ -684,7 +693,7 @@ header .wrapper {
     margin-bottom: 0; } }
 
 .menu-list-title {
-  margin: 0 0 1.25rem 0; }
+  margin: 1.25em 0; }
 
 .menu-list-small li {
   margin-bottom: 0.5em; }
@@ -701,9 +710,6 @@ header .wrapper {
 
 .post-list p::after {
   content: '..'; }
-
-.post-list-title {
-  margin: 0; }
 
 .menu-toggle {
   position: relative;
