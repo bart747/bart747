@@ -603,6 +603,7 @@ li code {
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
+    margin: 0;
     margin-right: 1em;
     margin-left: 1em; }
   .col-50-50 {
@@ -610,9 +611,9 @@ li code {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%; }
   .col:first-child {
-    margin-left: 1em; }
+    margin-left: 0; }
   .col:last-child {
-    margin-right: 1em; }
+    margin-right: 0; }
   .patterns-lib > h2 {
     background-color: #dddddd;
     color: #777;
