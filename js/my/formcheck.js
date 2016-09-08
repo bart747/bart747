@@ -13,7 +13,16 @@ function onKeyupValid(container, input) {
       container.classList.add('input-error');
       container.classList.remove('input-success');       
     }
+
+    validReset(container, input);
   });
+}
+
+function validReset(container, input) {
+  if (input.value.length < 1) {
+    container.classList.remove('input-error');
+    container.classList.remove('input-success'); 
+  }
 }
 
 if (inputDivs[0]) {
@@ -24,7 +33,7 @@ if (inputDivs[0]) {
     if (input) {
 
       input.addEventListener('blur', _=> {
-
+        
         onKeyupValid(el, input);
 
         if (input.validity.patternMismatch) {
@@ -40,6 +49,8 @@ if (inputDivs[0]) {
           el.classList.remove('input-error');
           el.classList.add('input-success');
         }
+
+        validReset(el, input);
       });
 
       if (input.classList.contains("input-password")) {
