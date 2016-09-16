@@ -5,6 +5,14 @@
   font-size: $base-font-size;
 }
 
+.home section {
+  margin: 4rem 0;
+}
+
+.home-example {
+  margin: 3em 0;
+}
+
 .home-example-ui {
   @include shadow;
   border-radius: $radius;
@@ -15,6 +23,9 @@
 .home-example-toggle-menu {
   height: 31em;
   margin: 0 auto;
+  @media screen and (max-width: $screen-mid) {
+    height: 32em;
+  }
 }
 
 .home-pic img {
@@ -23,3 +34,5 @@
   border-radius: 50%;
   border: 1px solid $black;
 }
+
+

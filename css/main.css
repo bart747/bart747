@@ -461,12 +461,12 @@ body {
       font-size: 18px; } }
 
 section {
-  margin: 3rem 0; }
+  margin: 2em 0; }
 
 .wrapper {
   margin: 0 auto;
   max-width: 1000px;
-  padding: 0 1rem 0; }
+  padding: 0 1em 0; }
 
 .wrapper-small {
   margin: 0 auto;
@@ -674,6 +674,9 @@ header .wrapper {
 .masthead {
   text-align: center; }
 
+.masthead-h1 {
+  margin: 2em 0; }
+
 .menu-list {
   font-size: 18px;
   margin-bottom: 3rem; }
@@ -717,8 +720,7 @@ header .wrapper {
 .menu-toggle {
   position: relative;
   top: 3px;
-  padding: 0;
-  z-index: 2; }
+  padding: 0; }
 
 .menu-toggle ul {
   margin-bottom: 0; }
@@ -1005,6 +1007,12 @@ a.is-active.cc_btn {
 .work-samples {
   font-size: 21px; }
 
+.home section {
+  margin: 4rem 0; }
+
+.home-example {
+  margin: 3em 0; }
+
 .home-example-ui {
   box-shadow: 0 1px 4px 0 #777;
   border-radius: 0.25em;
@@ -1014,6 +1022,9 @@ a.is-active.cc_btn {
 .home-example-toggle-menu {
   height: 31em;
   margin: 0 auto; }
+  @media screen and (max-width: 768px) {
+    .home-example-toggle-menu {
+      height: 32em; } }
 
 .home-pic img {
   width: 150px;
@@ -1260,6 +1271,9 @@ a.cc_btn {
   .highlight .lineno {
     color: #bbb;
     margin-right: 0.5rem; }
+
+.crest {
+  margin: 3em auto 2.75em; }
 
 #crest-rect {
   -webkit-animation-name: crest-rect;

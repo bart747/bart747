@@ -6,6 +6,7 @@ layout: default
 
   <section class="masthead center">
 
+    <div class="crest">
     <svg id="crest" version="1.1"
         baseProfile="full"
         width="100" height="100"
@@ -29,8 +30,8 @@ layout: default
             fill="black">=>
       </text>
 
-
     </svg>
+    </div>
  
     <h1 class="masthead-h1">
       Making Fast Web Interfaces
@@ -55,7 +56,7 @@ layout: default
 
     <h1>Before & After Examples</h1>
     
-    <section>
+    <div class="home-example">
 
     <h2 id="form-boring-home">Sign up & Sign in Forms</h2>
 
@@ -202,9 +203,9 @@ layout: default
         Errors will be detected right after you'll switch to another input field.
       </p>
       
-    </section>
+    </div>
 
-    <section>
+    <div class="home-example">
 
     <h2>Big Mobile Menu</h2>
 
@@ -348,33 +349,31 @@ layout: default
       There are also easy to spot icons that will help users get faster to other crucial pages.
     </p>
 
-    </section>
+    </div>
 
   </section>
+  
+  <br>
+  <div class="grid">
 
+    <div class="menu-list col col-50-50">
+      <ul>
+        <h3 class="menu-list-title">New Blog Posts</h3>
 
-  <section>
-    <hr>
-    <div class="grid">
+        {% for post in site.posts limit:3 %}
+          <li>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+              {{ post.title}}
+            </a>
+          </li>
+        {% endfor %}
 
-      <div class="menu-list col col-50-50">
-        <ul>
-          <h3 class="menu-list-title">New Blog Posts</h3>
+        <a class="bold" href="/blog">GO TO BLOG</a>
+      </ul>
+    </div>
 
-          {% for post in site.posts limit:3 %}
-            <li>
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-                {{ post.title}}
-              </a>
-            </li>
-          {% endfor %}
-
-          <a class="bold" href="/blog">GO TO BLOG</a>
-        </ul>
-      </div>
-
-      <div class="menu-list col col-50-50">
-        <ul>
+    <div class="menu-list col col-50-50">
+      <ul>
         <h3 class="menu-list-title">Projects</h3>
 
         <li>
@@ -406,11 +405,9 @@ layout: default
           <a href="/Input-field-state-indicators">Input Field State Indicators</a>
         </li>
 
-    </ul>
+      </ul>
     </div>
 
   </div>
-
-</section>
 
 </div>

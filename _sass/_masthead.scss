@@ -3,24 +3,10 @@
 //
 
 .masthead {
-  text-align: center;
+  text-align: center;\
+  margin: 3em 0;
 }
 
 .masthead-h1 {
-  
-}
-
-
-@media all and (min-width: $screen-sml) {
-  .masthead {
-  }
-
-
-
-}
-
-@media all and (min-width: $screen-mid) {
-
-
-
+  margin: 2em 0;
 }
