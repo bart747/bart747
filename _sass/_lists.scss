@@ -2,6 +2,28 @@
 // menu list
 //
 
+ul {
+  margin: 1em 0;
+  padding-left: 1.5em;
+}
+
+ol {
+  margin: 1.5em 0;
+  padding-left: 1.5em;
+}
+
+.list-inline {
+  padding: 0;
+  & li {
+    display: inline;
+    list-style: none;
+    margin-left: 1em;
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+}
+
 .menu-list {
   font-size: $small-font-size;
   margin-bottom: 3rem;
@@ -93,7 +115,7 @@
   background: $background-color;
   border-radius: 0 0 $radius $radius;  
   border-top: 6px solid $blue-dark;
-  box-shadow: 0 4px 4px $grey;
+  box-shadow: 0 1px 4px $grey;
   padding: 1em 1em 1em;
   text-align: left;
   width: auto;

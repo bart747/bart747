@@ -10,7 +10,7 @@
 }
 
 .home-example {
-  margin: 3em 0;
+  margin: 3.5em 0;
 }
 
 .home-example-ui {
@@ -34,5 +34,20 @@
   border-radius: 50%;
   border: 1px solid $black;
 }
+.home-example-nav-search {
+  padding: 0 0 0.25em; 
+}
 
+.home-example-nav-search-zoom {
+  padding: 0; 
+}
 
+.home-example-nav-search > ::before {
+  color: $blue-dark;
+  font-size: 17px;  
+}
+
+.home-example-nav-search-zoom > ::before {
+  color: $blue-dark;
+  font-size: 17px;
+}

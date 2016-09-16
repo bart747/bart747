@@ -57,6 +57,11 @@ input.input-icon {
   display: block;
 }
 
+.input-small {
+  font-size: $small-font-size;
+  padding: 0.25em 0.38em;
+}
+
 .input-line-fixed {
   height: 4.5em;
 }
@@ -141,4 +146,38 @@ input.cc-cvc-input {
   animation-timing-function: ease-out;
 }
 
+form.form-nav {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+}
 
+input.input-nav {
+  display: inline;
+  width: 33%;
+  @media screen and (min-wdith: $screen-mid) {
+    width: 40%;
+  }
+}
+
+.search-zoom {
+  margin: 0.5em -0.5em 0;
+  height: 1.8em;
+}
+
+.search-zoom input {
+  display: inline;  
+  max-width: none;
+  width: 75%;
+  transition: all 0.2s ease-out;
+}
+
+
+.search-zoom input:focus {
+  box-shadow: 0 3px 50px $grey;
+  font-size: $base-font-size; 
+  padding: 0.5em 0.63em;
+  max-width: none;
+  width: 85%; 
+}
