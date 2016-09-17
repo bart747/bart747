@@ -66,10 +66,14 @@ input.input-icon {
   height: 4.5em;
 }
 
+// .validate is used by JS form check script
+// to detect forms for live validation 
+input.input-success,
 .validate.input-success input {
   border-color: $green;
 }
 
+input.input-error,
 .validate.input-error input {
   border-color: $red;
 }

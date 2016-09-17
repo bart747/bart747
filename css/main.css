@@ -832,9 +832,11 @@ input.input-icon {
 .input-line-fixed {
   height: 4.5em; }
 
+input.input-success,
 .validate.input-success input {
   border-color: #189560; }
 
+input.input-error,
 .validate.input-error input {
   border-color: #E02020; }
 
@@ -1181,7 +1183,8 @@ svg {
   min-width: 52%;
   padding: 0 1em;
   border-radius: 0.25em;
-  box-shadow: 0 -1px 1px 0 #777; }
+  box-shadow: 0 -1px 1px 0 #777;
+  z-index: 1000; }
   .cc_banner::after {
     content: "";
     display: table;
