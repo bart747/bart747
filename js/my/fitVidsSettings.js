@@ -1,0 +1,6 @@
+(function () {
+
+$(".fit-vid").fitVids();
+
+})()
+

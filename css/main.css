@@ -507,6 +507,9 @@ p {
     .p-large {
       font-size: 21px; } }
 
+.txt-tiny {
+  font-size: 14px; }
+
 h1,
 h2,
 h3,
@@ -728,8 +731,11 @@ ol {
 .post-list li {
   margin-bottom: 3em; }
 
-.post-list p::after {
-  content: '..'; }
+.excerpt p::after {
+  content: ' . .'; }
+
+.post-list-note {
+  margin: 4em auto; }
 
 .menu-toggle {
   position: relative;
@@ -1103,6 +1109,15 @@ a.is-active.cc_btn {
   margin-bottom: 3em;
   padding: 0 1em; }
 
+.note-title {
+  font-size: 1.12em;
+  text-transform: uppercase; }
+
+.title-icon .icon {
+  color: #ddbb00;
+  font-size: 0.75em;
+  margin-left: 1em; }
+
 .post-meta {
   color: #777; }
 
@@ -1151,6 +1166,12 @@ img {
   to {
     -webkit-filter: blur(0);
     filter: blur(0); } }
+
+.video {
+  margin: 2em auto; }
+
+.video-description {
+  font-size: 0.75em; }
 
 @-webkit-keyframes show-up {
   from {

@@ -83,10 +83,14 @@ ol {
   margin-bottom: 3em;
 }
 
-.post-list p {
+.excerpt p {
   &::after {
-    content: '..';
+    content: ' . .';
   }
+}
+
+.post-list-note {
+  margin: 4em auto;
 }
 
 .menu-toggle {

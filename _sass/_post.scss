@@ -10,7 +10,17 @@
   padding: 0 1em;
 }
 
-.post-title {
+.note-title {
+  //font-style: italic;
+  //font-weight: normal;
+  font-size: 1.12em;
+  text-transform: uppercase;
+}
+
+.title-icon .icon {
+  color: $yellow-dark;
+  font-size: 0.75em;
+  margin-left: 1em;
 
 }
 
