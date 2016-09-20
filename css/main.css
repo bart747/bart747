@@ -1168,7 +1168,12 @@ img {
     filter: blur(0); } }
 
 .video {
+  color: #444444;
   margin: 2em auto; }
+
+@media screen and (min-width: 860px) {
+  .video-overflow {
+    margin: 2em -5em; } }
 
 .video-description {
   font-size: 0.75em; }

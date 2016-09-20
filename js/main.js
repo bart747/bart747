@@ -6,5 +6,6 @@ const formSw = require('./my/formswitch.js');
 const linkStates = require('./my/linkstates.js');
 const fitVids = require('./plugins/jquery.fitvids.js')
 const FitVidsSettings = require('./my/fitVidsSettings.js');
+const videoResize = require('./my/videoResize.js');
 const paymentPlugin = require('./plugins/jquery.payment.js');
 const formsCommerce = require('./my/commerce.js');

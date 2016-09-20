@@ -3,7 +3,14 @@
 //
 
 .video {
+  color: $grey-dark;
   margin: 2em auto;
+}
+
+.video-overflow {
+  @media screen and (min-width: 860px) {
+    margin: 2em -5em;
+  }
 }
 
 .video-description {

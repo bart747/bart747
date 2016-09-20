@@ -5,9 +5,11 @@ category: quicknote
 date: 2016-09-20
 ---
 
-<div class="video fit-vid">
+<div class="video video-overflow fit-vid">
   <iframe src="https://www.youtube.com/embed/5tusreUDXUM" frameborder="0" allowfullscreen></iframe>
-  <span class="video-description"> video by <a href="https://www.youtube.com/channel/UCMIjEnXruVHtvgSVf6TgfUg">Wranglerstar</a></span>
+  <span class="video-description"> video by
+    <a href="https://www.youtube.com/channel/UCMIjEnXruVHtvgSVf6TgfUg">Wranglerstar</a>
+  </span>
 </div>
 
 I enjoy looking at craftsmen at work.
