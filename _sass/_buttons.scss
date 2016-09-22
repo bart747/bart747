@@ -19,11 +19,14 @@ button,
   transition: all 0.2s ease;
 
   &:hover, &:active {
+    //box-shadow: 0 1px 5px $black inset; 
     background: lighten($blue-dark, 10%);
   }
   &:active {
     background: $blue-dark;
     border-color: $blue-dark;
+    box-shadow: 0 1px 1em $grey-dark inset; 
+    transition: none;
   }
 }
 
@@ -64,6 +67,7 @@ button.is-active,
   &:active {
     background: $yellow;
     border-color: $yellow;
+    box-shadow: 0 1px 0.5em darken($grey-light, 10%) inset; 
   }
 }
 

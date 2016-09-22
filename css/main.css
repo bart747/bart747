@@ -975,7 +975,9 @@ a.cc_btn {
   .btn:active,
   a.cc_btn:active {
     background: #2233aa;
-    border-color: #2233aa; }
+    border-color: #2233aa;
+    box-shadow: 0 1px 1em #444444 inset;
+    transition: none; }
 
 button.is-active,
 .btn.is-active,
@@ -1008,7 +1010,8 @@ a.is-active.cc_btn {
     background: #ffeb80; }
   .btn-in-txt:active {
     background: #ffd600;
-    border-color: #ffd600; }
+    border-color: #ffd600;
+    box-shadow: 0 1px 0.5em #c4c4c4 inset; }
 
 .btn-menu-square {
   text-align: center;
