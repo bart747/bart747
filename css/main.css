@@ -737,6 +737,10 @@ ol {
 .post-list-note {
   margin: 4em auto; }
 
+.pagination {
+  text-align: center;
+  margin: 3em auto; }
+
 .menu-toggle {
   position: relative;
   top: 3px;
@@ -1175,9 +1179,9 @@ img {
   color: #444444;
   margin: 2em auto; }
 
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 899px) {
   .video-overflow {
-    margin: 2em -5em; } }
+    margin: 2em -6em; } }
 
 .video-description {
   font-size: 0.75em; }

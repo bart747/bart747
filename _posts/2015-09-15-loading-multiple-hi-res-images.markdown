@@ -24,15 +24,15 @@ That's because details like freckles on a face or dust on an object will
 not be so visible.
 
 
-![image optimization example]({{ localhost:4000 }}/img/img-opt1.jpg "image optimization example 1")
+![image optimization example]({{ site.baseurl }}/img/img-opt1.jpg "image optimization example 1")
 <br>
 68k
 
-![image optimization example]({{ localhost:4000 }}/img/img-opt2.jpg "image optimization example 2")
+![image optimization example]({{ site.baseurl }}/img/img-opt2.jpg "image optimization example 2")
 <br>
 31k
 
-![image optimization example]({{ localhost:4000 }}/img/img-opt3.jpg "image optimization example 3")
+![image optimization example]({{ site.baseurl }}/img/img-opt3.jpg "image optimization example 3")
 <br>
 17.9k
 

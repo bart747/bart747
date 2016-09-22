@@ -54,7 +54,22 @@ title: Musings on UI design and development
 
     {% endfor %}
 
+<div class="pagination">
 
+  <div class="page_number txt-secondary">Page: {{ paginator.page }} of {{ paginator.total_pages }}</div>
+
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+  {% else %}
+    <span class="previous txt-secondary">Previous</span>
+  {% endif %}
+  &emsp;
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+    <span class="next txt-secondary">Next</span>
+  {% endif %}
+</div>
 
 
 </div>

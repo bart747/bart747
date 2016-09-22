@@ -7,9 +7,11 @@ description: > # this means to ignore newlines until "baseurl:"
   CSS/SASS, HTML, JavaScript.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://bart747.github.io" # the base hostname & protocol for your site
+paginate: 12
+paginate_path: "/blog/page:num/"
 permalink: /:title.html
 twitter_username: bwhimself
 github_username: bart747
-gems: [jekyll-sitemap]
+gems: [jekyll-sitemap, jekyll-paginate]
 
 exclude: [_sass, sass, gulpfile.js, node_modules, projects/*/node_modules]
