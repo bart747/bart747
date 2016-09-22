@@ -12,16 +12,20 @@ title: Musings on UI design and development
       <li>
         {% if post.category == "quicknote" %}
           <div class="post-list-note">
-            <h2 class="post-list-title title-icon note-title">             
-              {{ post.title }}<span class="icon ion-pin"></span>       
+            <h2 class="post-list-title title-icon note-title">
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">             
+                {{ post.title }}<span class="icon ion-pin"></span>       
+              </a>
             </h2>
             {{ post.content }}
           </div>
 
         {% elsif post.category == "quote" %}
           <div class="post-list-note">
-            <h2 class="post-list-title title-icon note-title">             
-              {{ post.title }}<span class="icon ion-quote"></span>       
+            <h2 class="post-list-title title-icon note-title">
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">             
+                {{ post.title }}<span class="icon ion-quote"></span>       
+              </a>
             </h2>
             {{ post.content }}
           </div>

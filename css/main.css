@@ -478,10 +478,10 @@ object {
 
 a {
   color: #2233aa;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: color 0.2s; }
   a:active, a:hover {
-    color: #ec4422;
-    transition: color 0.25s; }
+    color: #ec4422; }
 
 hr {
   border: none;
@@ -959,17 +959,18 @@ a.cc_btn {
   padding: 0.4em 1em;
   text-align: center;
   margin: 0.5rem 0;
-  max-width: 12rem; }
+  max-width: 12rem;
+  transition: all 0.2s ease; }
   button:hover, button:active,
   .btn:hover,
   a.cc_btn:hover,
   .btn:active,
   a.cc_btn:active {
-    background: #2233aa;
-    transition: all 0.2s ease; }
+    background: #2b40d5; }
   button:active,
   .btn:active,
   a.cc_btn:active {
+    background: #2233aa;
     border-color: #2233aa; }
 
 button.is-active,
@@ -1000,7 +1001,10 @@ a.is-active.cc_btn {
   border-color: #ffd600;
   border-width: 1px 1px 2px 1px; }
   .btn-in-txt:hover, .btn-in-txt:active {
-    background: #ffd600; }
+    background: #ffeb80; }
+  .btn-in-txt:active {
+    background: #ffd600;
+    border-color: #ffd600; }
 
 .btn-menu-square {
   text-align: center;

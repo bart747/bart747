@@ -16,12 +16,13 @@ button,
   text-align: center;
   margin: 0.5rem 0;
   max-width: 12rem;
+  transition: all 0.2s ease;
 
   &:hover, &:active {
-    background: $blue-dark;
-    transition: all 0.2s ease;
+    background: lighten($blue-dark, 10%);
   }
   &:active {
+    background: $blue-dark;
     border-color: $blue-dark;
   }
 }
@@ -58,7 +59,11 @@ button.is-active,
   border-color: $yellow;
   border-width: 1px 1px 2px 1px ;
   &:hover, &:active {
+    background: lighten($yellow, 25%);
+  }
+  &:active {
     background: $yellow;
+    border-color: $yellow;
   }
 }
 
