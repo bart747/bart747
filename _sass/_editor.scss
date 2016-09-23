@@ -1,0 +1,60 @@
+//
+// editor
+//
+
+.editable {
+  max-width: 32em;
+}
+
+.edit-field {
+  border: 1px solid transparent;
+  border-radius: $radius;
+  margin: 0.75em -0.25em 0;
+  padding: 0.25em 0.25em;
+  outline: none;
+}
+
+.edit-mode {
+  background: #fff;
+  border: 1px solid $blue;
+  transition: all 0.2s ease-in;
+}
+
+
+textarea {
+  border: 1px solid $grey;
+  border-radius: $radius;
+  color: $black;
+  outline: none;
+  padding: 0.5em 0.75em;
+  &:hover, &:focus {
+    border: 1px solid $blue;
+  }
+}
+
+textarea.editor {
+  resize: none;
+}
+
+textarea:disabled.editor {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.btn-edit {
+  color: $blue;
+  cursor: pointer;
+  float: right;
+  margin: 0 0 1em;
+  text-align: right;
+}
+
+.btn-edit-mode {
+  color: $orange-deep;
+  transition: all 0.25s ease-in;
+}
+
+.btn-edit-done {
+  color: $green;
+}

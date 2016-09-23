@@ -18,8 +18,7 @@ button,
   max-width: 12rem;
   transition: all 0.2s ease;
 
-  &:hover, &:active {
-    //box-shadow: 0 1px 5px $black inset; 
+  &:hover, &:active { 
     background: lighten($blue-dark, 10%);
   }
   &:active {
