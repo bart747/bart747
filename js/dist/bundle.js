@@ -51,12 +51,12 @@
 	__webpack_require__(3);
 	__webpack_require__(4);
 	__webpack_require__(5);
-	__webpack_require__(11);
 	__webpack_require__(6);
 	__webpack_require__(7);
 	__webpack_require__(8);
 	__webpack_require__(9);
 	__webpack_require__(10);
+	__webpack_require__(11);
 
 /***/ },
 /* 1 */
@@ -247,6 +247,75 @@
 /* 6 */
 /***/ function(module, exports) {
 
+	"use strict";
+
+	(function () {
+
+	  var doc = document;
+	  var editables = [].slice.call(doc.getElementsByClassName("editable"));
+	  // console.log(editables);
+
+	  var dateName = {
+	    recent: "just a moment ago",
+	    days1: "1 day ago",
+	    days2: "2 days ago"
+	  };
+
+	  function editModeToggle(editFields, editBtn, dateField) {
+
+	    if (editFields[0].classList.contains("edit-mode")) {
+
+	      editFields.forEach(function (fld) {
+	        fld.classList.remove("edit-mode");
+	        fld.setAttribute("contenteditable", "false");
+	      });
+
+	      editBtn.classList.remove("btn-edit-mode");
+	      editBtn.classList.add("btn-edit-waiting");
+
+	      // place for 'saving' code
+	      // than: "if (saved) {... 
+	      setTimeout(function (_) {
+	        editBtn.classList.remove("btn-edit-waiting");
+	        editBtn.classList.add("btn-edit-done");
+	        dateField.innerHTML = "&nbsp; | &nbsp; edited: " + dateName.recent;
+	      }, 500);
+
+	      setTimeout(function (_) {
+	        editBtn.classList.remove("btn-edit-done");
+	      }, 1500);
+	    } else {
+
+	      editFields.forEach(function (fld) {
+	        fld.classList.add("edit-mode");
+	        fld.setAttribute("contenteditable", "true");
+	      });
+
+	      editBtn.classList.add("btn-edit-mode");
+	    }
+	  }
+
+	  // add edit mode toggle for each editable area
+	  editables.forEach(function (el) {
+
+	    var editBtn = el.getElementsByClassName("btn-edit")[0];
+	    var editFields = [].slice.call(el.getElementsByClassName("editor-field"));
+	    var dateField = el.getElementsByClassName("editor-date")[0];
+
+	    // console.log(btn);
+	    // console.log(field);
+	    // console.log(dateField);
+
+	    editBtn.addEventListener('click', function (_) {
+	      editModeToggle(editFields, editBtn, dateField);
+	    });
+	  });
+	})();
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
 	'use strict';
 
 	/*jshint browser:true */
@@ -332,7 +401,7 @@
 	})(window.jQuery || window.Zepto);
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -343,7 +412,7 @@
 	})();
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -354,7 +423,7 @@
 	});
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1034,7 +1103,7 @@
 	}).call(undefined);
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1269,48 +1338,6 @@
 	        }
 	    });
 	  })();
-	})();
-
-/***/ },
-/* 11 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	(function () {
-
-	  var editables = [].slice.call(document.getElementsByClassName("editable"));
-	  // console.log(editables);
-
-	  var editBtns = [].slice.call(document.getElementsByClassName("btn-edit"));
-	  // console.log(editBtns);
-
-	  editables.forEach(function (el) {
-	    var btn = el.getElementsByClassName("btn-edit")[0];
-	    var field = el.getElementsByClassName("edit-field")[0];
-	    // console.log(btn);
-	    btn.addEventListener('click', function (_) {
-
-	      if (field.classList.contains("edit-mode")) {
-	        field.classList.remove("edit-mode");
-	        field.setAttribute("contenteditable", "false");
-	        btn.classList.remove("btn-edit-mode");
-
-	        // place for 'saving' code
-	        // than: "if (saved) {... 
-
-	        btn.classList.add("btn-edit-done");
-
-	        setTimeout(function (_) {
-	          btn.classList.remove("btn-edit-done");
-	        }, 1500);
-	      } else {
-	        field.classList.add("edit-mode");
-	        field.setAttribute("contenteditable", "true");
-	        btn.classList.add("btn-edit-mode");
-	      }
-	    });
-	  });
 	})();
 
 /***/ }

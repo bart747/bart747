@@ -18,13 +18,14 @@ button,
   max-width: 12rem;
   transition: all 0.2s ease;
 
-  &:hover, &:active { 
+  &:hover,
+  &:active,
+  &:focus { 
     background: lighten($blue-dark, 10%);
   }
   &:active {
     background: $blue-dark;
     border-color: $blue-dark;
-    box-shadow: 0 1px 1em $grey-dark inset; 
     transition: none;
   }
 }
@@ -36,10 +37,36 @@ button.is-active,
 }
 
 .btn-neutral {
-  border: solid $grey-dark;
-  background: $grey;
-  &:hover, &:active {
-    background: $grey-dark;
+  background: transparent;
+  border-color: darken($yellow, 30%);
+  color: $black;
+  
+  &:active,
+  &:hover,
+  &:focus {
+    background: $yellow-light;
+  }
+  &:active {
+    background: $yellow;
+    border-color: $yellow-light;
+  }
+}
+
+.btn-in-txt {
+  background: transparent;
+  color: $blue-dark;
+  padding:  0 0.25em;
+  margin: 0 0.25em;
+  border-color: $yellow;
+  border-width: 1px 1px 2px 1px ;
+  &:hover,
+  &:active,
+  &:focus {
+    background: lighten($yellow, 25%);
+  }
+  &:active {
+    background: $yellow;
+    border-color: $yellow;
   }
 }
 
@@ -51,23 +78,6 @@ button.is-active,
 
 .btn-social {
   margin: 1em 0 1em 2px;
-}
-
-.btn-in-txt {
-  background: transparent;
-  color: $blue-dark;
-  padding:  0 0.25em;
-  margin: 0 0.25em;
-  border-color: $yellow;
-  border-width: 1px 1px 2px 1px ;
-  &:hover, &:active {
-    background: lighten($yellow, 25%);
-  }
-  &:active {
-    background: $yellow;
-    border-color: $yellow;
-    box-shadow: 0 1px 0.5em darken($grey-light, 10%) inset; 
-  }
 }
 
 .btn-menu-square {

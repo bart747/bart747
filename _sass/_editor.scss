@@ -6,20 +6,34 @@
   max-width: 32em;
 }
 
-.edit-field {
+.editor-field {
   border: 1px solid transparent;
   border-radius: $radius;
-  margin: 0.75em -0.25em 0;
-  padding: 0.25em 0.25em;
+  margin: 0 -0.5em 1em;
+  padding: 0.25em 0.5em;
+  outline: none;
+  transition: all 0.2s ease-in;
+}
+
+.non-edit-field {
+  margin: 1em 0;
+  padding: 0.25em 0;
   outline: none;
 }
 
 .edit-mode {
   background: #fff;
   border: 1px solid $blue;
-  transition: all 0.2s ease-in;
 }
 
+.editor-date-box {
+  color: $grey;
+  display: inline-block;
+  font-size: 0.75em;
+  font-weight: normal;
+  text-transform: lowercase;
+  transition: all 0.2s ease-in;
+}
 
 textarea {
   border: 1px solid $grey;
@@ -43,18 +57,46 @@ textarea:disabled.editor {
 }
 
 .btn-edit {
-  color: $blue;
-  cursor: pointer;
-  float: right;
-  margin: 0 0 1em;
-  text-align: right;
+  border-width: 1px 1px 2px;
+  color: $black;
+  font-size: 14px;
+  margin: 0.25em 0;
+  padding:  0 0.2em 0 0.3em;
+  text-align: center;
+  transition: all 0.2s ease-in;
 }
 
-.btn-edit-mode {
-  color: $orange-deep;
-  transition: all 0.25s ease-in;
+.btn-edit-txt {
+  display: inline-block;
 }
 
-.btn-edit-done {
+.btn-edit-mode .btn-edit-txt{
+  width: 2.5em;
+  &:after {
+    content: "save";
+  }
+}
+
+.btn-edit-waiting .btn-edit-txt {
+  width: 2.5em;
+  &:after {
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-name: blinker;
   color: $green;
+  content: ".";
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 0.1em;
+  position: relative;
+  top: -2px;
+  }
+}
+
+.btn-edit-done .btn-edit-txt {
+  width: 2.5em;
+  color: $green;
+  &:after {
+    content: "done";
+  }
 }

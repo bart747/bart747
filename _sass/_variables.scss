@@ -36,7 +36,7 @@ $orange:           #ee7700;
 $purple:           #7722bb;
 $purple-light:     #aa40ee;
 $yellow:           #ffd600;
-$yellow-light:     #fff1ac;
+$yellow-light:     lighten($yellow, 25%);
 $yellow-dark:      #ddbb00;
 
 $grey:             #777;

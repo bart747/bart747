@@ -33,11 +33,14 @@ header .wrapper {
   max-height: 1.5em;
   padding: 0.25em 1em;
   
-  &:active, &:hover {
+  &:active,
+  &:hover,
+  &:focus {
     background: $orange-deep;
   }
   &:active {
-    border-color: $orange-deep;
+    background: $orange-deep;
+    border-color: $orange-deep; 
   }
 }
 
