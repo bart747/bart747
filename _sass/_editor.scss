@@ -6,8 +6,9 @@
   max-width: 32em;
 }
 
-.editor-field {
-  border: 1px solid transparent;
+.editor-writer {
+  background: #fff;
+  border: 1px solid $blue;
   border-radius: $radius;
   margin: 0 -0.5em 1em;
   padding: 0.25em 0.5em;
@@ -19,11 +20,6 @@
   margin: 1em 0;
   padding: 0.25em 0;
   outline: none;
-}
-
-.edit-mode {
-  background: #fff;
-  border: 1px solid $blue;
 }
 
 .editor-date-box {

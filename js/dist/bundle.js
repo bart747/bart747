@@ -249,67 +249,59 @@
 
 	"use strict";
 
+	var _exports = module.exports = {};
+
 	(function () {
+	  "use strict";
 
 	  var doc = document;
-	  var editables = [].slice.call(doc.getElementsByClassName("editable"));
-	  // console.log(editables);
+	  var editors = doc.getElementsByClassName("editable");
+	  console.log(editors[0]);
 
-	  var dateName = {
+	  var editorBtnCss = {
+	    edit: "editor-btn-edit",
+	    waiting: "editor-btn-waiting",
+	    save: "editor-btn-save"
+	  };
+
+	  var note = "Joey seems interested in the Pro plan.\n              He was talking about organizing his team.\n              I'll meet with him tomorrow.";
+
+	  var editorWriter = {
+	    on: false,
+	    content: "*empty note*"
+	  };
+
+	  var editorReader = {
+	    on: true,
+	    content: "*empty note*"
+	  };
+
+	  var dateNames = {
 	    recent: "just a moment ago",
 	    days1: "1 day ago",
 	    days2: "2 days ago"
+	    // ... 
 	  };
 
-	  function editModeToggle(editFields, editBtn, dateField) {
+	  var reader = doc.createElement("div");
+	  var newNote = doc.createTextNode(note);
+	  reader.classList.add("editor-reader");
+	  reader.appendChild(newNote);
 
-	    if (editFields[0].classList.contains("edit-mode")) {
+	  var writer = doc.createElement("div");
+	  var newNoteCopy = doc.createTextNode(note);
+	  writer.classList.add("editor-writer");
+	  writer.setAttribute("contenteditable", "true");
+	  writer.appendChild(newNoteCopy);
 
-	      editFields.forEach(function (fld) {
-	        fld.classList.remove("edit-mode");
-	        fld.setAttribute("contenteditable", "false");
-	      });
+	  var editorFragment = document.createDocumentFragment();
+	  editorFragment.appendChild(reader);
+	  editorFragment.appendChild(writer);
+	  editors[0].appendChild(editorFragment);
 
-	      editBtn.classList.remove("btn-edit-mode");
-	      editBtn.classList.add("btn-edit-waiting");
-
-	      // place for 'saving' code
-	      // than: "if (saved) {... 
-	      setTimeout(function (_) {
-	        editBtn.classList.remove("btn-edit-waiting");
-	        editBtn.classList.add("btn-edit-done");
-	        dateField.innerHTML = "&nbsp; | &nbsp; edited: " + dateName.recent;
-	      }, 500);
-
-	      setTimeout(function (_) {
-	        editBtn.classList.remove("btn-edit-done");
-	      }, 1500);
-	    } else {
-
-	      editFields.forEach(function (fld) {
-	        fld.classList.add("edit-mode");
-	        fld.setAttribute("contenteditable", "true");
-	      });
-
-	      editBtn.classList.add("btn-edit-mode");
-	    }
-	  }
-
-	  // add edit mode toggle for each editable area
-	  editables.forEach(function (el) {
-
-	    var editBtn = el.getElementsByClassName("btn-edit")[0];
-	    var editFields = [].slice.call(el.getElementsByClassName("editor-field"));
-	    var dateField = el.getElementsByClassName("editor-date")[0];
-
-	    // console.log(btn);
-	    // console.log(field);
-	    // console.log(dateField);
-
-	    editBtn.addEventListener('click', function (_) {
-	      editModeToggle(editFields, editBtn, dateField);
-	    });
-	  });
+	  var writerContent = writer.textContent;
+	  editorWriter.content = writer.textContent;
+	  console.log("writer content: " + editorWriter.content);
 	})();
 
 /***/ },
@@ -420,7 +412,7 @@
 	(function () {
 
 	  var vid = document.getElementsByClassName(".video");
-	});
+	})();
 
 /***/ },
 /* 10 */

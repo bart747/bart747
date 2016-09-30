@@ -18,12 +18,12 @@ formsToggle.forEach( el => {
   }
 
   btn[0].addEventListener('click', _ => {
-    hideShow()
+    hideShow();
   });
 
   btn[1].addEventListener('click', _ => {
-    hideShow()
+    hideShow();
   });
 
-})
+});
 })();

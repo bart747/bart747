@@ -14,7 +14,7 @@ if (btnNonSubmit[0]) {
     el.addEventListener('click', _=> {
       return false;
     });
-  })
+  });
 }
 
 toggleMenu.forEach( el => {
@@ -27,7 +27,7 @@ toggleMenu.forEach( el => {
     content[0].classList.toggle('hidden');
   });
 
-})
+});
 
 
 

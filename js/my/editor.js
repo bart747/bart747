@@ -1,71 +1,58 @@
+var exports = module.exports = {};
+
 (function () {
-
+"use strict";
 const doc = document;
-const editables = []
-                  .slice
-                  .call(doc.getElementsByClassName("editable"));       
-// console.log(editables);
+const editors = doc.getElementsByClassName("editable");       
+console.log(editors[0]);
 
-const dateName = {
-  recent : "just a moment ago",
-  days1: "1 day ago",
-  days2: "2 days ago"
-}
+const editorBtnCss = {
+  edit:     "editor-btn-edit",
+  waiting:  "editor-btn-waiting",
+  save:     "editor-btn-save"
+};
 
-function editModeToggle(editFields, editBtn, dateField) {
+const note = `Joey seems interested in the Pro plan.
+              He was talking about organizing his team.
+              I'll meet with him tomorrow.`;
 
-  if (editFields[0].classList.contains("edit-mode")) {
-
-    editFields.forEach( fld => {
-      fld.classList.remove("edit-mode");
-      fld.setAttribute("contenteditable", "false");
-    })
-
-    editBtn.classList.remove("btn-edit-mode");
-    editBtn.classList.add("btn-edit-waiting");
-
-    // place for 'saving' code
-    // than: "if (saved) {... 
-    setTimeout( _=> {
-      editBtn.classList.remove("btn-edit-waiting");
-      editBtn.classList.add("btn-edit-done");
-      dateField.innerHTML = "&nbsp; | &nbsp; edited: " + dateName.recent;
-    }, 500);
-    
-    setTimeout( _=> {
-      editBtn.classList.remove("btn-edit-done");
-    }, 1500);
-  }
-
-  else {
-
-    editFields.forEach( fld => {
-      fld.classList.add("edit-mode");
-      fld.setAttribute("contenteditable", "true");
-    })
-
-    editBtn.classList.add("btn-edit-mode");
-  }
-}
-
-// add edit mode toggle for each editable area
-editables.forEach( el => {
-
-  let editBtn = el.getElementsByClassName("btn-edit")[0];
-  let editFields = []
-                   .slice
-                   .call(el.getElementsByClassName("editor-field"));
-  let dateField = el.getElementsByClassName("editor-date")[0];
-
-  // console.log(btn);
-  // console.log(field);
-  // console.log(dateField);
-
-  editBtn.addEventListener('click', _ => {
-    editModeToggle(editFields, editBtn, dateField);  
-  });
+const editorWriter = {
+  on:           false,
+  content:      "*empty note*",
+};
 
 
-})
+const editorReader = {
+  on:           true,
+  content:      "*empty note*",
+};
+
+const dateNames = {
+  recent:   "just a moment ago",
+  days1:    "1 day ago",
+  days2:    "2 days ago"
+  // ... 
+};
+
+
+const reader = doc.createElement("div");
+const newNote = doc.createTextNode(note);
+reader.classList.add("editor-reader");
+reader.appendChild(newNote); 
+
+const writer = doc.createElement("div");
+const newNoteCopy = doc.createTextNode(note);
+writer.classList.add("editor-writer");
+writer.setAttribute("contenteditable", "true");
+writer.appendChild(newNoteCopy);
+
+const editorFragment = document.createDocumentFragment();
+editorFragment.appendChild(reader); 
+editorFragment.appendChild(writer);
+editors[0].appendChild(editorFragment);  
+
+let writerContent = writer.textContent;
+editorWriter.content = writer.textContent;
+console.log("writer content: " + editorWriter.content);
 
 })();

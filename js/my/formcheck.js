@@ -44,8 +44,7 @@ if (inputDivs[0]) {
         } if (input.validity.valid) {
           el.classList.add('input-success');
 
-        } if (input.validity.valid 
-              && el.classList.contains('input-error')) {
+        } if (input.validity.valid && el.classList.contains('input-error')) {
           el.classList.remove('input-error');
           el.classList.add('input-success');
         }
