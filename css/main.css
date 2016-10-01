@@ -1328,10 +1328,14 @@ svg {
   background: #fff;
   border: 1px solid #4466cc;
   border-radius: 0.25em;
-  margin: 0 -0.5em 1em;
+  margin: -0.25em -0.5em 0.75em;
   padding: 0.25em 0.5em;
-  outline: none;
-  transition: all 0.2s ease-in; }
+  outline: none; }
+
+.editor-reader {
+  border: 1px solid transparent;
+  margin: 0 0 1em;
+  padding: 0; }
 
 .non-edit-field {
   margin: 1em 0;
@@ -1363,22 +1367,34 @@ textarea:disabled.editor {
   border: none;
   padding: 0; }
 
-.btn-edit {
+.editor-btn-edit {
   border-width: 1px 1px 2px;
   color: #222;
   font-size: 14px;
   margin: 0.25em 0;
-  padding: 0 0.2em 0 0.3em;
+  padding: 0 0.25em;
   text-align: center;
-  transition: all 0.2s ease-in; }
+  transition: all 0.2s ease-in;
+  padding: 0 0.2em 0 0.3em; }
+
+.editor-btn-cancel {
+  border-width: 1px 1px 2px;
+  color: #222;
+  font-size: 14px;
+  margin: 0.25em 0;
+  padding: 0 0.25em;
+  text-align: center;
+  transition: all 0.2s ease-in;
+  padding: 0 0.34em 0 0.1em; }
+
+.editor-btn-save {
+  width: 5em;
+  color: #189560; }
+  .editor-btn-save:after {
+    content: "save"; }
 
 .btn-edit-txt {
   display: inline-block; }
-
-.btn-edit-mode .btn-edit-txt {
-  width: 2.5em; }
-  .btn-edit-mode .btn-edit-txt:after {
-    content: "save"; }
 
 .btn-edit-waiting .btn-edit-txt {
   width: 2.5em; }

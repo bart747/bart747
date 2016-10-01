@@ -245,36 +245,45 @@
 
 /***/ },
 /* 6 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
-	var _exports = module.exports = {};
-
 	(function () {
 	  "use strict";
+
+	  var l = __webpack_require__(12);
 
 	  var doc = document;
 	  var editors = doc.getElementsByClassName("editable");
 	  console.log(editors[0]);
 
-	  var editorBtnCss = {
+	  var editorCSS = {
+	    window: "editor-window",
+	    writer: "editor-writer",
+	    reader: "editor-reader"
+	  };
+
+	  var btnCSS = {
 	    edit: "editor-btn-edit",
 	    waiting: "editor-btn-waiting",
-	    save: "editor-btn-save"
+	    save: "editor-btn-save",
+	    cancel: "editor-btn-cancel"
 	  };
 
-	  var note = "Joey seems interested in the Pro plan.\n              He was talking about organizing his team.\n              I'll meet with him tomorrow.";
+	  var CSShidden = "hidden";
 
-	  var editorWriter = {
-	    on: false,
-	    content: "*empty note*"
-	  };
+	  // states are mutable
+	  var writerState = {
+	    display: false, // initial
+	    content: "*empty note*" };
 
-	  var editorReader = {
-	    on: true,
-	    content: "*empty note*"
-	  };
+	  var readerState = {
+	    display: true, // initial
+	    content: "*empty note*" };
+
+	  var btnState = {
+	    save: false };
 
 	  var dateNames = {
 	    recent: "just a moment ago",
@@ -283,25 +292,92 @@
 	    // ... 
 	  };
 
-	  var reader = doc.createElement("div");
-	  var newNote = doc.createTextNode(note);
-	  reader.classList.add("editor-reader");
-	  reader.appendChild(newNote);
+	  var note = "Joey seems interested in the Pro plan.\n              He was talking about organizing his team.\n              I'll meet with him tomorrow.";
 
-	  var writer = doc.createElement("div");
-	  var newNoteCopy = doc.createTextNode(note);
-	  writer.classList.add("editor-writer");
-	  writer.setAttribute("contenteditable", "true");
-	  writer.appendChild(newNoteCopy);
+	  readerState.content = note;
+	  writerState.content = note;
 
+	  // creater reader window
+	  var readerUi = doc.createElement("div");
+	  var newNote = doc.createTextNode(readerState.content);
+	  readerUi.classList.add(editorCSS.reader);
+	  readerUi.appendChild(newNote);
+
+	  // creater writer window
+	  var writerUi = doc.createElement("div");
+	  var newNoteCopy = doc.createTextNode(writerState.content);
+	  writerUi.classList.add(editorCSS.writer);
+	  writerUi.setAttribute("contenteditable", "true");
+	  writerUi.appendChild(newNoteCopy);
+
+	  // append reader and writer to editor window
+	  var editorWindow = editors[0].getElementsByClassName(editorCSS.window);
 	  var editorFragment = document.createDocumentFragment();
-	  editorFragment.appendChild(reader);
-	  editorFragment.appendChild(writer);
-	  editors[0].appendChild(editorFragment);
+	  editorFragment.appendChild(readerUi);
+	  editorFragment.appendChild(writerUi);
+	  editorWindow[0].appendChild(editorFragment);
 
-	  var writerContent = writer.textContent;
-	  editorWriter.content = writer.textContent;
-	  console.log("writer content: " + editorWriter.content);
+	  function showEditorState() {
+
+	    if (readerState.display === true) {
+	      writerUi.classList.add(CSShidden);
+	      readerUi.classList.remove(CSShidden);
+	    } else {
+	      writerUi.classList.remove(CSShidden);
+	      readerUi.classList.add(CSShidden);
+	    }
+	  }
+	  showEditorState();
+
+	  function editorToggle() {
+	    // change states
+	    writerState.display = l.toggleBool(writerState.display);
+	    readerState.display = l.toggleBool(readerState.display);
+	    btnState.save = l.toggleBool(btnState.save);
+	    //console.log("writer disp: " + writerState.display);
+	    //console.log("reader dips: " + readerState.display);
+	    //console.log("button save: " + btnState.save);
+
+	    // show right window
+	    showEditorState();
+
+	    // transform buttons (edit/save)
+	    if (btnState.save === true) {
+	      btn[0].classList.add(btnCSS.save);
+	      btnCancel[0].classList.remove(CSShidden);
+	    } else {
+	      btn[0].classList.remove(btnCSS.save);
+	      btnCancel[0].classList.add(CSShidden);
+	    }
+	  }
+
+	  function editorSave() {
+	    if (btnState.save === true) {
+	      readerState.content = l.getUpdatedContent(readerState.content, writerUi.textContent);
+	      // console.log(readerState.content);
+	      readerUi.textContent = readerState.content;
+	    }
+	  }
+
+	  function editorUpdate() {
+	    writerState.content = readerState.content;
+	    writerUi.textContent = writerState.content;
+	  }
+
+	  var btn = editors[0].getElementsByClassName(btnCSS.edit);
+	  var btnCancel = editors[0].getElementsByClassName(btnCSS.cancel);
+
+	  // create edit button functionality
+	  btn[0].addEventListener('click', function (_) {
+	    editorSave();
+	    editorUpdate();
+	    editorToggle();
+	  });
+
+	  // create cancel btn functionality
+	  btnCancel[0].addEventListener('click', function (_) {
+	    editorToggle();
+	  });
 	})();
 
 /***/ },
@@ -1331,6 +1407,40 @@
 	    });
 	  })();
 	})();
+
+/***/ },
+/* 12 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	var _exports = module.exports = {};
+
+	function testFn(a, b) {
+	  x = a + b;
+	  return x;
+	}
+
+	function toggleBool(el) {
+	  if (el === false) {
+	    el = !false;
+	  } else {
+	    el = !true;
+	  }
+	  return el;
+	}
+
+	function getUpdatedContent(sourceOld, sourceNew) {
+	  if (sourceOld != sourceNew) {
+	    return sourceNew;
+	  } else {
+	    return sourceOld;
+	  }
+	}
+
+	_exports.testFn = testFn;
+	_exports.toggleBool = toggleBool;
+	_exports.getUpdatedContent = getUpdatedContent;
 
 /***/ }
 /******/ ]);
