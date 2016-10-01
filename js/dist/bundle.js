@@ -52,11 +52,11 @@
 	__webpack_require__(4);
 	__webpack_require__(5);
 	__webpack_require__(6);
-	__webpack_require__(7);
 	__webpack_require__(8);
 	__webpack_require__(9);
 	__webpack_require__(10);
 	__webpack_require__(11);
+	__webpack_require__(12);
 
 /***/ },
 /* 1 */
@@ -252,136 +252,205 @@
 	(function () {
 	  "use strict";
 
-	  var l = __webpack_require__(12);
+	  function editor() {
 
-	  var doc = document;
-	  var editors = doc.getElementsByClassName("editable");
-	  console.log(editors[0]);
+	    var l = __webpack_require__(7);
 
-	  var editorCSS = {
-	    window: "editor-window",
-	    writer: "editor-writer",
-	    reader: "editor-reader"
-	  };
+	    var doc = document;
+	    var editors = doc.getElementsByClassName("editable");
+	    console.log(editors[0]);
 
-	  var btnCSS = {
-	    edit: "editor-btn-edit",
-	    waiting: "editor-btn-waiting",
-	    save: "editor-btn-save",
-	    cancel: "editor-btn-cancel"
-	  };
+	    var editorCSS = {
+	      window: "editor-window",
+	      writer: "editor-writer",
+	      reader: "editor-reader"
+	    };
 
-	  var CSShidden = "hidden";
+	    var btnCSS = {
+	      edit: "editor-btn-edit",
+	      cancel: "editor-btn-cancel"
+	    };
 
-	  // states are mutable
-	  var writerState = {
-	    display: false, // initial
-	    content: "*empty note*" };
+	    var CSShidden = "hidden";
 
-	  var readerState = {
-	    display: true, // initial
-	    content: "*empty note*" };
+	    // states are mutable
+	    var writerState = {
+	      display: false, // initial
+	      content: "*empty note*" };
 
-	  var btnState = {
-	    save: false };
+	    var readerState = {
+	      display: true, // initial
+	      content: "*empty note*" };
 
-	  var dateNames = {
-	    recent: "just a moment ago",
-	    days1: "1 day ago",
-	    days2: "2 days ago"
-	    // ... 
-	  };
+	    var btnState = {
+	      save: false };
 
-	  var note = "Joey seems interested in the Pro plan.\n              He was talking about organizing his team.\n              I'll meet with him tomorrow.";
+	    var dateCSS = "editor-date";
+	    var dateNames = {
+	      recent: "just a moment ago",
+	      days1: "1 day ago",
+	      days2: "2 days ago"
+	      // ... 
+	    };
 
-	  readerState.content = note;
-	  writerState.content = note;
+	    var noteDate = {
+	      field: editors[0].getElementsByClassName(dateCSS),
+	      created: dateNames.days1
+	    };
 
-	  // creater reader window
-	  var readerUi = doc.createElement("div");
-	  var newNote = doc.createTextNode(readerState.content);
-	  readerUi.classList.add(editorCSS.reader);
-	  readerUi.appendChild(newNote);
+	    var note = "Joey seems interested in the Pro plan.\n              He was talking about organizing his team.\n              I'll meet with him tomorrow.";
 
-	  // creater writer window
-	  var writerUi = doc.createElement("div");
-	  var newNoteCopy = doc.createTextNode(writerState.content);
-	  writerUi.classList.add(editorCSS.writer);
-	  writerUi.setAttribute("contenteditable", "true");
-	  writerUi.appendChild(newNoteCopy);
+	    readerState.content = note;
+	    writerState.content = note;
 
-	  // append reader and writer to editor window
-	  var editorWindow = editors[0].getElementsByClassName(editorCSS.window);
-	  var editorFragment = document.createDocumentFragment();
-	  editorFragment.appendChild(readerUi);
-	  editorFragment.appendChild(writerUi);
-	  editorWindow[0].appendChild(editorFragment);
+	    /*
+	    There are two separate windows: 
+	    one for reading notes, one for editing them.
+	    When you click an edit button, "reader" becomes hidden
+	    and "writer" shows up
+	    */
 
-	  function showEditorState() {
+	    // create publication date info
+	    noteDate.field[0].textContent = "created: " + noteDate.created;
 
-	    if (readerState.display === true) {
-	      writerUi.classList.add(CSShidden);
-	      readerUi.classList.remove(CSShidden);
-	    } else {
-	      writerUi.classList.remove(CSShidden);
-	      readerUi.classList.add(CSShidden);
+	    // creater reader window
+	    var readerUi = doc.createElement("div");
+	    var newNote = doc.createTextNode(readerState.content);
+	    readerUi.classList.add(editorCSS.reader);
+	    readerUi.appendChild(newNote);
+
+	    // creater writer window
+	    var writerUi = doc.createElement("div");
+	    var newNoteCopy = doc.createTextNode(writerState.content);
+	    writerUi.classList.add(editorCSS.writer);
+	    writerUi.setAttribute("contenteditable", "true");
+	    writerUi.appendChild(newNoteCopy);
+
+	    // append reader and writer to editor window
+	    var editorWindow = editors[0].getElementsByClassName(editorCSS.window);
+	    var editorFragment = document.createDocumentFragment();
+	    editorFragment.appendChild(readerUi);
+	    editorFragment.appendChild(writerUi);
+	    editorWindow[0].appendChild(editorFragment);
+
+	    var btn = editors[0].getElementsByClassName(btnCSS.edit);
+	    var btnCancel = editors[0].getElementsByClassName(btnCSS.cancel);
+
+	    function showEditorState() {
+
+	      if (readerState.display === true) {
+	        writerUi.classList.add(CSShidden);
+	        readerUi.classList.remove(CSShidden);
+	      } else {
+	        writerUi.classList.remove(CSShidden);
+	        readerUi.classList.add(CSShidden);
+	      }
 	    }
-	  }
-	  showEditorState();
-
-	  function editorToggle() {
-	    // change states
-	    writerState.display = l.toggleBool(writerState.display);
-	    readerState.display = l.toggleBool(readerState.display);
-	    btnState.save = l.toggleBool(btnState.save);
-	    //console.log("writer disp: " + writerState.display);
-	    //console.log("reader dips: " + readerState.display);
-	    //console.log("button save: " + btnState.save);
-
-	    // show right window
 	    showEditorState();
 
-	    // transform buttons (edit/save)
-	    if (btnState.save === true) {
-	      btn[0].classList.add(btnCSS.save);
-	      btnCancel[0].classList.remove(CSShidden);
-	    } else {
-	      btn[0].classList.remove(btnCSS.save);
-	      btnCancel[0].classList.add(CSShidden);
+	    function editorToggle() {
+	      // change states
+	      writerState.display = l.toggleBool(writerState.display);
+	      readerState.display = l.toggleBool(readerState.display);
+	      btnState.save = l.toggleBool(btnState.save);
+	      //console.log("writer disp: " + writerState.display);
+	      //console.log("reader dips: " + readerState.display);
+	      //console.log("button save: " + btnState.save);
+
+	      // show selected window (writer or reader)
+	      showEditorState();
+
+	      // transform buttons (edit/save)
+	      if (btnState.save === true) {
+	        btn[0].classList.add(btnCSS.save);
+	        btnCancel[0].classList.remove(CSShidden);
+	      } else {
+	        btn[0].classList.remove(btnCSS.save);
+	        btnCancel[0].classList.add(CSShidden);
+	      }
 	    }
-	  }
 
-	  function editorSave() {
-	    if (btnState.save === true) {
-	      readerState.content = l.getUpdatedContent(readerState.content, writerUi.textContent);
-	      // console.log(readerState.content);
-	      readerUi.textContent = readerState.content;
+	    function editorSave() {
+	      if (btnState.save === true) {
+	        writerState.content = l.getUpdatedContent(writerState.content, writerUi.textContent);
+	        // console.log(readerState.content);
+	      }
 	    }
+
+	    function saveFeedback() {
+	      console.log("content is saved properly (not really, it's just a demo)");
+	    }
+
+	    var nbsp = String.fromCharCode(8195);
+
+	    function editorUpdate() {
+	      if (writerState.content !== readerState.content) {
+	        readerState.content = writerState.content;
+	        writerUi.textContent = writerState.content;
+	        readerUi.textContent = readerState.content;
+	        saveFeedback(); // do if saved on db (hard-coded here)
+	        noteDate.field[0].textContent = "created: " + noteDate.created + nbsp + " edited: " + dateNames.recent;
+	      } else {
+	        writerUi.textContent = writerState.content;
+	      }
+	    }
+
+	    // create edit button functionality
+	    btn[0].addEventListener('click', function (_) {
+	      editorSave();
+	      editorUpdate();
+	      editorToggle();
+	    });
+
+	    // create cancel btn functionality
+	    btnCancel[0].addEventListener('click', function (_) {
+	      editorToggle();
+	    });
 	  }
 
-	  function editorUpdate() {
-	    writerState.content = readerState.content;
-	    writerUi.textContent = writerState.content;
+	  if (document.getElementsByClassName("editable")[0]) {
+	    editor();
 	  }
-
-	  var btn = editors[0].getElementsByClassName(btnCSS.edit);
-	  var btnCancel = editors[0].getElementsByClassName(btnCSS.cancel);
-
-	  // create edit button functionality
-	  btn[0].addEventListener('click', function (_) {
-	    editorSave();
-	    editorUpdate();
-	    editorToggle();
-	  });
-
-	  // create cancel btn functionality
-	  btnCancel[0].addEventListener('click', function (_) {
-	    editorToggle();
-	  });
 	})();
 
 /***/ },
 /* 7 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	var _exports = module.exports = {};
+
+	function testFn(a, b) {
+	  "use strict";
+
+	  var x = a + b;
+	  return x;
+	}
+
+	function toggleBool(el) {
+	  if (el === false) {
+	    el = !false;
+	  } else {
+	    el = !true;
+	  }
+	  return el;
+	}
+
+	function getUpdatedContent(sourceOld, sourceNew) {
+	  if (sourceOld != sourceNew) {
+	    return sourceNew;
+	  } else {
+	    return sourceOld;
+	  }
+	}
+
+	_exports.testFn = testFn;
+	_exports.toggleBool = toggleBool;
+	_exports.getUpdatedContent = getUpdatedContent;
+
+/***/ },
+/* 8 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -469,7 +538,7 @@
 	})(window.jQuery || window.Zepto);
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -480,7 +549,7 @@
 	})();
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -491,7 +560,7 @@
 	})();
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1171,7 +1240,7 @@
 	}).call(undefined);
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1407,40 +1476,6 @@
 	    });
 	  })();
 	})();
-
-/***/ },
-/* 12 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	var _exports = module.exports = {};
-
-	function testFn(a, b) {
-	  x = a + b;
-	  return x;
-	}
-
-	function toggleBool(el) {
-	  if (el === false) {
-	    el = !false;
-	  } else {
-	    el = !true;
-	  }
-	  return el;
-	}
-
-	function getUpdatedContent(sourceOld, sourceNew) {
-	  if (sourceOld != sourceNew) {
-	    return sourceNew;
-	  } else {
-	    return sourceOld;
-	  }
-	}
-
-	_exports.testFn = testFn;
-	_exports.toggleBool = toggleBool;
-	_exports.getUpdatedContent = getUpdatedContent;
 
 /***/ }
 /******/ ]);

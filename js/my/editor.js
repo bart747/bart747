@@ -1,6 +1,8 @@
 (function () {
 "use strict";
 
+function editor() {
+
 const l = require('./editorLogic');
 
 const doc = document;
@@ -15,8 +17,6 @@ const editorCSS = {
 
 const btnCSS = {
   edit:     "editor-btn-edit",
-  waiting:  "editor-btn-waiting",
-  save:     "editor-btn-save",
   cancel:   "editor-btn-cancel",
 };
 
@@ -37,11 +37,17 @@ const btnState = {
   save:        false, // initial
 };
 
+const dateCSS = "editor-date";
 const dateNames = {
   recent:   "just a moment ago",
   days1:    "1 day ago",
   days2:    "2 days ago"
   // ... 
+};
+
+const noteDate = {
+  field : editors[0].getElementsByClassName( dateCSS ),
+  created: dateNames.days1,
 };
 
 const note = `Joey seems interested in the Pro plan.
@@ -50,6 +56,17 @@ const note = `Joey seems interested in the Pro plan.
 
 readerState.content = note; 
 writerState.content = note; 
+
+
+/*
+There are two separate windows: 
+one for reading notes, one for editing them.
+When you click an edit button, "reader" becomes hidden
+and "writer" shows up
+*/
+
+// create publication date info
+noteDate.field[0].textContent = "created: " + noteDate.created;
 
 // creater reader window
 const readerUi = doc.createElement( "div" );
@@ -71,6 +88,8 @@ editorFragment.appendChild( readerUi );
 editorFragment.appendChild( writerUi );
 editorWindow[0].appendChild( editorFragment );  
 
+const btn = editors[0].getElementsByClassName( btnCSS.edit );
+const btnCancel = editors[0].getElementsByClassName( btnCSS.cancel );
 
 function showEditorState() {
 
@@ -93,7 +112,7 @@ function editorToggle() {
   //console.log("reader dips: " + readerState.display);
   //console.log("button save: " + btnState.save);
   
-  // show right window
+  // show selected window (writer or reader)
   showEditorState();
 
   // transform buttons (edit/save)
@@ -108,20 +127,29 @@ function editorToggle() {
 
 function editorSave() {
   if (btnState.save === true) {
-    readerState.content = l.getUpdatedContent(readerState.content,
+    writerState.content = l.getUpdatedContent(writerState.content,
                                               writerUi.textContent);
     // console.log(readerState.content);
-    readerUi.textContent = readerState.content;
   }
 }
 
-function editorUpdate() {
-  writerState.content = readerState.content;
-  writerUi.textContent = writerState.content;
+function saveFeedback() {
+  console.log("content is saved properly (not really, it's just a demo)");
 }
 
-let btn = editors[0].getElementsByClassName( btnCSS.edit );
-let btnCancel = editors[0].getElementsByClassName( btnCSS.cancel );
+const nbsp = String.fromCharCode(8195);
+
+function editorUpdate() {
+  if (writerState.content !== readerState.content) {
+    readerState.content = writerState.content;
+    writerUi.textContent = writerState.content;
+    readerUi.textContent = readerState.content;
+    saveFeedback(); // do if saved on db (hard-coded here)
+    noteDate.field[0].textContent = "created: " + noteDate.created + nbsp + " edited: " + dateNames.recent;
+  } else {
+    writerUi.textContent = writerState.content;
+  }
+}
 
 // create edit button functionality
 btn[0].addEventListener('click', _=> {
@@ -135,4 +163,9 @@ btnCancel[0].addEventListener('click', _=> {
   editorToggle(); 
 });
 
+}
+
+if (document.getElementsByClassName("editable")[0]) {
+  editor();
+}
 })();

@@ -13,14 +13,12 @@
   margin: -0.25em -0.5em 0.75em;
   padding: 0.25em 0.5em;
   outline: none;
-
 }
 
 .editor-reader {
   border: 1px solid transparent;
   margin: 0 0 1em;
   padding: 0;
-
 }
 
 .non-edit-field {
@@ -36,6 +34,12 @@
   font-weight: normal;
   text-transform: lowercase;
   transition: all 0.2s ease-in;
+}
+
+.editor-date {
+  animation-name: show-up;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in;
 }
 
 textarea {
@@ -71,47 +75,17 @@ textarea:disabled.editor {
 
 .editor-btn-edit {
   @include editor-btn;
-  padding:  0 0.2em 0 0.3em;
+  padding:  0 0.34em 0 0.1em;
 }
 
 .editor-btn-cancel {
   @include editor-btn;
-    padding:  0 0.34em 0 0.1em;
+  padding:  0 0.34em 0 0.1em;
+  animation-name: show-up;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in;
 }
 
-.editor-btn-save {
-  width: 5em;
-  color: $green;
-  &:after {
-    content: "save";
-  }
-}
-
-.btn-edit-txt {
+.editor-messages {
   display: inline-block;
-}
-
-
-.btn-edit-waiting .btn-edit-txt {
-  width: 2.5em;
-  &:after {
-  animation-duration: 0.5s;
-  animation-iteration-count: infinite;
-  animation-name: blinker;
-  color: $green;
-  content: ".";
-  font-size: 2em;
-  font-weight: bold;
-  line-height: 0.1em;
-  position: relative;
-  top: -2px;
-  }
-}
-
-.btn-edit-done .btn-edit-txt {
-  width: 2.5em;
-  color: $green;
-  &:after {
-    content: "done";
-  }
 }

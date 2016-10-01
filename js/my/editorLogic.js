@@ -1,8 +1,9 @@
+
 var exports = module.exports = {};
 
-
 function testFn(a,b) {
-  x = a + b;
+  "use strict";
+  const x = a + b;
   return x;
 }
 

@@ -1282,7 +1282,7 @@ img {
 @-webkit-keyframes show-hide {
   0% {
     opacity: 0; }
-  50% {
+  25% {
     opacity: 1; }
   100% {
     opacity: 0; } }
@@ -1290,7 +1290,7 @@ img {
 @keyframes show-hide {
   0% {
     opacity: 0; }
-  50% {
+  25% {
     opacity: 1; }
   100% {
     opacity: 0; } }
@@ -1350,6 +1350,14 @@ svg {
   text-transform: lowercase;
   transition: all 0.2s ease-in; }
 
+.editor-date {
+  -webkit-animation-name: show-up;
+  animation-name: show-up;
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in; }
+
 textarea {
   border: 1px solid #777;
   border-radius: 0.25em;
@@ -1375,7 +1383,7 @@ textarea:disabled.editor {
   padding: 0 0.25em;
   text-align: center;
   transition: all 0.2s ease-in;
-  padding: 0 0.2em 0 0.3em; }
+  padding: 0 0.34em 0 0.1em; }
 
 .editor-btn-cancel {
   border-width: 1px 1px 2px;
@@ -1385,39 +1393,16 @@ textarea:disabled.editor {
   padding: 0 0.25em;
   text-align: center;
   transition: all 0.2s ease-in;
-  padding: 0 0.34em 0 0.1em; }
+  padding: 0 0.34em 0 0.1em;
+  -webkit-animation-name: show-up;
+  animation-name: show-up;
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in; }
 
-.editor-btn-save {
-  width: 5em;
-  color: #189560; }
-  .editor-btn-save:after {
-    content: "save"; }
-
-.btn-edit-txt {
+.editor-messages {
   display: inline-block; }
-
-.btn-edit-waiting .btn-edit-txt {
-  width: 2.5em; }
-  .btn-edit-waiting .btn-edit-txt:after {
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-name: blinker;
-    animation-name: blinker;
-    color: #189560;
-    content: ".";
-    font-size: 2em;
-    font-weight: bold;
-    line-height: 0.1em;
-    position: relative;
-    top: -2px; }
-
-.btn-edit-done .btn-edit-txt {
-  width: 2.5em;
-  color: #189560; }
-  .btn-edit-done .btn-edit-txt:after {
-    content: "done"; }
 
 .cc_banner {
   background: #eee;
