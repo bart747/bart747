@@ -17,6 +17,7 @@ const editorCSS = {
 
 const btnCSS = {
   edit:     "editor-btn-edit",
+  save:     "editor-btn-save",
   cancel:   "editor-btn-cancel",
 };
 
@@ -91,8 +92,7 @@ editorWindow[0].appendChild( editorFragment );
 const btn = editors[0].getElementsByClassName( btnCSS.edit );
 const btnCancel = editors[0].getElementsByClassName( btnCSS.cancel );
 
-function showEditorState() {
-
+function editorStateToUI() {
   if (readerState.display === true) {
     writerUi.classList.add( CSShidden );
     readerUi.classList.remove( CSShidden );
@@ -101,21 +101,9 @@ function showEditorState() {
     readerUi.classList.add( CSShidden ); 
   }
 }
-showEditorState();
+editorStateToUI();
 
-function editorToggle() {
-  // change states
-  writerState.display = l.toggleBool( writerState.display );
-  readerState.display = l.toggleBool( readerState.display );
-  btnState.save = l.toggleBool( btnState.save );
-  //console.log("writer disp: " + writerState.display);
-  //console.log("reader dips: " + readerState.display);
-  //console.log("button save: " + btnState.save);
-  
-  // show selected window (writer or reader)
-  showEditorState();
-
-  // transform buttons (edit/save)
+function btnStateToUI() {
   if (btnState.save === true) {
     btn[0].classList.add( btnCSS.save );
     btnCancel[0].classList.remove( CSShidden );
@@ -125,7 +113,17 @@ function editorToggle() {
   }
 }
 
-function editorSave() {
+function editorStateToggle() {
+  // change states
+  writerState.display = l.toggleBool( writerState.display );
+  readerState.display = l.toggleBool( readerState.display );
+  btnState.save = l.toggleBool( btnState.save );
+  //console.log("writer disp: " + writerState.display);
+  //console.log("reader dips: " + readerState.display);
+  //console.log("button save: " + btnState.save);
+}
+
+function editorContentSave() {
   if (btnState.save === true) {
     writerState.content = l.getUpdatedContent(writerState.content,
                                               writerUi.textContent);
@@ -133,7 +131,8 @@ function editorSave() {
   }
 }
 
-function saveFeedback() {
+function dbFeedback() {
+  // in practice there should be something that checks db message
   console.log("content is saved properly (not really, it's just a demo)");
 }
 
@@ -144,7 +143,7 @@ function editorUpdate() {
     readerState.content = writerState.content;
     writerUi.textContent = writerState.content;
     readerUi.textContent = readerState.content;
-    saveFeedback(); // do if saved on db (hard-coded here)
+    dbFeedback();
     noteDate.field[0].textContent = "created: " + noteDate.created + nbsp + " edited: " + dateNames.recent;
   } else {
     writerUi.textContent = writerState.content;
@@ -153,18 +152,23 @@ function editorUpdate() {
 
 // create edit button functionality
 btn[0].addEventListener('click', _=> {
-  editorSave();
+  editorContentSave();
   editorUpdate();
-  editorToggle();
+  editorStateToggle();
+  editorStateToUI();
+  btnStateToUI();
 });
 
 // create cancel btn functionality
 btnCancel[0].addEventListener('click', _=> {
-  editorToggle(); 
+  editorStateToggle();
+  editorStateToUI();
+  btnStateToUI();
 });
 
 }
 
+// run editor only if needed
 if (document.getElementsByClassName("editable")[0]) {
   editor();
 }

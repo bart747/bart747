@@ -1385,6 +1385,11 @@ textarea:disabled.editor {
   transition: all 0.2s ease-in;
   padding: 0 0.34em 0 0.1em; }
 
+.editor-btn-save {
+  font-size: 14px; }
+  .editor-btn-save:after {
+    content: "save"; }
+
 .editor-btn-cancel {
   border-width: 1px 1px 2px;
   color: #222;

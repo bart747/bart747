@@ -52,11 +52,11 @@
 	__webpack_require__(4);
 	__webpack_require__(5);
 	__webpack_require__(6);
+	__webpack_require__(7);
 	__webpack_require__(8);
 	__webpack_require__(9);
 	__webpack_require__(10);
 	__webpack_require__(11);
-	__webpack_require__(12);
 
 /***/ },
 /* 1 */
@@ -254,7 +254,7 @@
 
 	  function editor() {
 
-	    var l = __webpack_require__(7);
+	    var l = __webpack_require__(12);
 
 	    var doc = document;
 	    var editors = doc.getElementsByClassName("editable");
@@ -268,6 +268,7 @@
 
 	    var btnCSS = {
 	      edit: "editor-btn-edit",
+	      save: "editor-btn-save",
 	      cancel: "editor-btn-cancel"
 	    };
 
@@ -336,8 +337,7 @@
 	    var btn = editors[0].getElementsByClassName(btnCSS.edit);
 	    var btnCancel = editors[0].getElementsByClassName(btnCSS.cancel);
 
-	    function showEditorState() {
-
+	    function editorStateToUI() {
 	      if (readerState.display === true) {
 	        writerUi.classList.add(CSShidden);
 	        readerUi.classList.remove(CSShidden);
@@ -346,21 +346,9 @@
 	        readerUi.classList.add(CSShidden);
 	      }
 	    }
-	    showEditorState();
+	    editorStateToUI();
 
-	    function editorToggle() {
-	      // change states
-	      writerState.display = l.toggleBool(writerState.display);
-	      readerState.display = l.toggleBool(readerState.display);
-	      btnState.save = l.toggleBool(btnState.save);
-	      //console.log("writer disp: " + writerState.display);
-	      //console.log("reader dips: " + readerState.display);
-	      //console.log("button save: " + btnState.save);
-
-	      // show selected window (writer or reader)
-	      showEditorState();
-
-	      // transform buttons (edit/save)
+	    function btnStateToUI() {
 	      if (btnState.save === true) {
 	        btn[0].classList.add(btnCSS.save);
 	        btnCancel[0].classList.remove(CSShidden);
@@ -370,14 +358,25 @@
 	      }
 	    }
 
-	    function editorSave() {
+	    function editorStateToggle() {
+	      // change states
+	      writerState.display = l.toggleBool(writerState.display);
+	      readerState.display = l.toggleBool(readerState.display);
+	      btnState.save = l.toggleBool(btnState.save);
+	      //console.log("writer disp: " + writerState.display);
+	      //console.log("reader dips: " + readerState.display);
+	      //console.log("button save: " + btnState.save);
+	    }
+
+	    function editorContentSave() {
 	      if (btnState.save === true) {
 	        writerState.content = l.getUpdatedContent(writerState.content, writerUi.textContent);
 	        // console.log(readerState.content);
 	      }
 	    }
 
-	    function saveFeedback() {
+	    function dbFeedback() {
+	      // in practice there should be something that checks db message
 	      console.log("content is saved properly (not really, it's just a demo)");
 	    }
 
@@ -388,7 +387,7 @@
 	        readerState.content = writerState.content;
 	        writerUi.textContent = writerState.content;
 	        readerUi.textContent = readerState.content;
-	        saveFeedback(); // do if saved on db (hard-coded here)
+	        dbFeedback();
 	        noteDate.field[0].textContent = "created: " + noteDate.created + nbsp + " edited: " + dateNames.recent;
 	      } else {
 	        writerUi.textContent = writerState.content;
@@ -397,17 +396,22 @@
 
 	    // create edit button functionality
 	    btn[0].addEventListener('click', function (_) {
-	      editorSave();
+	      editorContentSave();
 	      editorUpdate();
-	      editorToggle();
+	      editorStateToggle();
+	      editorStateToUI();
+	      btnStateToUI();
 	    });
 
 	    // create cancel btn functionality
 	    btnCancel[0].addEventListener('click', function (_) {
-	      editorToggle();
+	      editorStateToggle();
+	      editorStateToUI();
+	      btnStateToUI();
 	    });
 	  }
 
+	  // run editor only if needed
 	  if (document.getElementsByClassName("editable")[0]) {
 	    editor();
 	  }
@@ -415,42 +419,6 @@
 
 /***/ },
 /* 7 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	var _exports = module.exports = {};
-
-	function testFn(a, b) {
-	  "use strict";
-
-	  var x = a + b;
-	  return x;
-	}
-
-	function toggleBool(el) {
-	  if (el === false) {
-	    el = !false;
-	  } else {
-	    el = !true;
-	  }
-	  return el;
-	}
-
-	function getUpdatedContent(sourceOld, sourceNew) {
-	  if (sourceOld != sourceNew) {
-	    return sourceNew;
-	  } else {
-	    return sourceOld;
-	  }
-	}
-
-	_exports.testFn = testFn;
-	_exports.toggleBool = toggleBool;
-	_exports.getUpdatedContent = getUpdatedContent;
-
-/***/ },
-/* 8 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -538,7 +506,7 @@
 	})(window.jQuery || window.Zepto);
 
 /***/ },
-/* 9 */
+/* 8 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -549,7 +517,7 @@
 	})();
 
 /***/ },
-/* 10 */
+/* 9 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -560,7 +528,7 @@
 	})();
 
 /***/ },
-/* 11 */
+/* 10 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1240,7 +1208,7 @@
 	}).call(undefined);
 
 /***/ },
-/* 12 */
+/* 11 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1476,6 +1444,42 @@
 	    });
 	  })();
 	})();
+
+/***/ },
+/* 12 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	var _exports = module.exports = {};
+
+	function testFn(a, b) {
+	  "use strict";
+
+	  var x = a + b;
+	  return x;
+	}
+
+	function toggleBool(el) {
+	  if (el === false) {
+	    el = !false;
+	  } else {
+	    el = !true;
+	  }
+	  return el;
+	}
+
+	function getUpdatedContent(sourceOld, sourceNew) {
+	  if (sourceOld != sourceNew) {
+	    return sourceNew;
+	  } else {
+	    return sourceOld;
+	  }
+	}
+
+	_exports.testFn = testFn;
+	_exports.toggleBool = toggleBool;
+	_exports.getUpdatedContent = getUpdatedContent;
 
 /***/ }
 /******/ ]);
