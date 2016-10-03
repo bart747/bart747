@@ -1,13 +1,11 @@
 (function () {
 "use strict";
 
-function editor() {
+function editor(editor) {
 
 const l = require('./editorLogic');
 
 const doc = document;
-const editors = doc.getElementsByClassName("editable");       
-console.log(editors[0]);
 
 const editorCSS = {
   window: "editor-window",
@@ -47,7 +45,7 @@ const dateNames = {
 };
 
 const noteDate = {
-  field : editors[0].getElementsByClassName( dateCSS ),
+  field : editor.getElementsByClassName( dateCSS ),
   created: dateNames.days1,
 };
 
@@ -83,14 +81,14 @@ writerUi.setAttribute( "contenteditable", "true" );
 writerUi.appendChild( newNoteCopy );
 
 // append reader and writer to editor window
-let editorWindow = editors[0].getElementsByClassName( editorCSS.window );
+let editorWindow = editor.getElementsByClassName( editorCSS.window );
 const editorFragment = document.createDocumentFragment();
 editorFragment.appendChild( readerUi ); 
 editorFragment.appendChild( writerUi );
 editorWindow[0].appendChild( editorFragment );  
 
-const btn = editors[0].getElementsByClassName( btnCSS.edit );
-const btnCancel = editors[0].getElementsByClassName( btnCSS.cancel );
+const btn = editor.getElementsByClassName( btnCSS.edit );
+const btnCancel = editor.getElementsByClassName( btnCSS.cancel );
 
 function editorStateToUI() {
   if (readerState.display === true) {
@@ -168,8 +166,10 @@ btnCancel[0].addEventListener('click', _=> {
 
 }
 
+
 // run editor only if needed
 if (document.getElementsByClassName("editable")[0]) {
-  editor();
+  const editors = document.getElementsByClassName("editable");       
+  editor(editors[0]);
 }
 })();

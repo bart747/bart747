@@ -52,11 +52,11 @@
 	__webpack_require__(4);
 	__webpack_require__(5);
 	__webpack_require__(6);
-	__webpack_require__(7);
 	__webpack_require__(8);
 	__webpack_require__(9);
 	__webpack_require__(10);
 	__webpack_require__(11);
+	__webpack_require__(12);
 
 /***/ },
 /* 1 */
@@ -252,13 +252,11 @@
 	(function () {
 	  "use strict";
 
-	  function editor() {
+	  function editor(editor) {
 
-	    var l = __webpack_require__(12);
+	    var l = __webpack_require__(7);
 
 	    var doc = document;
-	    var editors = doc.getElementsByClassName("editable");
-	    console.log(editors[0]);
 
 	    var editorCSS = {
 	      window: "editor-window",
@@ -295,7 +293,7 @@
 	    };
 
 	    var noteDate = {
-	      field: editors[0].getElementsByClassName(dateCSS),
+	      field: editor.getElementsByClassName(dateCSS),
 	      created: dateNames.days1
 	    };
 
@@ -328,14 +326,14 @@
 	    writerUi.appendChild(newNoteCopy);
 
 	    // append reader and writer to editor window
-	    var editorWindow = editors[0].getElementsByClassName(editorCSS.window);
+	    var editorWindow = editor.getElementsByClassName(editorCSS.window);
 	    var editorFragment = document.createDocumentFragment();
 	    editorFragment.appendChild(readerUi);
 	    editorFragment.appendChild(writerUi);
 	    editorWindow[0].appendChild(editorFragment);
 
-	    var btn = editors[0].getElementsByClassName(btnCSS.edit);
-	    var btnCancel = editors[0].getElementsByClassName(btnCSS.cancel);
+	    var btn = editor.getElementsByClassName(btnCSS.edit);
+	    var btnCancel = editor.getElementsByClassName(btnCSS.cancel);
 
 	    function editorStateToUI() {
 	      if (readerState.display === true) {
@@ -413,12 +411,49 @@
 
 	  // run editor only if needed
 	  if (document.getElementsByClassName("editable")[0]) {
-	    editor();
+	    var editors = document.getElementsByClassName("editable");
+	    editor(editors[0]);
 	  }
 	})();
 
 /***/ },
 /* 7 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	var _exports = module.exports = {};
+
+	function testFn(a, b) {
+	  "use strict";
+
+	  var x = a + b;
+	  return x;
+	}
+
+	function toggleBool(el) {
+	  if (el === false) {
+	    el = !false;
+	  } else {
+	    el = !true;
+	  }
+	  return el;
+	}
+
+	function getUpdatedContent(sourceOld, sourceNew) {
+	  if (sourceOld != sourceNew) {
+	    return sourceNew;
+	  } else {
+	    return sourceOld;
+	  }
+	}
+
+	_exports.testFn = testFn;
+	_exports.toggleBool = toggleBool;
+	_exports.getUpdatedContent = getUpdatedContent;
+
+/***/ },
+/* 8 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -506,7 +541,7 @@
 	})(window.jQuery || window.Zepto);
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -517,7 +552,7 @@
 	})();
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -528,7 +563,7 @@
 	})();
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1208,7 +1243,7 @@
 	}).call(undefined);
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1444,42 +1479,6 @@
 	    });
 	  })();
 	})();
-
-/***/ },
-/* 12 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	var _exports = module.exports = {};
-
-	function testFn(a, b) {
-	  "use strict";
-
-	  var x = a + b;
-	  return x;
-	}
-
-	function toggleBool(el) {
-	  if (el === false) {
-	    el = !false;
-	  } else {
-	    el = !true;
-	  }
-	  return el;
-	}
-
-	function getUpdatedContent(sourceOld, sourceNew) {
-	  if (sourceOld != sourceNew) {
-	    return sourceNew;
-	  } else {
-	    return sourceOld;
-	  }
-	}
-
-	_exports.testFn = testFn;
-	_exports.toggleBool = toggleBool;
-	_exports.getUpdatedContent = getUpdatedContent;
 
 /***/ }
 /******/ ]);
