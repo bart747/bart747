@@ -378,7 +378,7 @@
 	      console.log("content is saved properly (not really, it's just a demo)");
 	    }
 
-	    var nbsp = String.fromCharCode(8195);
+	    var emsp = String.fromCharCode(8195);
 
 	    function editorUpdate() {
 	      if (writerState.content !== readerState.content) {
@@ -386,7 +386,7 @@
 	        writerUi.textContent = writerState.content;
 	        readerUi.textContent = readerState.content;
 	        dbFeedback();
-	        noteDate.field[0].textContent = "created: " + noteDate.created + nbsp + " edited: " + dateNames.recent;
+	        noteDate.field[0].textContent = "created: " + noteDate.created + emsp + " edited: " + dateNames.recent;
 	      } else {
 	        writerUi.textContent = writerState.content;
 	      }
