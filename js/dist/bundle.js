@@ -252,7 +252,7 @@
 	(function () {
 	  "use strict";
 
-	  function editor(editor) {
+	  function editor(editor, note) {
 
 	    var l = __webpack_require__(7);
 
@@ -296,8 +296,6 @@
 	      field: editor.getElementsByClassName(dateCSS),
 	      created: dateNames.days1
 	    };
-
-	    var note = "Joey seems interested in the Pro plan.\n              He was talking about organizing his team.\n              I'll meet with him tomorrow.";
 
 	    readerState.content = note;
 	    writerState.content = note;
@@ -408,11 +406,14 @@
 	      btnStateToUI();
 	    });
 	  }
+	  // END --------------------------
 
 	  // run editor only if needed
 	  if (document.getElementsByClassName("editable")[0]) {
+
+	    var note1 = "Joey seems interested in the Pro plan.\n              He was talking about organizing his team.\n              I'll meet with him tomorrow.";
 	    var editors = document.getElementsByClassName("editable");
-	    editor(editors[0]);
+	    editor(editors[0], note1);
 	  }
 	})();
 

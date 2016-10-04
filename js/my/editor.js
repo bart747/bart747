@@ -1,7 +1,7 @@
 (function () {
 "use strict";
 
-function editor(editor) {
+function editor(editor, note) {
 
 const l = require('./editorLogic');
 
@@ -48,10 +48,6 @@ const noteDate = {
   field : editor.getElementsByClassName( dateCSS ),
   created: dateNames.days1,
 };
-
-const note = `Joey seems interested in the Pro plan.
-              He was talking about organizing his team.
-              I'll meet with him tomorrow.`;
 
 readerState.content = note; 
 writerState.content = note; 
@@ -165,11 +161,15 @@ btnCancel[0].addEventListener('click', _=> {
 });
 
 }
-
+// END --------------------------
 
 // run editor only if needed
 if (document.getElementsByClassName("editable")[0]) {
+
+  const note1 = `Joey seems interested in the Pro plan.
+              He was talking about organizing his team.
+              I'll meet with him tomorrow.`;
   const editors = document.getElementsByClassName("editable");       
-  editor(editors[0]);
+  editor(editors[0], note1);
 }
 })();
