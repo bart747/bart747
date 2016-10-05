@@ -1,5 +1,5 @@
 (function () {
-"use strict";
+'use strict';
 
 function editor(editor, note) {
 
@@ -8,23 +8,23 @@ const l = require('./editorLogic');
 const doc = document;
 
 const editorCSS = {
-  window: "editor-window",
-  writer: "editor-writer",
-  reader: "editor-reader",
+  window: 'editor-window',
+  writer: 'editor-writer',
+  reader: 'editor-reader',
 };
 
 const btnCSS = {
-  edit:     "editor-btn-edit",
-  save:     "editor-btn-save",
-  cancel:   "editor-btn-cancel",
+  edit:     'editor-btn-edit',
+  save:     'editor-btn-save',
+  cancel:   'editor-btn-cancel',
 };
 
-const CSShidden = "hidden";
+const CSShidden = 'hidden';
 
 // states are mutable
 const writerState = {
   display:     false, // initial
-  content:     "*empty note*", // initial
+  content:     '*empty note*', // initial
 };
 
 const readerState = {
@@ -36,7 +36,7 @@ const btnState = {
   save:        false, // initial
 };
 
-const dateCSS = "editor-date";
+const dateCSS = 'editor-date';
 const dateNames = {
   recent:   "just a moment ago",
   days1:    "1 day ago",
@@ -64,17 +64,15 @@ and "writer" shows up
 noteDate.field[0].textContent = "created: " + noteDate.created;
 
 // creater reader window
-const readerUi = doc.createElement( "div" );
-const newNote = doc.createTextNode( readerState.content );
+const readerUi = doc.createElement('div');
+readerUi.innerHTML = readerState.content;
 readerUi.classList.add( editorCSS.reader );
-readerUi.appendChild( newNote );
 
 // creater writer window
-const writerUi = doc.createElement("div");
-const newNoteCopy = doc.createTextNode( writerState.content );
+const writerUi = doc.createElement('div');
+writerUi.innerHTML = writerState.content;
 writerUi.classList.add( editorCSS.writer );
-writerUi.setAttribute( "contenteditable", "true" );
-writerUi.appendChild( newNoteCopy );
+writerUi.setAttribute( 'contenteditable', 'true' );
 
 // append reader and writer to editor window
 let editorWindow = editor.getElementsByClassName( editorCSS.window );
@@ -82,6 +80,8 @@ const editorFragment = document.createDocumentFragment();
 editorFragment.appendChild( readerUi ); 
 editorFragment.appendChild( writerUi );
 editorWindow[0].appendChild( editorFragment );  
+
+
 
 const btn = editor.getElementsByClassName( btnCSS.edit );
 const btnCancel = editor.getElementsByClassName( btnCSS.cancel );
@@ -120,7 +120,7 @@ function editorStateToggle() {
 function editorContentSave() {
   if (btnState.save === true) {
     writerState.content = l.getUpdatedContent(writerState.content,
-                                              writerUi.textContent);
+                                              writerUi.innerHTML);
     // console.log(readerState.content);
   }
 }
@@ -135,12 +135,12 @@ const emsp = String.fromCharCode(8195);
 function editorUpdate() {
   if (writerState.content !== readerState.content) {
     readerState.content = writerState.content;
-    writerUi.textContent = writerState.content;
-    readerUi.textContent = readerState.content;
+    writerUi.innerHTML = writerState.content;
+    readerUi.innerHTML = readerState.content;
     dbFeedback();
     noteDate.field[0].textContent = "created: " + noteDate.created + emsp + " edited: " + dateNames.recent;
   } else {
-    writerUi.textContent = writerState.content;
+    writerUi.innerHTML = writerState.content;
   }
 }
 
@@ -164,12 +164,12 @@ btnCancel[0].addEventListener('click', _=> {
 // END --------------------------
 
 // run editor only if needed
-if (document.getElementsByClassName("editable")[0]) {
+if (document.getElementsByClassName('editable')[0]) {
 
-  const note1 = `Joey seems interested in the Pro plan.
+  const note1 = `<p>Joey seems interested in the Pro plan.
               He was talking about organizing his team.
-              I'll meet with him tomorrow.`;
-  const editors = document.getElementsByClassName("editable");       
+              I'll meet with him tomorrow.</p>`;
+  const editors = document.getElementsByClassName('editable');       
   editor(editors[0], note1);
 }
 })();

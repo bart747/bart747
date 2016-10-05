@@ -6,19 +6,23 @@
   max-width: 32em;
 }
 
+.editor-title {
+  margin-bottom: 0;
+}
+
 .editor-writer {
   background: #fff;
   border: 1px solid $blue;
   border-radius: $radius;
-  margin: -0.25em -0.5em 0.75em;
-  padding: 0.25em 0.5em;
+  margin: 0 -0.5em 0;
+  padding: 0 0.5em;
   outline: none;
 }
 
 .editor-reader {
   border: 1px solid transparent;
-  margin: 0 0 1em;
-  padding: 0;
+  margin: none;
+  padding: none;
 }
 
 .non-edit-field {

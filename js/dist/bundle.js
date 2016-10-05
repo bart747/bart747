@@ -247,10 +247,10 @@
 /* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	(function () {
-	  "use strict";
+	  'use strict';
 
 	  function editor(editor, note) {
 
@@ -259,23 +259,23 @@
 	    var doc = document;
 
 	    var editorCSS = {
-	      window: "editor-window",
-	      writer: "editor-writer",
-	      reader: "editor-reader"
+	      window: 'editor-window',
+	      writer: 'editor-writer',
+	      reader: 'editor-reader'
 	    };
 
 	    var btnCSS = {
-	      edit: "editor-btn-edit",
-	      save: "editor-btn-save",
-	      cancel: "editor-btn-cancel"
+	      edit: 'editor-btn-edit',
+	      save: 'editor-btn-save',
+	      cancel: 'editor-btn-cancel'
 	    };
 
-	    var CSShidden = "hidden";
+	    var CSShidden = 'hidden';
 
 	    // states are mutable
 	    var writerState = {
 	      display: false, // initial
-	      content: "*empty note*" };
+	      content: '*empty note*' };
 
 	    var readerState = {
 	      display: true, // initial
@@ -284,7 +284,7 @@
 	    var btnState = {
 	      save: false };
 
-	    var dateCSS = "editor-date";
+	    var dateCSS = 'editor-date';
 	    var dateNames = {
 	      recent: "just a moment ago",
 	      days1: "1 day ago",
@@ -311,17 +311,15 @@
 	    noteDate.field[0].textContent = "created: " + noteDate.created;
 
 	    // creater reader window
-	    var readerUi = doc.createElement("div");
-	    var newNote = doc.createTextNode(readerState.content);
+	    var readerUi = doc.createElement('div');
+	    readerUi.innerHTML = readerState.content;
 	    readerUi.classList.add(editorCSS.reader);
-	    readerUi.appendChild(newNote);
 
 	    // creater writer window
-	    var writerUi = doc.createElement("div");
-	    var newNoteCopy = doc.createTextNode(writerState.content);
+	    var writerUi = doc.createElement('div');
+	    writerUi.innerHTML = writerState.content;
 	    writerUi.classList.add(editorCSS.writer);
-	    writerUi.setAttribute("contenteditable", "true");
-	    writerUi.appendChild(newNoteCopy);
+	    writerUi.setAttribute('contenteditable', 'true');
 
 	    // append reader and writer to editor window
 	    var editorWindow = editor.getElementsByClassName(editorCSS.window);
@@ -366,7 +364,7 @@
 
 	    function editorContentSave() {
 	      if (btnState.save === true) {
-	        writerState.content = l.getUpdatedContent(writerState.content, writerUi.textContent);
+	        writerState.content = l.getUpdatedContent(writerState.content, writerUi.innerHTML);
 	        // console.log(readerState.content);
 	      }
 	    }
@@ -381,12 +379,12 @@
 	    function editorUpdate() {
 	      if (writerState.content !== readerState.content) {
 	        readerState.content = writerState.content;
-	        writerUi.textContent = writerState.content;
-	        readerUi.textContent = readerState.content;
+	        writerUi.innerHTML = writerState.content;
+	        readerUi.innerHTML = readerState.content;
 	        dbFeedback();
 	        noteDate.field[0].textContent = "created: " + noteDate.created + emsp + " edited: " + dateNames.recent;
 	      } else {
-	        writerUi.textContent = writerState.content;
+	        writerUi.innerHTML = writerState.content;
 	      }
 	    }
 
@@ -409,10 +407,10 @@
 	  // END --------------------------
 
 	  // run editor only if needed
-	  if (document.getElementsByClassName("editable")[0]) {
+	  if (document.getElementsByClassName('editable')[0]) {
 
-	    var note1 = "Joey seems interested in the Pro plan.\n              He was talking about organizing his team.\n              I'll meet with him tomorrow.";
-	    var editors = document.getElementsByClassName("editable");
+	    var note1 = '<p>Joey seems interested in the Pro plan.\n              He was talking about organizing his team.\n              I\'ll meet with him tomorrow.</p>';
+	    var editors = document.getElementsByClassName('editable');
 	    editor(editors[0], note1);
 	  }
 	})();
