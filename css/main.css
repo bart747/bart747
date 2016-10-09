@@ -818,6 +818,7 @@ ol {
 .menu-toggle {
   position: relative;
   top: 3px;
+  margin-bottom: 1em;
   padding: 0; }
 
 .menu-toggle ul {
@@ -846,8 +847,8 @@ ol {
   z-index: 2;
   -webkit-animation-name: show-up;
   animation-name: show-up;
-  -webkit-animation-duration: 0.2s;
-  animation-duration: 0.2s;
+  -webkit-animation-duration: 0.12s;
+  animation-duration: 0.12s;
   -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in; }
 
@@ -1165,11 +1166,7 @@ a.is-active.cc_btn {
   margin: 2em auto; }
 
 .home-example-toggle-menu {
-  height: 31em;
   margin: 0 auto; }
-  @media screen and (max-width: 768px) {
-    .home-example-toggle-menu {
-      height: 32em; } }
 
 .home-pic img {
   width: 150px;

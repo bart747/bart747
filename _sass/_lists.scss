@@ -101,6 +101,7 @@ ol {
 .menu-toggle {
   position: relative;
   top: 3px;
+  margin-bottom: 1em;
   padding: 0;
 }
 
@@ -131,7 +132,7 @@ ol {
   width: 16em;
   z-index: 2;
   animation-name: show-up;
-  animation-duration: 0.2s;
+  animation-duration: 0.12s;
   animation-timing-function: ease-in;
 }
 
