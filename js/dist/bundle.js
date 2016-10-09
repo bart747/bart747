@@ -139,7 +139,7 @@
 	      error(container);
 	    }
 	    if (input.validity.valid && container.classList.contains('input-error')) {
-	      correct(el);
+	      correct(container);
 	    }
 	  }
 
