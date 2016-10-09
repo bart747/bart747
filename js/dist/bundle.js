@@ -122,24 +122,35 @@
 
 	  var inputDivs = [].slice.call(document.getElementsByClassName("validate"));
 
+	  function error(container) {
+	    container.classList.add('input-error');
+	    container.classList.remove('input-success');
+	  }
+
+	  function correct(container) {
+	    container.classList.remove('input-error');
+	    container.classList.add('input-success');
+	  }
+
 	  function addIndicator(container, input) {
 	    if (input.validity.valid) {
-	      container.classList.remove('input-error');
-	      container.classList.add('input-success');
+	      correct(container);
 	    } else {
-	      container.classList.add('input-error');
-	      container.classList.remove('input-success');
+	      error(container);
+	    }
+	    if (input.validity.valid && container.classList.contains('input-error')) {
+	      correct(el);
 	    }
 	  }
 
 	  function onKeyupValid(container, input) {
 	    input.addEventListener('keyup', function (_) {
 	      addIndicator(container, input);
-	      validReset(container, input);
+	      validReset(container);
 	    });
 	  }
 
-	  function validReset(container, input) {
+	  function validReset(container) {
 	    container.classList.remove('input-error');
 	    container.classList.remove('input-success');
 	  }
@@ -153,30 +164,24 @@
 
 	        input.addEventListener('blur', function (_) {
 
-	          if (input.validity.patternMismatch) {
-	            el.classList.add('input-error');
-	            el.classList.remove('input-success');
-	          }if (input.validity.valid) {
-	            el.classList.add('input-success');
-	          }if (input.validity.valid && el.classList.contains('input-error')) {
-	            el.classList.remove('input-error');
-	            el.classList.add('input-success');
-	          }if (input.classList.contains("input-email")) {
-	            onKeyupValid(el, input);
-	          }
-	          if (input.value.length < 1) {
-	            validReset(el, input);
+	          addIndicator(el, input);
+
+	          if (input.classList.contains("input-email")) {
+	            input.addEventListener('keyup', function (_) {
+	              addIndicator(el, input);
+	              if (input.value.length < 1) {
+	                validReset(el);
+	              }
+	            });
 	          }
 	        });
 
 	        if (input.classList.contains("input-password")) {
 	          el.addEventListener('keyup', function (_) {
 	            if (input.value.length >= 8) {
-	              el.classList.add('input-success');
-	              el.classList.remove('input-error');
+	              correct(el);
 	            } else {
-	              el.classList.remove('input-success');
-	              el.classList.remove('input-error');
+	              validReset(el);
 	            }
 	          });
 	        }
