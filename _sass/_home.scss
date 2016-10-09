@@ -5,10 +5,6 @@
   font-size: $base-font-size;
 }
 
-.home section {
-  margin: 4rem 0;
-}
-
 .home-example {
   margin: 3.5em 0;
 }
@@ -46,4 +42,9 @@
 .home-example-nav-search-zoom > ::before {
   color: $blue-dark;
   font-size: 17px;
+}
+
+.home-example-editor {
+  margin: 3em auto;
+  max-width: 28em;
 }

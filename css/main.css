@@ -1153,9 +1153,6 @@ a.is-active.cc_btn {
 .work-samples {
   font-size: 21px; }
 
-.home section {
-  margin: 4rem 0; }
-
 .home-example {
   margin: 3.5em 0; }
 
@@ -1187,6 +1184,10 @@ a.is-active.cc_btn {
 .home-example-nav-search-zoom > ::before {
   color: #2233aa;
   font-size: 17px; }
+
+.home-example-editor {
+  margin: 3em auto;
+  max-width: 28em; }
 
 .post,
 .wrapper-post-like {
