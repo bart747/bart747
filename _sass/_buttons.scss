@@ -19,8 +19,7 @@ button,
   transition: all 0.2s ease;
 
   &:hover,
-  &:active,
-  &:focus { 
+  &:active { 
     background: lighten($blue-dark, 10%);
   }
   &:active {
@@ -42,8 +41,7 @@ button.is-active,
   color: $black;
   
   &:active,
-  &:hover,
-  &:focus {
+  &:hover {
     background: $yellow-light;
   }
   &:active {
@@ -146,7 +144,6 @@ button.is-active,
 .toggle-is-on {
   background: $blue-dark;
   border-color: $blue-dark;
-  color: $yellow-light;
-  text-shadow: 0 0 6px;
   transition: 0.2s ease;
 }
+

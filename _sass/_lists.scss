@@ -116,16 +116,16 @@ ol {
 
 .menu-toggle-content {
   position: absolute;
-  top: 2.9em;
+  top: 2.8em;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
   margin: 0 auto;
-  background: $background-color;
+  background: #fff;
   border-radius: 0 0 $radius $radius;  
-  border-top: 6px solid $blue-dark;
-  box-shadow: 0 1px 4px $grey;
+  border: 1px solid $blue-dark;
+  border-top-width: 5px;
   padding: 1.5em 1em;
   text-align: left;
   width: auto;

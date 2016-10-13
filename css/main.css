@@ -461,7 +461,7 @@ body {
       font-size: 18px; } }
 
 section {
-  margin: 2em 0; }
+  margin: 0; }
 
 .wrapper {
   margin: 0 auto;
@@ -521,10 +521,10 @@ h1, .h1-like, .h1-light {
   font-size: 1.75em;
   font-weight: bold;
   line-height: 1.125;
-  margin: 2em 0; }
+  margin: 2em 0 0.57em; }
   @media screen and (max-width: 568px) {
     h1, .h1-like, .h1-light {
-      margin: 1.5em 0; } }
+      margin: 1.5em 0.57em; } }
 
 .h1-light {
   font-weight: 400; }
@@ -532,12 +532,14 @@ h1, .h1-like, .h1-light {
 h2, .h2-like {
   font-size: 1.25em;
   font-weight: 600;
-  line-height: 1.2; }
+  line-height: 1.2;
+  margin: 2em 0 0.8em; }
 
 h3, .h3-like {
   font-size: 1em;
   font-weight: 600;
   line-height: 1.5;
+  letter-spacing: 0.05em;
   text-transform: uppercase; }
 
 .h1-mega {
@@ -745,11 +747,16 @@ header .wrapper {
     transform: rotate(45deg); }
 
 .masthead {
-  text-align: center;
-  margin: 3em 0; }
+  text-align: left;
+  margin: 3em auto;
+  max-width: 32em; }
 
 .masthead-h1 {
-  margin: 2em 0; }
+  font-size: 2.5em;
+  margin: 1em 0 2em; }
+  @media screen and (max-width: 568px) {
+    .masthead-h1 {
+      font-size: 1em 0 2em; } }
 
 ul {
   margin: 1em 0;
@@ -830,16 +837,16 @@ ol {
 
 .menu-toggle-content {
   position: absolute;
-  top: 2.9em;
+  top: 2.8em;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
   margin: 0 auto;
-  background: #fffcf8;
+  background: #fff;
   border-radius: 0 0 0.25em 0.25em;
-  border-top: 6px solid #2233aa;
-  box-shadow: 0 1px 4px #777;
+  border: 1px solid #2233aa;
+  border-top-width: 5px;
   padding: 1.5em 1em;
   text-align: left;
   width: auto;
@@ -1040,13 +1047,11 @@ a.cc_btn {
   margin: 0.5rem 0;
   max-width: 12rem;
   transition: all 0.2s ease; }
-  button:hover, button:active, button:focus,
+  button:hover, button:active,
   .btn:hover,
   a.cc_btn:hover,
   .btn:active,
-  a.cc_btn:active,
-  .btn:focus,
-  a.cc_btn:focus {
+  a.cc_btn:active {
     background: #2b40d5; }
   button:active,
   .btn:active,
@@ -1065,7 +1070,7 @@ a.is-active.cc_btn {
   background: transparent;
   border-color: #665600;
   color: #222; }
-  .btn-neutral:active, .btn-neutral:hover, .btn-neutral:focus {
+  .btn-neutral:active, .btn-neutral:hover {
     background: #ffeb80; }
   .btn-neutral:active {
     background: #ffd600;
@@ -1146,8 +1151,6 @@ a.is-active.cc_btn {
 .toggle-is-on {
   background: #2233aa;
   border-color: #2233aa;
-  color: #ffeb80;
-  text-shadow: 0 0 6px;
   transition: 0.2s ease; }
 
 .work-samples {
@@ -1195,6 +1198,12 @@ a.is-active.cc_btn {
   margin: 0 auto;
   margin-bottom: 3em;
   padding: 0 1em; }
+
+.post-title {
+  margin: 2em 0; }
+  @media screen and (max-width: 568px) {
+    .post-title {
+      margin: 1.5em 0; } }
 
 .note-title {
   font-size: 1.12em;
@@ -1348,6 +1357,7 @@ svg {
   display: inline-block;
   font-size: 0.75em;
   font-weight: normal;
+  letter-spacing: 0;
   text-transform: lowercase;
   transition: all 0.2s ease-in; }
 
@@ -1573,69 +1583,14 @@ a.cc_btn {
     color: #bbb;
     margin-right: 0.5rem; }
 
-.crest {
-  margin: 3em auto 2.75em; }
-
-#crest-rect {
-  -webkit-animation-name: crest-rect;
-  animation-name: crest-rect;
-  -webkit-animation-duration: 1.25s;
-  animation-duration: 1.25s;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in;
-  animation-timing-function: ease-in;
-  fill: #ffd600; }
-
-#crest-txt {
-  font-size: 40px;
-  font-weight: bold; }
-
-@-webkit-keyframes crest-rect {
-  0% {
-    rx: 5;
-    ry: 5; }
-  30% {
-    rx: 30;
-    ry: 30; }
-  55% {
-    rx: 17;
-    ry: 17; }
-  85% {
-    rx: 23;
-    ry: 23; }
-  100% {
-    rx: 20;
-    ry: 20; } }
-
-@keyframes crest-rect {
-  0% {
-    rx: 5;
-    ry: 5; }
-  30% {
-    rx: 30;
-    ry: 30; }
-  55% {
-    rx: 17;
-    ry: 17; }
-  85% {
-    rx: 23;
-    ry: 23; }
-  100% {
-    rx: 20;
-    ry: 20; } }
-
-@-webkit-keyframes crest-txt {
-  0% {
-    opacity: 0.25; }
-  100% {
-    opacity: 1; } }
-
-@keyframes crest-txt {
-  0% {
-    opacity: 0.25; }
-  100% {
-    opacity: 1; } }
+.crest svg {
+  width: 38px;
+  height: auto;
+  margin: 0 auto;
+  stroke: #222;
+  transition: all 0.2s ease-in; }
+  .crest svg:hover {
+    stroke: #ec4422; }
 
 .travel-time {
   display: -webkit-flex;

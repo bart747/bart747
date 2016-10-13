@@ -2,56 +2,14 @@
 // crest
 //
 
-.crest {
-  margin: 3em auto 2.75em;
-}
-
-#crest-rect {
-  animation-name: crest-rect;
-  animation-duration: 1.25s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  fill: $yellow;
-}
-
-#crest-txt {
-  font-size: 40px;
-  font-weight: bold;
-}
-
-@keyframes crest-rect {
-  0% {
-    rx: 5;
-    ry: 5;
-  }
-
-  30% {
-    rx: 30;
-    ry: 30;
-  }
-
-  55% {
-    rx: 17;
-    ry: 17;
-  }
-
-  85% {
-    rx: 23;
-    ry: 23;
-  }
-  
-  100% {
-    rx: 20;
-    ry: 20;
-  }
-}
-
-@keyframes crest-txt {
-  0% {
-    opacity: 0.25;
-  }
-
-  100% {
-    opacity: 1;
+.crest svg {
+  //background-image: url('/img/crest.svg');
+  width: 38px;
+  height: auto;
+  margin: 0 auto;
+  stroke: $black;
+  transition: all 0.2s ease-in;
+  &:hover {
+    stroke: $orange-deep;
   }
 }

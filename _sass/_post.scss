@@ -11,7 +11,10 @@
 }
 
 .post-title {
-
+  margin: 2em 0;
+  @media screen and (max-width: $screen-sml) {
+    margin: 1.5em 0;
+  }
 }
 
 .note-title {

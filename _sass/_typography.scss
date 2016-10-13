@@ -31,9 +31,9 @@ h1, .h1-like {
   font-size: 1.75em;
   font-weight: bold;
   line-height: 1.125;
-  margin: 2em 0;
+  margin: 2em 0 0.57em;
   @media screen and (max-width: $screen-sml) {
-    margin: 1.5em 0;
+    margin: 1.5em 0.57em;
   }
 }
 
@@ -46,12 +46,14 @@ h2, .h2-like {
   font-size: 1.25em;
   font-weight: 600;
   line-height: 1.2;
+  margin: 2em 0 0.8em
 }
 
 h3, .h3-like {
   font-size: 1em;
   font-weight: 600;
   line-height: 1.5;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
