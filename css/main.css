@@ -389,6 +389,9 @@ th {
 .hidden {
   display: none; }
 
+.invisible {
+  visibility: hidden; }
+
 .sandbox {
   background: #eee;
   border-radius: 0.25em;
@@ -408,6 +411,9 @@ th {
 
 .blue-night {
   color: #102070; }
+
+.orange {
+  color: #ee7700; }
 
 .red {
   color: #E02020; }
@@ -746,6 +752,24 @@ header .wrapper {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg); }
 
+.contact-link-box {
+  -webkit-animation-name: show-up;
+  animation-name: show-up;
+  -webkit-animation-duration: 0.12s;
+  animation-duration: 0.12s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  background: #ffeb80;
+  border-radius: 0.25em;
+  font-size: 21px;
+  line-height: 1.75;
+  margin-top: 1.5em;
+  margin-right: 1em;
+  margin-left: -8em;
+  padding: 0.5em 0.75em;
+  position: absolute;
+  text-align: left; }
+
 .masthead {
   text-align: left;
   margin: 3em auto;
@@ -866,8 +890,9 @@ ol {
   font-family: "Ionicons";
   src: url("/bower_components/Ionicons/fonts/ionicons.woff"); }
 
-.icon {
-  padding: 0 0.25em; }
+.icon:before {
+  padding: 0 0.125em;
+  vertical-align: middle; }
 
 .icon-large {
   font-size: 1.66em; }

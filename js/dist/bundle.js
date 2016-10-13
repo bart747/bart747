@@ -230,12 +230,13 @@
 	'use strict';
 
 	(function () {
-
-	  var homeDiv = document.getElementsByClassName('home');
-	  var postDiv = document.getElementsByClassName('post');
-	  var blogDiv = document.getElementsByClassName('blog');
-	  var homeLink = document.getElementsByClassName('link-home');
-	  var blogLink = document.getElementsByClassName('link-blog');
+	  var doc = document;
+	  var postDiv = doc.getElementsByClassName('post')[0];
+	  var blogDiv = doc.getElementsByClassName('blog')[0];
+	  var blogLink = doc.getElementsByClassName('link-blog')[0];
+	  var contactLink = doc.getElementsByClassName('contact-link')[0];
+	  var contactLinkBox = doc.getElementsByClassName('contact-link-box')[0];
+	  var contactLinkTxt = doc.getElementsByClassName('contact-link-txt')[0];
 
 	  window.onload = function () {
 
@@ -243,11 +244,17 @@
 	    //  homeLink[0].classList.add("link-active");
 	    //}
 
-	    if (postDiv[0] !== undefined || blogDiv[0] !== undefined) {
-	      blogLink[0].classList.add('link-active');
+	    if (postDiv !== undefined || blogDiv !== undefined) {
+	      blogLink.classList.add('link-active');
 	    }
 	    // console.log(homeDiv); console.log(homeLink);
 	    // console.log(postDiv); console.log(blogLink);
+	    if (contactLink !== undefined) {
+	      contactLink.addEventListener('click', function (_) {
+	        contactLinkBox.classList.toggle('hidden');
+	        contactLinkTxt.classList.toggle('orange');
+	      });
+	    }
 	  };
 	})();
 

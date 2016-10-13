@@ -7,7 +7,10 @@
 }
 
 .icon  {
-  padding: 0 0.25em;
+  &:before {
+    padding: 0 0.125em;
+    vertical-align: middle;
+  }
 }
 
 .icon-large {

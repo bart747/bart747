@@ -49,6 +49,10 @@
   display: none;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .sandbox {
   background: #eee;
   border-radius: 0.25em;
@@ -73,6 +77,11 @@
 .blue-night {
   color: $blue-night;
 }
+
+.orange {
+  color: $orange;
+}
+
 .red {
   color: $red;
 }

@@ -54,3 +54,19 @@ header .wrapper {
   }
 }
 
+.contact-link-box {
+  animation-name: show-up;
+  animation-duration: 0.12s;
+  animation-timing-function: ease-in;
+  background: $yellow-light;
+  border-radius: $radius;
+  font-size: 21px;
+  line-height: 1.75;
+  margin-top: 1.5em;
+  margin-right: 1em;
+  margin-left: -8em;
+  padding: 0.5em 0.75em;
+  position: absolute;
+  text-align: left;
+}
+

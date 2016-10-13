@@ -1,12 +1,11 @@
 (function() {
-
-  const homeDiv = document.getElementsByClassName('home');
-  const postDiv = document.getElementsByClassName('post');
-  const blogDiv = document.getElementsByClassName('blog');
-  const homeLink = document.getElementsByClassName('link-home');
-  const blogLink = document.getElementsByClassName('link-blog');
-
-
+  const doc = document;
+  const postDiv = doc.getElementsByClassName('post')[0];
+  const blogDiv = doc.getElementsByClassName('blog')[0];
+  const blogLink = doc.getElementsByClassName('link-blog')[0];
+  const contactLink = doc.getElementsByClassName('contact-link')[0];
+  const contactLinkBox = doc.getElementsByClassName('contact-link-box')[0];
+  const contactLinkTxt = doc.getElementsByClassName('contact-link-txt')[0];
 
   window.onload = function() {
   
@@ -14,11 +13,17 @@
     //  homeLink[0].classList.add("link-active");
     //}
 
-    if (postDiv[0] !== undefined || blogDiv[0] !== undefined) {
-      blogLink[0].classList.add('link-active');
+    if (postDiv !== undefined || blogDiv !== undefined) {
+      blogLink.classList.add('link-active');
     }
   // console.log(homeDiv); console.log(homeLink);
   // console.log(postDiv); console.log(blogLink);
+    if (contactLink !== undefined) {
+      contactLink.addEventListener('click', _=> {
+        contactLinkBox.classList.toggle('hidden');
+        contactLinkTxt.classList.toggle('orange');
+      });
+    }
   };
   
 }());
