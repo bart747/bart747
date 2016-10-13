@@ -1394,23 +1394,6 @@ svg {
   -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in; }
 
-textarea {
-  border: 1px solid #777;
-  border-radius: 0.25em;
-  color: #222;
-  outline: none;
-  padding: 0.5em 0.75em; }
-  textarea:hover, textarea:focus {
-    border: 1px solid #4466cc; }
-
-textarea.editor {
-  resize: none; }
-
-textarea:disabled.editor {
-  background: transparent;
-  border: none;
-  padding: 0; }
-
 .editor-btn-edit {
   border-width: 1px 1px 2px;
   color: #222;
@@ -1419,7 +1402,9 @@ textarea:disabled.editor {
   padding: 0 0.25em;
   text-align: center;
   transition: all 0.2s ease-in;
-  padding: 0 0.34em 0 0.1em; }
+  padding: 0 0.25em 0 0.25em; }
+  .editor-btn-edit .icon:before {
+    vertical-align: -5%; }
 
 .editor-btn-save {
   font-size: 14px; }
@@ -1434,13 +1419,15 @@ textarea:disabled.editor {
   padding: 0 0.25em;
   text-align: center;
   transition: all 0.2s ease-in;
-  padding: 0 0.34em 0 0.1em;
+  padding: 0 0.25em 0 0.25em;
   -webkit-animation-name: show-up;
   animation-name: show-up;
   -webkit-animation-duration: 0.2s;
   animation-duration: 0.2s;
   -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in; }
+  .editor-btn-cancel .icon:before {
+    vertical-align: -5%; }
 
 .editor-messages {
   display: inline-block; }

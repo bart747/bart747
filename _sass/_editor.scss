@@ -47,27 +47,6 @@
   animation-timing-function: ease-in;
 }
 
-textarea {
-  border: 1px solid $grey;
-  border-radius: $radius;
-  color: $black;
-  outline: none;
-  padding: 0.5em 0.75em;
-  &:hover, &:focus {
-    border: 1px solid $blue;
-  }
-}
-
-textarea.editor {
-  resize: none;
-}
-
-textarea:disabled.editor {
-  background: transparent;
-  border: none;
-  padding: 0;
-}
-
 @mixin editor-btn {
   border-width: 1px 1px 2px;
   color: $black;
@@ -76,12 +55,16 @@ textarea:disabled.editor {
   padding:  0 0.25em;
   text-align: center;
   transition: all 0.2s ease-in;
+  & .icon:before {
+    vertical-align: -5%;
+  }
 }
 
 .editor-btn-edit {
   @include editor-btn;
-  padding:  0 0.34em 0 0.1em;
+  padding:  0 0.25em 0 0.25em;
 }
+
 
 .editor-btn-save {
   font-size: 14px;
@@ -92,7 +75,7 @@ textarea:disabled.editor {
 
 .editor-btn-cancel {
   @include editor-btn;
-  padding:  0 0.34em 0 0.1em;
+  padding:  0 0.25em 0 0.25em;
   animation-name: show-up;
   animation-duration: 0.2s;
   animation-timing-function: ease-in;
