@@ -58,7 +58,7 @@ header .wrapper {
   animation-name: show-up;
   animation-duration: 0.12s;
   animation-timing-function: ease-in;
-  background: $yellow-light;
+  background:hsla(55, 100%, 75%, 0.9);
   border-radius: $radius;
   font-size: 21px;
   line-height: 1.75;
@@ -68,5 +68,20 @@ header .wrapper {
   padding: 0.5em 0.75em;
   position: absolute;
   text-align: left;
+}
+
+.contact-link-box .icon {
+  color: $grey;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 0;
+  height: 1px;
+  position: relative;
+  right: -6em;
+  bottom: -0.5em;
+}
+
+.contact-link-box .icon:hover {
+  color: $orange-deep;
 }
 

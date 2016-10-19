@@ -759,7 +759,7 @@ header .wrapper {
   animation-duration: 0.12s;
   -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
-  background: #ffeb80;
+  background: rgba(255, 244, 128, 0.9);
   border-radius: 0.25em;
   font-size: 21px;
   line-height: 1.75;
@@ -769,6 +769,19 @@ header .wrapper {
   padding: 0.5em 0.75em;
   position: absolute;
   text-align: left; }
+
+.contact-link-box .icon {
+  color: #777;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 0;
+  height: 1px;
+  position: relative;
+  right: -6em;
+  bottom: -0.5em; }
+
+.contact-link-box .icon:hover {
+  color: #ec4422; }
 
 .masthead {
   text-align: left;
@@ -1057,7 +1070,6 @@ button,
 .btn,
 a.cc_btn {
   display: inline-block;
-  outline: none;
   color: #fff;
   cursor: pointer;
   background: #4466cc;
@@ -1080,7 +1092,7 @@ a.cc_btn {
   a.cc_btn:active {
     background: #2233aa;
     border-color: #2233aa;
-    transition: none; }
+    outline: none; }
 
 button.is-active,
 .btn.is-active,
