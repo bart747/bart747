@@ -2,11 +2,15 @@
 // crest
 //
 
+.crest {
+  height: 1.5em;
+}
+
 .crest svg {
   //background-image: url('/img/crest.svg');
   width: 38px;
   height: auto;
-  margin: 0 auto;
+  margin: -0.5em auto 0;
   stroke: $black;
   transition: all 0.2s ease-in;
   &:hover {

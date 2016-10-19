@@ -6,7 +6,7 @@ category:
 ---
 
 Lazy Load is a great idea, so it's overused frequently.
-Do you remember that situations when you scrolled down
+Do you remember that situation when you scrolled down
 quickly to get to the middle part and what you saw was a blank space?
 
 You can use a threshold/offset option to fire the thing earlier, but people can scroll fast. 

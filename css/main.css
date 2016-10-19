@@ -836,9 +836,6 @@ ol {
 .post-list li {
   margin-bottom: 3em; }
 
-.excerpt p::after {
-  content: ' . .'; }
-
 .post-list-note {
   margin: 4em auto; }
 
@@ -1595,10 +1592,13 @@ a.cc_btn {
     color: #bbb;
     margin-right: 0.5rem; }
 
+.crest {
+  height: 1.5em; }
+
 .crest svg {
   width: 38px;
   height: auto;
-  margin: 0 auto;
+  margin: -0.5em auto 0;
   stroke: #222;
   transition: all 0.2s ease-in; }
   .crest svg:hover {

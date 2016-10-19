@@ -84,9 +84,6 @@ ol {
 }
 
 .excerpt p {
-  &::after {
-    content: ' . .';
-  }
 }
 
 .post-list-note {
