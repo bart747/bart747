@@ -25,13 +25,6 @@ function addIndicator(container, input) {
   }
 }
 
-function onKeyupValid(container, input) {
-  input.addEventListener('keyup', _=> {
-    addIndicator(container, input);
-    validReset(container);
-  });
-}
-
 function validReset(container) {
   container.classList.remove('input-error');
   container.classList.remove('input-success'); 
