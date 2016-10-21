@@ -234,7 +234,8 @@
 	  var blogLink = doc.getElementsByClassName('link-blog')[0];
 	  var contactLink = doc.getElementsByClassName('contact-link')[0];
 	  var contactLinkBox = doc.getElementsByClassName('contact-link-box')[0];
-	  var contactLinkTxt = doc.getElementsByClassName('contact-link-txt')[0];
+	  var contactLinkOpen = doc.getElementsByClassName('contact-link-open')[0];
+	  var contactLinkClose = doc.getElementsByClassName('contact-link-close')[0];
 	  var customLink = [].slice.call(doc.getElementsByClassName('link-custom'));
 
 	  window.onload = function () {
@@ -249,10 +250,14 @@
 	    // console.log(homeDiv); console.log(homeLink);
 	    // console.log(postDiv); console.log(blogLink);
 	    if (contactLink !== undefined) {
-	      contactLink.addEventListener('click', function (_) {
+	      contactLinkOpen.addEventListener('click', function (_) {
 	        event.preventDefault();
 	        contactLinkBox.classList.toggle('hidden');
-	        contactLinkTxt.classList.toggle('orange');
+	        contactLinkOpen.classList.toggle('orange');
+	      });
+	      contactLinkClose.addEventListener('click', function (_) {
+	        contactLinkBox.classList.add('hidden');
+	        contactLinkOpen.classList.remove('orange');
 	      });
 	    }
 	  };
