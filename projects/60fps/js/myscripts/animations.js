@@ -4,13 +4,14 @@
  */
 
 const fps60 = 16.66;
+const fps66p6 = 15;
 
 // estimated delay caused by scripting
 // they vary
-const scriptDelay = 3;
+const scriptDelay = 2;
 
 // DOM accepts integers only
-const frameRate = Math.floor(fps60);
+const frameRate = fps66p6;
 
 const frameDelay = frameRate - scriptDelay;
 

@@ -86,23 +86,23 @@
 	  }
 
 	  function colorizeWire() {
-	    saturation(600, 35, 0, 2.6, setWireColor);
+	    saturation(600, 35, 0, 2.5, setWireColor);
 	    setTimeout( () => {
-	      saturation(800, 35, 100, -2, setWireColor);
+	      saturation(800, 35, 100, -1.8, setWireColor);
 	    }, 860);
 	  }
 
 	  function moveString() {
-	    animatePath(380, 0, 0.5, 1, setStringCurve);
+	    animatePath(380, 0, 0.45, 1, setStringCurve);
 
 	    setTimeout( () => {
-	      animatePath(600, 11, 0.5, -1, setStringCurve);
+	      animatePath(600, 11, 0.45, -1, setStringCurve);
 
 	      setTimeout( () => {
-	        animatePath(240, -7.5, 0.5, 1, setStringCurve);
-	      }, 600);
+	        animatePath(240, -7, 0.45, 1, setStringCurve);
+	      }, 601);
 
-	    }, 380);
+	    }, 381);
 
 	  }
 
@@ -127,13 +127,14 @@
 	 */
 
 	const fps60 = 16.66;
+	const fps66p6 = 15;
 
 	// estimated delay caused by scripting
 	// they vary
-	const scriptDelay = 3;
+	const scriptDelay = 2;
 
 	// DOM accepts integers only
-	const frameRate = Math.floor(fps60);
+	const frameRate = fps66p6;
 
 	const frameDelay = frameRate - scriptDelay;
 

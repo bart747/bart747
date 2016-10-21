@@ -30,23 +30,23 @@ svgObj.addEventListener('load', function() {
   }
 
   function colorizeWire() {
-    saturation(600, 35, 0, 2.6, setWireColor);
+    saturation(600, 35, 0, 2.5, setWireColor);
     setTimeout( () => {
-      saturation(800, 35, 100, -2, setWireColor);
+      saturation(800, 35, 100, -1.8, setWireColor);
     }, 860);
   }
 
   function moveString() {
-    animatePath(380, 0, 0.5, 1, setStringCurve);
+    animatePath(380, 0, 0.45, 1, setStringCurve);
 
     setTimeout( () => {
-      animatePath(600, 11, 0.5, -1, setStringCurve);
+      animatePath(600, 11, 0.45, -1, setStringCurve);
 
       setTimeout( () => {
-        animatePath(240, -7.5, 0.5, 1, setStringCurve);
-      }, 600);
+        animatePath(240, -7, 0.45, 1, setStringCurve);
+      }, 601);
 
-    }, 380);
+    }, 381);
 
   }
 

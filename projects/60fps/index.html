@@ -6,6 +6,7 @@ title: JS Animation Script + SVG Graph in 60fps
 <div class="wrapper-post-like">
 
   <h1 class="h1-mega purple">JS Animation Script + SVG Graph in 60fps</h1>
+  <h2 class="h1-like">Experimenting</h2>
 
 <section>
 
@@ -39,8 +40,8 @@ title: JS Animation Script + SVG Graph in 60fps
 <section>
   <h2>The Code:</h2>
   <p>
-    There are following JavaScript animations. Each does one iteration per
-    frame, 60fps (Well, not quite. It's 60fps on average. There are some scripting related delays of various lengths.).
+    There are following JavaScript animations functions. Each does one iteration per
+    frame. Heres how they work:
 
     <ul>
       <li>
@@ -53,16 +54,27 @@ title: JS Animation Script + SVG Graph in 60fps
         the ones that shape the curve.
       </li>
     </ul>
+    <h3>Not everything is like it should be:</h3>
+    <ul>
+      <li>
+        In practice, frames are uneven. Some take more time than 16.66ms, some less.  
+        To keep everything at least as good as 60fps most of the time I switched to 66.6fps: 15ms per 1s. 
+      </li>
+      <li>
+        To keep everything in it's time frame I had to add <i>scripting delay</i> variable: ~2ms;
+      </li>
+    </ul>
   </p>
 
 
 {% highlight js linenos %}
 
 const fps60 = 16.66;
+const fps66p6 = 15;
 
 // estimated delay caused by scripting
 // they vary
-const scriptDelay = 3;
+const scriptDelay = 2;
 
 // DOM accepts integers only
 const frameRate = Math.floor(fps60);
