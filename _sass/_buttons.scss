@@ -8,9 +8,11 @@ button,
   color: #fff;
   cursor: pointer;
   background: $blue;
-  border: solid $blue-night;
-  border-width: 1px 1px 3px;
+  border: solid $blue;
+  border-width: 2px 2px 3px;
+  border-bottom-color: $blue-dark;
   border-radius: $radius;
+  outline: none; 
   padding: 0.4em 1em;
   text-align: center;
   margin: 0.5rem 0;
@@ -24,7 +26,11 @@ button,
   &:active {
     background: $blue-dark;
     border-color: $blue-dark;
+    
+  }
+  &:focus {
     outline: none;
+    border-color: $blue-dark;
   }
 }
 
@@ -91,6 +97,21 @@ button.is-active,
   color: $yellow-light;
   display: block;
   font-size: 0.76em;
+}
+
+.btn-clear {
+  border: none;
+  background: none;
+  &:hover,
+  &:active,
+  &:focus {
+    background: none;
+    
+  }
+  &:active {
+    background: none;
+    border-color: none;
+  }
 }
 
 .btn-switch-dot {

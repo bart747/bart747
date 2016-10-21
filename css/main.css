@@ -777,7 +777,7 @@ header .wrapper {
   line-height: 0;
   height: 1px;
   position: relative;
-  right: -6em;
+  right: -5em;
   bottom: -0.5em; }
 
 .contact-link-box .icon:hover {
@@ -1073,9 +1073,11 @@ a.cc_btn {
   color: #fff;
   cursor: pointer;
   background: #4466cc;
-  border: solid #102070;
-  border-width: 1px 1px 3px;
+  border: solid #4466cc;
+  border-width: 2px 2px 3px;
+  border-bottom-color: #2233aa;
   border-radius: 0.25em;
+  outline: none;
   padding: 0.4em 1em;
   text-align: center;
   margin: 0.5rem 0;
@@ -1091,8 +1093,12 @@ a.cc_btn {
   .btn:active,
   a.cc_btn:active {
     background: #2233aa;
-    border-color: #2233aa;
-    outline: none; }
+    border-color: #2233aa; }
+  button:focus,
+  .btn:focus,
+  a.cc_btn:focus {
+    outline: none;
+    border-color: #2233aa; }
 
 button.is-active,
 .btn.is-active,
@@ -1144,6 +1150,15 @@ a.is-active.cc_btn {
   color: #ffeb80;
   display: block;
   font-size: 0.76em; }
+
+.btn-clear {
+  border: none;
+  background: none; }
+  .btn-clear:hover, .btn-clear:active, .btn-clear:focus {
+    background: none; }
+  .btn-clear:active {
+    background: none;
+    border-color: none; }
 
 .btn-switch-dot:before {
   position: relative;
