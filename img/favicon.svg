@@ -9,40 +9,44 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="200"
-   height="200"
-   id="svg2"
    version="1.1"
+   width="400"
+   height="400"
+   viewBox="0 0 400 400"
+   id="svg2"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 1">
-  <defs
-     id="defs4" />
+   sodipodi:docname="favicon.svg">
   <sodipodi:namedview
-     id="base"
      pagecolor="#ffffff"
      bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="-15.930311"
-     inkscape:cy="91.834001"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="1056"
+     inkscape:window-height="1050"
+     id="namedview7"
+     showgrid="true"
+     inkscape:zoom="1.18"
+     inkscape:cx="371.8035"
+     inkscape:cy="139.69691"
      inkscape:window-x="0"
-     inkscape:window-y="24"
-     inkscape:window-maximized="1">
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-page="true">
     <inkscape:grid
        type="xygrid"
-       id="grid2985"
+       id="grid3012"
        empspacing="5"
        visible="true"
        enabled="true"
        snapvisiblegridlinesonly="true" />
   </sodipodi:namedview>
+  <defs
+     id="defs4" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -56,37 +60,12 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,-852.36218)">
-    <rect
-       style="fill:#1f2a40;fill-opacity:1;stroke:none"
-       id="rect2987"
-       width="200"
-       height="200"
-       x="0"
-       y="0"
-       transform="translate(0,852.36218)"
-       rx="10"
-       ry="10" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:none"
-       id="rect2991"
-       width="100"
-       height="100"
-       x="50"
-       y="902.36218"
-       rx="10"
-       ry="9.9999971" />
-    <rect
-       ry="7.9999981"
-       rx="7.9999995"
-       y="912.36218"
-       x="60"
-       height="80"
-       width="80"
-       id="rect3761"
-       style="fill:#ff4136;fill-opacity:1;stroke:none" />
+     transform="translate(0,-652.36218)"
+     id="layer1">
+    <path
+       d="M 218.18587,882.6614 155.15438,686.29421 c 0,145.45725 -60.607175,193.94304 -60.607175,193.94304 l 72.728675,0 c 18.67563,1.94303 32.72779,2.42415 32.72779,14.54584 -46.06138,20.6063 -72.72852,24.24277 -127.275049,24.24277 26.667173,32.72782 42.425039,60.60716 -2.424291,94.54554 -16.878256,10.1276 -40.000726,8.4859 -40.000726,-9.6956 0,-24.24278 30.303583,-24.24278 24.242865,-6.06021 24.24287,0 18.182152,-36.36478 -6.060726,-36.36478 -24.242869,0 -42.4250211,18.18221 -42.4250211,42.42499 0,24.2428 12.1214401,42.4251 36.3643121,42.4251 55.328889,0.1741 66.667916,-42.4251 90.910776,-72.72869 48.48576,-54.54635 90.9107,30.30359 36.3645,30.30359 12.12126,-18.1821 6.0604,-24.24278 0,-24.24278 -12.12166,0 -22.04623,12.25455 -24.2431,30.30408 -1.47531,12.1202 0,36.3638 36.36436,36.3638 54.54643,0 46.06145,-81.21365 94.54718,-105.45663 60.60717,-36.36416 96.97168,48.48591 36.36433,60.60763 11.04528,-11.04599 14.26256,-20.97267 12.70839,-28.25282 -4.22342,-17.80895 -38.16328,-15.38472 -46.64843,12.49462 -8.26184,27.1463 6.06063,60.6072 48.48593,60.6072 115.15347,0 72.72839,-230.30729 -63.03169,-141.82079 0,0 16.26731,-9.99366 24.24295,-24.24286 14.30583,-25.55869 -4.33891,-69.285 -12.12148,-84.85009 0,60.60718 -58.18288,87.27424 -58.18288,87.27424 z"
+       id="path2987"
+       style="fill:none;stroke:#000000;stroke-width:12.12144375;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
