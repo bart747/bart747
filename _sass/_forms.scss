@@ -14,8 +14,8 @@ form {
 }
 
 .form-subtxt {
-  font-size: 0.8em;
-  margin: 1.25em 0;
+  font-size: 0.84em;
+  margin: 1.2em 0 0;
 }
 
 fieldset {
@@ -27,9 +27,9 @@ fieldset {
 label {
   color: $grey-dark;
   display: block;
-  font-size: 0.8em;
+  font-size: 0.84em;
   font-weight: bold;
-  margin: 1.25em 0 0;
+  margin: 1.2em 0 0;
 }
 
 input {
@@ -60,7 +60,7 @@ input.input-icon {
 
 .input-info {
   color: darken($grey, 10%);
-  font-size: 0.8em;
+  font-size: 0.84em;
   margin: 0;
 }
 

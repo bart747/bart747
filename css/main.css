@@ -917,8 +917,8 @@ form {
   letter-spacing: 0; }
 
 .form-subtxt {
-  font-size: 0.8em;
-  margin: 1.25em 0; }
+  font-size: 0.84em;
+  margin: 1.2em 0 0; }
 
 fieldset {
   border: none;
@@ -928,9 +928,9 @@ fieldset {
 label {
   color: #444444;
   display: block;
-  font-size: 0.8em;
+  font-size: 0.84em;
   font-weight: bold;
-  margin: 1.25em 0 0; }
+  margin: 1.2em 0 0; }
 
 input {
   border: 2px solid #777;
@@ -955,7 +955,7 @@ input.input-icon {
 
 .input-info {
   color: #5e5e5e;
-  font-size: 0.8em;
+  font-size: 0.84em;
   margin: 0; }
 
 .input-line {
