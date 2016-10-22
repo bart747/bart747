@@ -907,21 +907,30 @@ ol {
 .icon-large {
   font-size: 1.66em; }
 
-fieldset {
-  border: none;
-  margin: 1rem 0;
-  padding: 0; }
-
 form {
   text-align: left;
   margin: 1.5em 0 3em; }
 
+.form-title {
+  margin: 1em 0 0.4em;
+  text-transform: none;
+  letter-spacing: 0; }
+
+.form-subtxt {
+  font-size: 0.8em;
+  margin: 1.25em 0; }
+
+fieldset {
+  border: none;
+  margin: 0 0 1em;
+  padding: 0; }
+
 label {
   color: #444444;
   display: block;
-  font-size: 16px;
+  font-size: 0.8em;
   font-weight: bold;
-  margin: 1em 0 0; }
+  margin: 1.25em 0 0; }
 
 input {
   border: 2px solid #777;
@@ -931,7 +940,7 @@ input {
   margin: 0;
   padding: 0.5em 0.62em;
   width: 100%;
-  max-width: 15em;
+  max-width: 18em;
   transition: border-color 0.25s; }
 
 input:focus {
@@ -944,10 +953,10 @@ input:focus {
 input.input-icon {
   width: 80%; }
 
-.input-message {
-  color: #444444;
-  font-size: 16px;
-  margin: 0 0 1em; }
+.input-info {
+  color: #5e5e5e;
+  font-size: 0.8em;
+  margin: 0; }
 
 .input-line {
   display: block; }
@@ -1011,7 +1020,7 @@ input.cc-cvc-input {
   height: 20em; }
 
 .form-wrapper-narrow {
-  max-width: 16em;
+  max-width: 17em;
   margin: 0 auto; }
 
 .form-boring input {
@@ -1080,8 +1089,8 @@ a.cc_btn {
   outline: none;
   padding: 0.4em 1em;
   text-align: center;
-  margin: 0.5rem 0;
-  max-width: 12rem;
+  margin: 0.5em 0;
+  max-width: 12em;
   transition: all 0.2s ease; }
   button:hover, button:active,
   .btn:hover,

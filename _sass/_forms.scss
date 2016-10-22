@@ -2,23 +2,34 @@
 // forms
 //
 
-fieldset {
-  border: none;
-  margin: 1rem 0 ;
-  padding: 0;
-}
-
 form {
   text-align: left;
   margin: 1.5em 0 3em;
 }
 
+.form-title {
+  margin: 1em 0 0.4em;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.form-subtxt {
+  font-size: 0.8em;
+  margin: 1.25em 0;
+}
+
+fieldset {
+  border: none;
+  margin: 0 0 1em;
+  padding: 0;
+}
+
 label {
   color: $grey-dark;
   display: block;
-  font-size: 16px;
+  font-size: 0.8em;
   font-weight: bold;
-  margin: 1em 0 0;
+  margin: 1.25em 0 0;
 }
 
 input {
@@ -29,7 +40,7 @@ input {
   margin: 0;
   padding: 0.5em 0.62em;
   width: 100%;
-  max-width: 15em;
+  max-width: 18em;
   transition: border-color 0.25s;
 
 }
@@ -47,10 +58,10 @@ input.input-icon {
   width: 80%;
 }
 
-.input-message {
-  color: $grey-dark;
-  font-size: 16px;
-  margin: 0 0 1em;
+.input-info {
+  color: darken($grey, 10%);
+  font-size: 0.8em;
+  margin: 0;
 }
 
 .input-line {
@@ -123,7 +134,7 @@ input.cc-cvc-input {
 }
 
 .form-wrapper-narrow {
-  max-width: 16em;
+  max-width: 17em;
   margin: 0 auto;
 }
 
