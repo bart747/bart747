@@ -90,11 +90,13 @@ layout: default
         <h3>After</h3>
 
         <div class="forms-toggle
+                    flip
                     form-wrapper-narrow
                     home-example-ui
                     center"> 
-
-          <form class="form-sign-up">
+          <div class="flipper">
+          <div class="front">
+          <form class="form-sign-up-flip">
             <h2 class="form-title">Create Account</h2>
 
             <fieldset>
@@ -122,8 +124,10 @@ layout: default
 
             <p class="form-subtxt">Already got one? <a class="btn btn-in-txt form-switch" href="">Log in</a></p>
           </form>
+          </div>
 
-          <form class="form-sign-in hidden">
+          <div class="back">
+          <form class="form-sign-in-flip">
             <h2 class="form-title">Log in</h2>
 
             <fieldset>
@@ -147,6 +151,8 @@ layout: default
             <p class="form-subtxt"> Don't have an account? <a class="btn btn-in-txt form-switch" href="">Sign up</a></p>
 
           </form>
+          </div>
+          </div>
         </div>
       </div>
       </div>

@@ -1036,14 +1036,49 @@ input.cc-cvc-input {
     .forms-toggle {
       height: 28em; } }
 
-.form-sign-up,
-.form-sign-in {
+.form-sign-in, .form-sign-up {
   -webkit-animation-name: show-up;
   animation-name: show-up;
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
   -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out; }
+
+.flip {
+  -webkit-perspective: 1000px;
+  perspective: 1000px; }
+
+.flipper.rotate {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
+
+.flipper {
+  transition: 0.5s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative; }
+
+.flip {
+  max-width: auto; }
+
+.flip .front,
+.flip .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.flip .front {
+  z-index: 2;
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg); }
+
+.flip .back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
 
 form.form-nav {
   display: inline;
