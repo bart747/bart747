@@ -7,9 +7,6 @@
   const contactLinkBox = doc.getElementsByClassName('contact-link-box')[0];
   const contactLinkOpen = doc.getElementsByClassName('contact-link-open')[0];
   const contactLinkClose = doc.getElementsByClassName('contact-link-close')[0];
-  const customLink = []
-                     .slice
-                     .call(doc.getElementsByClassName('link-custom'));
 
   window.onload = function() {
   
