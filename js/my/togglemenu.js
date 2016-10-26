@@ -24,7 +24,8 @@ toggleMenu.forEach( el => {
 
   btn[0].addEventListener('click', _ => {
     btn[0].classList.toggle('toggle-is-on');
-    content[0].classList.toggle('hidden');
+    content[0].classList.toggle('menu-toggle-hide');
+    content[0].classList.toggle('menu-toggle-show');
   });
 
 });

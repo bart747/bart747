@@ -55,9 +55,9 @@ header .wrapper {
 }
 
 .contact-link-box {
-  animation-name: show-up;
-  animation-duration: 0.12s;
-  animation-timing-function: ease-in;
+  animation-name: menu-show;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
   background:hsla(55, 100%, 75%, 0.9);
   border-radius: $radius;
   font-size: 21px;

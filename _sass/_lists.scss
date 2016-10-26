@@ -111,6 +111,17 @@ ol {
   margin-left: 1.5em;
 }
 
+.menu-toggle-show {
+  display: block;
+  animation-name: menu-show;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
+}
+
+.menu-toggle-hide {
+  display: none;
+}
+
 .menu-toggle-content {
   position: absolute;
   top: 2.8em;
@@ -128,9 +139,7 @@ ol {
   width: auto;
   width: 16em;
   z-index: 2;
-  animation-name: show-up;
-  animation-duration: 0.12s;
-  animation-timing-function: ease-in;
+
 }
 
 .menu-icons .li-has-icon {
