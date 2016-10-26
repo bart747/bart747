@@ -373,12 +373,12 @@ th {
   border-bottom: 1px solid; }
 
 .link-like {
-  color: #2233aa !important;
+  color: #2233aa;
   text-decoration: none;
   transition: color 0.2s;
   cursor: pointer; }
   .link-like:active, .link-like:hover {
-    color: #ec4422 !important; }
+    color: #ec4422; }
 
 .txt-highlight {
   border-bottom: 2px solid #189560; }
@@ -483,11 +483,11 @@ object {
   width: 100%; }
 
 a {
-  color: #2233aa !important;
+  color: #2233aa;
   text-decoration: none;
   transition: color 0.2s; }
   a:active, a:hover {
-    color: #ec4422 !important; }
+    color: #ec4422; }
 
 hr {
   border: none;
