@@ -13,12 +13,12 @@
  }
 
 .small {
-  font-size: $tiny-font-size;
+  font-size: $small-font-size;
 }
 
 .txt-secondary {
   color: $grey-dark;
-  font-size: $tiny-font-size;
+  font-size: $small-font-size;
   text-transform: none;
 }
 
@@ -27,14 +27,8 @@
 }
 
 .link-like {
-  color: $blue-dark;
+  @include link();
   cursor: pointer;
-  text-decoration: none;
-
-  &:active, &:hover {
-    color: $red;
-    transition: color 0.25s;
-  }
 }
 
 .txt-highlight {

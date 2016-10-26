@@ -5,11 +5,11 @@
 @mixin link($color-base : $blue-dark,
             $color-hover: $orange-deep) {
 
-  color: $color-base;
+  color: $color-base !important;
   text-decoration: none;
   transition: color 0.2s;
 
   &:active, &:hover {
-    color: $color-hover;
+    color: $color-hover !important;
   }
 }

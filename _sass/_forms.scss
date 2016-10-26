@@ -8,13 +8,13 @@ form {
 }
 
 .form-title {
-  margin: 1em 0 0.25em;
+  margin: 1em 0 0.4em;
   text-transform: none;
   letter-spacing: 0;
 }
 
 .form-subtxt {
-  font-size: 0.75em;
+  font-size: $small-font-size;
   margin: 1em 0 0;
 }
 
@@ -27,22 +27,27 @@ fieldset {
 label {
   color: $grey-dark;
   display: block;
-  font-size: 0.88em;
+  font-size: $medium-font-size;
   font-weight: bold;
-  margin: 1em 0 0;
+  margin: 1.2em 0 0;
 }
 
 input {
   border: 2px solid $grey;
   border-radius: $radius;
   display: inline-block;
-  font-size: $base-font-size;
+  font-size: $large-font-size;
   margin: 0;
   padding: 0.5em 0.63em;
   width: 100%;
   max-width: 18em;
   transition: border-color 0.25s;
+}
 
+@media all and (max-width: $screen-sml) {
+  input {
+    font-size: $medium-font-size;
+  }
 }
 
 input:focus {
@@ -60,8 +65,12 @@ input.input-icon {
 
 .input-info {
   color: darken($grey, 10%);
-  font-size: 0.75em;
+  font-size: $small-font-size;
   margin: 0;
+}
+
+.btn-submit {
+// margin: 0;
 }
 
 .input-line {
@@ -234,7 +243,7 @@ input.input-nav {
 
 .search-zoom input:focus {
   box-shadow: 0 3px 50px $grey;
-  font-size: $base-font-size; 
+  font-size: $large-font-size; 
   padding: 0.5em 0.63em;
   max-width: none;
   width: 85%; 

@@ -4,7 +4,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: $base-font-size;
+  font-size: $large-font-size;
   line-height: $base-line-height;
 }
 
@@ -16,9 +16,9 @@ body {
   background-color: $background-color;
   color: $text-color;
   font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-size: $large-font-size;
   @media screen and (max-width: $screen-sml) {
-    font-size: $small-font-size;
+    font-size: $medium-font-size;
   }
 }
 
