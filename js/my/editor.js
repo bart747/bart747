@@ -139,6 +139,12 @@ function editorUpdate() {
     readerUi.innerHTML = readerState.content;
     dbFeedback();
     noteDate.field[0].textContent = "created: " + noteDate.created + emsp + " edited: " + dateNames.recent;
+ 
+    noteDate.field[0].classList.add('highlight-anim');
+    setTimeout( _=> {
+      noteDate.field[0].classList.remove('highlight-anim');
+    }, 1200);
+    
   } else {
     writerUi.innerHTML = writerState.content;
   }

@@ -47,6 +47,48 @@
   }
 }
 
+@keyframes writer-show {
+  from {
+    border-color: #fff;
+  }
+
+  to {
+    border-color: $blue;
+  }
+}
+
+@keyframes reader-show {
+  from {
+    border: 1px solid $blue;
+    border-radius: $radius;
+    margin: 0 -0.5em 0;
+    padding: 0 0.5em;
+  }
+
+  to {
+    border-color: transparent;
+  }
+}
+
+@keyframes highlight-anim {
+  from {
+    color: inherit;
+  }
+
+  50% {
+    color: $yellow;
+  }
+
+  to {
+    color: inherit;
+  }
+}
+.highlight-anim {
+  animation-name: highlight-anim;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
 @keyframes bounceInDown {
   from, 60%, 75%, 90%, to {
     animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);

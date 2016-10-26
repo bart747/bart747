@@ -11,6 +11,9 @@
 }
 
 .editor-writer {
+  animation-name: writer-show;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in;
   background: #fff;
   border: 1px solid $blue;
   border-radius: $radius;
@@ -19,7 +22,10 @@
   outline: none;
 }
 
-.editor-reader {
+.editor-reader {  
+  animation-name: reader-show;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-in;
   border: 1px solid transparent;
   margin: none;
   padding: none;
@@ -38,13 +44,10 @@
   font-weight: normal;
   letter-spacing: 0;
   text-transform: lowercase;
-  transition: all 0.2s ease-in;
 }
 
 .editor-date {
-  animation-name: show-up;
-  animation-duration: 0.2s;
-  animation-timing-function: ease-in;
+
 }
 
 @mixin editor-btn {

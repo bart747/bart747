@@ -1173,6 +1173,9 @@ a.is-active.cc_btn {
   .btn-neutral:active {
     background: #ffd600;
     border-color: #ffeb80; }
+  .btn-neutral:focus {
+    outline: none;
+    border-color: #ffd600; }
 
 .btn-in-txt {
   background: transparent;
@@ -1446,6 +1449,60 @@ img {
     -webkit-transform: none;
     transform: none; } }
 
+@-webkit-keyframes writer-show {
+  from {
+    border-color: #fff; }
+  to {
+    border-color: #4466cc; } }
+
+@keyframes writer-show {
+  from {
+    border-color: #fff; }
+  to {
+    border-color: #4466cc; } }
+
+@-webkit-keyframes reader-show {
+  from {
+    border: 1px solid #4466cc;
+    border-radius: 0.25em;
+    margin: 0 -0.5em 0;
+    padding: 0 0.5em; }
+  to {
+    border-color: transparent; } }
+
+@keyframes reader-show {
+  from {
+    border: 1px solid #4466cc;
+    border-radius: 0.25em;
+    margin: 0 -0.5em 0;
+    padding: 0 0.5em; }
+  to {
+    border-color: transparent; } }
+
+@-webkit-keyframes highlight-anim {
+  from {
+    color: inherit; }
+  50% {
+    color: #ffd600; }
+  to {
+    color: inherit; } }
+
+@keyframes highlight-anim {
+  from {
+    color: inherit; }
+  50% {
+    color: #ffd600; }
+  to {
+    color: inherit; } }
+
+.highlight-anim {
+  -webkit-animation-name: highlight-anim;
+  animation-name: highlight-anim;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out; }
+
 @-webkit-keyframes bounceInDown {
   from, 60%, 75%, 90%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -1507,6 +1564,12 @@ svg {
   margin-bottom: 0; }
 
 .editor-writer {
+  -webkit-animation-name: writer-show;
+  animation-name: writer-show;
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
   background: #fff;
   border: 1px solid #4466cc;
   border-radius: 0.25em;
@@ -1515,6 +1578,12 @@ svg {
   outline: none; }
 
 .editor-reader {
+  -webkit-animation-name: reader-show;
+  animation-name: reader-show;
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
   border: 1px solid transparent;
   margin: none;
   padding: none; }
@@ -1530,16 +1599,7 @@ svg {
   font-size: 0.75em;
   font-weight: normal;
   letter-spacing: 0;
-  text-transform: lowercase;
-  transition: all 0.2s ease-in; }
-
-.editor-date {
-  -webkit-animation-name: show-up;
-  animation-name: show-up;
-  -webkit-animation-duration: 0.2s;
-  animation-duration: 0.2s;
-  -webkit-animation-timing-function: ease-in;
-  animation-timing-function: ease-in; }
+  text-transform: lowercase; }
 
 .editor-btn-edit {
   border-width: 1px 1px 2px;

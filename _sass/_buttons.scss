@@ -53,6 +53,10 @@ button.is-active,
     background: $yellow;
     border-color: $yellow-light;
   }
+  &:focus {
+    outline: none;
+    border-color: $yellow;
+  }
 }
 
 .btn-in-txt {
