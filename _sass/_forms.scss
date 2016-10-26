@@ -14,7 +14,7 @@ form {
 }
 
 .form-subtxt {
-  font-size: 0.84em;
+  font-size: 0.88em;
   margin: 1.2em 0 0;
 }
 
@@ -27,9 +27,8 @@ fieldset {
 label {
   color: $grey-dark;
   display: block;
-  font-size: 0.84em;
   font-weight: bold;
-  margin: 1.2em 0 0;
+  margin: 1em 0 0;
 }
 
 input {
@@ -38,7 +37,7 @@ input {
   display: inline-block;
   font-size: $base-font-size;
   margin: 0;
-  padding: 0.5em 0.62em;
+  padding: 0.5em 0.63em;
   width: 100%;
   max-width: 18em;
   transition: border-color 0.25s;
@@ -60,7 +59,8 @@ input.input-icon {
 
 .input-info {
   color: darken($grey, 10%);
-  font-size: 0.84em;
+  font-size: 0.75em;
+  line-height: 1.38;
   margin: 0;
 }
 
@@ -139,11 +139,12 @@ input.cc-cvc-input {
 }
 
 .form-boring input {
-  font-size: 0.9em;
+  font-size: 0.88em;
   padding: 0.4em;
 }
 
 .form-boring label {
+  font-size: 0.88em;
   margin: 0.5rem 0 0;
 }
 

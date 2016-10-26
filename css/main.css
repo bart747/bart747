@@ -917,7 +917,7 @@ form {
   letter-spacing: 0; }
 
 .form-subtxt {
-  font-size: 0.84em;
+  font-size: 0.88em;
   margin: 1.2em 0 0; }
 
 fieldset {
@@ -928,9 +928,8 @@ fieldset {
 label {
   color: #444444;
   display: block;
-  font-size: 0.84em;
   font-weight: bold;
-  margin: 1.2em 0 0; }
+  margin: 1em 0 0; }
 
 input {
   border: 2px solid #777;
@@ -938,7 +937,7 @@ input {
   display: inline-block;
   font-size: 21px;
   margin: 0;
-  padding: 0.5em 0.62em;
+  padding: 0.5em 0.63em;
   width: 100%;
   max-width: 18em;
   transition: border-color 0.25s; }
@@ -955,7 +954,8 @@ input.input-icon {
 
 .input-info {
   color: #5e5e5e;
-  font-size: 0.84em;
+  font-size: 0.75em;
+  line-height: 1.38;
   margin: 0; }
 
 .input-line {
@@ -1024,10 +1024,11 @@ input.cc-cvc-input {
   margin: 0 auto; }
 
 .form-boring input {
-  font-size: 0.9em;
+  font-size: 0.88em;
   padding: 0.4em; }
 
 .form-boring label {
+  font-size: 0.88em;
   margin: 0.5rem 0 0; }
 
 .forms-toggle {
@@ -1165,13 +1166,14 @@ a.is-active.cc_btn {
   color: #2233aa;
   padding: 0 0.25em;
   margin: 0 0.25em;
-  border-color: #ffd600;
+  border-color: #4466cc;
   border-width: 1px 1px 2px 1px; }
   .btn-in-txt:hover, .btn-in-txt:active, .btn-in-txt:focus {
-    background: #ffeb80; }
+    background: #44aaff;
+    color: #fff; }
   .btn-in-txt:active {
-    background: #ffd600;
-    border-color: #ffd600; }
+    background: #4466cc;
+    border-color: #4466cc; }
 
 .btn-round {
   border-radius: 50%;
