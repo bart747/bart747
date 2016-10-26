@@ -8,14 +8,14 @@ form {
 }
 
 .form-title {
-  margin: 1em 0 0.4em;
+  margin: 1em 0 0.25em;
   text-transform: none;
   letter-spacing: 0;
 }
 
 .form-subtxt {
-  font-size: 0.88em;
-  margin: 1.2em 0 0;
+  font-size: 0.75em;
+  margin: 1em 0 0;
 }
 
 fieldset {
@@ -27,6 +27,7 @@ fieldset {
 label {
   color: $grey-dark;
   display: block;
+  font-size: 0.88em;
   font-weight: bold;
   margin: 1em 0 0;
 }
@@ -45,7 +46,7 @@ input {
 }
 
 input:focus {
-  border-color: $blue;
+  border-color: $blue-light;  
   outline: none;
 }
 
@@ -60,7 +61,6 @@ input.input-icon {
 .input-info {
   color: darken($grey, 10%);
   font-size: 0.75em;
-  line-height: 1.38;
   margin: 0;
 }
 
@@ -146,6 +146,10 @@ input.cc-cvc-input {
 .form-boring label {
   font-size: 0.88em;
   margin: 0.5rem 0 0;
+}
+
+.form-boring button {
+  margin: 0;
 }
 
 .forms-toggle {

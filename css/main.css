@@ -912,13 +912,13 @@ form {
   margin: 1.5em 0 3em; }
 
 .form-title {
-  margin: 1em 0 0.4em;
+  margin: 1em 0 0.25em;
   text-transform: none;
   letter-spacing: 0; }
 
 .form-subtxt {
-  font-size: 0.88em;
-  margin: 1.2em 0 0; }
+  font-size: 0.75em;
+  margin: 1em 0 0; }
 
 fieldset {
   border: none;
@@ -928,6 +928,7 @@ fieldset {
 label {
   color: #444444;
   display: block;
+  font-size: 0.88em;
   font-weight: bold;
   margin: 1em 0 0; }
 
@@ -943,7 +944,7 @@ input {
   transition: border-color 0.25s; }
 
 input:focus {
-  border-color: #4466cc;
+  border-color: #44aaff;
   outline: none; }
 
 .inputs-long input {
@@ -955,7 +956,6 @@ input.input-icon {
 .input-info {
   color: #5e5e5e;
   font-size: 0.75em;
-  line-height: 1.38;
   margin: 0; }
 
 .input-line {
@@ -1030,6 +1030,9 @@ input.cc-cvc-input {
 .form-boring label {
   font-size: 0.88em;
   margin: 0.5rem 0 0; }
+
+.form-boring button {
+  margin: 0; }
 
 .forms-toggle {
   height: 25em; }
