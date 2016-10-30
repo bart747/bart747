@@ -20,8 +20,8 @@
   // console.log(homeDiv); console.log(homeLink);
   // console.log(postDiv); console.log(blogLink);
     if (contactLink !== undefined) {
-      contactLinkOpen.addEventListener('click', _=> {
-        event.preventDefault();
+      contactLinkOpen.addEventListener('click', evt => {
+        evt.preventDefault();
         contactLinkBox.classList.toggle('hidden');
         contactLinkOpen.classList.toggle('orange');
       });

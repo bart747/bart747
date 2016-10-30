@@ -24,13 +24,13 @@ if (formsToggle[0]) {
       }
     }
 
-    btn[0].addEventListener('click', _ => {
-      event.preventDefault();
+    btn[0].addEventListener('click', evt => {
+      evt.preventDefault();
       transform();
     });
 
-    btn[1].addEventListener('click', _ => {
-      event.preventDefault();
+    btn[1].addEventListener('click', evt => {
+      evt.preventDefault();
       transform();
     });
 
