@@ -1,8 +1,8 @@
 {
-  "name": "my-jekyll-site",
+  "name": "bart747-jekyll-site",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
+  "main": "js/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/bart747/bart747.github.io.git"
   },
   "author": "Bartosz Wieczorek",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/bart747/bart747.github.io/issues"
   },
