@@ -1,4 +1,4 @@
-
+require('../_sass/main.scss');
 require('./my/switch');
 require('./my/togglemenu');
 require('./my/formcheck');
