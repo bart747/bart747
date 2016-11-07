@@ -9,7 +9,7 @@
 .crest svg {
   //background-image: url('/img/crest.svg');
   width: 38px;
-  height: auto;
+  height: 38px !important;
   margin: 0 auto;
   stroke: $black;
   transition: all 0.2s ease-in;
