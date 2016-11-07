@@ -9,7 +9,12 @@ header .wrapper {
   padding: 1rem 1rem 0 ;
 }
 
-.header-nav {
+.header-nav-2 {
+  flex: 2 1 auto;
+  margin: 0 auto;
+}
+
+.header-nav-1 {
   flex: 1 1 auto;
   margin: 0 auto;
 }
