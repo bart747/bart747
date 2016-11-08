@@ -7,11 +7,11 @@
 }
 
 .crest svg {
-  //background-image: url('/img/crest.svg');
+  position: absolute;
   width: 38px;
   height: 38px !important;
-  margin: 0 auto;
-  stroke: $black;
+  margin: -5px auto 0;
+  stroke: $white;
   transition: all 0.2s ease-in;
   &:hover {
     stroke: $orange-deep;

@@ -17,6 +17,7 @@ body {
   color: $text-color;
   font-family: $base-font-family;
   font-size: $large-font-size;
+  padding-top: 3em;
   @media screen and (max-width: $screen-sml) {
     font-size: $medium-font-size;
   }

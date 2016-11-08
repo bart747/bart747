@@ -2,11 +2,27 @@
 // header
 //
 
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  padding: 0.75em;
+  transition: all 0.25s ease-in;  
+  z-index: 100;
+}
+
 header .wrapper {
   display: flex;
   font-size: $medium-font-size;
   justify-content: space-between;
-  padding: 1rem 1rem 0 ;
+}
+
+.header-scroll {
+  padding: 0.25em;  
+  background: rgba(0,0,0,0.7);
 }
 
 .header-nav-2 {
@@ -28,6 +44,10 @@ header .wrapper {
 .header-nav li {
   display: inline;
   margin: 0 1em 0 0;
+}
+
+.header-nav a {
+  @include link(#fff);
 }
 
 .icon-logo {
@@ -67,7 +87,7 @@ header .wrapper {
   border-radius: $radius;
   font-size: 21px;
   line-height: 1.75;
-  margin-top: 1.5em;
+  margin-top: 1.75em;
   margin-right: 1em;
   margin-left: -8em;
   padding: 0.5em 0.75em;
@@ -87,6 +107,10 @@ header .wrapper {
 
 .contact-link-box .icon:hover {
   color: $orange-deep;
+}
+
+.contact-link-box a {
+  @include link();
 }
 
 

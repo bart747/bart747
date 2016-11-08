@@ -1,5 +1,6 @@
 (function() {
   const doc = document;
+  const header = doc.getElementsByTagName('header')[0];
   const postDiv = doc.getElementsByClassName('post')[0];
   const blogDiv = doc.getElementsByClassName('blog')[0];
   const blogLink = doc.getElementsByClassName('link-blog')[0];
@@ -27,6 +28,16 @@
         contactLinkOpen.classList.remove('orange');
       });
     }
+    
+    function runOnScroll() { 
+      if (doc.body.scrollTop > 25 && doc.body.scrollTop < 500) {
+        header.classList.add('header-scroll');     
+      }
+      if (doc.body.scrollTop < 20) {
+        header.classList.remove('header-scroll');  
+      }
+    }
+    window.addEventListener('scroll', runOnScroll);
   };
-  
+
 }());
