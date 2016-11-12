@@ -10,25 +10,25 @@
   const contactLinkClose = doc.getElementsByClassName('contact-link-close')[0];
 
   window.onload = function() {
-
     if (postDiv !== undefined || blogDiv !== undefined) {
       blogLink.classList.add('link-active');
     }
   // console.log(homeDiv); console.log(homeLink);
   // console.log(postDiv); console.log(blogLink);
   // console.log(contactLinkClose);
-    if (contactLink !== undefined) {
-      contactLinkOpen.addEventListener('click', evt => {
-        evt.preventDefault();
-        contactLinkBox.classList.toggle('hidden');
-        contactLinkOpen.classList.toggle('orange');
-      });
-      contactLinkClose.addEventListener('click', evt => {
-        contactLinkBox.classList.add('hidden');
-        contactLinkOpen.classList.remove('orange');
-      });
-    }
-    
+
   };
+
+  if (contactLink !== undefined) {
+    contactLinkOpen.addEventListener('click', evt => {
+      evt.preventDefault();
+      contactLinkBox.classList.toggle('hidden');
+      contactLinkOpen.classList.toggle('orange');
+    });
+    contactLinkClose.addEventListener('click', evt => {
+      contactLinkBox.classList.add('hidden');
+      contactLinkOpen.classList.remove('orange');
+    });
+  }
 
 }()); 
