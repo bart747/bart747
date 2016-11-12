@@ -98,7 +98,7 @@ ol {
 .menu-toggle {
   position: relative;
   top: 3px;
-  margin-bottom: 1em;
+  margin-bottom: 0.38em;
   padding: 0;
 }
 
@@ -133,7 +133,7 @@ ol {
   background: #fff;
   border-radius: 0 0 $radius $radius;  
   border: 1px solid $blue-dark;
-  border-top-width: 5px;
+  border-top-width: 2px;
   padding: 1.5em 1em;
   text-align: left;
   width: auto;

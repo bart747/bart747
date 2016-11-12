@@ -8,9 +8,8 @@ button,
   color: #fff;
   cursor: pointer;
   background: $blue;
-  border: solid $blue;
-  border-width: 2px 2px 3px;
-  border-bottom-color: $blue-dark;
+  border: solid $blue-dark;
+  border-width: 2px;
   border-radius: $radius;
   outline: none; 
   padding: 0.4em 1em;
@@ -20,18 +19,16 @@ button,
   transition: all 0.2s ease;
 
   &:hover,
-  &:active { 
+  &:active,
+  &:focus { 
     background: lighten($blue-dark, 10%);
+    outline: none;
   }
   &:active {
     background: $blue-dark;
     border-color: $blue-dark;
-    
   }
-  &:focus {
-    outline: none;
-    border-color: $blue-dark;
-  }
+
 }
 
 button.is-active,
@@ -65,7 +62,7 @@ button.is-active,
   padding:  0 0.25em;
   margin: 0 0.25em;
   border-color: $blue;
-  border-width: 1px 1px 2px 1px ;
+  border-width: 1px;
   &:hover,
   &:active,
   &:focus {
