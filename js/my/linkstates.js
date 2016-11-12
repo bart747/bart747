@@ -1,6 +1,5 @@
 (function() {
   const doc = document;
-  const header = doc.getElementsByTagName('header')[0];
   const postDiv = doc.getElementsByClassName('post')[0];
   const blogDiv = doc.getElementsByClassName('blog')[0];
   const blogLink = doc.getElementsByClassName('link-blog')[0];
