@@ -41,17 +41,15 @@ button.is-active,
   background: transparent;
   border-color: darken($yellow, 30%);
   color: $black;
-  
+
+  &:hover,
   &:active,
-  &:hover {
+  &:focus { 
     background: $yellow-light;
+    outline: none;
   }
   &:active {
-    background: $yellow;
-    border-color: $yellow-light;
-  }
-  &:focus {
-    outline: none;
+    background: $yellow-light;
     border-color: $yellow;
   }
 }
