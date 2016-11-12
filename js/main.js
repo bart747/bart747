@@ -4,6 +4,7 @@ require('./my/togglemenu');
 require('./my/formcheck');
 require('./my/formswitch');
 require('./my/linkstates');
+require('./my/onscroll');
 require('./my/imgload');
 require('./my/editor');
 require('./plugins/jquery.fitvids');

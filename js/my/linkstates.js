@@ -29,15 +29,6 @@
       });
     }
     
-    function runOnScroll() { 
-      if (doc.body.scrollTop > 25 && doc.body.scrollTop < 500) {
-        header.classList.add('header-scroll');     
-      }
-      if (doc.body.scrollTop < 20) {
-        header.classList.remove('header-scroll');  
-      }
-    }
-    window.addEventListener('scroll', runOnScroll);
   };
 
-}());
+}()); 
